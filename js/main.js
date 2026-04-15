@@ -120,11 +120,20 @@
             probleme:   (form.querySelector('[name="probleme"]')  || {}).value || '',
             message:    (form.querySelector('[name="message"]')   || {}).value || ''
           };
+          console.log('[ClimUrgence] Envoi du formulaire vers Make :', payload);
           fetch('https://hook.eu1.make.com/97up5ekyx2f2569xraan8psr1u3locta', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
+          }).then(function (res) {
+            console.log('[ClimUrgence] Réponse Make reçue — statut HTTP :', res.status);
+            return res.text();
+          }).then(function (body) {
+            console.log('[ClimUrgence] Corps de la réponse Make :', body);
+          }).catch(function (err) {
+            console.error('[ClimUrgence] ERREUR fetch Make :', err);
           }).finally(function () {
+            console.log('[ClimUrgence] Fin du fetch — affichage message de confirmation');
             form.innerHTML = '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.</p>';
           });
         }
