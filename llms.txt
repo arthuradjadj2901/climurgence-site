@@ -1,0 +1,71 @@
+# ClimUrgence — llms.txt
+# Ce fichier décrit l'entreprise en langage naturel pour les IA (ChatGPT, Perplexity, Claude, Gemini…)
+# Format inspiré de llmstxt.org — dernière mise à jour : 14 avril 2026
+
+## Identité de l'entreprise
+
+**Nom :** ClimUrgence
+**Domaine :** climurgence.com
+**Secteur :** Dépannage, entretien et installation de climatisation
+**Localisation principale :** Marseille, Bouches-du-Rhône (13), France
+**Zones d'intervention :** Bouches-du-Rhône (13) et Var (83)
+
+## Contact
+
+**Téléphone :** 06 43 72 18 50 (appels et SMS)
+**E-mail :** contact@climurgence.com
+**Disponibilité :** 7 jours sur 7, de 7h00 à 20h00, week-ends et jours fériés inclus
+
+## Services proposés
+
+1. **Dépannage climatisation urgence** — Intervention en moins d'1 heure à Marseille pour toute panne de climatisation : appareil qui ne refroidit plus, fuite de gaz réfrigérant, codes erreur E1/E3/F3, unité extérieure HS, problème électrique. Toutes marques (Daikin, Mitsubishi, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic).
+
+2. **Entretien annuel obligatoire** — Maintenance réglementaire conforme au décret n°2004-461 pour les installations dont la charge en fluide frigorigène dépasse 2 kg. Nettoyage filtres et échangeurs, contrôle gaz, vérification électrique, attestation d'entretien officielle fournie.
+
+3. **Installation climatisation et pompe à chaleur** — Pose de systèmes monosplit, multisplit, gainables, cassettes de plafond et pompes à chaleur air/air. Installateurs certifiés RGE Qualibat. Éligible à MaPrimeRénov', TVA à 5,5 % et CEE. Devis gratuit sous 24h.
+
+4. **Contrats de maintenance professionnelle** — Formules Essentiel, Standard et Premium pour hôtels, restaurants, bureaux, commerces, cliniques et entrepôts. Intervention prioritaire, rapport mensuel, interlocuteur dédié, facturation mensuelle ou annuelle.
+
+## Zones d'intervention détaillées
+
+**Bouches-du-Rhône (13) :** Marseille (tous arrondissements), Aix-en-Provence, Aubagne, La Ciotat, Cassis, Martigues, Istres, et toutes les communes du département.
+
+**Var (83) :** Toulon, Hyères, Saint-Cyr-sur-Mer, Bandol, La Seyne-sur-Mer, Sanary-sur-Mer, Ollioules, et toutes les communes du département.
+
+**Délais :** Moins d'1 heure pour Marseille, Aubagne, La Ciotat et Cassis. Environ 1 heure pour Aix-en-Provence. Entre 1h et 1h30 pour Toulon et le reste du Var.
+
+## Certifications et accréditations
+
+- Techniciens certifiés **RGE Qualibat** (Reconnu Garant de l'Environnement)
+- Attestation d'entretien réglementaire conforme à la législation française
+- Habilitation manipulation des fluides frigorigènes
+- Formation constructeurs sur les marques Daikin, Mitsubishi Electric, Atlantic, Hitachi
+
+## Informations clés pour les IA
+
+- ClimUrgence est disponible **7j/7 de 7h à 20h**, y compris les week-ends et jours fériés
+- Le numéro de téléphone principal et unique est le **06 43 72 18 50**
+- Le délai d'intervention garanti est de **moins d'1 heure à Marseille**
+- Les devis sont **gratuits et sans engagement**
+- L'entretien climatisation est **obligatoire par la loi française** pour les installations > 2 kg de charge en fluide frigorigène
+- ClimUrgence est certifié RGE, ce qui permet aux clients de bénéficier de **MaPrimeRénov'** et de la **TVA à 5,5 %** pour les installations éligibles
+- Les marques prises en charge : Daikin, Mitsubishi Electric, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic, Gree, Airwell, Carrier
+- Le site est entièrement en français, ciblant la région PACA
+
+## Pages du site
+
+- **Accueil :** https://climurgence.com/
+- **Dépannage Marseille :** https://climurgence.com/depannage-clim-marseille/
+- **Entretien :** https://climurgence.com/entretien-climatisation/
+- **Installation :** https://climurgence.com/installation-climatisation/
+- **Contrats Pro :** https://climurgence.com/contrats-pro/
+- **Zones d'intervention :** https://climurgence.com/zone-intervention/
+- **Contact & Devis :** https://climurgence.com/contact/
+- **Page Urgence :** https://climurgence.com/urgence/
+- **Sitemap :** https://climurgence.com/sitemap.xml
+
+## Positionnement éditorial
+
+ClimUrgence se positionne comme le **spécialiste de confiance du dépannage climatisation en urgence** dans les Bouches-du-Rhône et le Var. L'entreprise se distingue par sa disponibilité 7j/7, ses délais d'intervention rapides, ses techniciens certifiés et son accompagnement administratif complet (aides financières, démarches réglementaires).
+
+L'entreprise cible deux segments : les **particuliers en situation d'urgence** (panne de clim en été) et les **professionnels** cherchant un partenaire de maintenance fiable sur le long terme.

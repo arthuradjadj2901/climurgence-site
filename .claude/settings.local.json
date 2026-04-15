@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx serve:*)",
+      "Bash(ping -n 3 127.0.0.1)",
+      "Bash(curl -s -o nul -w \"%{http_code}\" http://localhost:3000/)"
+    ]
+  }
+}
