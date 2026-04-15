@@ -284,6 +284,72 @@
     </section>
 
     <!-- ═══════════════════════════════════════
+         FORMULAIRE DEVIS
+    ═══════════════════════════════════════ -->
+    <section class="section section--alt" id="devis" aria-labelledby="form-title">
+      <div class="container">
+        <div class="form-card" style="max-width:780px;">
+          <h2 id="form-title">Formulaire de demande de devis</h2>
+          <p style="color:var(--text2);font-size:.9rem;margin-bottom:1.5rem;">Tous les champs marqués <span style="color:var(--orange);">*</span> sont obligatoires. Réponse garantie sous 30 minutes en journée.</p>
+
+          <form class="form-devis" novalidate action="#" method="POST" aria-label="Formulaire de demande de devis">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="c-nom">Nom complet <span class="req">*</span></label>
+                <input type="text" id="c-nom" name="nom" placeholder="Jean Dupont" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="c-tel">Téléphone <span class="req">*</span></label>
+                <input type="tel" id="c-tel" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel" required />
+              </div>
+              <div class="form-group">
+                <label for="c-cp">Code postal <span class="req">*</span></label>
+                <input type="text" id="c-cp" name="codepostal" placeholder="13000" maxlength="5" inputmode="numeric" required />
+              </div>
+              <div class="form-group">
+                <label for="c-email">E-mail</label>
+                <input type="email" id="c-email" name="email" placeholder="vous@exemple.fr" autocomplete="email" />
+              </div>
+              <div class="form-group full">
+                <label for="c-service">Type de besoin <span class="req">*</span></label>
+                <select id="c-service" name="probleme" required>
+                  <option value="">Sélectionnez votre besoin…</option>
+                  <optgroup label="Urgences">
+                    <option value="panne-totale">Panne totale — clim ne démarre plus</option>
+                    <option value="ne-refroidit-plus">Clim ne refroidit plus</option>
+                    <option value="code-erreur">Code erreur affiché (E1, E3, F3…)</option>
+                    <option value="fuite">Fuite eau / gaz réfrigérant</option>
+                    <option value="bruit">Bruit anormal</option>
+                  </optgroup>
+                  <optgroup label="Entretien &amp; maintenance">
+                    <option value="entretien-annuel">Entretien annuel obligatoire</option>
+                    <option value="nettoyage">Nettoyage filtres uniquement</option>
+                    <option value="contrat-pro">Contrat maintenance professionnelle</option>
+                  </optgroup>
+                  <optgroup label="Installation">
+                    <option value="installation-neuve">Installation neuve</option>
+                    <option value="remplacement">Remplacement ancien système</option>
+                    <option value="pac">Pompe à chaleur air/air</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="c-message">Message (optionnel)</label>
+                <textarea id="c-message" name="message" placeholder="Décrivez votre situation, la marque de votre appareil, l'année d'installation…" rows="4"></textarea>
+              </div>
+              <div class="form-group full">
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                  Envoyer ma demande
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
          BANDEAU ORANGE URGENCE
     ═══════════════════════════════════════ -->
     <div class="urgency-strip" aria-label="Points forts ClimUrgence">
@@ -464,64 +530,6 @@
 
         <div class="text-center mt-8">
           <a href="/zone-intervention/" class="btn btn-outline">Voir toutes les zones d'intervention</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════
-         FORMULAIRE DEVIS
-    ═══════════════════════════════════════ -->
-    <section class="section section--white" id="devis" aria-labelledby="form-title">
-      <div class="container">
-        <div class="form-card">
-          <h2 id="form-title">Demander un devis gratuit</h2>
-          <p>Réponse sous 30 minutes en journée · 7j/7 · Sans engagement</p>
-
-          <form class="form-devis" novalidate action="#" method="POST" aria-label="Formulaire de demande de devis">
-            <div class="form-grid">
-
-              <div class="form-group">
-                <label for="nom">Nom complet <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="nom" name="nom" placeholder="Jean Dupont" autocomplete="name" required />
-              </div>
-
-              <div class="form-group">
-                <label for="telephone">Téléphone <span class="req" aria-hidden="true">*</span></label>
-                <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel" required />
-              </div>
-
-              <div class="form-group">
-                <label for="codepostal">Code postal <span class="req" aria-hidden="true">*</span></label>
-                <input type="text" id="codepostal" name="codepostal" placeholder="13000" maxlength="5" inputmode="numeric" required />
-              </div>
-
-              <div class="form-group">
-                <label for="probleme">Type de besoin</label>
-                <select id="probleme" name="probleme">
-                  <option value="">Sélectionnez…</option>
-                  <option value="depannage">Dépannage urgence</option>
-                  <option value="entretien">Entretien annuel</option>
-                  <option value="installation">Installation neuve</option>
-                  <option value="devis-remplacement">Remplacement / rénovation</option>
-                  <option value="contrat-pro">Contrat professionnel</option>
-                </select>
-              </div>
-
-              <div class="form-group full">
-                <label class="form-urgence" for="urgence">
-                  <input type="checkbox" id="urgence" name="urgence" value="oui" />
-                  <span>C'est une urgence — je souhaite être rappelé dans les 30 minutes</span>
-                </label>
-              </div>
-
-              <div class="form-group full">
-                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:.875rem;">
-                  Envoyer ma demande — Gratuit et sans engagement
-                </button>
-              </div>
-
-            </div>
-          </form>
         </div>
       </div>
     </section>

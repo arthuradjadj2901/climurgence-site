@@ -240,35 +240,6 @@
       </div>
     </section>
 
-    <!-- Formulaire -->
-    <section class="section" aria-labelledby="form-zones-title">
-      <div class="container">
-        <div class="form-card">
-          <h2 id="form-zones-title">Vérifier la disponibilité et demander un devis</h2>
-          <p style="color:var(--text2);font-size:.9rem;margin-bottom:1.25rem;">Indiquez votre code postal, nous confirmons sous 30 minutes.</p>
-          <form class="form-devis" novalidate action="#" method="POST">
-            <div class="form-grid">
-              <div class="form-group"><label for="nom-z">Nom <span class="req">*</span></label><input type="text" id="nom-z" name="nom" placeholder="Jean Dupont" autocomplete="name" required /></div>
-              <div class="form-group"><label for="tel-z">Téléphone <span class="req">*</span></label><input type="tel" id="tel-z" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel" required /></div>
-              <div class="form-group"><label for="cp-z">Code postal <span class="req">*</span></label><input type="text" id="cp-z" name="codepostal" placeholder="13000" maxlength="5" inputmode="numeric" required /></div>
-              <div class="form-group">
-                <label for="serv-z">Service souhaité</label>
-                <select id="serv-z" name="probleme">
-                  <option value="">Sélectionnez…</option>
-                  <option value="depannage">Dépannage urgence</option>
-                  <option value="entretien">Entretien annuel</option>
-                  <option value="installation">Installation neuve</option>
-                  <option value="contrat-pro">Contrat professionnel</option>
-                </select>
-              </div>
-              <div class="form-group full"><label class="form-urgence" for="urg-z"><input type="checkbox" id="urg-z" name="urgence" value="oui" /><span>⚡ Urgence — rappel dans les 30 minutes</span></label></div>
-              <div class="form-group full"><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Vérifier la disponibilité</button></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <!-- FAQ -->
     <section class="section section--alt" aria-labelledby="faq-z-title">
       <div class="container">
