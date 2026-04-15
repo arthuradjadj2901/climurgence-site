@@ -82,29 +82,58 @@
 
     /* ── Formulaire devis : validation basique ── */
     const forms = document.querySelectorAll('.form-devis');
+    console.log('[ClimUrgence] Formulaires .form-devis trouvés :', forms.length);
     forms.forEach(function (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+        console.log('[ClimUrgence] Submit intercepté par JS');
+
         const tel  = form.querySelector('input[name="telephone"]');
         const nom  = form.querySelector('input[name="nom"]');
         const cp   = form.querySelector('input[name="codepostal"]');
 
+        console.log('[ClimUrgence] nom =', nom ? '"' + nom.value + '"' : 'CHAMP ABSENT');
+        console.log('[ClimUrgence] telephone =', tel ? '"' + tel.value + '"' : 'CHAMP ABSENT');
+        console.log('[ClimUrgence] codepostal =', cp ? '"' + cp.value + '"' : 'CHAMP ABSENT');
+
         let ok = true;
 
-        [tel, nom, cp].forEach(function (field) {
-          if (!field) return;
-          if (!field.value.trim()) {
-            field.style.borderColor = '#e53e3e';
-            ok = false;
-          } else {
-            field.style.borderColor = '';
-          }
-        });
+        if (!nom || !nom.value.trim()) {
+          if (nom) nom.style.borderColor = '#e53e3e';
+          console.warn('[ClimUrgence] KO : nom vide ou absent');
+          ok = false;
+        } else {
+          nom.style.borderColor = '';
+          console.log('[ClimUrgence] OK : nom');
+        }
+
+        if (!tel || !tel.value.trim()) {
+          if (tel) tel.style.borderColor = '#e53e3e';
+          console.warn('[ClimUrgence] KO : telephone vide ou absent');
+          ok = false;
+        } else {
+          tel.style.borderColor = '';
+          console.log('[ClimUrgence] OK : telephone présent');
+        }
+
+        if (!cp || !cp.value.trim()) {
+          if (cp) cp.style.borderColor = '#e53e3e';
+          console.warn('[ClimUrgence] KO : codepostal vide ou absent');
+          ok = false;
+        } else {
+          cp.style.borderColor = '';
+          console.log('[ClimUrgence] OK : codepostal');
+        }
 
         if (tel && tel.value && !/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/.test(tel.value.replace(/\s/g, ''))) {
           tel.style.borderColor = '#e53e3e';
+          console.warn('[ClimUrgence] KO : telephone invalide (regex) — valeur :', tel.value);
           ok = false;
+        } else if (tel && tel.value) {
+          console.log('[ClimUrgence] OK : telephone regex');
         }
+
+        console.log('[ClimUrgence] Validation finale ok =', ok);
 
         if (ok) {
           const btn = form.querySelector('[type="submit"]');
