@@ -112,11 +112,21 @@
             btn.disabled = true;
             btn.textContent = 'Envoi en cours…';
           }
-          /* Ici : fetch POST vers votre backend/Formspree */
-          /* Simulation : */
-          setTimeout(function () {
+          var payload = {
+            nom:        (form.querySelector('[name="nom"]')       || {}).value || '',
+            telephone:  (form.querySelector('[name="telephone"]') || {}).value || '',
+            codepostal: (form.querySelector('[name="codepostal"]')|| {}).value || '',
+            email:      (form.querySelector('[name="email"]')     || {}).value || '',
+            probleme:   (form.querySelector('[name="probleme"]')  || {}).value || '',
+            message:    (form.querySelector('[name="message"]')   || {}).value || ''
+          };
+          fetch('https://hook.eu1.make.com/97up5ekyx2f2569xraan8psr1u3locta', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).finally(function () {
             form.innerHTML = '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.</p>';
-          }, 800);
+          });
         }
       });
     });
