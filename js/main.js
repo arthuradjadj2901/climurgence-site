@@ -155,15 +155,30 @@
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
           }).then(function (res) {
-            console.log('[ClimUrgence] Réponse Make reçue — statut HTTP :', res.status);
-            return res.text();
-          }).then(function (body) {
-            console.log('[ClimUrgence] Corps de la réponse Make :', body);
-          }).catch(function (err) {
-            console.error('[ClimUrgence] ERREUR fetch Make :', err);
-          }).finally(function () {
-            console.log('[ClimUrgence] Fin du fetch — affichage message de confirmation');
+            console.log('[ClimUrgence] Réponse Make — statut HTTP :', res.status);
+            return res.text().then(function (body) {
+              console.log('[ClimUrgence] Corps réponse Make :', body);
+              if (!res.ok) {
+                throw new Error('HTTP ' + res.status + ' — ' + body);
+              }
+            });
+          }).then(function () {
+            console.log('[ClimUrgence] Succès confirmé — affichage message de confirmation');
             form.innerHTML = '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.</p>';
+          }).catch(function (err) {
+            console.error('[ClimUrgence] ERREUR envoi Make :', err.message || err);
+            if (btn) {
+              btn.disabled = false;
+              btn.textContent = 'Envoyer ma demande';
+            }
+            var errEl = form.querySelector('.form-send-error');
+            if (!errEl) {
+              errEl = document.createElement('p');
+              errEl.className = 'form-send-error';
+              errEl.style.cssText = 'color:#e53e3e;font-weight:700;text-align:center;margin-top:1rem;';
+              form.appendChild(errEl);
+            }
+            errEl.textContent = '⚠️ Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler directement.';
           });
         }
       });
