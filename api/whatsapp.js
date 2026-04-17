@@ -140,10 +140,12 @@ async function generatePdf(record) {
 // ── Commande OK ───────────────────────────────────────────────────────────────
 
 async function handleOk(redis, twilioClient) {
+  console.log("[handleOk] Récupération du dernier devis depuis Redis…");
   const raw = await redis.get(KV_LAST_DEVIS_KEY);
   const lastDevis = typeof raw === "string" ? JSON.parse(raw) : raw;
 
   if (!lastDevis) {
+    console.warn("[handleOk] Aucun devis en cours dans Redis");
     await twilioClient.messages.create({
       from: TWILIO_FROM, to: MY_WHATSAPP,
       body: "❌ Aucun devis en cours. Soumets d'abord une demande via le formulaire du site.",
@@ -151,25 +153,34 @@ async function handleOk(redis, twilioClient) {
     return;
   }
 
+  console.log(`[handleOk] Devis trouvé: ${lastDevis.devis_numero} — ${lastDevis.client_nom}`);
+
   try {
-    await twilioClient.messages.create({
+    const msg1 = await twilioClient.messages.create({
       from: TWILIO_FROM, to: MY_WHATSAPP,
       body: `⏳ Génération du PDF pour le devis ${lastDevis.devis_numero}…`,
     });
+    console.log(`[handleOk] Message WhatsApp envoyé: SID=${msg1.sid} status=${msg1.status}`);
 
     const downloadUrl = await generatePdf(lastDevis);
+    console.log(`[handleOk] PDF prêt: ${downloadUrl}`);
 
-    await twilioClient.messages.create({
+    const msg2 = await twilioClient.messages.create({
       from: TWILIO_FROM, to: MY_WHATSAPP,
       body: `✅ PDF prêt — devis ${lastDevis.devis_numero}\n\n📄 ${downloadUrl}\n\nClient : ${lastDevis.client_nom}\nTotal : ${lastDevis.total_ttc}`,
     });
+    console.log(`[handleOk] PDF envoyé: SID=${msg2.sid} status=${msg2.status}`);
 
   } catch (err) {
-    console.error("[whatsapp] Erreur PDFMonkey:", err);
-    await twilioClient.messages.create({
-      from: TWILIO_FROM, to: MY_WHATSAPP,
-      body: `❌ Erreur PDF : ${err.message}`,
-    });
+    console.error("[handleOk] Erreur:", err.message, err.stack);
+    try {
+      await twilioClient.messages.create({
+        from: TWILIO_FROM, to: MY_WHATSAPP,
+        body: `❌ Erreur PDF : ${err.message}`,
+      });
+    } catch (sendErr) {
+      console.error("[handleOk] Impossible d'envoyer le message d'erreur:", sendErr.message);
+    }
   }
 }
 
@@ -339,6 +350,13 @@ module.exports = async function handler(req, res) {
     // Sécurité : on n'accepte que les messages de ton propre numéro
     if (from !== MY_WHATSAPP) {
       console.warn(`[whatsapp] Message ignoré venant de: ${from}`);
+      return;
+    }
+
+    // Ignorer les messages système Twilio sandbox (join/leave codes)
+    const TWILIO_SYSTEM_RE = /^(join|leave)\s+\S+/i;
+    if (TWILIO_SYSTEM_RE.test(rawMessage)) {
+      console.log(`[whatsapp] Message système Twilio ignoré: "${rawMessage}"`);
       return;
     }
 
