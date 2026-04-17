@@ -149,15 +149,15 @@
             probleme:   (form.querySelector('[name="probleme"]')  || {}).value || '',
             message:    (form.querySelector('[name="message"]')   || {}).value || ''
           };
-          console.log('[ClimUrgence] Envoi du formulaire vers Make :', payload);
-          fetch('https://hook.eu1.make.com/97up5ekyx2f2569xraan8psr1u3locta', {
+          console.log('[ClimUrgence] Envoi du formulaire vers /api/devis :', payload);
+          fetch('/api/devis', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
           }).then(function (res) {
-            console.log('[ClimUrgence] Réponse Make — statut HTTP :', res.status);
+            console.log('[ClimUrgence] Réponse /api/devis — statut HTTP :', res.status);
             return res.text().then(function (body) {
-              console.log('[ClimUrgence] Corps réponse Make :', body);
+              console.log('[ClimUrgence] Corps réponse /api/devis :', body);
               if (!res.ok) {
                 throw new Error('HTTP ' + res.status + ' — ' + body);
               }
@@ -166,7 +166,7 @@
             console.log('[ClimUrgence] Succès confirmé — affichage message de confirmation');
             form.innerHTML = '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.</p>';
           }).catch(function (err) {
-            console.error('[ClimUrgence] ERREUR envoi Make :', err.message || err);
+            console.error('[ClimUrgence] ERREUR envoi /api/devis :', err.message || err);
             if (btn) {
               btn.disabled = false;
               btn.textContent = 'Envoyer ma demande';
