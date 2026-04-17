@@ -6,6 +6,7 @@ const querystring = require("querystring");
 const TWILIO_FROM = "whatsapp:+14155238886";
 const MY_WHATSAPP = "whatsapp:+33643721850";
 const KV_LAST_DEVIS_KEY = "last_devis";
+const TWILIO_SYSTEM_RE = /^(join|leave)\s+\S+/i;
 
 const SYSTEM_PROMPT = `Tu es l'assistant de devis de ClimUrgence, entreprise de dépannage climatisation à Marseille. Tu reçois une demande client et tu génères un devis structuré.
 
@@ -38,16 +39,18 @@ Réponds UNIQUEMENT en JSON valide sans markdown :
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function sendTwiml(res) {
-  res.setHeader("Content-Type", "text/xml");
-  res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
+  if (!res.headersSent) {
+    res.setHeader("Content-Type", "text/xml");
+    res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
+  }
 }
 
 async function parseBody(req) {
-  // Vercel parse automatiquement application/x-www-form-urlencoded → req.body
+  // req.body déjà parsé par Vercel (JSON ou form-urlencoded)
   if (req.body && typeof req.body === "object" && Object.keys(req.body).length > 0) {
     return req.body;
   }
-  // Fallback : lecture manuelle du stream
+  // Fallback stream (ne devrait pas être nécessaire, mais sécurité)
   return new Promise((resolve, reject) => {
     let data = "";
     req.on("data", (chunk) => (data += chunk.toString()));
@@ -76,7 +79,7 @@ NOTE TECHNICIEN : ${devisData.note_technicien}
 💬 Réponds DEVIS + description pour un nouveau devis`;
 }
 
-// ── PDFMonkey ─────────────────────────────────────────────────────────────────
+// ── PDFMonkey — polling court (≤8s pour rester dans le budget free tier) ──────
 
 async function generatePdf(record) {
   const templateId = process.env.PDFMONKEY_TEMPLATE_ID;
@@ -120,32 +123,35 @@ async function generatePdf(record) {
 
   const { document } = await createRes.json();
   const docId = document.id;
-  console.log(`[whatsapp] PDF PDFMonkey lancé, ID=${docId}`);
+  console.log(`[pdf] Document lancé ID=${docId}`);
 
-  // Polling : max 25 × 2s = 50 secondes
-  for (let i = 0; i < 25; i++) {
-    await new Promise((r) => setTimeout(r, 2000));
+  // Polling court : 5 × 1.5s = 7.5s max (compatible free tier Vercel 10s)
+  for (let i = 0; i < 5; i++) {
+    await new Promise((r) => setTimeout(r, 1500));
     const pollRes = await fetch(`https://api.pdfmonkey.io/api/v1/documents/${docId}`, {
       headers: { Authorization: `Bearer ${apiKey}` },
     });
     if (!pollRes.ok) continue;
     const { document: doc } = await pollRes.json();
-    if (doc.status === "success" && doc.download_url) return doc.download_url;
+    console.log(`[pdf] Poll ${i + 1}/5 — status=${doc.status}`);
+    if (doc.status === "success" && doc.download_url) return { url: doc.download_url, done: true };
     if (doc.status === "error") throw new Error(`PDFMonkey error: ${JSON.stringify(doc.errors)}`);
   }
 
-  throw new Error("PDFMonkey timeout: PDF non prêt après 50s");
+  // PDF pas encore prêt → retourner docId pour que l'utilisateur puisse réessayer
+  return { url: null, done: false, docId };
 }
 
 // ── Commande OK ───────────────────────────────────────────────────────────────
 
 async function handleOk(redis, twilioClient) {
-  console.log("[handleOk] Récupération du dernier devis depuis Redis…");
+  console.log("[handleOk] Démarrage");
+
   const raw = await redis.get(KV_LAST_DEVIS_KEY);
   const lastDevis = typeof raw === "string" ? JSON.parse(raw) : raw;
 
   if (!lastDevis) {
-    console.warn("[handleOk] Aucun devis en cours dans Redis");
+    console.warn("[handleOk] Aucun devis en Redis");
     await twilioClient.messages.create({
       from: TWILIO_FROM, to: MY_WHATSAPP,
       body: "❌ Aucun devis en cours. Soumets d'abord une demande via le formulaire du site.",
@@ -153,40 +159,41 @@ async function handleOk(redis, twilioClient) {
     return;
   }
 
-  console.log(`[handleOk] Devis trouvé: ${lastDevis.devis_numero} — ${lastDevis.client_nom}`);
+  console.log(`[handleOk] Devis trouvé: ${lastDevis.devis_numero}`);
 
   try {
-    const msg1 = await twilioClient.messages.create({
-      from: TWILIO_FROM, to: MY_WHATSAPP,
-      body: `⏳ Génération du PDF pour le devis ${lastDevis.devis_numero}…`,
-    });
-    console.log(`[handleOk] Message WhatsApp envoyé: SID=${msg1.sid} status=${msg1.status}`);
+    const result = await generatePdf(lastDevis);
 
-    const downloadUrl = await generatePdf(lastDevis);
-    console.log(`[handleOk] PDF prêt: ${downloadUrl}`);
-
-    const msg2 = await twilioClient.messages.create({
-      from: TWILIO_FROM, to: MY_WHATSAPP,
-      body: `✅ PDF prêt — devis ${lastDevis.devis_numero}\n\n📄 ${downloadUrl}\n\nClient : ${lastDevis.client_nom}\nTotal : ${lastDevis.total_ttc}`,
-    });
-    console.log(`[handleOk] PDF envoyé: SID=${msg2.sid} status=${msg2.status}`);
-
-  } catch (err) {
-    console.error("[handleOk] Erreur:", err.message, err.stack);
-    try {
+    if (result.done) {
+      console.log(`[handleOk] PDF prêt: ${result.url}`);
       await twilioClient.messages.create({
         from: TWILIO_FROM, to: MY_WHATSAPP,
-        body: `❌ Erreur PDF : ${err.message}`,
+        body: `✅ PDF prêt — devis ${lastDevis.devis_numero}\n\n📄 ${result.url}\n\nClient : ${lastDevis.client_nom}\nTotal : ${lastDevis.total_ttc}`,
       });
-    } catch (sendErr) {
-      console.error("[handleOk] Impossible d'envoyer le message d'erreur:", sendErr.message);
+    } else {
+      // PDF pas encore prêt dans les 8s → demander de réessayer
+      console.log(`[handleOk] PDF pas encore prêt, docId=${result.docId}`);
+      // Sauvegarder le docId pour éviter de recréer un document
+      await redis.set(KV_LAST_DEVIS_KEY, JSON.stringify({ ...lastDevis, pdfmonkey_doc_id: result.docId }), { ex: 60 * 60 * 24 * 7 });
+      await twilioClient.messages.create({
+        from: TWILIO_FROM, to: MY_WHATSAPP,
+        body: `⏳ PDF en cours de génération (PDFMonkey prend 15-30s).\n\nRenvoie *OK* dans 30 secondes pour récupérer le lien.`,
+      });
     }
+  } catch (err) {
+    console.error("[handleOk] Erreur PDFMonkey:", err.message);
+    await twilioClient.messages.create({
+      from: TWILIO_FROM, to: MY_WHATSAPP,
+      body: `❌ Erreur PDF : ${err.message}`,
+    });
   }
 }
 
 // ── Commande MODIF ────────────────────────────────────────────────────────────
 
 async function handleModif(modifText, redis, twilioClient) {
+  console.log(`[handleModif] Modification: "${modifText}"`);
+
   const raw = await redis.get(KV_LAST_DEVIS_KEY);
   const lastDevis = typeof raw === "string" ? JSON.parse(raw) : raw;
 
@@ -200,7 +207,6 @@ async function handleModif(modifText, redis, twilioClient) {
 
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-  // On reprend l'historique complet de la conversation pour garder le contexte
   const previousMessages = lastDevis.openai_messages || [
     { role: "system", content: SYSTEM_PROMPT },
     { role: "user", content: `Client: ${lastDevis.client_nom}, Problème: ${lastDevis.probleme}` },
@@ -236,7 +242,6 @@ async function handleModif(modifText, redis, twilioClient) {
   const newResponse = completion.choices[0].message.content;
   const newData = JSON.parse(newResponse);
 
-  // Mise à jour Redis
   const updatedRecord = {
     ...lastDevis,
     ...newData,
@@ -254,14 +259,15 @@ async function handleModif(modifText, redis, twilioClient) {
     body: buildModifiedDevisMessage(newData, lastDevis.client_codepostal),
   });
 
-  console.log(`[whatsapp] Devis ${lastDevis.devis_numero} modifié`);
+  console.log(`[handleModif] Devis ${lastDevis.devis_numero} modifié`);
 }
 
 // ── Commande DEVIS ────────────────────────────────────────────────────────────
 
 async function handleDevis(description, redis, twilioClient) {
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  console.log(`[handleDevis] Description: "${description}"`);
 
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   const userMessage = `Génère un devis à partir de cette description :\n${description}`;
 
   const completion = await openai.chat.completions.create({
@@ -328,7 +334,7 @@ NOTE TECHNICIEN : ${devisData.note_technicien}
 💬 Réponds DEVIS + description pour un nouveau devis`,
   });
 
-  console.log(`[whatsapp] Nouveau devis ${devisNumero} généré depuis WhatsApp`);
+  console.log(`[handleDevis] Nouveau devis ${devisNumero} créé`);
 }
 
 // ── Handler principal ─────────────────────────────────────────────────────────
@@ -339,31 +345,26 @@ module.exports = async function handler(req, res) {
     return res.status(405).send('<?xml version="1.0" encoding="UTF-8"?><Response></Response>');
   }
 
-  // Répondre immédiatement à Twilio (évite le timeout webhook de 15s)
-  sendTwiml(res);
-
   try {
+    // ── 1. Parser le body EN PREMIER (avant toute réponse HTTP) ──────────────
     const body = await parseBody(req);
     const rawMessage = (body.Body || "").trim();
     const from = body.From || "";
 
-    // Sécurité : on n'accepte que les messages de ton propre numéro
+    console.log(`[whatsapp] Reçu de ${from}: "${rawMessage}"`);
+
+    // ── 2. Filtres ────────────────────────────────────────────────────────────
     if (from !== MY_WHATSAPP) {
-      console.warn(`[whatsapp] Message ignoré venant de: ${from}`);
-      return;
+      console.warn(`[whatsapp] Ignoré — expéditeur inconnu: ${from}`);
+      return sendTwiml(res);
     }
 
-    // Ignorer les messages système Twilio sandbox (join/leave codes)
-    const TWILIO_SYSTEM_RE = /^(join|leave)\s+\S+/i;
     if (TWILIO_SYSTEM_RE.test(rawMessage)) {
       console.log(`[whatsapp] Message système Twilio ignoré: "${rawMessage}"`);
-      return;
+      return sendTwiml(res);
     }
 
-    console.log(`[whatsapp] Commande reçue: "${rawMessage}"`);
-
-    const upper = rawMessage.toUpperCase();
-
+    // ── 3. Initialiser les clients ────────────────────────────────────────────
     const redis = new Redis({
       url: process.env.KV_REST_API_URL,
       token: process.env.KV_REST_API_TOKEN,
@@ -374,6 +375,10 @@ module.exports = async function handler(req, res) {
       process.env.TWILIO_AUTH_TOKEN
     );
 
+    const upper = rawMessage.toUpperCase();
+    console.log(`[whatsapp] Dispatch commande: "${upper}"`);
+
+    // ── 4. Exécuter la commande (AVANT d'envoyer TwiML) ──────────────────────
     if (upper === "OK") {
       await handleOk(redis, twilioClient);
 
@@ -384,9 +389,9 @@ module.exports = async function handler(req, res) {
           from: TWILIO_FROM, to: MY_WHATSAPP,
           body: '✏️ Précise les modifications après MODIF.\nEx : "MODIF Ajoute un entretien bisplit et retire le diagnostic"',
         });
-        return;
+      } else {
+        await handleModif(modifText, redis, twilioClient);
       }
-      await handleModif(modifText, redis, twilioClient);
 
     } else if (upper.startsWith("DEVIS")) {
       const description = rawMessage.replace(/^DEVIS\s*/i, "").trim();
@@ -395,9 +400,9 @@ module.exports = async function handler(req, res) {
           from: TWILIO_FROM, to: MY_WHATSAPP,
           body: '💬 Décris la demande après DEVIS.\nEx : "DEVIS Client 13008, clim qui ne refroidit plus, monosplit Daikin"',
         });
-        return;
+      } else {
+        await handleDevis(description, redis, twilioClient);
       }
-      await handleDevis(description, redis, twilioClient);
 
     } else {
       await twilioClient.messages.create({
@@ -406,8 +411,12 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    // ── 5. Répondre à Twilio une fois tout le travail terminé ─────────────────
+    console.log(`[whatsapp] Commande "${upper}" traitée, envoi TwiML`);
+    return sendTwiml(res);
+
   } catch (err) {
-    console.error("[whatsapp] Erreur non rattrapée:", err);
-    // res déjà envoyé, on log uniquement
+    console.error("[whatsapp] Erreur:", err.message, "\n", err.stack);
+    return sendTwiml(res);
   }
 };
