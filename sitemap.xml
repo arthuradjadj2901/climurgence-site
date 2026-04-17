@@ -59,6 +59,14 @@
   </url>
 
   <url>
+    <loc>https://climurgence.com/tarifs/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/tarifs/" />
+  </url>
+
+  <url>
     <loc>https://climurgence.com/urgence/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
