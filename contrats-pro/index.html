@@ -69,9 +69,9 @@
         "mainEntity": [
           {"@type":"Question","name":"Qui peut souscrire un abonnement climatisation ClimUrgence ?","acceptedAnswer":{"@type":"Answer","text":"Tout le monde ! Les abonnements ClimUrgence sont ouverts aux particuliers (maisons, appartements) comme aux professionnels (hôtels, restaurants, bars, commerces, bureaux, cabinets médicaux, entrepôts). ClimUrgence adapte la formule à la nature et au volume de votre installation."}},
           {"@type":"Question","name":"Que comprend un abonnement climatisation ClimUrgence ?","acceptedAnswer":{"@type":"Answer","text":"L'abonnement comprend : visites préventives planifiées (1 à 4 par an selon la formule), nettoyage complet des unités, contrôle du circuit frigorifique, vérification électrique, rapport d'intervention, rapport d'entretien annuel, intervention curative prioritaire en cas de panne avec délai garanti."}},
-          {"@type":"Question","name":"Quel est le délai d'intervention garanti en cas de panne ?","acceptedAnswer":{"@type":"Answer","text":"Selon la formule souscrite, ClimUrgence garantit une intervention en 2h (Sérénité / Premium), 4h (Standard) ou en jour ouvré suivant (Essentiel) en cas de panne. Ces délais sont garantis contractuellement."}},
+          {"@type":"Question","name":"Quel est le délai d'intervention garanti en cas de panne ?","acceptedAnswer":{"@type":"Answer","text":"Selon la formule souscrite, ClimUrgence garantit une intervention sous 4h en heures ouvrées (Premium) ou en jour ouvré suivant (Essentiel) en cas de panne. Ces délais sont garantis contractuellement."}},
           {"@type":"Question","name":"Comment est facturé un abonnement climatisation ?","acceptedAnswer":{"@type":"Answer","text":"Les abonnements sont facturés mensuellement ou annuellement selon votre préférence. Toutes les visites préventives sont incluses dans le forfait ; les pièces de remplacement éventuelles sont facturées selon un barème tarifaire préférentiel (–15 %)."}},
-          {"@type":"Question","name":"Les particuliers ont-ils accès aux mêmes garanties que les professionnels ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention garantis, du même niveau de technicité et des mêmes rapports d'intervention. La formule Sérénité est spécialement conçue pour les particuliers souhaitant un service premium."}}
+          {"@type":"Question","name":"Les particuliers ont-ils accès aux mêmes garanties que les professionnels ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention garantis et du même niveau de technicité. La formule Premium est idéale pour ceux qui souhaitent une couverture prioritaire avec intervention sous 4h."}}
         ]
       }
     ]
@@ -145,77 +145,37 @@
           <p class="section-sub">Particulier ou professionnel, choisissez le niveau de couverture adapté à votre installation et à vos besoins.</p>
         </div>
 
-        <div class="plans-grid">
+        <div class="plans-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
           <div class="plan-card">
             <div class="plan-name">Essentiel</div>
-            <div class="plan-price">À partir de 199 €</div>
-            <div class="plan-period">/ an · par unité</div>
+            <div class="plan-price">25 €<span style="font-size:1rem;font-weight:400"> / mois</span></div>
+            <div class="plan-period">soit 300 € TTC / an</div>
             <ul class="plan-features">
-              <li>1 visite préventive annuelle</li>
-              <li>Nettoyage filtres &amp; échangeurs</li>
-              <li>Contrôle gaz réfrigérant</li>
-              <li>Rapport d'entretien annuel</li>
-              <li>Intervention curative J+1 ouvré</li>
-              <li>Rapport d'intervention PDF</li>
+              <li>1 visite de maintenance préventive annuelle</li>
+              <li>Entretien complet de chaque unité</li>
+              <li>Rapport écrit détaillé post-visite</li>
+              <li>Priorité de planification (RDV sous 5 jours ouvrés)</li>
+              <li>Réduction de 15% sur toutes les interventions de dépannage</li>
             </ul>
-            <a href="/#formulaire" class="btn btn-outline" style="width:100%;justify-content:center;">Demander un devis</a>
+            <a href="/contact/" class="btn btn-outline" style="width:100%;justify-content:center;">Choisir cette offre</a>
           </div>
 
           <div class="plan-card featured">
             <div class="plan-badge">Le plus choisi</div>
-            <div class="plan-name">Standard</div>
-            <div class="plan-price">À partir de 349 €</div>
-            <div class="plan-period">/ an · par unité</div>
-            <ul class="plan-features">
-              <li>2 visites préventives / an</li>
-              <li>Nettoyage complet intérieur + extérieur</li>
-              <li>Contrôle circuit frigorifique complet</li>
-              <li>Vérification électrique</li>
-              <li>Rapport d'entretien annuel</li>
-              <li>Intervention curative en 4h</li>
-              <li>Compte-rendu d'état semestriel</li>
-              <li>Tarif pièces préférentiel –15 %</li>
-            </ul>
-            <a href="/#formulaire" class="btn btn-primary" style="width:100%;justify-content:center;">Demander un devis</a>
-          </div>
-
-          <div class="plan-card">
-            <div class="plan-badge" style="background:var(--accent2,#06D6A0);color:#000;">Particuliers</div>
-            <div class="plan-name">Sérénité</div>
-            <div class="plan-price">Sur devis</div>
-            <div class="plan-period">Maison · Appartement · Plusieurs unités</div>
-            <ul class="plan-features">
-              <li>3 visites préventives / an</li>
-              <li>Entretien complet toutes unités du logement</li>
-              <li>Intervention curative en 2h garantie</li>
-              <li>Astreinte étendue (jusqu'à 22h)</li>
-              <li>Rapport d'entretien annuel</li>
-              <li>Interlocuteur dédié</li>
-              <li>Rapport d'intervention après chaque visite</li>
-              <li>Tarif pièces préférentiel –15 %</li>
-            </ul>
-            <a href="/#formulaire" class="btn btn-outline" style="width:100%;justify-content:center;">Demander un devis</a>
-          </div>
-
-          <div class="plan-card">
-            <div class="plan-badge" style="background:#4A4E69;color:#fff;">Professionnels</div>
             <div class="plan-name">Premium</div>
-            <div class="plan-price">Sur devis</div>
-            <div class="plan-period">Multi-sites · Grandes installations</div>
+            <div class="plan-price">40 €<span style="font-size:1rem;font-weight:400"> / mois</span></div>
+            <div class="plan-period">soit 480 € TTC / an</div>
             <ul class="plan-features">
-              <li>4 visites préventives / an</li>
-              <li>Entretien complet toutes unités</li>
-              <li>Intervention curative en 2h garantie</li>
-              <li>Astreinte étendue (jusqu'à 22h)</li>
-              <li>Registre fluides frigorigènes géré</li>
-              <li>Interlocuteur dédié</li>
-              <li>Rapport mensuel + bilan annuel</li>
-              <li>Pièces de remplacement incluses*</li>
+              <li>2 visites de maintenance par an (printemps + automne)</li>
+              <li>Entretien complet à chaque visite</li>
+              <li>Priorité urgence : intervention sous 4h en heures ouvrées</li>
+              <li>Bilan annuel de performance énergétique</li>
+              <li>Réduction de 15% sur les pièces de rechange</li>
+              <li>Réduction de 15% sur toutes les interventions</li>
             </ul>
-            <a href="/#formulaire" class="btn btn-outline" style="width:100%;justify-content:center;">Demander un devis</a>
+            <a href="/contact/" class="btn btn-primary" style="width:100%;justify-content:center;">Choisir cette offre</a>
           </div>
         </div>
-        <p style="color:var(--text3);font-size:.8rem;text-align:center;margin-top:1rem;">* Hors compresseur et échangeurs. Tarifs HT, hors TVA applicable.</p>
       </div>
     </section>
 
@@ -275,7 +235,7 @@
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="pfaq3" id="pfaq3-btn">Quel est le délai d'intervention garanti en cas de panne ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq3" role="region" aria-labelledby="pfaq3-btn"><div class="faq-answer-inner"><p>Selon la formule : <strong>2h (Sérénité / Premium)</strong>, <strong>4h (Standard)</strong>, ou <strong>J+1 ouvré (Essentiel)</strong>. Ces délais sont garantis avec astreinte étendue jusqu'à 22h pour les formules hautes.</p></div></div>
+            <div class="faq-answer" id="pfaq3" role="region" aria-labelledby="pfaq3-btn"><div class="faq-answer-inner"><p>Selon la formule : <strong>intervention sous 4h en heures ouvrées (Premium)</strong> ou <strong>J+1 ouvré (Essentiel)</strong>. Ces délais sont garantis contractuellement.</p></div></div>
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="pfaq4" id="pfaq4-btn">Comment est facturé un abonnement climatisation ?<span class="faq-icon" aria-hidden="true"></span></button>
@@ -283,7 +243,7 @@
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false" aria-controls="pfaq5" id="pfaq5-btn">Les particuliers bénéficient-ils des mêmes garanties que les professionnels ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq5" role="region" aria-labelledby="pfaq5-btn"><div class="faq-answer-inner"><p>Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention garantis et du même niveau de technicité. La formule <strong>Sérénité</strong> est spécialement conçue pour les particuliers souhaitant un service premium avec intervention en 2h.</p></div></div>
+            <div class="faq-answer" id="pfaq5" role="region" aria-labelledby="pfaq5-btn"><div class="faq-answer-inner"><p>Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention garantis et du même niveau de technicité. La formule <strong>Premium</strong> est idéale pour ceux qui souhaitent une couverture prioritaire avec intervention sous 4h.</p></div></div>
           </div>
         </div>
       </div>
