@@ -66,12 +66,5 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/tarifs/" />
   </url>
 
-  <url>
-    <loc>https://climurgence.com/urgence/</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/urgence/" />
-  </url>
 
 </urlset>

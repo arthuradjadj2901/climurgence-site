@@ -72,6 +72,16 @@
       "source": "/installation",
       "destination": "/installation-climatisation",
       "permanent": true
+    },
+    {
+      "source": "/urgence",
+      "destination": "/depannage-clim-marseille",
+      "permanent": true
+    },
+    {
+      "source": "/urgence/",
+      "destination": "/depannage-clim-marseille/",
+      "permanent": true
     }
   ]
 }

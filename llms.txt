@@ -64,7 +64,6 @@
 - **Contrats Pro :** https://climurgence.com/contrats-pro/
 - **Zones d'intervention :** https://climurgence.com/zone-intervention/
 - **Contact & Devis :** https://climurgence.com/contact/
-- **Page Urgence :** https://climurgence.com/urgence/
 - **Sitemap :** https://climurgence.com/sitemap.xml
 
 ## Grille tarifaire publique (TTC, TVA 20% incluse)
