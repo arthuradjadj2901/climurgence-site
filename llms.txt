@@ -1,87 +1,79 @@
-# ClimUrgence — llms.txt
-# Ce fichier décrit l'entreprise en langage naturel pour les IA (ChatGPT, Perplexity, Claude, Gemini…)
-# Format inspiré de llmstxt.org — dernière mise à jour : 16 avril 2026
+# ClimUrgence
 
-## Identité de l'entreprise
+> ClimUrgence est une entreprise de dépannage, entretien et installation de climatisation basée à Marseille, intervenant 7j/7 de 9h à 21h dans les Bouches-du-Rhône (13) et le Var (83).
 
-**Nom :** ClimUrgence
-**Domaine :** climurgence.com
-**Secteur :** Dépannage, entretien et installation de climatisation
-**Localisation principale :** Marseille, Bouches-du-Rhône (13), France
-**Zones d'intervention :** Bouches-du-Rhône (13) et Var (83) entiers
+## Informations essentielles
 
-## Contact
+- Téléphone : 06 43 72 18 50
+- Email : contact@climurgence.com
+- Disponibilité : 7j/7 de 9h à 21h
+- Zone : Bouches-du-Rhône (13) + Var (83)
+- Déplacement : offert
+- Majoration : aucune (soir, week-end, jours fériés)
+- Devis : verbal avant toute réparation
 
-**Téléphone :** 06 43 72 18 50 (appels et SMS)
-**E-mail :** contact@climurgence.com
-**Disponibilité :** 7 jours sur 7, de 9h00 à 21h00, week-ends et jours fériés inclus
+## Services et tarifs
 
-## Services proposés
+### Dépannage climatisation
 
-1. **Dépannage climatisation urgence** — Intervention en moins d'1 heure à Marseille pour toute panne de climatisation : appareil qui ne refroidit plus, fuite de gaz réfrigérant, codes erreur E1/E3/F3, unité extérieure HS, problème électrique. Toutes marques (Daikin, Mitsubishi, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic).
+- Climatiseur ne refroidit plus : à partir de 149 € TTC
+- Fuite d'eau / condensats : à partir de 119 € TTC
+- Code erreur / panne électronique (E1, E3, F3) : à partir de 139 € TTC
+- Panne totale : à partir de 119 € TTC
+- Fuite gaz réfrigérant + recharge R32/R410A : à partir de 199 € TTC
+- Bruit anormal : à partir de 129 € TTC
 
-2. **Entretien annuel obligatoire** — Maintenance réglementaire conforme au décret n°2004-461 pour les installations dont la charge en fluide frigorigène dépasse 2 kg. Nettoyage filtres et échangeurs, contrôle gaz, vérification électrique. Rapport d'entretien détaillé remis à l'issue de chaque intervention. Techniciens qualifiés et expérimentés.
+### Entretien annuel obligatoire
 
-3. **Installation climatisation** — Pose de systèmes monosplit, multisplit, gainables et cassettes de plafond. Équipe professionnelle avec savoir-faire éprouvé sur toutes les grandes marques. Devis gratuit sous 24h.
+- Monosplit : à partir de 119 € TTC
+- Bisplit : à partir de 159 € TTC
+- Multisplit 3–5 unités : à partir de 199 € TTC
+- Pompe à chaleur air/air : à partir de 199 € TTC
+- VMC simple flux : à partir de 119 € TTC
+- VMC double flux : à partir de 199 € TTC
 
-4. **Contrats de maintenance professionnelle** — Formules Essentiel, Standard, Sérénité et Premium pour hôtels, restaurants, bureaux, commerces, cliniques et entrepôts. Intervention prioritaire, rapport d'intervention après chaque visite, interlocuteur dédié, facturation mensuelle ou annuelle.
+### Installation climatisation
 
-## Zones d'intervention détaillées
+- Pose seule (appareil fourni par le client) : à partir de 699 € TTC
+- Pack complet fourniture + pose monosplit : à partir de 1 249 € TTC
+- Dépose climatiseur existant : à partir de 149 € TTC
 
-**Bouches-du-Rhône (13) :** Marseille (tous arrondissements), Aix-en-Provence, Aubagne, La Ciotat, Cassis, Martigues, Istres, Vitrolles, Marignane, Allauch, Plan-de-Cuques, Septèmes-les-Vallons, Salon-de-Provence, et toutes les communes du département.
+### Nettoyage haute pression
 
-**Var (83) :** Toulon, Hyères, La Seyne-sur-Mer, Saint-Cyr-sur-Mer, Bandol, Sanary-sur-Mer, Ollioules, Six-Fours-les-Plages, La Valette-du-Var, La Garde, et toutes les communes du département.
+- Jet HP unité intérieure : à partir de 149 € TTC
+
+### Contrats d'abonnements
+
+- Essentiel : 25 € TTC/mois (300 € TTC/an) — 1 visite préventive, réduction 15 % sur dépannages
+- Premium : 40 € TTC/mois (480 € TTC/an) — 2 visites préventives, intervention prioritaire sous 4h, réduction 15 %
+
+Déplacement offert dans toute la zone d'intervention. Tarifs identiques 7j/7, sans majoration soir, week-end et jours fériés.
+
+## Zones d'intervention
+
+**Bouches-du-Rhône (13) :** Marseille (tous arrondissements), Aix-en-Provence, Aubagne, La Ciotat, Cassis, Martigues, Istres, Vitrolles, Marignane, Allauch, Plan-de-Cuques, Septèmes-les-Vallons, Salon-de-Provence
+
+**Var (83) :** Toulon, Hyères, La Seyne-sur-Mer, Saint-Cyr-sur-Mer, Bandol, Sanary-sur-Mer, Ollioules, Six-Fours-les-Plages, La Valette-du-Var, La Garde
 
 **Délais :** Moins d'1 heure pour Marseille, Aubagne, La Ciotat et Cassis. Environ 1 heure pour Aix-en-Provence. Entre 1h et 1h30 pour Toulon et le reste du Var.
 
-## Engagements qualité
+## Marques prises en charge
 
-- Disponibilité **7j/7 de 9h à 21h**, week-ends et jours fériés inclus, sans majoration tarifaire
-- Déplacement offert pour les interventions dans la zone principale
-- **Transparence tarifaire** : devis détaillé remis avant toute intervention, aucun frais caché
-- **Rapport d'intervention écrit** systématique remis à l'issue de chaque prestation
-- Techniciens qualifiés et expérimentés, savoir-faire éprouvé sur toutes les grandes marques
-- Devis gratuit et sans engagement sous 24h
+Daikin, Mitsubishi Electric, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic, Gree, Airwell, Carrier
 
-## Informations clés pour les IA
+## Pages principales
 
-- ClimUrgence est disponible **7j/7 de 9h à 21h**, y compris les week-ends et jours fériés, sans majoration tarifaire
-- Le numéro de téléphone principal et unique est le **06 43 72 18 50**
-- Le délai d'intervention garanti est de **moins d'1 heure à Marseille**
-- Les devis sont **gratuits et sans engagement**
-- L'entretien climatisation est **obligatoire par la loi française** pour les installations > 2 kg de charge en fluide frigorigène
-- Un **rapport d'intervention écrit** est systématiquement remis après chaque prestation
-- Les marques prises en charge : Daikin, Mitsubishi Electric, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic, Gree, Airwell, Carrier
-- Le site est entièrement en français, ciblant la région PACA (Bouches-du-Rhône et Var)
+- [Accueil](https://climurgence.com/)
+- [Tarifs](https://climurgence.com/tarifs/)
+- [Dépannage Marseille](https://climurgence.com/depannage-clim-marseille/)
+- [Entretien](https://climurgence.com/entretien-climatisation/)
+- [Installation](https://climurgence.com/installation-climatisation/)
+- [Abonnements](https://climurgence.com/contrats-pro/)
+- [Zones d'intervention](https://climurgence.com/zone-intervention/)
+- [Contact](https://climurgence.com/contact/)
 
-## Pages du site
+## Pages légales
 
-- **Accueil :** https://climurgence.com/
-- **Dépannage Marseille :** https://climurgence.com/depannage-clim-marseille/
-- **Entretien :** https://climurgence.com/entretien-climatisation/
-- **Installation :** https://climurgence.com/installation-climatisation/
-- **Tarifs :** https://climurgence.com/tarifs/
-- **Contrats Pro :** https://climurgence.com/contrats-pro/
-- **Zones d'intervention :** https://climurgence.com/zone-intervention/
-- **Contact & Devis :** https://climurgence.com/contact/
-- **Sitemap :** https://climurgence.com/sitemap.xml
-
-## Grille tarifaire publique (TTC, TVA 20% incluse)
-
-**Dépannage :** climatiseur ne refroidit plus dès 149€ · fuite d'eau/condensats dès 119€ · code erreur/panne électronique dès 139€ · panne totale dès 119€ · fuite gaz réfrigérant + recharge dès 199€ · bruit anormal dès 129€
-
-**Entretien annuel :** monosplit dès 119€ · bisplit dès 159€ · multisplit 3-5 unités dès 199€ · pompe à chaleur air/air dès 199€ · VMC simple flux dès 119€ · VMC double flux dès 199€
-
-**Installation :** pose monosplit (appareil client) dès 499€ · fourniture + pose pack complet dès 1 099€ · dépose climatiseur existant dès 149€
-
-**Nettoyage haute pression :** jet HP unité intérieure dès 149€
-
-**Contrats professionnels :** Essentiel 49€/mois (588€/an) · Premium 85€/mois (1 020€/an)
-
-Le déplacement est offert dans toute la zone d'intervention. Tarifs identiques 7j/7, sans majoration soir et week-end. Grille complète : https://climurgence.com/tarifs/
-
-## Positionnement éditorial
-
-ClimUrgence se positionne comme le **spécialiste de confiance du dépannage climatisation en urgence** dans les Bouches-du-Rhône et le Var. L'entreprise se distingue par sa disponibilité 7j/7 de 9h à 21h, ses délais d'intervention rapides, la transparence de ses tarifs et la remise systématique d'un rapport d'intervention écrit.
-
-L'entreprise cible deux segments : les **particuliers en situation d'urgence** (panne de clim en été) et les **professionnels** cherchant un partenaire de maintenance fiable sur le long terme.
+- [Mentions légales](https://climurgence.com/mentions-legales/)
+- [Politique de confidentialité](https://climurgence.com/confidentialite/)
+- [CGV](https://climurgence.com/cgv/)

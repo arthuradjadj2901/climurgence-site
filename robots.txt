@@ -5,8 +5,11 @@ User-agent: *
 Allow: /
 Disallow:
 
-# Bots de moteurs de recherche classiques
+# Moteurs de recherche classiques
 User-agent: Googlebot
+Allow: /
+
+User-agent: GoogleOther
 Allow: /
 
 User-agent: Bingbot
@@ -24,16 +27,17 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Bots IA — explicitement autorisés
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: OAI-SearchBot
 Allow: /
 
+# Anthropic
 User-agent: ClaudeBot
 Allow: /
 
@@ -43,23 +47,64 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-User-agent: cohere-ai
+User-agent: ClaudeBot-User
 Allow: /
 
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / AI
 User-agent: Google-Extended
 Allow: /
 
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+
+# Common Crawl
 User-agent: CCBot
 Allow: /
 
+# Meta
 User-agent: FacebookBot
 Allow: /
 
-User-agent: Applebot
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# Divers
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: YouBot
 Allow: /
 
 # Sitemap
 Sitemap: https://climurgence.com/sitemap.xml
 
-# IndexNow
-# Clé : climurgence2026a8f3c7d21b9
+# IndexNow — Clé : climurgence2026a8f3c7d21b9

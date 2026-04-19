@@ -1,0 +1,12 @@
+/* TEAM */
+Équipe ClimUrgence
+Dépannage climatisation 7j/7
+Marseille et région PACA
+
+/* SITE */
+Dernière mise à jour : 2026-04-18
+Langue : Français
+Standards : HTML5, CSS3, Schema.org, llms.txt
+
+/* REMERCIEMENTS */
+Merci à nos clients pour leur confiance.

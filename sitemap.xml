@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://climurgence.com/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/" />
@@ -12,15 +12,23 @@
 
   <url>
     <loc>https://climurgence.com/depannage-clim-marseille/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/depannage-clim-marseille/" />
   </url>
 
   <url>
+    <loc>https://climurgence.com/tarifs/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/tarifs/" />
+  </url>
+
+  <url>
     <loc>https://climurgence.com/entretien-climatisation/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/entretien-climatisation/" />
@@ -28,7 +36,7 @@
 
   <url>
     <loc>https://climurgence.com/installation-climatisation/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/installation-climatisation/" />
@@ -36,7 +44,7 @@
 
   <url>
     <loc>https://climurgence.com/contrats-pro/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/contrats-pro/" />
@@ -44,7 +52,7 @@
 
   <url>
     <loc>https://climurgence.com/zone-intervention/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/zone-intervention/" />
@@ -52,19 +60,34 @@
 
   <url>
     <loc>https://climurgence.com/contact/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/contact/" />
   </url>
 
   <url>
-    <loc>https://climurgence.com/tarifs/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/tarifs/" />
+    <loc>https://climurgence.com/mentions-legales/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/mentions-legales/" />
   </url>
 
+  <url>
+    <loc>https://climurgence.com/confidentialite/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/confidentialite/" />
+  </url>
+
+  <url>
+    <loc>https://climurgence.com/cgv/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/cgv/" />
+  </url>
 
 </urlset>
