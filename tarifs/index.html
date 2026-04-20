@@ -1117,7 +1117,7 @@
           </div>
           <div class="form-group">
             <label for="m-tel">Téléphone <span class="req">*</span></label>
-            <input type="tel" id="m-tel" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel" required />
+            <input type="tel" id="m-tel" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel" pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$" required />
           </div>
           <div class="form-group">
             <label for="m-email">E-mail <span class="req">*</span></label>
@@ -1125,19 +1125,14 @@
           </div>
           <div class="form-group">
             <label for="m-cp">Code postal <span class="req">*</span></label>
-            <input type="text" id="m-cp" name="codepostal" placeholder="13000" maxlength="5" inputmode="numeric" required />
+            <input type="text" id="m-cp" name="codepostal" placeholder="13000" maxlength="5" pattern="[0-9]{5}" inputmode="numeric" required />
           </div>
           <div class="form-group full">
             <label for="m-message">Message complémentaire</label>
             <textarea id="m-message" name="message" placeholder="Marque de votre appareil, situation particulière…" rows="3"></textarea>
           </div>
-          <div class="form-group full">
-            <div class="rgpd-group">
-              <input type="checkbox" id="m-rgpd" name="rgpd" />
-              <label for="m-rgpd">J'accepte d'être recontacté par ClimUrgence concernant ma demande <span class="req">*</span></label>
-            </div>
-          </div>
         </div>
+        <p style="font-size:.78rem;color:var(--text-muted);text-align:center;margin:.75rem 0 0;line-height:1.5;">En soumettant ce formulaire, vous acceptez d'être recontacté(e) par ClimUrgence au sujet de votre demande. Vos données sont traitées conformément à notre <a href="/confidentialite/" style="color:var(--text-muted);text-decoration:underline;">politique de confidentialité</a>.</p>
         <div class="modal-actions">
           <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
           <button type="button" class="btn btn-outline" id="modalCancel">Annuler</button>
@@ -1190,7 +1185,6 @@
       var tel   = modalForm.querySelector('[name="telephone"]');
       var email = modalForm.querySelector('[name="email"]');
       var cp    = modalForm.querySelector('[name="codepostal"]');
-      var rgpd  = modalForm.querySelector('[name="rgpd"]');
       var msg   = modalForm.querySelector('[name="message"]');
 
       function setErr(el, isErr) { if (el) el.style.borderColor = isErr ? '#e53e3e' : ''; }
@@ -1202,8 +1196,6 @@
       else setErr(tel, false);
       if (!email || !email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { setErr(email, true); ok = false; } else setErr(email, false);
       if (!cp   || !cp.value.trim())   { setErr(cp,   true); ok = false; } else setErr(cp,   false);
-      if (!rgpd || !rgpd.checked) { if (rgpd) rgpd.parentElement.style.color = '#e53e3e'; ok = false; }
-      else if (rgpd) rgpd.parentElement.style.color = '';
       if (!ok) return;
 
       var btn = modalForm.querySelector('[type="submit"]');

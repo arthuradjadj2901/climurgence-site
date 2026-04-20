@@ -34,15 +34,21 @@ Règles : déplacement offert, aucune majoration soir/week-end, TVA 20%, ne jama
 Réponds UNIQUEMENT en JSON valide sans markdown :
 {"client_nom":"nom","probleme":"résumé","lignes_whatsapp":"• Prestation (REF) — prix€ TTC\\n• Prestation (REF) — prix€ TTC","lignes_html":"<tr><td>Prestation</td><td>REF</td><td class=prix>prix€ TTC</td></tr>","total_ttc":"total€ TTC","conditions":"conditions","note_technicien":"note"}`;
 
-function buildWhatsAppMessage(devisData, codepostal) {
-  return `🔧 NOUVEAU DEVIS — ${devisData.client_nom} (${codepostal || ""})
+function buildWhatsAppMessage(devisData, { telephone, email, codepostal, message }) {
+  const msgClient = (message || "").trim() || "Aucun message";
+  return `Nouvelle demande ClimUrgence
+📍 Prestation : ${devisData.probleme}
+👤 Nom : ${devisData.client_nom}
+📞 Téléphone : ${telephone || "Non renseigné"}
+📧 Email : ${email || "Non renseigné"}
+📮 Code postal : ${codepostal || "Non renseigné"}
+💬 Message : ${msgClient}
 
-PROBLÈME : ${devisData.probleme}
-
-LIGNES DE DEVIS :
+─────────────────
+DEVIS GÉNÉRÉ
 ${devisData.lignes_whatsapp}
 
-TOTAL : ${devisData.total_ttc}
+TOTAL TTC : ${devisData.total_ttc}
 DÉPLACEMENT : Offert
 CONDITIONS : ${devisData.conditions}
 NOTE TECHNICIEN : ${devisData.note_technicien}
@@ -143,7 +149,7 @@ Message complémentaire: ${message || "Aucun"}`;
     await twilioClient.messages.create({
       from: TWILIO_FROM,
       to: MY_WHATSAPP,
-      body: buildWhatsAppMessage(devisData, codepostal),
+      body: buildWhatsAppMessage(devisData, { telephone, email, codepostal, message }),
     });
 
     console.log(`[devis] Devis ${devisNumero} créé et envoyé sur WhatsApp`);
