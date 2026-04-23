@@ -67,6 +67,14 @@
   </url>
 
   <url>
+    <loc>https://climurgence.com/guide/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/guide/" />
+  </url>
+
+  <url>
     <loc>https://climurgence.com/contact/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
