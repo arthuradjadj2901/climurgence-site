@@ -36,56 +36,139 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "Service",
       "@id": "https://climurgence.com/contrats-pro/#essentiel",
       "name": "Contrat maintenance Essentiel ClimUrgence",
-      "description": "Contrat annuel d'entretien climatisation : 1 visite préventive par an, réduction 15% sur tous les dépannages, rapport écrit systématique. Adapté particuliers et professionnels.",
-      "brand": {
-        "@type": "Brand",
-        "name": "ClimUrgence"
+      "serviceType": "Contrat de maintenance climatisation",
+      "description": "Contrat annuel d'entretien climatisation à 25 € TTC par mois. Comprend 1 visite de maintenance préventive par an, réduction de 15 % sur tous les dépannages, compte-rendu d'intervention écrit systématique. Adapté aux particuliers et professionnels (commerces, bureaux, cabinets médicaux).",
+      "provider": {
+        "@id": "https://climurgence.com/#business"
       },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bouches-du-Rhône"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        }
+      ],
       "offers": {
         "@type": "Offer",
+        "name": "Abonnement mensuel Essentiel",
         "price": 25,
         "priceCurrency": "EUR",
         "valueAddedTaxIncluded": true,
         "priceSpecification": {
-          "@type": "PriceSpecification",
+          "@type": "UnitPriceSpecification",
           "price": 25,
           "priceCurrency": "EUR",
-          "billingDuration": "P1M"
+          "valueAddedTaxIncluded": true,
+          "billingIncrement": 1,
+          "unitCode": "MON",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": 1,
+            "unitCode": "MON"
+          }
         },
         "availability": "https://schema.org/InStock",
         "seller": {
           "@id": "https://climurgence.com/#business"
-        }
-      }
+        },
+        "url": "https://climurgence.com/contrats-pro/",
+        "category": "Contrat de maintenance"
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "termsOfService": "https://climurgence.com/cgv/",
+      "serviceOutput": [
+        "1 visite de maintenance préventive par an",
+        "Rapport d'intervention écrit",
+        "Réduction 15% sur dépannages",
+        "Priorité de planification RDV sous 5 jours"
+      ]
     },
     {
-      "@type": "Product",
+      "@type": "Service",
       "@id": "https://climurgence.com/contrats-pro/#premium",
       "name": "Contrat maintenance Premium ClimUrgence",
-      "description": "Contrat annuel d'entretien climatisation premium : 2 visites préventives par an, intervention garantie sous 4h, réduction 20% sur pièces et dépannages. Recommandé pour restaurants, hôtels, commerces.",
-      "brand": {
-        "@type": "Brand",
-        "name": "ClimUrgence"
+      "serviceType": "Contrat de maintenance climatisation premium",
+      "description": "Contrat annuel d'entretien climatisation premium à 40 € TTC par mois. Comprend 2 visites de maintenance préventive par an, intervention garantie sous 4 heures en cas de panne, réduction de 20 % sur les pièces et dépannages. Recommandé pour restaurants, hôtels, commerces alimentaires et salles de sport.",
+      "provider": {
+        "@id": "https://climurgence.com/#business"
       },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bouches-du-Rhône"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        }
+      ],
       "offers": {
         "@type": "Offer",
+        "name": "Abonnement mensuel Premium",
         "price": 40,
         "priceCurrency": "EUR",
         "valueAddedTaxIncluded": true,
         "priceSpecification": {
-          "@type": "PriceSpecification",
+          "@type": "UnitPriceSpecification",
           "price": 40,
           "priceCurrency": "EUR",
-          "billingDuration": "P1M"
+          "valueAddedTaxIncluded": true,
+          "billingIncrement": 1,
+          "unitCode": "MON",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": 1,
+            "unitCode": "MON"
+          }
         },
         "availability": "https://schema.org/InStock",
         "seller": {
           "@id": "https://climurgence.com/#business"
-        }
-      }
+        },
+        "url": "https://climurgence.com/contrats-pro/",
+        "category": "Contrat de maintenance premium"
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "termsOfService": "https://climurgence.com/cgv/",
+      "serviceOutput": [
+        "2 visites de maintenance préventive par an",
+        "Intervention garantie sous 4h",
+        "Rapport détaillé avec préconisations",
+        "Réduction 20% sur pièces et dépannages",
+        "Bilan annuel de performance énergétique"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -113,6 +196,14 @@
       "isPartOf": {
         "@id": "https://climurgence.com/#website"
       },
+      "about": [
+        {
+          "@id": "https://climurgence.com/contrats-pro/#essentiel"
+        },
+        {
+          "@id": "https://climurgence.com/contrats-pro/#premium"
+        }
+      ],
       "inLanguage": "fr-FR",
       "dateModified": "2026-04-23"
     }
