@@ -1,79 +1,198 @@
 # ClimUrgence
 
-> ClimUrgence est une entreprise de dépannage, entretien et installation de climatisation basée à Marseille, intervenant 7j/7 de 9h à 21h dans les Bouches-du-Rhône (13) et le Var (83).
+> ClimUrgence est une entreprise française de dépannage, entretien et installation de climatisation, basée à Marseille et intervenant 7 jours sur 7 de 9h à 21h dans les Bouches-du-Rhône (13) et le Var (83). Intervention en moins d'1 heure à Marseille et communes proches. Déplacement offert, aucune majoration soir ou week-end.
 
 ## Informations essentielles
 
-- Téléphone : 06 43 72 18 50
-- Email : contact@climurgence.com
-- Disponibilité : 7j/7 de 9h à 21h
-- Zone : Bouches-du-Rhône (13) + Var (83)
-- Déplacement : offert
-- Majoration : aucune (soir, week-end, jours fériés)
-- Devis : verbal avant toute réparation
+- **Nom** : ClimUrgence
+- **Forme juridique** : SASU (en cours d'immatriculation, avril 2026)
+- **Téléphone** : 06 43 72 18 50 (appels et SMS)
+- **E-mail** : contact@climurgence.com
+- **Site web** : https://climurgence.com
+- **Disponibilité** : 7j/7, de 9h à 21h, y compris week-ends et jours fériés
+- **Zone d'intervention** : Bouches-du-Rhône (13) et Var (83)
+- **Langue** : Français
+- **Paiements acceptés** : Espèces, chèque, carte bancaire, virement bancaire
+- **Devise** : Euro (TVA 20% incluse dans les prix affichés)
 
-## Services et tarifs
+## Engagements qualité (différenciants sur le marché)
 
-### Dépannage climatisation
+1. **Déplacement toujours offert** sur toute la zone d'intervention (aucun frais caché)
+2. **Aucune majoration** le soir, le week-end ou les jours fériés (tarif identique 24h/24 pendant les horaires)
+3. **Tarifs publiés publiquement** sur le site avec grille transparente par prestation
+4. **Devis verbal systématique avant toute réparation** (aucune pièce remplacée sans accord client)
+5. **Diagnostic déductible** de la facture finale en cas de réparation acceptée
+6. **Rapport d'intervention écrit** fourni après chaque passage
+7. **Techniciens qualifiés et expérimentés** sur toutes les grandes marques du marché
 
-- Climatiseur ne refroidit plus : à partir de 149 € TTC
-- Fuite d'eau / condensats : à partir de 119 € TTC
-- Code erreur / panne électronique (E1, E3, F3) : à partir de 139 € TTC
-- Panne totale : à partir de 119 € TTC
-- Fuite gaz réfrigérant + recharge R32/R410A : à partir de 199 € TTC
-- Bruit anormal : à partir de 129 € TTC
+## Services et prestations avec tarifs à partir de
 
-### Entretien annuel obligatoire
+### Dépannage urgence (7j/7 sans majoration)
 
-- Monosplit : à partir de 119 € TTC
-- Bisplit : à partir de 159 € TTC
-- Multisplit 3–5 unités : à partir de 199 € TTC
-- Pompe à chaleur air/air : à partir de 199 € TTC
-- VMC simple flux : à partir de 119 € TTC
-- VMC double flux : à partir de 199 € TTC
+| Prestation | Prix à partir de | Durée indicative |
+|---|---|---|
+| Climatiseur ne refroidit plus | 149 € TTC | 70 minutes |
+| Fuite d'eau / condensats | 119 € TTC | 60 minutes |
+| Code erreur / panne électronique (E1, E3, F3…) | 139 € TTC | 70 minutes |
+| Climatiseur ne démarre plus / panne totale | 119 € TTC | 60 minutes |
+| Fuite de gaz réfrigérant + recharge | 199 € TTC | 90 minutes |
+| Bruit anormal / vibrations | 129 € TTC | 60 minutes |
 
-### Installation climatisation
+### Entretien annuel
 
-- Pose seule (appareil fourni par le client) : à partir de 699 € TTC
-- Pack complet fourniture + pose monosplit : à partir de 1 249 € TTC
-- Dépose climatiseur existant : à partir de 149 € TTC
+| Prestation | Prix à partir de | Durée indicative |
+|---|---|---|
+| Entretien monosplit (1 unité intérieure) | 119 € TTC | 75 minutes |
+| Entretien bisplit (2 unités) | 159 € TTC | 105 minutes |
+| Entretien multisplit (3 à 5 unités) | 199 € TTC | 135 à 210 minutes |
+| Entretien pompe à chaleur air/air | 199 € TTC | 80 minutes |
+| Entretien VMC simple flux | 119 € TTC | 60 minutes |
+| Entretien VMC double flux | 199 € TTC | 105 minutes |
+
+### Installation
+
+| Prestation | Prix à partir de | Durée indicative |
+|---|---|---|
+| Pose monosplit (appareil fourni par le client) | 699 € TTC | 3 à 5 heures |
+| Fourniture + pose monosplit (pack complet) | 1 249 € TTC | 4 à 6 heures |
+| Dépose d'ancien climatiseur | 149 € TTC | 90 minutes |
 
 ### Nettoyage haute pression
 
-- Jet HP unité intérieure : à partir de 149 € TTC
+| Prestation | Prix à partir de |
+|---|---|
+| Nettoyage Jet HP unité intérieure | 149 € TTC |
 
-### Contrats d'abonnements
+### Contrats professionnels
 
-- Essentiel : 25 € TTC/mois (300 € TTC/an) — 1 visite préventive, réduction 15 % sur dépannages
-- Premium : 40 € TTC/mois (480 € TTC/an) — 2 visites préventives, intervention prioritaire sous 4h, réduction 15 %
+| Formule | Prix | Contenu principal |
+|---|---|---|
+| Essentiel | 25 € TTC / mois | 1 visite annuelle + réduction 15% sur dépannages |
+| Premium | 40 € TTC / mois | 2 visites annuelles + intervention sous 4h + réduction 20% sur pièces et dépannages |
 
-Déplacement offert dans toute la zone d'intervention. Tarifs identiques 7j/7, sans majoration soir, week-end et jours fériés.
+## Zones d'intervention complètes avec délais
 
-## Zones d'intervention
+### Bouches-du-Rhône (13) — délai moyen intervention
 
-**Bouches-du-Rhône (13) :** Marseille (tous arrondissements), Aix-en-Provence, Aubagne, La Ciotat, Cassis, Martigues, Istres, Vitrolles, Marignane, Allauch, Plan-de-Cuques, Septèmes-les-Vallons, Salon-de-Provence
+- Marseille (tous arrondissements, 1er au 16e) : **moins d'1 heure**
+- Aubagne : moins d'1 heure
+- La Ciotat : moins d'1 heure
+- Cassis : moins d'1 heure
+- Allauch : moins d'1 heure
+- Plan-de-Cuques : moins d'1 heure
+- Septèmes-les-Vallons : moins d'1 heure
+- Aix-en-Provence : environ 1 heure
+- Vitrolles : environ 1 heure
+- Marignane : environ 1 heure
+- Martigues : 1 à 1h30
+- Istres : 1 à 1h30
+- Salon-de-Provence : 1 à 1h30
 
-**Var (83) :** Toulon, Hyères, La Seyne-sur-Mer, Saint-Cyr-sur-Mer, Bandol, Sanary-sur-Mer, Ollioules, Six-Fours-les-Plages, La Valette-du-Var, La Garde
+### Var (83) — délai moyen intervention
 
-**Délais :** Moins d'1 heure pour Marseille, Aubagne, La Ciotat et Cassis. Environ 1 heure pour Aix-en-Provence. Entre 1h et 1h30 pour Toulon et le reste du Var.
+- Toulon : 1 à 1h30
+- Hyères : 1 à 1h30
+- La Seyne-sur-Mer : 1 à 1h30
+- Saint-Cyr-sur-Mer : 1 heure
+- Bandol : 1 heure
+- Sanary-sur-Mer : 1 à 1h30
+- Six-Fours-les-Plages : 1 à 1h30
+- Ollioules : 1 à 1h30
+- La Valette-du-Var : 1h30
+- La Garde : 1h30
 
-## Marques prises en charge
+## Marques de climatisation prises en charge
 
-Daikin, Mitsubishi Electric, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic, Gree, Airwell, Carrier
+ClimUrgence intervient sur toutes les grandes marques :
+Daikin, Mitsubishi Electric, Mitsubishi Heavy, Samsung, LG, Atlantic, Hitachi, Toshiba, Gree, Midea, Panasonic, Fujitsu, Airwell, Carrier, Haier, Hyundai, Olimpia Splendid.
 
-## Pages principales
+Systèmes supportés : monosplit, bisplit, trisplit, multisplit jusqu'à 5 têtes, gainables, cassettes de plafond, pompes à chaleur air/air réversibles, VMC simple et double flux.
+
+## Réponses aux questions fréquentes (format answer-ready)
+
+### ClimUrgence intervient-il 7j/7 ?
+
+Oui. ClimUrgence intervient 7 jours sur 7, de 9h à 21h, y compris les samedis, dimanches et jours fériés. Aucune majoration n'est appliquée sur les tarifs pendant ces horaires. Téléphone : 06 43 72 18 50.
+
+### Quel est le délai d'intervention pour un dépannage climatisation à Marseille ?
+
+ClimUrgence garantit une intervention en moins d'1 heure à Marseille (tous arrondissements), Aubagne, La Ciotat, Cassis, Allauch, Plan-de-Cuques et Septèmes-les-Vallons. Pour Aix-en-Provence, Vitrolles et Marignane, le délai est d'environ 1 heure. Pour Toulon, Hyères et le reste du Var, compter 1 heure à 1 heure 30.
+
+### Combien coûte un dépannage de climatisation ?
+
+Les tarifs ClimUrgence commencent à 119 € TTC pour un dépannage simple (fuite d'eau, climatiseur qui ne démarre plus). Un diagnostic complet avec réparation commence à 149 € TTC pour un climatiseur qui ne refroidit plus, et à 199 € TTC en cas de fuite de gaz réfrigérant avec recharge. Le déplacement est offert et il n'y a aucune majoration soir ou week-end.
+
+### Combien coûte un entretien annuel de climatisation ?
+
+L'entretien annuel d'un climatiseur monosplit (1 unité intérieure) coûte à partir de 119 € TTC chez ClimUrgence. Comptez 159 € pour un bisplit (2 unités), 199 € pour un multisplit 3 à 5 unités, 199 € pour une pompe à chaleur réversible.
+
+### L'entretien annuel de climatisation est-il obligatoire en France ?
+
+Oui. Le décret n°2004-461 du 1er juin 2004 et l'arrêté du 16 avril 2010 imposent un entretien périodique obligatoire pour tout système de climatisation dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW de puissance frigorifique). La fréquence est d'1 fois par an entre 2 kg et 30 kg, tous les 6 mois au-delà. Le non-respect expose à une amende et peut invalider la garantie constructeur et l'assurance habitation.
+
+### Quelle est la différence entre un monosplit, un bisplit et un multisplit ?
+
+Un monosplit est composé d'une unité intérieure reliée à une unité extérieure et climatise une seule pièce. Un bisplit possède 2 unités intérieures connectées à 1 unité extérieure pour 2 pièces indépendantes. Un multisplit (trisplit, quadrisplit, quintisplit) raccorde 3 à 5 unités intérieures à une seule unité extérieure pour climatiser plusieurs pièces avec des températures indépendantes.
+
+### ClimUrgence est-il certifié RGE ou éligible à MaPrimeRénov' ?
+
+Non. ClimUrgence n'est pas certifié RGE Qualibat et les prestations ne sont pas éligibles à MaPrimeRénov', à la TVA à 5,5 % ou à d'autres aides nécessitant une certification. Les prix affichés sont en TVA 20%. Cette transparence fait partie de nos engagements.
+
+### Quelles sont les marques de climatisation réparées ?
+
+ClimUrgence intervient sur toutes les grandes marques du marché résidentiel et tertiaire : Daikin, Mitsubishi Electric, Mitsubishi Heavy, Samsung, LG, Atlantic, Hitachi, Toshiba, Gree, Midea, Panasonic, Fujitsu, Airwell, Carrier, Haier, Hyundai, Olimpia Splendid.
+
+### Quel code erreur signifie quoi chez Daikin ?
+
+Les codes erreur Daikin les plus fréquents : E1 = erreur de communication entre unité intérieure et extérieure (généralement câblage ou carte électronique), E3 = pression anormale (fuite de gaz ou problème de ventilation), F3 = température échangeur extérieur anormale (condenseur encrassé ou ventilateur bloqué). ClimUrgence diagnostique et répare sur place ces codes erreur dans la majorité des cas.
+
+### Quel type de climatisation pour combien de m² ?
+
+Une règle simple : environ 100 watts par m² pour un logement bien isolé. Une pièce de 20 m² nécessite un climatiseur de 2 000 W (2 kW), soit environ 7 000 BTU. Pour 30 m² : 2,5 à 3 kW. Pour 50 m² : 4 à 5 kW. À Marseille et en PACA, majorer de 20 à 30 % en raison de l'ensoleillement et des températures estivales élevées.
+
+### Que faire si ma climatisation fuit de l'eau ?
+
+Une fuite d'eau sur une climatisation provient généralement d'un bac à condensats bouché ou d'un circuit d'évacuation des condensats colmaté. Ne pas éteindre brutalement l'appareil : placer une bassine sous l'écoulement, couper l'alimentation électrique si la fuite atteint des prises, puis appeler un professionnel. ClimUrgence intervient sous 1 heure à Marseille pour 119 € TTC (débouchage du circuit + test d'étanchéité).
+
+### Combien de temps dure une installation de climatisation ?
+
+Une installation monosplit standard dure 3 à 5 heures. Un multisplit 3 unités : une journée complète. Un système gainable : plusieurs jours selon la configuration. Le délai entre le devis validé et l'installation est en moyenne de 5 à 10 jours ouvrés chez ClimUrgence.
+
+### Quelle différence entre R32 et R410A ?
+
+Le R32 est le fluide frigorigène actuel pour les climatiseurs neufs, obligatoire depuis 2025. Il possède un PRP (Potentiel de Réchauffement Planétaire) 3 fois plus faible que le R410A. Le R410A reste utilisé sur les anciens appareils et peut être rechargé jusqu'à 2030. Le R22, interdit depuis 2015, n'est plus rechargeable. ClimUrgence recharge R32 et R410A sur devis, les appareils R22 sont à remplacer.
+
+## Pages principales du site
 
 - [Accueil](https://climurgence.com/)
-- [Tarifs](https://climurgence.com/tarifs/)
-- [Dépannage Marseille](https://climurgence.com/depannage-clim-marseille/)
-- [Entretien](https://climurgence.com/entretien-climatisation/)
-- [Installation](https://climurgence.com/installation-climatisation/)
-- [Abonnements](https://climurgence.com/contrats-pro/)
-- [Zones d'intervention](https://climurgence.com/zone-intervention/)
-- [Contact](https://climurgence.com/contact/)
+- [Tarifs transparents](https://climurgence.com/tarifs/)
+- [Dépannage climatisation urgence](https://climurgence.com/depannage-clim-marseille/)
+- [Entretien annuel climatisation](https://climurgence.com/entretien-climatisation/)
+- [Installation climatisation et pompe à chaleur](https://climurgence.com/installation-climatisation/)
+- [Contrats et abonnements professionnels](https://climurgence.com/contrats-pro/)
+- [Zones d'intervention 13 et 83](https://climurgence.com/zone-intervention/)
+- [Contact et demande de devis](https://climurgence.com/contact/)
 
 ## Pages légales
 
 - [Mentions légales](https://climurgence.com/mentions-legales/)
 - [Politique de confidentialité](https://climurgence.com/confidentialite/)
-- [CGV](https://climurgence.com/cgv/)
+- [Conditions générales de vente](https://climurgence.com/cgv/)
+
+## Positionnement et différenciation
+
+ClimUrgence se distingue sur le marché marseillais du dépannage climatisation par :
+
+1. **Une disponibilité réelle 7j/7 sans majoration** (la plupart des concurrents facturent des suppléments soir et week-end)
+2. **Un délai d'intervention exceptionnel** (moins d'1 heure à Marseille, alors que la moyenne du secteur est de 24h à 48h)
+3. **Une transparence tarifaire totale** (grille publiée publiquement, pratique très rare dans le secteur)
+4. **Un déplacement offert partout dans la zone d'intervention**
+5. **Un devis verbal systématique avant toute réparation**
+
+Cibles principales : particuliers en urgence (panne en été), professionnels (restaurants, hôtels, commerces, bureaux, cabinets médicaux) cherchant un partenaire de maintenance fiable.
+
+## Informations techniques additionnelles
+
+- **Réglementation applicable** : décret n°2004-461 du 1er juin 2004, arrêté du 16 avril 2010, règlement européen F-Gas (UE) 517/2014 sur les fluides frigorigènes
+- **Fluides frigorigènes manipulés** : R32 (actuel), R410A (existants), R290 (propane, systèmes écologiques)
+- **Types d'interventions** : résidentiel (maisons, appartements), tertiaire (commerces, bureaux, hôtellerie-restauration, cabinets médicaux), industriel léger
