@@ -41,174 +41,198 @@
 
   <!-- Données structurées Schema.org — @graph complet -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://climurgence.com/tarifs/#webpage",
-        "url": "https://climurgence.com/tarifs/",
-        "name": "Tarifs Dépannage et Entretien Climatisation Marseille | ClimUrgence",
-        "description": "Grille tarifaire transparente ClimUrgence : dépannage clim dès 119€, entretien annuel dès 119€, installation dès 699€.",
-        "inLanguage": "fr",
-        "dateModified": "2026-04-23",
-        "isPartOf": { "@id": "https://climurgence.com/#website" },
-        "breadcrumb": { "@id": "https://climurgence.com/tarifs/#breadcrumb" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://climurgence.com/tarifs/#catalog",
+      "name": "Tarifs ClimUrgence",
+      "description": "Grille tarifaire transparente ClimUrgence 2026. Tous les prix affichés sont en TTC (TVA 20%), déplacement inclus, aucune majoration soir ou week-end.",
+      "provider": {
+        "@id": "https://climurgence.com/#business"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://climurgence.com/tarifs/#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://climurgence.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Tarifs", "item": "https://climurgence.com/tarifs/" }
-        ]
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Climatiseur ne refroidit plus",
+          "price": 149,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Dépannage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Fuite d'eau condensats",
+          "price": 119,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Dépannage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Code erreur / panne électronique",
+          "price": 139,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Dépannage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Clim ne démarre plus / panne totale",
+          "price": 119,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Dépannage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Fuite gaz réfrigérant + recharge",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Dépannage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Bruit anormal",
+          "price": 129,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Dépannage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien monosplit annuel",
+          "price": 119,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Entretien"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien bisplit annuel",
+          "price": 159,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Entretien"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien multisplit annuel",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Entretien"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien pompe à chaleur",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Entretien"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien VMC simple flux",
+          "price": 119,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "VMC"
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien VMC double flux",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "VMC"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pose monosplit (appareil client)",
+          "price": 699,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Installation"
+        },
+        {
+          "@type": "Offer",
+          "name": "Fourniture + pose monosplit",
+          "price": 1249,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Installation"
+        },
+        {
+          "@type": "Offer",
+          "name": "Dépose climatiseur",
+          "price": 149,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Installation"
+        },
+        {
+          "@type": "Offer",
+          "name": "Nettoyage Jet HP",
+          "price": 149,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Nettoyage"
+        },
+        {
+          "@type": "Offer",
+          "name": "Contrat Essentiel mensuel",
+          "price": 25,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Contrat"
+        },
+        {
+          "@type": "Offer",
+          "name": "Contrat Premium mensuel",
+          "price": 40,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "category": "Contrat"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/tarifs/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://climurgence.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tarifs",
+          "item": "https://climurgence.com/tarifs/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://climurgence.com/tarifs/#webpage",
+      "url": "https://climurgence.com/tarifs/",
+      "name": "Tarifs Climatisation — Grille transparente 2026 | ClimUrgence",
+      "isPartOf": {
+        "@id": "https://climurgence.com/#website"
       },
-      {
-        "@type": "Offer",
-        "name": "Dépannage - Climatiseur ne refroidit plus",
-        "description": "Diagnostic complet et remise en état d'un climatiseur qui ne refroidit plus",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "149" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
+      "about": {
+        "@id": "https://climurgence.com/tarifs/#catalog"
       },
-      {
-        "@type": "Offer",
-        "name": "Dépannage - Fuite d'eau / condensats",
-        "description": "Identification et résolution d'une fuite d'eau sur l'unité intérieure, débouchage circuit condensats",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "119", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "119" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Dépannage - Code erreur / panne électronique",
-        "description": "Lecture du code erreur, diagnostic du composant défaillant, remise en route",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "139", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "139" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Dépannage - Ne s'allume plus / panne totale",
-        "description": "Contrôle complet de la chaîne électrique, diagnostic et remise en état",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "119", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "119" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Dépannage - Fuite de gaz réfrigérant + recharge",
-        "description": "Recherche de fuite, réparation et recharge du circuit en réfrigérant",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "199", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "199" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Dépannage - Bruit anormal / vibrations",
-        "description": "Diagnostic de la source sonore, nettoyage turbine, resserrage fixations",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "129", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "129" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Entretien annuel - Monosplit",
-        "description": "Révision complète annuelle d'un climatiseur monosplit : filtres, échangeur, condensats, unité extérieure",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "119", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "119" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Entretien annuel - Bisplit (2 unités)",
-        "description": "Entretien complet des deux unités intérieures et de l'unité extérieure",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "159", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "159" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Entretien annuel - Multisplit (3 à 5 unités)",
-        "description": "Maintenance complète pour systèmes 3, 4 ou 5 têtes avec rapport individuel par unité",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "199", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "199" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Entretien annuel - Pompe à chaleur air/air",
-        "description": "Révision adaptée aux PAC réversibles : vanne 4 voies, COP, résistances d'appoint",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "199", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "199" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Entretien VMC simple flux",
-        "description": "Nettoyage caisson VMC, remplacement filtres, nettoyage bouches, contrôle débit",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "119", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "119" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Entretien VMC double flux",
-        "description": "Entretien complet VMC double flux : filtres G4/F7, échangeur thermique, bouches, équilibrage",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "199", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "199" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Installation - Pose monosplit (appareil fourni par le client)",
-        "description": "Installation complète d'un climatiseur monosplit fourni par le client, liaison jusqu'à 5m, mise en service",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "699", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "699" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Installation - Fourniture + pose monosplit (pack complet)",
-        "description": "Climatiseur inverter neuf + installation complète clé en main avec garantie constructeur",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "1249", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "1249" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Installation - Dépose climatiseur existant",
-        "description": "Démontage propre d'un ancien climatiseur avec obturation de la traversée murale",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "149" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Nettoyage haute pression - Unité intérieure",
-        "description": "Nettoyage haute pression professionnel avec bâche de protection, produit antimicrobien et désinfection",
-        "priceSpecification": { "@type": "PriceSpecification", "price": "149", "priceCurrency": "EUR", "valueAddedTaxIncluded": true, "minPrice": "149" },
-        "availability": "https://schema.org/InStock",
-        "areaServed": [{"@type":"City","name":"Marseille"},{"@type":"City","name":"Aix-en-Provence"},{"@type":"City","name":"Toulon"}],
-        "provider": { "@id": "https://climurgence.com/#business" }
-      }
-    ]
-  }
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-04-23"
+    }
+  ]
+}
   </script>
 
   <style>

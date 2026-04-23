@@ -33,56 +33,90 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "HVACBusiness",
-        "@id": "https://climurgence.com/#business",
-        "name": "ClimUrgence",
-        "telephone": "+33643721850",
-        "url": "https://climurgence.com",
-        "address": {"@type": "PostalAddress", "addressLocality": "Marseille", "postalCode": "13000", "addressCountry": "FR"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 43.2965, "longitude": 5.3698},
-        "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "21:00"}]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://climurgence.com/installation-climatisation/#service",
+      "serviceType": "Installation climatisation",
+      "name": "Installation climatisation et pompe à chaleur",
+      "description": "Installation de climatiseurs monosplit, bisplit, multisplit, gainables, cassettes et pompes à chaleur air/air réversibles. Marques Daikin, Mitsubishi, Atlantic, Samsung, LG. Fourniture et pose clé en main ou pose seule si appareil client.",
+      "provider": {
+        "@id": "https://climurgence.com/#business"
       },
-      {
-        "@type": "Service",
-        "@id": "https://climurgence.com/installation-climatisation/#service",
-        "name": "Installation climatisation",
-        "description": "Installation de systèmes de climatisation et pompes à chaleur air/air dans les Bouches-du-Rhône et le Var. Techniciens qualifiés et expérimentés.",
-        "url": "https://climurgence.com/installation-climatisation/",
-        "provider": {"@id": "https://climurgence.com/#business"},
-        "areaServed": [{"@type": "AdministrativeArea", "name": "Bouches-du-Rhône"}, {"@type": "AdministrativeArea", "name": "Var"}]
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bouches-du-Rhône"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Pose monosplit (appareil fourni par le client)",
+          "price": 699,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        },
+        {
+          "@type": "Offer",
+          "name": "Fourniture + pose monosplit (pack complet)",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 1249,
+            "maxPrice": 1999,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Dépose ancien climatiseur",
+          "price": 149,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/installation-climatisation/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://climurgence.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Installation climatisation",
+          "item": "https://climurgence.com/installation-climatisation/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://climurgence.com/installation-climatisation/#webpage",
+      "url": "https://climurgence.com/installation-climatisation/",
+      "name": "Installation Climatisation Marseille | ClimUrgence",
+      "isPartOf": {
+        "@id": "https://climurgence.com/#website"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://climurgence.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Installation Climatisation", "item": "https://climurgence.com/installation-climatisation/"}
-        ]
+      "about": {
+        "@id": "https://climurgence.com/installation-climatisation/#service"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://climurgence.com/installation-climatisation/#webpage",
-        "url": "https://climurgence.com/installation-climatisation/",
-        "name": "Installation Climatisation Marseille | ClimUrgence",
-        "inLanguage": "fr-FR",
-        "dateModified": "2026-04-23",
-        "isPartOf": {"@id": "https://climurgence.com/#website"}
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Combien coûte l'installation d'une climatisation à Marseille ?","acceptedAnswer":{"@type":"Answer","text":"Pose seule (appareil fourni par vos soins) à partir de 699 € TTC. Pack complet fourniture + pose (climatiseur neuf + installation) à partir de 1 249 € TTC pour un monosplit. Devis gratuit et sur mesure pour multisplit, gainable ou cassette."}},
-          {"@type":"Question","name":"Y a-t-il des aides financières pour l'installation d'une climatisation ?","acceptedAnswer":{"@type":"Answer","text":"Certaines aides financières peuvent s'appliquer selon votre situation et les dispositifs en vigueur. Nous vous recommandons de consulter les organismes compétents (ANAH, votre fournisseur d'énergie) pour connaître les conditions applicables."}},
-          {"@type":"Question","name":"Quelle puissance de climatisation choisir pour mon logement à Marseille ?","acceptedAnswer":{"@type":"Answer","text":"En règle générale, comptez 100 W de puissance frigorifique par m² bien isolé, avec un coefficient majoré de 20 à 30 % pour les logements mal isolés ou très exposés au soleil (fréquent en PACA). Un technicien ClimUrgence réalise un calcul thermique précis lors du devis gratuit."}},
-          {"@type":"Question","name":"Quelles marques de climatisation installez-vous ?","acceptedAnswer":{"@type":"Answer","text":"ClimUrgence installe et entretient les marques leaders : Daikin, Mitsubishi Electric, Atlantic, Hitachi, Samsung, LG, Toshiba, Fujitsu, Panasonic. Nous sélectionnons les modèles adaptés à votre usage et à votre budget."}},
-          {"@type":"Question","name":"Combien de temps dure une installation de climatisation ?","acceptedAnswer":{"@type":"Answer","text":"Une installation monosplit standard prend entre 3 et 5 heures. Un multisplit 3 unités nécessite généralement une journée complète. Le délai entre le devis validé et l'installation est en moyenne de 5 jours Maximum selon les disponibilités."}}
-        ]
-      }
-    ]
-  }
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-04-23"
+    }
+  ]
+}
   </script>
 </head>
 <body>

@@ -33,56 +33,156 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "HVACBusiness",
-        "@id": "https://climurgence.com/#business",
-        "name": "ClimUrgence",
-        "telephone": "+33643721850",
-        "url": "https://climurgence.com",
-        "address": {"@type": "PostalAddress", "addressLocality": "Marseille", "postalCode": "13000", "addressCountry": "FR"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 43.2965, "longitude": 5.3698},
-        "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "21:00"}]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://climurgence.com/entretien-climatisation/#service",
+      "serviceType": "Entretien climatisation",
+      "name": "Entretien annuel climatisation",
+      "description": "Maintenance préventive annuelle pour climatiseurs monosplit, bisplit, multisplit, pompes à chaleur et VMC. Nettoyage filtres, dépoussiérage échangeur, débouchage bac à condensats, traitement antibactérien, compte-rendu écrit.",
+      "provider": {
+        "@id": "https://climurgence.com/#business"
       },
-      {
-        "@type": "Service",
-        "@id": "https://climurgence.com/entretien-climatisation/#service",
-        "name": "Entretien annuel climatisation",
-        "description": "Entretien réglementaire annuel de systèmes de climatisation dans les Bouches-du-Rhône et le Var. Nettoyage, contrôle gaz, compte-rendu d'intervention écrit.",
-        "url": "https://climurgence.com/entretien-climatisation/",
-        "provider": {"@id": "https://climurgence.com/#business"},
-        "areaServed": [{"@type": "AdministrativeArea", "name": "Bouches-du-Rhône"}, {"@type": "AdministrativeArea", "name": "Var"}]
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bouches-du-Rhône"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Entretien monosplit (1 unité)",
+          "price": 119,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien bisplit (2 unités)",
+          "price": 159,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien multisplit (3 à 5 unités)",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien pompe à chaleur air/air",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien VMC simple flux",
+          "price": 119,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        },
+        {
+          "@type": "Offer",
+          "name": "Entretien VMC double flux",
+          "price": 199,
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://climurgence.com/entretien-climatisation/#howto-entretien",
+      "name": "Comment entretenir sa climatisation soi-même entre deux visites professionnelles",
+      "description": "Entretien simple accessible à tous pour prolonger la durée de vie de votre climatisation",
+      "totalTime": "PT30M",
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Eau tiède savonneuse"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Chiffon microfibre"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Couper l'alimentation électrique",
+          "text": "Mettre hors tension la climatisation au niveau du disjoncteur avant toute manipulation pour éviter tout risque électrique."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Retirer et laver les filtres",
+          "text": "Ouvrir le capot de l'unité intérieure, retirer les filtres à air, les laver à l'eau tiède savonneuse en insistant sur la poussière incrustée."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Sécher complètement les filtres",
+          "text": "Laisser sécher les filtres à l'air libre pendant au moins 2 heures. Ne jamais remettre un filtre humide, cela favoriserait moisissures et bactéries."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Nettoyer l'extérieur de l'unité",
+          "text": "Essuyer doucement la façade de l'unité intérieure avec un chiffon microfibre légèrement humide. Dépoussiérer les grilles d'aération visibles."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Programmer un entretien professionnel annuel",
+          "text": "Au minimum 1 fois par an, faire appel à un professionnel pour l'entretien complet (nettoyage échangeur, bac à condensats, vérifications électriques). À partir de 119 € TTC chez ClimUrgence."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/entretien-climatisation/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://climurgence.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Entretien climatisation",
+          "item": "https://climurgence.com/entretien-climatisation/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://climurgence.com/entretien-climatisation/#webpage",
+      "url": "https://climurgence.com/entretien-climatisation/",
+      "name": "Entretien Climatisation Marseille — Annuel | ClimUrgence",
+      "isPartOf": {
+        "@id": "https://climurgence.com/#website"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://climurgence.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Entretien Climatisation", "item": "https://climurgence.com/entretien-climatisation/"}
-        ]
+      "about": {
+        "@id": "https://climurgence.com/entretien-climatisation/#service"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://climurgence.com/entretien-climatisation/#webpage",
-        "url": "https://climurgence.com/entretien-climatisation/",
-        "name": "Entretien Climatisation Marseille & PACA – Obligatoire | ClimUrgence",
-        "inLanguage": "fr-FR",
-        "dateModified": "2026-04-23",
-        "isPartOf": {"@id": "https://climurgence.com/#website"}
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"L'entretien de climatisation est-il vraiment obligatoire ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le décret n°2004-461 du 1er juin 2004 et l'arrêté du 16 avril 2010 imposent un entretien périodique pour tout système de climatisation dont la charge en fluide frigorigène est supérieure à 2 kg (environ 6 kW de puissance). Le non-respect peut entraîner des amendes et l'invalidation de votre assurance."}},
-          {"@type":"Question","name":"Quelle est la fréquence d'entretien d'une climatisation ?","acceptedAnswer":{"@type":"Answer","text":"La fréquence légale dépend de la charge en fluide frigorigène : tous les ans pour une charge entre 2 et 30 kg, tous les 6 mois au-delà de 30 kg. En pratique, un entretien annuel avant la saison chaude (mars-avril) est recommandé pour toutes les installations."}},
-          {"@type":"Question","name":"Que comprend exactement un entretien de climatisation chez ClimUrgence ?","acceptedAnswer":{"@type":"Answer","text":"L'entretien ClimUrgence comprend : nettoyage des filtres et des échangeurs intérieur et extérieur, contrôle du niveau de gaz réfrigérant, vérification des pressions, contrôle du circuit électrique, test de fonctionnement, nettoyage du bac de condensats, et remise d'un rapport d'entretien détaillé."}},
-          {"@type":"Question","name":"Quel est le prix d'un entretien climatisation à Marseille ?","acceptedAnswer":{"@type":"Answer","text":"Un entretien annuel chez ClimUrgence est facturé à partir de 79 € TTC pour un monosplit. Tarifs dégressifs pour les multisplits. Des forfaits annuels avec priorité d'intervention sont disponibles. Devis gratuit sur demande."}},
-          {"@type":"Question","name":"ClimUrgence fournit-il un rapport d'entretien après l'intervention ?","acceptedAnswer":{"@type":"Answer","text":"Oui. À l'issue de chaque entretien, ClimUrgence remet un rapport d'entretien détaillé. Ce compte-rendu écrit récapitule les opérations réalisées et l'état de l'installation, indispensable en cas de contrôle ou de sinistre."}}
-        ]
-      }
-    ]
-  }
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-04-23"
+    }
+  ]
+}
   </script>
 </head>
 <body>

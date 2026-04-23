@@ -43,174 +43,401 @@
 
   <!-- Données structurées Schema.org — @graph complet -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "HVACBusiness",
-        "@id": "https://climurgence.com/#business",
-        "name": "ClimUrgence",
-        "alternateName": "Clim Urgence PACA",
-        "description": "Entreprise spécialisée dans le dépannage d'urgence, l'entretien et l'installation de climatisation dans les Bouches-du-Rhône (13) et le Var (83). Disponible 7j/7 de 9h à 21h.",
-        "url": "https://climurgence.com",
-        "telephone": "+33643721850",
-        "email": "contact@climurgence.com",
-        "logo": "https://climurgence.com/img/logo.webp",
-        "image": "https://climurgence.com/img/og-home.webp",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Marseille",
-          "addressRegion": "Bouches-du-Rhône",
-          "postalCode": "13000",
-          "addressCountry": "FR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 43.2965,
-          "longitude": 5.3698
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "09:00",
-            "closes": "21:00"
-          }
-        ],
-        "areaServed": [
-          {"@type": "City", "name": "Marseille", "sameAs": "https://www.wikidata.org/wiki/Q23482"},
-          {"@type": "City", "name": "Aix-en-Provence"},
-          {"@type": "City", "name": "Aubagne"},
-          {"@type": "City", "name": "La Ciotat"},
-          {"@type": "City", "name": "Cassis"},
-          {"@type": "City", "name": "Martigues"},
-          {"@type": "City", "name": "Istres"},
-          {"@type": "City", "name": "Vitrolles"},
-          {"@type": "City", "name": "Marignane"},
-          {"@type": "City", "name": "Allauch"},
-          {"@type": "City", "name": "Plan-de-Cuques"},
-          {"@type": "City", "name": "Septèmes-les-Vallons"},
-          {"@type": "City", "name": "Salon-de-Provence"},
-          {"@type": "City", "name": "Toulon"},
-          {"@type": "City", "name": "Hyères"},
-          {"@type": "City", "name": "La Seyne-sur-Mer"},
-          {"@type": "City", "name": "Saint-Cyr-sur-Mer"},
-          {"@type": "City", "name": "Bandol"},
-          {"@type": "City", "name": "Sanary-sur-Mer"},
-          {"@type": "City", "name": "Ollioules"},
-          {"@type": "City", "name": "Six-Fours-les-Plages"},
-          {"@type": "City", "name": "La Valette-du-Var"},
-          {"@type": "City", "name": "La Garde"},
-          {"@type": "AdministrativeArea", "name": "Bouches-du-Rhône"},
-          {"@type": "AdministrativeArea", "name": "Var"}
-        ],
-        "priceRange": "€€",
-        "currenciesAccepted": "EUR",
-        "paymentAccepted": "Cash, Chèque, Carte bancaire, Virement",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Services ClimUrgence",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://climurgence.com/depannage-clim-marseille/#service",
-                "name": "Dépannage climatisation urgence",
-                "url": "https://climurgence.com/depannage-clim-marseille/",
-                "provider": {"@id": "https://climurgence.com/#business"}
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://climurgence.com/entretien-climatisation/#service",
-                "name": "Entretien annuel climatisation",
-                "url": "https://climurgence.com/entretien-climatisation/",
-                "provider": {"@id": "https://climurgence.com/#business"}
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "@id": "https://climurgence.com/installation-climatisation/#service",
-                "name": "Installation climatisation",
-                "url": "https://climurgence.com/installation-climatisation/",
-                "provider": {"@id": "https://climurgence.com/#business"}
-              }
-            }
-          ]
-        },
-        "sameAs": []
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HVACBusiness",
+      "@id": "https://climurgence.com/#business",
+      "name": "ClimUrgence",
+      "alternateName": [
+        "Clim Urgence",
+        "Clim Urgence Marseille",
+        "Clim Urgence PACA"
+      ],
+      "description": "Entreprise française de dépannage, entretien et installation de climatisation 7j/7 dans les Bouches-du-Rhône (13) et le Var (83). Intervention en moins d'1 heure à Marseille. Déplacement offert, aucune majoration soir ou week-end, tarifs transparents publiés en ligne.",
+      "url": "https://climurgence.com",
+      "telephone": "+33643721850",
+      "email": "contact@climurgence.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://climurgence.com/img/logo.webp",
+        "width": 400,
+        "height": 112
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://climurgence.com/#website",
-        "url": "https://climurgence.com",
-        "name": "ClimUrgence",
-        "description": "Dépannage climatisation urgence 7j/7 dans les Bouches-du-Rhône et le Var",
-        "publisher": {"@id": "https://climurgence.com/#business"},
-        "inLanguage": "fr-FR",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {"@type": "EntryPoint", "urlTemplate": "https://climurgence.com/?s={search_term_string}"},
-          "query-input": "required name=search_term_string"
+      "image": [
+        "https://climurgence.com/img/og-home.webp",
+        "https://climurgence.com/img/logo.webp"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Marseille",
+        "addressRegion": "Bouches-du-Rhône",
+        "postalCode": "13000",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.2965,
+        "longitude": 5.3698
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "21:00"
         }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://climurgence.com/#webpage",
-        "url": "https://climurgence.com/",
-        "name": "Dépannage Climatisation Marseille – Urgence 7j/7 | ClimUrgence",
-        "isPartOf": {"@id": "https://climurgence.com/#website"},
-        "about": {"@id": "https://climurgence.com/#business"},
-        "description": "Dépannage, entretien et installation de climatisation en urgence dans les Bouches-du-Rhône et le Var.",
-        "inLanguage": "fr-FR",
-        "dateModified": "2026-04-23"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://climurgence.com/#faq",
-        "isPartOf": {"@id": "https://climurgence.com/#webpage"},
-        "mainEntity": [
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Marseille",
+          "sameAs": "https://www.wikidata.org/wiki/Q23482"
+        },
+        {
+          "@type": "City",
+          "name": "Aix-en-Provence",
+          "sameAs": "https://www.wikidata.org/wiki/Q14724"
+        },
+        {
+          "@type": "City",
+          "name": "Aubagne"
+        },
+        {
+          "@type": "City",
+          "name": "La Ciotat"
+        },
+        {
+          "@type": "City",
+          "name": "Cassis"
+        },
+        {
+          "@type": "City",
+          "name": "Martigues"
+        },
+        {
+          "@type": "City",
+          "name": "Istres"
+        },
+        {
+          "@type": "City",
+          "name": "Vitrolles"
+        },
+        {
+          "@type": "City",
+          "name": "Marignane"
+        },
+        {
+          "@type": "City",
+          "name": "Allauch"
+        },
+        {
+          "@type": "City",
+          "name": "Plan-de-Cuques"
+        },
+        {
+          "@type": "City",
+          "name": "Septèmes-les-Vallons"
+        },
+        {
+          "@type": "City",
+          "name": "Salon-de-Provence"
+        },
+        {
+          "@type": "City",
+          "name": "Toulon",
+          "sameAs": "https://www.wikidata.org/wiki/Q6616"
+        },
+        {
+          "@type": "City",
+          "name": "Hyères"
+        },
+        {
+          "@type": "City",
+          "name": "La Seyne-sur-Mer"
+        },
+        {
+          "@type": "City",
+          "name": "Saint-Cyr-sur-Mer"
+        },
+        {
+          "@type": "City",
+          "name": "Bandol"
+        },
+        {
+          "@type": "City",
+          "name": "Sanary-sur-Mer"
+        },
+        {
+          "@type": "City",
+          "name": "Ollioules"
+        },
+        {
+          "@type": "City",
+          "name": "Six-Fours-les-Plages"
+        },
+        {
+          "@type": "City",
+          "name": "La Valette-du-Var"
+        },
+        {
+          "@type": "City",
+          "name": "La Garde"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Bouches-du-Rhône"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Var"
+        }
+      ],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": [
+        "Cash",
+        "Credit Card",
+        "Check",
+        "Bank Transfer"
+      ],
+      "knowsAbout": [
+        "Dépannage climatisation",
+        "Entretien climatisation",
+        "Installation climatisation",
+        "Pompe à chaleur air/air",
+        "VMC simple flux",
+        "VMC double flux",
+        "Fluide frigorigène R32",
+        "Fluide frigorigène R410A",
+        "Daikin",
+        "Mitsubishi Electric",
+        "Samsung",
+        "LG",
+        "Atlantic",
+        "Hitachi",
+        "Toshiba",
+        "Panasonic",
+        "Fujitsu"
+      ],
+      "slogan": "Dépannage climatisation 7j/7 en moins d'1h",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services ClimUrgence",
+        "itemListElement": [
           {
-            "@type": "Question",
-            "name": "En combien de temps ClimUrgence intervient-il à Marseille ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ClimUrgence s'engage à intervenir en moins d'1 heure à Marseille et dans les communes proches (Aubagne, La Ciotat, Cassis). Pour les zones plus éloignées comme Aix-en-Provence ou Toulon, le délai est généralement de 1h à 1h30."
+            "@type": "Offer",
+            "name": "Dépannage climatisation urgence",
+            "url": "https://climurgence.com/depannage-clim-marseille/",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": 119,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true,
+              "minPrice": 119,
+              "maxPrice": 199
+            },
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dépannage climatisation urgence",
+              "provider": {
+                "@id": "https://climurgence.com/#business"
+              }
             }
           },
           {
-            "@type": "Question",
-            "name": "ClimUrgence intervient-il le week-end et les jours fériés ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Oui. ClimUrgence est disponible 7 jours sur 7, y compris les week-ends et jours fériés, de 9h à 21h. Pour toute urgence climatisation, appelez directement le 06 43 72 18 50."
+            "@type": "Offer",
+            "name": "Entretien annuel climatisation",
+            "url": "https://climurgence.com/entretien-climatisation/",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": 119,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true,
+              "minPrice": 119,
+              "maxPrice": 199
+            },
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Entretien annuel climatisation",
+              "provider": {
+                "@id": "https://climurgence.com/#business"
+              }
             }
           },
           {
-            "@type": "Question",
-            "name": "Quels types de pannes de climatisation ClimUrgence répare-t-il ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ClimUrgence répare toutes les pannes courantes : climatiseur qui ne refroidit plus, compresseur en panne, fuite de gaz réfrigérant, erreurs E1, E3, F3, unité extérieure qui ne démarre pas, clim qui souffle chaud, court-circuit électrique, sonde de température HS."
+            "@type": "Offer",
+            "name": "Installation climatisation",
+            "url": "https://climurgence.com/installation-climatisation/",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": 699,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true,
+              "minPrice": 699,
+              "maxPrice": 1999
+            },
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Installation climatisation",
+              "provider": {
+                "@id": "https://climurgence.com/#business"
+              }
             }
           },
           {
-            "@type": "Question",
-            "name": "L'entretien annuel de climatisation est-il obligatoire ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Oui, l'entretien est obligatoire par la réglementation française pour tout système de climatisation dont la charge en fluide frigorigène est supérieure à 2 kg (environ 6 kW). Le non-respect expose à des amendes. ClimUrgence réalise l'entretien annuel complet et vous remet un rapport d'intervention détaillé."
-            }
+            "@type": "Offer",
+            "name": "Contrat maintenance Essentiel",
+            "url": "https://climurgence.com/contrats-pro/",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": 25,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true,
+              "billingDuration": "P1M"
+            },
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Contrat maintenance Premium",
+            "url": "https://climurgence.com/contrats-pro/",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": 40,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true,
+              "billingDuration": "P1M"
+            },
+            "availability": "https://schema.org/InStock"
           }
         ]
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "ClimUrgence"
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Déplacement offert",
+          "description": "Aucun frais de déplacement facturé sur toute la zone d'intervention"
+        },
+        {
+          "@type": "Offer",
+          "name": "Aucune majoration soir et week-end",
+          "description": "Tarif identique 7j/7 de 9h à 21h, jours fériés inclus"
+        },
+        {
+          "@type": "Offer",
+          "name": "Devis gratuit et sans engagement",
+          "description": "Devis verbal systématique avant toute réparation"
+        }
+      ],
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://climurgence.com/#website",
+      "url": "https://climurgence.com",
+      "name": "ClimUrgence",
+      "description": "Dépannage climatisation urgence 7j/7 dans les Bouches-du-Rhône et le Var",
+      "publisher": {
+        "@id": "https://climurgence.com/#business"
+      },
+      "inLanguage": "fr-FR",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://climurgence.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://climurgence.com/#webpage",
+      "url": "https://climurgence.com/",
+      "name": "Dépannage Climatisation Marseille – Urgence 7j/7 | ClimUrgence",
+      "isPartOf": {
+        "@id": "https://climurgence.com/#website"
+      },
+      "about": {
+        "@id": "https://climurgence.com/#business"
+      },
+      "description": "Dépannage, entretien et installation de climatisation en urgence dans les Bouches-du-Rhône et le Var. Intervention en moins d'1 heure à Marseille, 7j/7 de 9h à 21h sans majoration.",
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-04-23",
+      "datePublished": "2026-04-01"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://climurgence.com/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://climurgence.com/#faq-home",
+      "isPartOf": {
+        "@id": "https://climurgence.com/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "En combien de temps ClimUrgence intervient-il à Marseille ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ClimUrgence s'engage à intervenir en moins d'1 heure à Marseille et dans les communes proches (Aubagne, La Ciotat, Cassis, Allauch, Plan-de-Cuques, Septèmes). Pour Aix-en-Provence, Vitrolles et Marignane : environ 1 heure. Pour Toulon et le Var : 1 à 1h30."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ClimUrgence intervient-il le week-end et les jours fériés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. ClimUrgence est disponible 7 jours sur 7, y compris les week-ends et jours fériés, de 9h à 21h. Aucune majoration n'est appliquée. Téléphone : 06 43 72 18 50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels types de pannes de climatisation ClimUrgence répare-t-il ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Toutes les pannes courantes : climatiseur qui ne refroidit plus, compresseur en panne, fuite de gaz réfrigérant, codes erreur E1/E3/F3, unité extérieure qui ne démarre pas, clim qui souffle chaud, court-circuit électrique, sonde de température HS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'entretien annuel de climatisation est-il obligatoire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, par le décret n°2004-461 pour tout système dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW). ClimUrgence réalise l'entretien et fournit un compte-rendu d'intervention écrit."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>

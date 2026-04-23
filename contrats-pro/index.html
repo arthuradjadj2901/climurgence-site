@@ -32,56 +32,92 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "HVACBusiness",
-        "@id": "https://climurgence.com/#business",
-        "name": "ClimUrgence",
-        "telephone": "+33643721850",
-        "url": "https://climurgence.com",
-        "address": {"@type": "PostalAddress", "addressLocality": "Marseille", "postalCode": "13000", "addressCountry": "FR"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 43.2965, "longitude": 5.3698},
-        "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "21:00"}]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://climurgence.com/contrats-pro/#essentiel",
+      "name": "Contrat maintenance Essentiel ClimUrgence",
+      "description": "Contrat annuel d'entretien climatisation : 1 visite préventive par an, réduction 15% sur tous les dépannages, rapport écrit systématique. Adapté particuliers et professionnels.",
+      "brand": {
+        "@type": "Brand",
+        "name": "ClimUrgence"
       },
-      {
-        "@type": "Service",
-        "@id": "https://climurgence.com/contrats-pro/#service",
-        "name": "Abonnements climatisation particuliers et professionnels",
-        "description": "Abonnements annuels de maintenance préventive et curative pour particuliers, entreprises, hôtels, restaurants et commerces dans les Bouches-du-Rhône et le Var.",
-        "url": "https://climurgence.com/contrats-pro/",
-        "provider": {"@id": "https://climurgence.com/#business"},
-        "areaServed": [{"@type": "AdministrativeArea", "name": "Bouches-du-Rhône"}, {"@type": "AdministrativeArea", "name": "Var"}]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://climurgence.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Abonnements", "item": "https://climurgence.com/contrats-pro/"}
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://climurgence.com/contrats-pro/#webpage",
-        "url": "https://climurgence.com/contrats-pro/",
-        "name": "Abonnement Climatisation Marseille – Particuliers &amp; Professionnels | Climurgence",
-        "inLanguage": "fr-FR",
-        "dateModified": "2026-04-23",
-        "isPartOf": {"@id": "https://climurgence.com/#website"}
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Qui peut souscrire un abonnement climatisation ClimUrgence ?","acceptedAnswer":{"@type":"Answer","text":"Tout le monde ! Les abonnements ClimUrgence sont ouverts aux particuliers (maisons, appartements) comme aux professionnels (hôtels, restaurants, bars, commerces, bureaux, cabinets médicaux, entrepôts). ClimUrgence adapte la formule à la nature et au volume de votre installation."}},
-          {"@type":"Question","name":"Que comprend un abonnement climatisation ClimUrgence ?","acceptedAnswer":{"@type":"Answer","text":"L'abonnement comprend : visites préventives planifiées (1 à 4 par an selon la formule), nettoyage complet des unités, contrôle du circuit frigorifique, vérification électrique, rapport d'intervention, rapport d'entretien annuel, intervention curative prioritaire en cas de panne avec délai garanti."}},
-          {"@type":"Question","name":"Quel est le délai d'intervention garanti en cas de panne ?","acceptedAnswer":{"@type":"Answer","text":"Selon la formule souscrite, ClimUrgence garantit une intervention sous 4h en heures ouvrées (Premium) ou en jour ouvré suivant (Essentiel) en cas de panne. Ces délais sont garantis contractuellement."}},
-          {"@type":"Question","name":"Comment est facturé un abonnement climatisation ?","acceptedAnswer":{"@type":"Answer","text":"Les abonnements sont facturés mensuellement ou annuellement selon votre préférence. Toutes les visites préventives sont incluses dans le forfait ; les pièces de remplacement éventuelles sont facturées selon un barème tarifaire préférentiel (–15 %)."}},
-          {"@type":"Question","name":"Les particuliers ont-ils accès aux mêmes garanties que les professionnels ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention garantis et du même niveau de technicité. La formule Premium est idéale pour ceux qui souhaitent une couverture prioritaire avec intervention sous 4h."}}
-        ]
+      "offers": {
+        "@type": "Offer",
+        "price": 25,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": true,
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 25,
+          "priceCurrency": "EUR",
+          "billingDuration": "P1M"
+        },
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://climurgence.com/#business"
+        }
       }
-    ]
-  }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://climurgence.com/contrats-pro/#premium",
+      "name": "Contrat maintenance Premium ClimUrgence",
+      "description": "Contrat annuel d'entretien climatisation premium : 2 visites préventives par an, intervention garantie sous 4h, réduction 20% sur pièces et dépannages. Recommandé pour restaurants, hôtels, commerces.",
+      "brand": {
+        "@type": "Brand",
+        "name": "ClimUrgence"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": 40,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": true,
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": 40,
+          "priceCurrency": "EUR",
+          "billingDuration": "P1M"
+        },
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://climurgence.com/#business"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/contrats-pro/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://climurgence.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Abonnements",
+          "item": "https://climurgence.com/contrats-pro/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://climurgence.com/contrats-pro/#webpage",
+      "url": "https://climurgence.com/contrats-pro/",
+      "name": "Abonnements Maintenance Climatisation | ClimUrgence",
+      "isPartOf": {
+        "@id": "https://climurgence.com/#website"
+      },
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-04-23"
+    }
+  ]
+}
   </script>
 </head>
 <body>
