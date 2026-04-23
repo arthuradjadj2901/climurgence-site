@@ -39,6 +39,165 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
+  <!-- CSS inline : sommaire premium (scope .faq-page) -->
+  <style>
+    /* Nouveau sommaire premium */
+    .faq-page .faq-toc-premium {
+      background: linear-gradient(135deg, #FFF9F5 0%, #F0F7FF 100%);
+      border: 1px solid #F3DED0;
+      border-radius: 20px;
+      padding: 2.25rem 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .faq-page .faq-toc-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 1.75rem;
+    }
+
+    .faq-page .faq-toc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #F56E17;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .faq-page .faq-toc-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: white;
+    }
+
+    .faq-page .faq-toc-label {
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      color: #F56E17 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 0 0 2px 0 !important;
+    }
+
+    .faq-page .faq-toc-heading {
+      font-family: 'Bebas Neue', sans-serif !important;
+      font-size: 1.5rem !important;
+      font-weight: 400 !important;
+      color: #1E6FA8 !important;
+      margin: 0 !important;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      line-height: 1.1 !important;
+    }
+
+    .faq-page .faq-toc-list {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 4px !important;
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .faq-page .faq-toc-list li {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .faq-page .faq-toc-link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 14px 16px !important;
+      border-radius: 10px !important;
+      color: #1F2937 !important;
+      text-decoration: none !important;
+      background: rgba(255, 255, 255, 0.7) !important;
+      border: 0.5px solid rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.2s ease !important;
+      gap: 12px !important;
+    }
+
+    .faq-page .faq-toc-link:hover {
+      background: #FFFFFF !important;
+      border-color: #F56E17 !important;
+      transform: translateX(2px);
+    }
+
+    .faq-page .faq-toc-link-inner {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      flex: 1 !important;
+    }
+
+    .faq-page .faq-toc-number {
+      width: 26px !important;
+      height: 26px !important;
+      border-radius: 6px !important;
+      background: #FDEEDF !important;
+      color: #F56E17 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .faq-page .faq-toc-link:hover .faq-toc-number {
+      background: #F56E17 !important;
+      color: #FFFFFF !important;
+    }
+
+    .faq-page .faq-toc-title {
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      color: #1F2937 !important;
+    }
+
+    .faq-page .faq-toc-arrow {
+      color: #9CA3AF !important;
+      font-size: 18px !important;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .faq-page .faq-toc-link:hover .faq-toc-arrow {
+      color: #F56E17 !important;
+      transform: translateX(2px);
+    }
+
+    /* Responsive mobile */
+    @media (max-width: 640px) {
+      .faq-page .faq-toc-premium {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .faq-page .faq-toc-header {
+        margin-bottom: 1.25rem;
+      }
+
+      .faq-page .faq-toc-heading {
+        font-size: 1.25rem !important;
+      }
+
+      .faq-page .faq-toc-link {
+        padding: 12px 14px !important;
+      }
+
+      .faq-page .faq-toc-title {
+        font-size: 14px !important;
+      }
+    }
+  </style>
+
   <!-- Données structurées FAQPage + Breadcrumb -->
   <script type="application/ld+json">
   {
@@ -308,7 +467,7 @@
   }
   </script>
 </head>
-<body>
+<body class="faq-page">
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
   <header class="site-header" role="banner">
@@ -345,18 +504,97 @@
         <p class="faq-intro">47 réponses claires et factuelles sur les pannes courantes, les tarifs, la réglementation et l'entretien. Toutes les informations sont à jour pour 2026 et correspondent aux prix pratiqués par ClimUrgence dans les Bouches-du-Rhône et le Var.</p>
       </header>
 
-      <nav class="faq-toc" aria-label="Sommaire des questions">
-        <h2>Explorer par thématique</h2>
-        <ul>
-          <li><a href="#section-depannage">Dépannage et pannes courantes</a></li>
-          <li><a href="#section-tarifs">Tarifs et devis</a></li>
-          <li><a href="#section-entretien">Entretien et réglementation</a></li>
-          <li><a href="#section-installation">Installation et remplacement</a></li>
-          <li><a href="#section-codes">Codes erreur et marques</a></li>
-          <li><a href="#section-zones">Zones d'intervention</a></li>
-          <li><a href="#section-vmc">VMC et ventilation</a></li>
-          <li><a href="#section-pratique">Questions pratiques et pros</a></li>
+      <nav class="faq-toc-premium" aria-label="Sommaire des questions">
+
+        <div class="faq-toc-header">
+          <div class="faq-toc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+              <circle cx="12" cy="12" r="10"/>
+            </svg>
+          </div>
+          <div>
+            <div class="faq-toc-label">Sommaire</div>
+            <div class="faq-toc-heading">FAQ Climatisation</div>
+          </div>
+        </div>
+
+        <ul class="faq-toc-list">
+          <li>
+            <a href="#section-depannage" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">1</span>
+                <span class="faq-toc-title">Dépannage et pannes courantes</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-tarifs" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">2</span>
+                <span class="faq-toc-title">Tarifs et devis</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-entretien" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">3</span>
+                <span class="faq-toc-title">Entretien et réglementation</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-installation" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">4</span>
+                <span class="faq-toc-title">Installation et remplacement</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-codes" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">5</span>
+                <span class="faq-toc-title">Codes erreur et marques</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-zones" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">6</span>
+                <span class="faq-toc-title">Zones d'intervention</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-vmc" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">7</span>
+                <span class="faq-toc-title">VMC et ventilation</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#section-pratique" class="faq-toc-link">
+              <span class="faq-toc-link-inner">
+                <span class="faq-toc-number">8</span>
+                <span class="faq-toc-title">Questions pratiques et pros</span>
+              </span>
+              <span class="faq-toc-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
         </ul>
+
       </nav>
 
       <!-- SECTION 1 -->
