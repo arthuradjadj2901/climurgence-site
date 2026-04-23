@@ -107,4 +107,7 @@ Allow: /
 # Sitemap
 Sitemap: https://climurgence.com/sitemap.xml
 
+# Fichier descriptif Markdown pour crawlers IA
+# https://climurgence.com/climurgence.md
+
 # IndexNow — Clé : climurgence2026a8f3c7d21b9

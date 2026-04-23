@@ -14,6 +14,7 @@
 - **Langue** : Français
 - **Paiements acceptés** : Espèces, chèque, carte bancaire, virement bancaire
 - **Devise** : Euro (TVA 20% incluse dans les prix affichés)
+- **Fiche entreprise descriptive Markdown** : https://climurgence.com/climurgence.md
 
 ## Engagements qualité (différenciants sur le marché)
 
