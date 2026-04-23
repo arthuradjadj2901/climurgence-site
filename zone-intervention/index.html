@@ -101,6 +101,192 @@
     ]
   }
   </script>
+  <style>
+body { margin: 0; padding: 0; }
+
+.zones-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 1.5rem 4rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1F2937;
+  line-height: 1.6;
+}
+
+.zones-wrap .z-bread {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0 0 1rem 0;
+}
+
+.zones-wrap h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.zones-wrap .z-intro {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0 0 3rem 0;
+  max-width: 680px;
+}
+
+.zones-wrap h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 3rem 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #E5E7EB;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.zones-wrap .cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 1.5rem 0;
+}
+
+.zones-wrap .city-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #1F2937;
+}
+
+.zones-wrap .city-card:hover {
+  border-color: #F56E17;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 110, 23, 0.08);
+}
+
+.zones-wrap .city-card.city-active {
+  border-color: #F56E17;
+  background: #FFF9F5;
+}
+
+.zones-wrap .city-info {
+  flex: 1;
+}
+
+.zones-wrap .city-name {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  margin-bottom: 4px;
+  color: #1F2937;
+}
+
+.zones-wrap .city-delay {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.zones-wrap .city-card.city-active .city-delay {
+  color: #F56E17;
+  font-weight: 500;
+}
+
+.zones-wrap .city-arrow {
+  color: #9CA3AF;
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.zones-wrap .city-card:hover .city-arrow {
+  color: #F56E17;
+  transform: translateX(2px);
+}
+
+.zones-wrap .city-badge-soon {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #F3F4F6;
+  color: #6B7280;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.zones-wrap .city-badge-active {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #F56E17;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.zones-wrap .z-cta {
+  background: linear-gradient(135deg, #1E6FA8 0%, #154B7A 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 4rem 0 0 0;
+  color: #FFFFFF;
+}
+
+.zones-wrap .z-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.875rem;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+}
+
+.zones-wrap .z-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.75rem 0;
+}
+
+.zones-wrap .z-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #F56E17;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.zones-wrap .z-cta-btn:hover {
+  background: #D85A0E;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .zones-wrap { padding: 120px 1rem 2.5rem 1rem; }
+  .zones-wrap h1 { font-size: 2rem; }
+  .zones-wrap h2 { font-size: 1.5rem; }
+  .zones-wrap .cities-grid { grid-template-columns: 1fr; }
+  .zones-wrap .z-cta { padding: 2.5rem 1.5rem; }
+  .zones-wrap .z-cta h2 { font-size: 1.625rem; }
+}
+</style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
@@ -128,182 +314,239 @@
     </div>
   </header>
 
-  <nav class="breadcrumb" aria-label="Fil d'Ariane">
-    <div class="container">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Accueil</span></a><meta itemprop="position" content="1" /></li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" aria-current="page">Zones d'Intervention</span><meta itemprop="position" content="2" /></li>
-      </ol>
+    <main id="main-content">
+    <div class="zones-wrap">
+
+      <div class="z-bread">
+        <a href="/" style="color:#6B7280;text-decoration:none;">Accueil</a> › <span>Zones d'intervention</span>
+      </div>
+
+      <h1>Zones d'intervention ClimUrgence</h1>
+
+      <p class="z-intro">ClimUrgence intervient 7 jours sur 7 dans l'ensemble des Bouches-du-Rhône (13) et du Var (83). Sélectionnez votre commune ci-dessous pour accéder à la page dédiée à votre zone avec les particularités locales, les quartiers couverts et le délai d'intervention. Toutes les autres communes de ces deux départements sont également desservies sur simple appel au <strong style="color:#F56E17;">06 43 72 18 50</strong>.</p>
+
+      <h2>Bouches-du-Rhône (13)</h2>
+
+      <div class="cities-grid">
+      <a href="/depannage-clim-marseille/" class="city-card city-active">
+        <div class="city-info">
+          <div class="city-name">Marseille</div>
+          <div class="city-delay">⚡ Intervention moins d'1h</div>
+          <span class="city-badge-active">Page disponible</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=aix-en-provence" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Aix-en-Provence</div>
+          <div class="city-delay">undefined</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=aubagne" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Aubagne</div>
+          <div class="city-delay">Intervention moins d'1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=la-ciotat" class="city-card">
+        <div class="city-info">
+          <div class="city-name">La Ciotat</div>
+          <div class="city-delay">Intervention moins d'1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=cassis" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Cassis</div>
+          <div class="city-delay">Intervention moins d'1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=martigues" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Martigues</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=istres" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Istres</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=vitrolles" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Vitrolles</div>
+          <div class="city-delay">Intervention ~1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=marignane" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Marignane</div>
+          <div class="city-delay">Intervention ~1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=allauch" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Allauch</div>
+          <div class="city-delay">Intervention moins d'1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=plan-de-cuques" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Plan-de-Cuques</div>
+          <div class="city-delay">Intervention moins d'1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=septemes-les-vallons" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Septèmes-les-Vallons</div>
+          <div class="city-delay">Intervention moins d'1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=salon-de-provence" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Salon-de-Provence</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+      </div>
+
+      <h2>Var (83)</h2>
+
+      <div class="cities-grid">
+      <a href="/contact/?ville=toulon" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Toulon</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=hyeres" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Hyères</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=la-seyne-sur-mer" class="city-card">
+        <div class="city-info">
+          <div class="city-name">La Seyne-sur-Mer</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=saint-cyr-sur-mer" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Saint-Cyr-sur-Mer</div>
+          <div class="city-delay">Intervention ~1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=bandol" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Bandol</div>
+          <div class="city-delay">Intervention ~1h</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=sanary-sur-mer" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Sanary-sur-Mer</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=six-fours-les-plages" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Six-Fours-les-Plages</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=ollioules" class="city-card">
+        <div class="city-info">
+          <div class="city-name">Ollioules</div>
+          <div class="city-delay">Intervention 1 à 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=la-valette-du-var" class="city-card">
+        <div class="city-info">
+          <div class="city-name">La Valette-du-Var</div>
+          <div class="city-delay">Intervention 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+
+      <a href="/contact/?ville=la-garde" class="city-card">
+        <div class="city-info">
+          <div class="city-name">La Garde</div>
+          <div class="city-delay">Intervention 1h30</div>
+          <span class="city-badge-soon">Page bientôt</span>
+        </div>
+        <span class="city-arrow">→</span>
+      </a>
+      </div>
+
+      <div class="z-cta">
+        <h2>Votre commune n'est pas listée ?</h2>
+        <p>Nous intervenons dans toutes les communes du 13 et du 83. Appelez-nous pour vérifier.</p>
+        <a href="tel:+33643721850" class="z-cta-btn">06 43 72 18 50</a>
+      </div>
+
     </div>
-  </nav>
-
-  <main id="main-content">
-
-    <section class="page-hero" aria-labelledby="h1-zones">
-      <div class="container">
-        <span class="hero-badge">Bouches-du-Rhône (13) &amp; Var (83)</span>
-        <h1 id="h1-zones">Zones d'Intervention<br><em style="color:#FFD166;font-style:normal;">Climatisation PACA</em><br>Marseille · Aix · Toulon et plus</h1>
-        <p class="lead">ClimUrgence intervient dans <strong>tout le département des Bouches-du-Rhône et du Var</strong> pour le dépannage, l'entretien et l'installation de climatisation. Délai d'intervention moyen : <strong>1 heure</strong>.</p>
-        <a href="tel:+33643721850" class="btn btn-primary btn-lg"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Vérifier la disponibilité dans votre ville</a>
-      </div>
-    </section>
-
-    <section class="section section--alt" style="padding-top:2rem;padding-bottom:1rem;">
-      <div class="container">
-        <div class="answer-capsule" role="note">
-          <p><strong>ClimUrgence intervient</strong> dans tout le département des Bouches-du-Rhône (13) et le Var (83) : Marseille, Aix-en-Provence, Aubagne, La Ciotat, Cassis, Toulon, Hyères, Saint-Cyr-sur-Mer, Bandol, Martigues, Istres. <strong>Délai d'intervention moyen : 1 heure</strong>. Disponible 7j/7 de 9h à 21h.</p>
-        </div>
-        <p class="update-badge"><svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg> Mis à jour le 18 avril 2026</p>
-      </div>
-    </section>
-
-    <!-- Tableau délais -->
-    <section class="section" aria-labelledby="delais-title">
-      <div class="container">
-        <h2 class="section-title" id="delais-title">Délais d'intervention par ville</h2>
-        <div class="table-wrapper" style="margin-top:1.5rem;">
-          <table>
-            <thead><tr><th>Ville</th><th>Département</th><th>Délai moyen</th><th>Services disponibles</th></tr></thead>
-            <tbody>
-              <tr><td><strong id="marseille">Marseille</strong> (tous arr.)</td><td>13</td><td>~ 1h</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Aubagne</td><td>13</td><td>~ 1h</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>La Ciotat</td><td>13</td><td>~ 1h</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Cassis</td><td>13</td><td>~ 1h</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td><strong id="aix">Aix-en-Provence</strong></td><td>13</td><td>~ 1h</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Martigues</td><td>13</td><td>~ 1h</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Istres</td><td>13</td><td>~ 1h – 1h30</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td><strong id="toulon">Toulon</strong></td><td>83</td><td>~ 1h – 1h30</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Hyères</td><td>83</td><td>~ 1h30</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Bandol</td><td>83</td><td>~ 1h – 1h30</td><td>Dépannage · Entretien · Installation</td></tr>
-              <tr><td>Saint-Cyr-sur-Mer</td><td>83</td><td>~ 1h – 1h30</td><td>Dépannage · Entretien · Installation</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="info-box" style="margin-top:1rem;">
-          <strong>Votre commune ne figure pas dans cette liste ?</strong> ClimUrgence intervient dans toutes les communes du 13 et du 83. Appelez le <strong>06 43 72 18 50</strong> pour confirmer la disponibilité dans votre secteur.
-        </div>
-      </div>
-    </section>
-
-    <!-- Villes en détail -->
-    <section class="section section--alt" aria-labelledby="villes-title">
-      <div class="container">
-        <h2 class="section-title" id="villes-title">Dépannage climatisation par ville</h2>
-        <div class="zones-grid" style="margin-top:1.5rem;">
-
-          <div class="zone-dept">
-            <h3>Marseille — 13000 à 13016</h3>
-            <ul>
-              <li>Marseille 1er – 7ème (Centre / Vieux-Port)</li>
-              <li>Marseille 8ème – 12ème (Sud / Est)</li>
-              <li>Marseille 13ème – 16ème (Nord)</li>
-              <li>Délai moyen : 1 heure</li>
-              <li>Disponible 7j/7 de 9h à 21h</li>
-            </ul>
-          </div>
-
-          <div class="zone-dept">
-            <h3>Aix-en-Provence — 13100</h3>
-            <ul>
-              <li>Centre-ville et quartiers résidentiels</li>
-              <li>Zones d'activités (Europarc, Pont-de-l'Arc)</li>
-              <li>Communes périphériques (Pertuis, Gardanne)</li>
-              <li>Délai moyen : 1 heure</li>
-              <li>Contrats pro disponibles</li>
-            </ul>
-          </div>
-
-          <div class="zone-dept">
-            <h3>Aubagne, La Ciotat, Cassis — 13400/13600/13260</h3>
-            <ul>
-              <li>Aubagne centre et zones industrielles</li>
-              <li>La Ciotat et La Ciotat Plage</li>
-              <li>Cassis et Cap Canaille</li>
-              <li>Délai moyen : 1 heure</li>
-            </ul>
-          </div>
-
-          <div class="zone-dept">
-            <h3>Martigues, Istres — 13500/13800</h3>
-            <ul>
-              <li>Martigues, Port-de-Bouc, Fos-sur-Mer</li>
-              <li>Istres, Miramas, Salon-de-Provence</li>
-              <li>Zone industrielle de Fos</li>
-              <li>Délai moyen : 1h à 1h30</li>
-            </ul>
-          </div>
-
-          <div class="zone-dept">
-            <h3>Toulon — 83000/83100/83200</h3>
-            <ul>
-              <li>Toulon centre et quartiers nord/est/ouest</li>
-              <li>La Seyne-sur-Mer, Six-Fours</li>
-              <li>Ollioules, Le Revest</li>
-              <li>Délai moyen : 1h à 1h30</li>
-              <li>Disponible 7j/7 de 9h à 21h</li>
-            </ul>
-          </div>
-
-          <div class="zone-dept">
-            <h3>Hyères, Bandol, Saint-Cyr — 83400/83150/83270</h3>
-            <ul>
-              <li>Hyères et Presqu'île de Giens</li>
-              <li>Bandol et Sanary-sur-Mer</li>
-              <li>Saint-Cyr-sur-Mer, La Cadière</li>
-              <li>Délai moyen : 1h30</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section section--alt" aria-labelledby="faq-z-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="faq-z-title">Questions fréquentes — Zones d'intervention</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="zfaq1" id="zfaq1-btn">Dans quelles villes ClimUrgence intervient-il ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="zfaq1" role="region" aria-labelledby="zfaq1-btn"><div class="faq-answer-inner"><p>ClimUrgence intervient dans toutes les villes des Bouches-du-Rhône (13) et du Var (83) : <strong>Marseille, Aix-en-Provence, Aubagne, La Ciotat, Cassis, Martigues, Istres, Toulon, Hyères, Saint-Cyr-sur-Mer, Bandol</strong> et toutes les communes environnantes.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="zfaq2" id="zfaq2-btn">Quel est le délai d'intervention moyen ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="zfaq2" role="region" aria-labelledby="zfaq2-btn"><div class="faq-answer-inner"><p>Délai moyen : <strong>1 heure pour Marseille</strong> et les communes proches (Aubagne, La Ciotat, Cassis). Pour Aix-en-Provence : environ 1h. Pour Toulon et le Var : 1h à 1h30 selon la localisation précise.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="zfaq3" id="zfaq3-btn">ClimUrgence intervient-il hors des grandes villes ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="zfaq3" role="region" aria-labelledby="zfaq3-btn"><div class="faq-answer-inner"><p>Oui. ClimUrgence intervient dans <strong>toutes les communes des Bouches-du-Rhône et du Var</strong>, y compris les zones rurales et périurbaines. Appelez le 06 43 72 18 50 pour confirmer la disponibilité dans votre commune.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="zfaq4" id="zfaq4-btn">Y a-t-il des frais de déplacement ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="zfaq4" role="region" aria-labelledby="zfaq4-btn"><div class="faq-answer-inner"><p>Des frais de déplacement peuvent s'appliquer pour les interventions situées à plus de 40 km de Marseille. Ces frais sont <strong>communiqués de façon transparente</strong> lors de la prise de rendez-vous et inclus dans le devis fourni avant intervention.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="zfaq5" id="zfaq5-btn">ClimUrgence intervient-il dans tout le Var (83) ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="zfaq5" role="region" aria-labelledby="zfaq5-btn"><div class="faq-answer-inner"><p>Oui. ClimUrgence couvre l'ensemble du Var : <strong>Toulon, Hyères, La Seyne-sur-Mer, Saint-Cyr-sur-Mer, Bandol, Le Beausset, Ollioules</strong> et les communes environnantes. Le délai d'intervention est de 1h à 1h30 depuis Marseille.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top:1.5rem;padding-bottom:2rem;">
-      <div class="container">
-        <div class="related-links">
-          <h3>Nos services dans votre zone</h3>
-          <ul>
-            <li><a href="/depannage-clim-marseille/">Dépannage urgence climatisation</a></li>
-            <li><a href="/entretien-climatisation/">Entretien annuel obligatoire</a></li>
-            <li><a href="/installation-climatisation/">Installation</a></li>
-            <li><a href="/contrats-pro/">Contrats maintenance professionnels</a></li>
-            <li><a href="/contact/">Demander un devis</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer class="site-footer" role="contentinfo">
