@@ -7,7 +7,6 @@
   <meta name="description" content="Toutes les réponses aux questions fréquentes sur le dépannage, l'entretien et l'installation de climatisation à Marseille. Prix, délais, codes erreur, réglementation." />
   <link rel="canonical" href="https://climurgence.com/faq/" />
 
-  <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://climurgence.com/faq/" />
   <meta property="og:title"       content="FAQ Climatisation — 47 questions réponses | ClimUrgence Marseille" />
@@ -16,18 +15,15 @@
   <meta property="og:locale"      content="fr_FR" />
   <meta property="og:site_name"   content="ClimUrgence" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="FAQ Climatisation — 47 questions réponses | ClimUrgence Marseille" />
   <meta name="twitter:description" content="Toutes les réponses aux questions fréquentes sur la climatisation à Marseille : prix, délais, pannes, réglementation, codes erreur." />
   <meta name="twitter:image"       content="https://climurgence.com/img/og-home.webp" />
 
-  <!-- IndexNow -->
   <meta name="indexnow" content="climurgence2026a8f3c7d21b9" />
   <meta name="robots"    content="index, follow" />
   <meta name="googlebot" content="index, follow" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
@@ -39,166 +35,400 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-  <!-- CSS inline : sommaire premium (scope .faq-page) -->
   <style>
-    /* Nouveau sommaire premium */
-    .faq-page .faq-toc-premium {
-      background: linear-gradient(135deg, #FFF9F5 0%, #F0F7FF 100%);
-      border: 1px solid #F3DED0;
-      border-radius: 20px;
-      padding: 2.25rem 2rem;
-      margin-bottom: 4rem;
-    }
+/* ============================================= */
+/* CSS SPÉCIFIQUE À LA PAGE FAQ — AUTONOME */
+/* ============================================= */
 
-    .faq-page .faq-toc-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 1.75rem;
-    }
+/* Reset anti-conflit avec style.css global */
+body {
+  margin: 0;
+  padding: 0;
+}
 
-    .faq-page .faq-toc-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: #F56E17;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+/* Wrapper principal — padding-top CRITIQUE pour éviter le header fixe */
+.faq-wrapper {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 140px 1.5rem 4rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1F2937;
+  line-height: 1.6;
+}
 
-    .faq-page .faq-toc-icon svg {
-      width: 22px;
-      height: 22px;
-      stroke: white;
-    }
+/* Breadcrumb */
+.faq-wrapper .faq-breadcrumb {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0 0 1rem 0;
+}
+.faq-wrapper .faq-breadcrumb a {
+  color: #6B7280;
+  text-decoration: none;
+}
+.faq-wrapper .faq-breadcrumb a:hover {
+  color: #F56E17;
+}
 
-    .faq-page .faq-toc-label {
-      font-size: 11px !important;
-      font-weight: 600 !important;
-      color: #F56E17 !important;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin: 0 0 2px 0 !important;
-    }
+/* Titre H1 */
+.faq-wrapper h1.faq-main-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #1E6FA8;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
 
-    .faq-page .faq-toc-heading {
-      font-family: 'Bebas Neue', sans-serif !important;
-      font-size: 1.5rem !important;
-      font-weight: 400 !important;
-      color: #1E6FA8 !important;
-      margin: 0 !important;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      line-height: 1.1 !important;
-    }
+/* Intro */
+.faq-wrapper .faq-intro-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0 0 3rem 0;
+  max-width: 680px;
+}
 
-    .faq-page .faq-toc-list {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 4px !important;
-      list-style: none !important;
-      padding: 0 !important;
-      margin: 0 !important;
-    }
+/* ============== SOMMAIRE PREMIUM ============== */
+.faq-wrapper .faq-toc-box {
+  background: linear-gradient(135deg, #FFF9F5 0%, #F0F7FF 100%);
+  border: 1px solid #F3DED0;
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  margin: 0 0 4rem 0;
+}
+.faq-wrapper .faq-toc-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.75rem;
+}
+.faq-wrapper .faq-toc-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #F56E17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.faq-wrapper .faq-toc-ico svg {
+  width: 22px;
+  height: 22px;
+}
+.faq-wrapper .faq-toc-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: #F56E17;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 2px 0;
+}
+.faq-wrapper .faq-toc-ttl {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.faq-wrapper .faq-toc-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.faq-wrapper .faq-toc-ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.faq-wrapper .faq-toc-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-radius: 10px;
+  color: #1F2937;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.7);
+  border: 0.5px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  gap: 12px;
+}
+.faq-wrapper .faq-toc-a:hover {
+  background: #FFFFFF;
+  border-color: #F56E17;
+  transform: translateX(2px);
+}
+.faq-wrapper .faq-toc-a-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+.faq-wrapper .faq-toc-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #FDEEDF;
+  color: #F56E17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.faq-wrapper .faq-toc-a:hover .faq-toc-num {
+  background: #F56E17;
+  color: #FFFFFF;
+}
+.faq-wrapper .faq-toc-txt {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1F2937;
+}
+.faq-wrapper .faq-toc-arr {
+  color: #9CA3AF;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.faq-wrapper .faq-toc-a:hover .faq-toc-arr {
+  color: #F56E17;
+  transform: translateX(2px);
+}
 
-    .faq-page .faq-toc-list li {
-      list-style: none !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
+/* ============== SECTIONS H2 ============== */
+.faq-wrapper .faq-sec {
+  margin: 0 0 4rem 0;
+  scroll-margin-top: 120px;
+}
+.faq-wrapper .faq-sec h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.875rem;
+  border-bottom: 2px solid #E5E7EB;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
 
-    .faq-page .faq-toc-link {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      padding: 14px 16px !important;
-      border-radius: 10px !important;
-      color: #1F2937 !important;
-      text-decoration: none !important;
-      background: rgba(255, 255, 255, 0.7) !important;
-      border: 0.5px solid rgba(0, 0, 0, 0.04) !important;
-      transition: all 0.2s ease !important;
-      gap: 12px !important;
-    }
+/* ============== ACCORDÉONS ============== */
+.faq-wrapper .faq-qa {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 14px;
+  margin: 0 0 12px 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  padding: 0;
+  list-style: none;
+}
+.faq-wrapper .faq-qa[open] {
+  border-color: #F56E17;
+  box-shadow: 0 4px 16px rgba(245, 110, 23, 0.08);
+}
+.faq-wrapper .faq-qa:hover:not([open]) {
+  border-color: #9CA3AF;
+}
+.faq-wrapper .faq-qa summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.375rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+}
+.faq-wrapper .faq-qa summary::-webkit-details-marker {
+  display: none;
+}
+.faq-wrapper .faq-qa summary::marker {
+  display: none;
+  content: "";
+}
+.faq-wrapper .faq-q {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1F2937;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  border: none;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.faq-wrapper .faq-qa[open] .faq-q {
+  color: #1E6FA8;
+}
+.faq-wrapper .faq-plus {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+.faq-wrapper .faq-qa[open] .faq-plus {
+  background: #F56E17;
+  color: #FFFFFF;
+  transform: rotate(45deg);
+}
+.faq-wrapper .faq-a {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid #F3F4F6;
+  margin-top: 0;
+  animation: faqSlide 0.25s ease;
+}
+.faq-wrapper .faq-a-inner {
+  padding-top: 1.25rem;
+}
+.faq-wrapper .faq-a p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: #4B5563;
+  margin: 0;
+}
+.faq-wrapper .faq-a a {
+  color: #1E6FA8;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 111, 168, 0.3);
+  text-underline-offset: 2px;
+}
+.faq-wrapper .faq-a a:hover {
+  text-decoration-color: #1E6FA8;
+}
+@keyframes faqSlide {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .faq-page .faq-toc-link:hover {
-      background: #FFFFFF !important;
-      border-color: #F56E17 !important;
-      transform: translateX(2px);
-    }
+/* ============== CTA FINAL ============== */
+.faq-wrapper .faq-cta-box {
+  background: linear-gradient(135deg, #1E6FA8 0%, #154B7A 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 5rem 0 0 0;
+}
+.faq-wrapper .faq-cta-box h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.faq-wrapper .faq-cta-box p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0 0 1.75rem 0;
+}
+.faq-wrapper .faq-cta-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.faq-wrapper .faq-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.faq-wrapper .faq-btn-pri {
+  background: #F56E17;
+  color: #FFFFFF;
+}
+.faq-wrapper .faq-btn-pri:hover {
+  background: #D85A0E;
+  transform: translateY(-1px);
+}
+.faq-wrapper .faq-btn-sec {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.faq-wrapper .faq-btn-sec:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
 
-    .faq-page .faq-toc-link-inner {
-      display: flex !important;
-      align-items: center !important;
-      gap: 12px !important;
-      flex: 1 !important;
-    }
+/* ============== RESPONSIVE MOBILE ============== */
+@media (max-width: 640px) {
+  .faq-wrapper {
+    padding: 120px 1rem 2.5rem 1rem;
+  }
+  .faq-wrapper h1.faq-main-title {
+    font-size: 2rem;
+  }
+  .faq-wrapper .faq-intro-text {
+    font-size: 1rem;
+  }
+  .faq-wrapper .faq-toc-box {
+    padding: 1.75rem 1.25rem;
+  }
+  .faq-wrapper .faq-toc-ttl {
+    font-size: 1.25rem;
+  }
+  .faq-wrapper .faq-toc-a {
+    padding: 12px 14px;
+  }
+  .faq-wrapper .faq-toc-txt {
+    font-size: 14px;
+  }
+  .faq-wrapper .faq-sec h2 {
+    font-size: 1.5rem;
+  }
+  .faq-wrapper .faq-qa summary {
+    padding: 1.125rem 1.25rem;
+  }
+  .faq-wrapper .faq-q {
+    font-size: 0.9375rem;
+  }
+  .faq-wrapper .faq-a {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+  }
+  .faq-wrapper .faq-cta-box {
+    padding: 2.5rem 1.5rem;
+  }
+  .faq-wrapper .faq-cta-box h2 {
+    font-size: 1.625rem;
+  }
+}
+</style>
 
-    .faq-page .faq-toc-number {
-      width: 26px !important;
-      height: 26px !important;
-      border-radius: 6px !important;
-      background: #FDEEDF !important;
-      color: #F56E17 !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 13px !important;
-      font-weight: 600 !important;
-      flex-shrink: 0;
-      transition: all 0.2s ease;
-    }
-
-    .faq-page .faq-toc-link:hover .faq-toc-number {
-      background: #F56E17 !important;
-      color: #FFFFFF !important;
-    }
-
-    .faq-page .faq-toc-title {
-      font-size: 15px !important;
-      font-weight: 500 !important;
-      color: #1F2937 !important;
-    }
-
-    .faq-page .faq-toc-arrow {
-      color: #9CA3AF !important;
-      font-size: 18px !important;
-      flex-shrink: 0;
-      transition: all 0.2s ease;
-    }
-
-    .faq-page .faq-toc-link:hover .faq-toc-arrow {
-      color: #F56E17 !important;
-      transform: translateX(2px);
-    }
-
-    /* Responsive mobile */
-    @media (max-width: 640px) {
-      .faq-page .faq-toc-premium {
-        padding: 1.75rem 1.25rem;
-      }
-
-      .faq-page .faq-toc-header {
-        margin-bottom: 1.25rem;
-      }
-
-      .faq-page .faq-toc-heading {
-        font-size: 1.25rem !important;
-      }
-
-      .faq-page .faq-toc-link {
-        padding: 12px 14px !important;
-      }
-
-      .faq-page .faq-toc-title {
-        font-size: 14px !important;
-      }
-    }
-  </style>
-
-  <!-- Données structurées FAQPage + Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -467,7 +697,7 @@
   }
   </script>
 </head>
-<body class="faq-page">
+<body>
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
   <header class="site-header" role="banner">
@@ -494,628 +724,654 @@
   </header>
 
   <main id="main-content">
-    <div class="faq-content">
+    <div class="faq-wrapper">
 
-      <header class="faq-header">
-        <div class="breadcrumb">
-          <a href="/">Accueil</a> <span>&gt;</span> <span>FAQ</span>
+      <div class="faq-breadcrumb">
+        <a href="/">Accueil</a> › <span>FAQ</span>
+      </div>
+
+      <h1 class="faq-main-title">FAQ climatisation — vos questions, nos réponses</h1>
+      <p class="faq-intro-text">47 réponses claires et factuelles sur les pannes courantes, les tarifs, la réglementation et l'entretien. Toutes les informations sont à jour pour 2026 et correspondent aux prix pratiqués par ClimUrgence dans les Bouches-du-Rhône et le Var.</p>
+
+    <nav class="faq-toc-box" aria-label="Sommaire des questions">
+      <div class="faq-toc-head">
+        <div class="faq-toc-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
         </div>
-        <h1>FAQ Climatisation — Vos questions, nos réponses</h1>
-        <p class="faq-intro">47 réponses claires et factuelles sur les pannes courantes, les tarifs, la réglementation et l'entretien. Toutes les informations sont à jour pour 2026 et correspondent aux prix pratiqués par ClimUrgence dans les Bouches-du-Rhône et le Var.</p>
-      </header>
-
-      <nav class="faq-toc-premium" aria-label="Sommaire des questions">
-
-        <div class="faq-toc-header">
-          <div class="faq-toc-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-              <line x1="12" y1="17" x2="12.01" y2="17"/>
-              <circle cx="12" cy="12" r="10"/>
-            </svg>
-          </div>
-          <div>
-            <div class="faq-toc-label">Sommaire</div>
-            <div class="faq-toc-heading">FAQ Climatisation</div>
-          </div>
+        <div>
+          <div class="faq-toc-lbl">Sommaire</div>
+          <div class="faq-toc-ttl">FAQ Climatisation</div>
         </div>
+      </div>
 
-        <ul class="faq-toc-list">
-          <li>
-            <a href="#section-depannage" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">1</span>
-                <span class="faq-toc-title">Dépannage et pannes courantes</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-tarifs" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">2</span>
-                <span class="faq-toc-title">Tarifs et devis</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-entretien" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">3</span>
-                <span class="faq-toc-title">Entretien et réglementation</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-installation" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">4</span>
-                <span class="faq-toc-title">Installation et remplacement</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-codes" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">5</span>
-                <span class="faq-toc-title">Codes erreur et marques</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-zones" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">6</span>
-                <span class="faq-toc-title">Zones d'intervention</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-vmc" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">7</span>
-                <span class="faq-toc-title">VMC et ventilation</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section-pratique" class="faq-toc-link">
-              <span class="faq-toc-link-inner">
-                <span class="faq-toc-number">8</span>
-                <span class="faq-toc-title">Questions pratiques et pros</span>
-              </span>
-              <span class="faq-toc-arrow" aria-hidden="true">→</span>
-            </a>
-          </li>
-        </ul>
+      <ul class="faq-toc-ul">
+        <li><a href="#section-depannage" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">1</span><span class="faq-toc-txt">Dépannage et pannes courantes</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-tarifs" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">2</span><span class="faq-toc-txt">Tarifs et devis</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-entretien" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">3</span><span class="faq-toc-txt">Entretien et réglementation</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-installation" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">4</span><span class="faq-toc-txt">Installation et remplacement</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-codes" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">5</span><span class="faq-toc-txt">Codes erreur et marques</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-zones" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">6</span><span class="faq-toc-txt">Zones d'intervention</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-vmc" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">7</span><span class="faq-toc-txt">VMC et ventilation</span></span><span class="faq-toc-arr">→</span></a></li>
+        <li><a href="#section-pratique" class="faq-toc-a"><span class="faq-toc-a-inner"><span class="faq-toc-num">8</span><span class="faq-toc-txt">Questions pratiques et pros</span></span><span class="faq-toc-arr">→</span></a></li>
+      </ul>
+    </nav>
 
-      </nav>
+    <section class="faq-sec" id="section-depannage">
+      <h2>1. Dépannage et pannes courantes</h2>
 
-      <!-- SECTION 1 -->
-      <section class="faq-section" id="section-depannage">
-        <h2>1. Dépannage et pannes courantes</h2>
-
-        <details class="faq-item">
-          <summary>
-            <h3>Pourquoi ma climatisation ne refroidit-elle plus ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Pourquoi ma climatisation ne refroidit-elle plus ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Les 5 causes principales sont les filtres encrassés (50% des cas), une fuite de gaz réfrigérant, un échangeur bouché, une thermistance défectueuse ou un mode de fonctionnement mal réglé. Avant d'appeler un professionnel, vérifiez que vous êtes bien en mode « Cool » (froid) et non « Fan » (ventilation), puis nettoyez les filtres à l'eau tiède. Si le problème persiste, il s'agit probablement d'une fuite de réfrigérant, d'un échangeur intérieur colmaté par la poussière, ou d'une panne électronique du compresseur. Un diagnostic professionnel ClimUrgence commence à 149 € TTC avec remise en état complète incluse. <a href="/depannage-clim-marseille/">Découvrir notre service de dépannage</a>.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Ma climatisation fuit de l'eau, que dois-je faire ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Ma climatisation fuit de l'eau, que dois-je faire ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Une fuite d'eau provient 9 fois sur 10 d'un bac à condensats bouché ou d'un circuit d'évacuation colmaté. Coupez immédiatement l'alimentation électrique, placez un récipient sous l'écoulement pour limiter les dégâts, puis appelez un professionnel. Le phénomène de condensation est normal en mode froid : l'eau est collectée dans un bac et évacuée via un tuyau. Quand ce tuyau se bouche (poussière, algues, insectes) ou que le bac est fissuré, l'eau déborde et peut détériorer peinture, plâtre et créer des moisissures. L'intervention ClimUrgence avec débouchage complet et test d'étanchéité commence à 119 € TTC.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Ma climatisation souffle chaud au lieu de froid, pourquoi ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Ma climatisation souffle chaud au lieu de froid, pourquoi ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Trois causes possibles : vous êtes en mode chauffage (Heat) au lieu de froid (Cool) sur la télécommande, votre vanne 4 voies (pompe à chaleur réversible) est bloquée, ou le compresseur est en panne. Vérifiez d'abord la télécommande — c'est l'erreur la plus fréquente. Sur les climatiseurs réversibles, une vanne mécanique inverse le cycle frigorifique pour produire du chaud en hiver ou du froid en été. Si cette vanne se bloque en position chauffage, l'appareil souffle chaud même en mode froid. Cette panne nécessite un diagnostic professionnel et parfois le remplacement de la vanne. Durée d'intervention : environ 70 minutes.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Ma clim fait un bruit anormal, comment identifier la cause ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Ma clim fait un bruit anormal, comment identifier la cause ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Chaque bruit a une cause différente : un bruit soudain vient souvent d'un objet tombé dans l'unité extérieure (feuille, petit animal, caillou poussé par le vent). Un sifflement aigu indique une fuite de gaz progressive. Un grondement au démarrage est fréquent sur les compresseurs vieillissants. Un claquement régulier signale une pale de ventilateur déséquilibrée. Des vibrations viennent de supports anti-vibratoires usés. Le technicien identifie la source par inspection et écoute, puis remédie sur place selon le cas (nettoyage, resserrage, remplacement des tampons anti-vibratoires, retrait du corps étranger). Diagnostic sur place à partir de 129 € TTC chez ClimUrgence.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Que signifie un code erreur affiché sur ma climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Que signifie un code erreur affiché sur ma climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Les codes erreur signalent une panne spécifique que l'appareil détecte et bloque en sécurité pour se protéger. Chaque marque a sa codification propre. Sur Daikin : E1 = erreur de communication entre unité intérieure et extérieure, E3 = pression anormale (fuite de gaz ou problème de ventilation), F3 = température échangeur extérieur anormale. Sur Mitsubishi : P1 = capteur intérieur, P2 = capteur de tuyauterie, E6 = erreur de communication. Un technicien professionnel dispose des documentations constructeur pour interpréter tous les codes des marques du marché. Lecture, diagnostic et remise en route par ClimUrgence à partir de 139 € TTC.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Mon climatiseur ne s'allume plus du tout, que vérifier ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Mon climatiseur ne s'allume plus du tout, que vérifier ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Vérifiez 3 points avant d'appeler un professionnel : les piles de la télécommande, le disjoncteur dédié sur votre tableau électrique, et le fusible de protection de l'appareil. Un climatiseur complètement éteint (plus de LED, aucune réponse) est souvent dû à une coupure d'alimentation en amont : disjoncteur déclenché, fusible grillé, piles vides, ou récepteur infrarouge HS. Si tout l'extérieur est OK, le problème est interne à l'appareil : carte électronique grillée, transformateur d'alimentation défectueux, ou condensateur démarreur mort sur les anciens modèles. Diagnostic ClimUrgence à partir de 119 € TTC avec contrôle complet de la chaîne électrique.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 2 -->
-      <section class="faq-section" id="section-tarifs">
-        <h2>2. Tarifs et devis</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Combien coûte un dépannage de climatisation à Marseille ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-tarifs">
+      <h2>2. Tarifs et devis</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Combien coûte un dépannage de climatisation à Marseille ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Chez ClimUrgence, les dépannages commencent à 119 € TTC (fuite d'eau, clim qui ne démarre plus) et montent à 199 € TTC pour une recharge de gaz réfrigérant complète. Tous nos tarifs sont publiés sur notre <a href="/tarifs/">grille tarifaire transparente</a>. Contrairement à la plupart des concurrents qui facturent le déplacement (50 à 80 € supplémentaires) et appliquent des majorations de 25 à 50% le soir ou week-end, ClimUrgence applique un tarif unique 7j/7 de 9h à 21h. Le déplacement est offert partout dans notre zone et un devis verbal est systématiquement présenté avant toute réparation.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Le diagnostic est-il payant chez ClimUrgence ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Le diagnostic est-il payant chez ClimUrgence ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, le diagnostic simple sans réparation est facturé 79 € TTC, mais ce montant est intégralement déduit de la facture finale si vous acceptez la réparation dans la même intervention. Cette approche permet au technicien de prendre le temps nécessaire pour identifier précisément l'origine de la panne sans être poussé à « trouver quelque chose à facturer ». Si la réparation est acceptée, la visite de diagnostic devient gratuite — c'est systématique. Cette démarche garantit un diagnostic honnête et évite les pseudo-réparations coûteuses qu'on voit parfois dans le secteur.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Y a-t-il une majoration le soir ou le week-end ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Y a-t-il une majoration le soir ou le week-end ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Non, aucune majoration. ClimUrgence applique exactement le même tarif du lundi au dimanche, de 9h à 21h, y compris les jours fériés. La plupart des entreprises de dépannage appliquent +25 à +50% sur les interventions hors heures ouvrées : un dépannage à 150 € peut facilement devenir 225 € un samedi soir chez un concurrent. ClimUrgence a fait le choix de l'équité tarifaire pour simplifier la vie de ses clients et éliminer les mauvaises surprises. Ce choix fait partie de nos engagements de transparence totale.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Le déplacement est-il facturé en supplément ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Le déplacement est-il facturé en supplément ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Non, le déplacement est entièrement offert sur toute la zone d'intervention : Bouches-du-Rhône (13) et Var (83), quel que soit le lieu (Marseille, Aix-en-Provence, Toulon, Hyères…). Aucun frais caché n'est ajouté à la facture. Nous considérons que le déplacement fait partie intégrante du service. Dans le secteur, les frais de déplacement facturés varient entre 40 et 80 € selon les entreprises et la distance. Chez ClimUrgence, ces frais sont inclus dans la prestation, ce qui rend notre grille tarifaire réellement transparente et nos prix affichés sans mauvaise surprise.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Puis-je obtenir un devis gratuit avant intervention ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Puis-je obtenir un devis gratuit avant intervention ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui. Tous les devis ClimUrgence sont gratuits et sans engagement. Vous pouvez les demander par téléphone au 06 43 72 18 50 (réponse immédiate), via le <a href="/contact/">formulaire de contact</a> (réponse sous 30 minutes en journée), ou via la <a href="/tarifs/">page Tarifs</a> pour un devis automatique par prestation. Pour les dépannages, un devis verbal est systématiquement présenté avant toute réparation impliquant une pièce de remplacement. Pour les installations neuves, une visite technique gratuite est programmée sous 24 à 48 heures pour mesurer précisément et remettre un devis écrit détaillé.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quels moyens de paiement acceptez-vous ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quels moyens de paiement acceptez-vous ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>ClimUrgence accepte 4 moyens de paiement à l'issue de l'intervention : espèces, chèque, carte bancaire (sur terminal mobile), et virement bancaire. Aucun paiement en avance n'est demandé pour les interventions de dépannage. Pour les clients professionnels sous contrat de maintenance (commerces, hôtels, bureaux, cabinets médicaux), nous proposons le paiement par virement mensuel ou trimestriel avec délai de 30 jours à réception de facture. Cette flexibilité simplifie la gestion comptable des pros et sécurise la trésorerie.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Les prix sont-ils affichés en TTC ou HT ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Les prix sont-ils affichés en TTC ou HT ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Tous les prix publiés sur climurgence.com et dans les devis sont exprimés en TTC (TVA 20% incluse). ClimUrgence n'étant pas certifiée RGE Qualibat, la TVA réduite à 5,5% ou 10% ne s'applique pas à nos prestations. La TVA réduite est réservée aux travaux de rénovation énergétique réalisés par des entreprises certifiées RGE. Nous communiquons cette information de manière totalement transparente : ClimUrgence applique la TVA standard à 20%, ce qui est déjà pris en compte dans nos tarifs publics très compétitifs.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 3 -->
-      <section class="faq-section" id="section-entretien">
-        <h2>3. Entretien annuel et réglementation</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>L'entretien annuel de climatisation est-il obligatoire en France ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-entretien">
+      <h2>3. Entretien annuel et réglementation</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">L'entretien annuel de climatisation est-il obligatoire en France ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui. Le décret n°2004-461 du 1er juin 2004 et l'arrêté du 16 avril 2010 imposent un entretien périodique obligatoire pour tout système de climatisation dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW). La fréquence est de 1 fois par an entre 2 kg et 30 kg, et tous les 6 mois au-delà de 30 kg. Le non-respect expose à une amende et peut invalider la garantie constructeur ainsi que votre assurance habitation en cas de sinistre lié à la climatisation. La plupart des climatiseurs résidentiels monosplit ou bisplit contiennent moins de 2 kg de fluide et ne sont donc pas légalement obligés, mais un entretien annuel reste fortement recommandé.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>À quelle fréquence faut-il entretenir sa climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">À quelle fréquence faut-il entretenir sa climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Idéalement 1 fois par an, de préférence au printemps (mars-avril) avant la saison chaude. Un entretien annuel prolonge la durée de vie de l'appareil de 5 à 8 ans et réduit la consommation électrique de 15 à 30%. L'entretien comprend le nettoyage des filtres, le dépoussiérage de l'échangeur intérieur, le débouchage du bac à condensats, le nettoyage du condenseur extérieur, la mesure des températures de soufflage et un traitement antibactérien du circuit d'air. Durée : 60 à 90 minutes pour un monosplit, 2 à 3 heures pour un multisplit. Prix à partir de 119 € TTC chez ClimUrgence.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Puis-je nettoyer les filtres de ma climatisation moi-même ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Puis-je nettoyer les filtres de ma climatisation moi-même ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, pour les filtres à air classiques c'est tout à fait accessible. Il suffit de les retirer (la plupart coulissent ou se déclipsent), les laver à l'eau tiède savonneuse, les laisser sécher complètement à l'air libre puis les remettre en place. À faire tous les 1 à 3 mois en période d'utilisation intensive. Par contre, le nettoyage de l'échangeur intérieur, du bac à condensats, du condenseur extérieur et les vérifications techniques (pression de gaz, étanchéité, fonctionnement électrique) nécessitent un professionnel équipé avec air comprimé, détecteur de fuite et produits spécifiques. Ne démontez jamais les parties internes de l'unité.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Qu'est-ce qu'un nettoyage haute pression (Jet HP) ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Qu'est-ce qu'un nettoyage haute pression (Jet HP) ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Le nettoyage Jet HP est un nettoyage professionnel approfondi de l'échangeur intérieur, utile tous les 2 à 3 ans quand le simple entretien annuel ne suffit plus. Signes d'un besoin : odeurs persistantes, moisissures visibles, baisse de performance, bruit de soufflage inhabituel. Le technicien installe une bâche de protection étanche, applique un produit dégraissant/antimicrobien, rince sous pression l'échangeur intérieur avec un kit Jet HP professionnel, puis désinfecte au spray. Les eaux usées sont récupérées dans la bâche. Durée : 75 minutes par unité. Prix à partir de 149 € TTC chez ClimUrgence.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Faut-il couper la climatisation quand on part en vacances ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Faut-il couper la climatisation quand on part en vacances ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, si l'absence dépasse 2 ou 3 jours. Couper l'alimentation électrique au disjoncteur évite la consommation en veille (5 à 15 W permanents) et les risques de panne pendant l'absence (orage, surtension, fuite d'eau non détectée). Relancer l'appareil 1 à 2 heures avant votre retour pour retrouver une pièce à bonne température. Pour les absences longues (plus de 2 semaines), nettoyez les filtres avant le départ pour éviter la formation de moisissures dans l'humidité résiduelle. Redémarrer progressivement l'appareil à votre retour permet de vérifier son bon fonctionnement et d'identifier tout problème avant qu'il ne s'aggrave.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quelle est la durée de vie d'une climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quelle est la durée de vie d'une climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>10 à 15 ans pour un climatiseur résidentiel correctement entretenu. Sans entretien régulier, la durée de vie peut descendre à 6-8 ans seulement. Les facteurs qui accélèrent le vieillissement sont multiples : environnement poussiéreux (cotonniers à Marseille en été), air salin près de la mer (Cassis, Bandol, La Ciotat, Saint-Cyr-sur-Mer), sous-entretien chronique, surdimensionnement ou sous-dimensionnement par rapport à la surface, ou utilisation d'un fluide R22 (appareil d'avant 2010 considéré obsolète). Un entretien annuel reste le meilleur investissement pour rentabiliser pleinement votre appareil sur sa durée de vie.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 4 -->
-      <section class="faq-section" id="section-installation">
-        <h2>4. Installation et remplacement</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Combien coûte l'installation d'une climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-installation">
+      <h2>4. Installation et remplacement</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Combien coûte l'installation d'une climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Chez ClimUrgence, la pose d'un monosplit (appareil fourni par le client) commence à 699 € TTC. Le pack complet fourniture + pose démarre à 1 249 € TTC pour un climatiseur inverter de qualité (Daikin, Mitsubishi, Atlantic, Samsung, LG). L'installation inclut la fixation des unités intérieure et extérieure, la traversée murale, la liaison frigorifique jusqu'à 5 mètres linéaires, la mise sous vide du circuit, la mise en service et le test de fonctionnement complet. Au-delà de 5 mètres de liaison, compter 12 € TTC par mètre supplémentaire. Tous les détails sur notre <a href="/installation-climatisation/">page installation</a>.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quelle puissance de climatisation choisir pour mon logement ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quelle puissance de climatisation choisir pour mon logement ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Règle simple : environ 100 watts par m² pour un logement bien isolé. Une pièce de 20 m² nécessite un climatiseur de 2 kW (environ 7 000 BTU). Pour 30 m² : 2,5 à 3 kW. Pour 50 m² : 4 à 5 kW. À Marseille et en PACA, majorer de 20 à 30% en raison de l'ensoleillement et des températures estivales élevées. Un surdimensionnement conduit à une consommation excessive et à un fonctionnement saccadé qui fatigue le compresseur. Un sous-dimensionnement conduit à un refroidissement insuffisant avec un appareil qui tourne en permanence à pleine puissance. Un technicien ClimUrgence réalise un calcul précis lors du devis gratuit.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Monosplit, bisplit ou multisplit : lequel choisir ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Monosplit, bisplit ou multisplit : lequel choisir ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Monosplit pour climatiser 1 pièce unique (chambre, salon, bureau). Bisplit pour 2 pièces indépendantes (par exemple salon + chambre principale). Multisplit pour 3 à 5 pièces avec une seule unité extérieure — économie esthétique et matérielle. Un multisplit coûte 20 à 30% plus cher à l'achat qu'un monosplit par pièce, mais permet de n'avoir qu'une seule unité extérieure sur la façade, ce qui est souvent un critère imposé par le règlement de copropriété. Les unités intérieures d'un multisplit fonctionnent indépendamment avec des températures différentes possibles. Le choix dépend du nombre de pièces à climatiser et des contraintes d'installation.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Peut-on installer une climatisation en appartement ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Peut-on installer une climatisation en appartement ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, mais vérifiez 3 points au préalable : votre règlement de copropriété (souvent contraignant sur les unités extérieures), l'accord du syndic si le passage de liaison en façade est nécessaire, et votre configuration électrique (un circuit dédié 16A minimum est obligatoire). De nombreuses copropriétés encadrent strictement l'installation des unités extérieures avec des règles précises : couleurs autorisées, positions, nombre maximal. Il est nécessaire d'obtenir une autorisation écrite du syndic avant toute installation. Certaines solutions alternatives (climatiseur mobile, monobloc sans unité extérieure) peuvent contourner ce problème mais sont moins performantes énergétiquement.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Combien de temps dure une installation de climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Combien de temps dure une installation de climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Une installation monosplit standard prend 3 à 5 heures en moyenne. Un multisplit 3 unités nécessite une journée complète (6 à 8 heures). Un système gainable avec conduits dans le faux plafond : 2 à 4 jours selon la complexité des travaux de plâtrerie. Les délais de planification entre signature du devis et installation effective sont en moyenne de 5 à 10 jours ouvrés chez ClimUrgence. Pour les clients professionnels sous contrat avec activité sensible (restaurants, commerces), nous proposons des interventions le samedi ou en soirée pour limiter les perturbations d'activité. L'installation inclut toujours une explication complète d'utilisation au client.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Faut-il dépolluer l'ancienne climatisation avant le remplacement ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Faut-il dépolluer l'ancienne climatisation avant le remplacement ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, la dépose d'un ancien climatiseur nécessite normalement la récupération réglementaire du fluide frigorigène par un professionnel certifié. Cette obligation est encadrée par le règlement F-Gas européen pour garantir que le gaz n'est pas relâché dans l'atmosphère (il a un potentiel de réchauffement planétaire élevé, parfois plusieurs milliers de fois celui du CO2). Chez ClimUrgence, nous ne proposons pas la récupération officielle certifiée du gaz, mais nous vous orientons vers un partenaire certifié si nécessaire. Notre service de dépose simple (démontage, débranchement, obturation) commence à 149 € TTC.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 5 -->
-      <section class="faq-section" id="section-codes">
-        <h2>5. Codes erreur et marques</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Que signifie le code E1 sur une climatisation Daikin ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-codes">
+      <h2>5. Codes erreur et marques</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Que signifie le code E1 sur une climatisation Daikin ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Le code E1 sur Daikin indique une erreur de communication entre l'unité intérieure et l'unité extérieure. Les causes fréquentes sont : un câble de liaison endommagé (souris, rongeurs, humidité), un mauvais branchement lors d'une installation récente, ou une carte électronique défectueuse sur l'une des deux unités. Un technicien vérifie d'abord la continuité du câble de liaison (5 fils sur la plupart des modèles) avec un multimètre. Si le câble est OK, le diagnostic s'oriente vers la carte électronique de l'unité extérieure, généralement plus exposée aux variations de température et à l'humidité. Lecture et diagnostic à partir de 139 € TTC chez ClimUrgence.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Que signifie le code E3 sur une climatisation Daikin ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Que signifie le code E3 sur une climatisation Daikin ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Le code E3 sur Daikin signale une pression anormale dans le circuit frigorifique, soit trop basse (fuite de gaz probable), soit trop élevée (condenseur encrassé ou ventilateur extérieur bloqué). C'est un signal d'alarme important qui ne doit pas être ignoré. Il ne faut surtout pas tenter de réinitialiser l'appareil sans diagnostic préalable : faire tourner un circuit frigorifique avec une pression anormale peut endommager irréversiblement le compresseur, qui est la pièce la plus coûteuse de l'appareil (entre 600 et 1 500 € à remplacer selon le modèle). Une intervention professionnelle rapide est indispensable.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Que signifie le code F3 sur une climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Que signifie le code F3 sur une climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Le code F3 indique une température anormale de l'échangeur extérieur. Les causes principales : un condenseur très encrassé (cotonniers de platane, poussière urbaine, pollution), un ventilateur extérieur en panne qui ne refroidit plus l'échangeur, ou une sonde de température défectueuse qui envoie de fausses données à la carte de contrôle. À Marseille, l'encrassement du condenseur par les cotonniers de platane est une cause extrêmement fréquente en été. Un simple nettoyage haute pression du condenseur extérieur (79 € TTC chez ClimUrgence) résout le problème dans la majorité des cas, sans remplacement de pièce.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quelles marques de climatisation réparez-vous ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quelles marques de climatisation réparez-vous ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>ClimUrgence répare toutes les grandes marques présentes sur le marché résidentiel et tertiaire français : Daikin, Mitsubishi Electric, Mitsubishi Heavy, Samsung, LG, Atlantic, Hitachi, Toshiba, Gree, Midea, Panasonic, Fujitsu, Airwell, Carrier, Haier, Hyundai, Olimpia Splendid. Nos techniciens disposent des documentations constructeur et des outils nécessaires pour diagnostiquer et réparer sur toutes ces marques. Les systèmes pris en charge incluent : monosplit, bisplit, trisplit, multisplit jusqu'à 5 têtes, gainables, cassettes de plafond, pompes à chaleur air/air réversibles, et VMC simple et double flux.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quelle est la meilleure marque de climatiseur en 2026 ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quelle est la meilleure marque de climatiseur en 2026 ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Daikin et Mitsubishi Electric sont les marques les plus fiables et les plus économes à l'usage, avec des coefficients de performance SCOP jusqu'à 5,1. Atlantic est excellent en rapport qualité-prix pour le marché français. Samsung et LG offrent des modèles innovants avec des fonctions connectées avancées. Il n'y a pas de « meilleur absolu » — le choix dépend du budget, de l'usage et des contraintes d'installation. Pour un usage résidentiel intensif en PACA (4-5 mois de climatisation par an), nous recommandons Daikin ou Mitsubishi pour leur longévité. Pour un usage modéré ou un budget plus serré, Atlantic et Samsung offrent d'excellentes performances 20 à 30% moins chères.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quelle différence entre les fluides R32 et R410A ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quelle différence entre les fluides R32 et R410A ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Le R32 est le fluide frigorigène actuel, obligatoire pour les climatiseurs neufs depuis 2025. Son PRP (Potentiel de Réchauffement Planétaire) est 3 fois plus faible que le R410A, ce qui le rend beaucoup plus écologique. Le R410A reste utilisable sur les appareils existants et peut encore être rechargé jusqu'en 2030. Le R22, utilisé avant 2015 sur les anciens appareils, est interdit depuis 2015 et non rechargeable : un appareil fonctionnant encore au R22 doit être remplacé. Le R290 (propane) est la nouvelle génération écologique en plein développement, mais encore peu répandue sur le marché français en 2026.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 6 -->
-      <section class="faq-section" id="section-zones">
-        <h2>6. Zones d'intervention et délais</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Intervenez-vous le week-end et les jours fériés ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-zones">
+      <h2>6. Zones d’intervention et délais</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Intervenez-vous le week-end et les jours fériés ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, ClimUrgence intervient 7 jours sur 7, samedis, dimanches et jours fériés inclus, de 9h à 21h. Aucune majoration tarifaire n'est appliquée. Pour toute urgence climatisation, appelez directement le 06 43 72 18 50 — un technicien vous répond en moins de 5 minutes. Notre disponibilité 7j/7 sans majoration est l'un de nos principaux avantages concurrentiels : la plupart des entreprises du secteur appliquent une majoration de 25 à 50% sur les interventions samedi, dimanche ou jours fériés. Ce choix d'équité tarifaire fait partie de nos engagements de transparence envers nos clients.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quel est le délai d'intervention à Marseille ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quel est le délai d'intervention à Marseille ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Moins d'1 heure à Marseille (tous arrondissements du 1er au 16e), ainsi qu'à Aubagne, La Ciotat, Cassis, Allauch, Plan-de-Cuques et Septèmes-les-Vallons. Nous disposons de plusieurs techniciens sur zone pour garantir cette réactivité exceptionnelle. En cas de forte affluence lors des pics de chaleur estivaux, ce délai peut ponctuellement dépasser 1 heure, mais nous vous prévenons systématiquement au moment de l'appel du délai réel. Cette rapidité d'intervention est particulièrement précieuse pour les professionnels dont l'activité dépend de la climatisation (restaurants, commerces alimentaires, salles de sport).</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Intervenez-vous à Aix-en-Provence ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Intervenez-vous à Aix-en-Provence ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, ClimUrgence intervient à Aix-en-Provence avec un délai moyen d'1 heure. Le service est identique à celui de Marseille : déplacement offert, tarif identique sans majoration, devis verbal avant réparation, rapport d'intervention écrit. Nous couvrons également Vitrolles, Marignane, Martigues, Istres et Salon-de-Provence dans les Bouches-du-Rhône. Tous ces déplacements sont inclus dans le prix de la prestation — aucun frais supplémentaire n'est facturé pour les zones plus éloignées de Marseille.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Intervenez-vous dans le Var (83) ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Intervenez-vous dans le Var (83) ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, ClimUrgence couvre l'intégralité du Var : Toulon, Hyères, La Seyne-sur-Mer, Saint-Cyr-sur-Mer, Bandol, Sanary-sur-Mer, Six-Fours-les-Plages, Ollioules, La Valette-du-Var, La Garde, et toutes les autres communes du département. Le délai d'intervention est de 1 à 1h30 selon la distance. Nos techniciens couvrent aussi bien la côte varoise que l'arrière-pays. Les délais sont légèrement plus longs qu'à Marseille en raison de la distance, mais le tarif reste strictement identique et le déplacement reste offert. Appelez le 06 43 72 18 50 pour toute demande.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Intervenez-vous dans les Alpes-Maritimes (06) ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Intervenez-vous dans les Alpes-Maritimes (06) ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Non, pas actuellement. ClimUrgence intervient uniquement dans les Bouches-du-Rhône (13) et le Var (83). Nous ne couvrons pas Nice, Cannes, Antibes, Grasse ou Monaco. Si vous avez un besoin dans ces zones, nous pouvons vous orienter vers un confrère de confiance sur demande. Si l'activité se développe dans le 83, nous pourrions étendre à moyen terme au 06. Les entreprises professionnelles avec plusieurs sites dans différents départements peuvent nous contacter pour étudier une solution adaptée à leur besoin, même hors de notre zone actuelle.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Faites-vous payer un supplément en zone éloignée ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Faites-vous payer un supplément en zone éloignée ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Non, jamais. Le déplacement est toujours offert et le tarif appliqué est strictement identique partout dans notre zone d'intervention, que vous soyez à Marseille 1er arrondissement, à Hyères, à La Garde ou à Salon-de-Provence. Nous avons fait le choix de la simplicité tarifaire absolue : aucun supplément de déplacement, aucune grille selon la distance, pas de surcoût caché. Cette approche nous permet aussi d'attirer les clients des communes souvent délaissées par les grandes enseignes qui privilégient les zones urbaines denses. Transparence tarifaire totale.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 7 -->
-      <section class="faq-section" id="section-vmc">
-        <h2>7. VMC et ventilation</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Faut-il entretenir sa VMC régulièrement ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-vmc">
+      <h2>7. VMC et ventilation</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Faut-il entretenir sa VMC régulièrement ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, 1 fois par an minimum. Une VMC mal entretenue perd jusqu'à 40% de son efficacité et favorise l'humidité, les moisissures et les mauvaises odeurs dans tout le logement. L'entretien professionnel comprend le nettoyage du caisson, le remplacement des filtres, le nettoyage des bouches d'extraction (dépose, lavage, remise en place) et le contrôle du débit d'air par mesure. Pour une VMC double flux, ajouter le nettoyage de l'échangeur thermique et le remplacement des filtres G4 et F7 (tous les 6 mois). Prix à partir de 119 € TTC chez ClimUrgence pour une VMC simple flux, 199 € TTC pour une double flux.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Quelle différence entre VMC simple flux et double flux ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Quelle différence entre VMC simple flux et double flux ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>La VMC simple flux extrait l'air vicié (salle de bain, cuisine, toilettes) et fait entrer l'air neuf via des entrées d'air passives au-dessus des fenêtres. La VMC double flux récupère la chaleur de l'air extrait pour préchauffer l'air entrant, générant une économie de chauffage significative (jusqu'à 90% de récupération). La VMC double flux est plus efficace énergétiquement mais plus chère à l'installation et à l'entretien. Elle nécessite le remplacement de filtres G4 et F7 tous les 6 mois environ. La simple flux reste adaptée aux logements standards, la double flux est recommandée pour les logements très bien isolés ou neufs.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Ma VMC fait du bruit, que faire ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Ma VMC fait du bruit, que faire ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Un bruit anormal vient souvent d'un moteur usé, de fixations desserrées, ou de débris accumulés dans le conduit principal. Il ne faut pas ignorer ce bruit : un moteur qui force peut griller complètement et nécessiter le remplacement du caisson entier. Les VMC ont une durée de vie moyenne de 10 à 15 ans. Si votre VMC a plus de 12 ans et commence à faire du bruit, il est souvent plus économique de remplacer le caisson complet que de réparer plusieurs composants successivement. Diagnostic ClimUrgence à partir de 119 € TTC avec contrôle complet du caisson, des conduits et des bouches d'extraction.</p>
           </div>
-        </details>
-      </section>
+        </div>
+      </details>
 
-      <!-- SECTION 8 -->
-      <section class="faq-section" id="section-pratique">
-        <h2>8. Questions pratiques et professionnels</h2>
+    </section>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Proposez-vous des contrats d'entretien pour professionnels ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+    <section class="faq-sec" id="section-pratique">
+      <h2>8. Questions pratiques et professionnels</h2>
+
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Proposez-vous des contrats d'entretien pour professionnels ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, deux formules sont disponibles. La formule Essentiel à 25 € TTC/mois inclut 1 visite annuelle d'entretien complet + une réduction de 15% sur tous les dépannages. La formule Premium à 40 € TTC/mois inclut 2 visites annuelles (printemps et automne) + intervention sous 4h en cas de panne + réduction de 20% sur les pièces et dépannages. Les contrats pro sont parfaitement adaptés aux restaurants, hôtels, commerces, bureaux, cabinets médicaux et salles de sport. Ils incluent un interlocuteur dédié, une facturation simplifiée (mensuelle ou trimestrielle) et un rapport d'intervention systématique pour la conformité réglementaire.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Proposez-vous des contrats pour les particuliers ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Proposez-vous des contrats pour les particuliers ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, exactement les mêmes formules Essentiel (25 €/mois) et Premium (40 €/mois) sont disponibles pour les particuliers (maisons, appartements). Les contrats particuliers sont particulièrement intéressants pour ceux qui veulent la tranquillité d'un entretien annuel automatique et d'un délai d'intervention prioritaire en cas de panne. La formule Premium est recommandée pour les maisons de vacances (entretien 2 fois par an avant et après la saison) ou pour les résidences principales occupées toute l'année avec usage intensif. Engagement 12 mois minimum, résiliable avec préavis de 30 jours après la première année.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Ma climatisation consomme trop d'électricité, que faire ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Ma climatisation consomme trop d'électricité, que faire ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>4 causes possibles à une surconsommation : filtres encrassés (jusqu'à +30% de consommation), condenseur extérieur bouché par la poussière ou les cotonniers, sous-dimensionnement de l'appareil qui tourne à pleine puissance en permanence, ou appareil vieillissant de plus de 10 ans (les technologies inverter récentes sont beaucoup plus efficaces). Un bilan énergétique ClimUrgence coûte 149 € TTC avec mesure des performances réelles, comparaison avec les spécifications constructeur, et recommandations chiffrées. Un appareil inverter récent consomme 30 à 50% de moins qu'un modèle on/off de 2015. Si votre facture explose, il peut être plus rentable de remplacer que de continuer.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Comment réduire ma facture de climatisation ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Comment réduire ma facture de climatisation ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>5 actions efficaces à appliquer : nettoyer les filtres tous les mois en période estivale, régler la température entre 26 et 27°C (chaque degré en moins représente +7% de consommation), utiliser les volets et stores le matin pour garder la fraîcheur nocturne, faire réaliser un entretien annuel professionnel, et remplacer un appareil de plus de 12 ans. Paradoxalement, la climatisation ne doit pas être réglée à fond pour être efficace — 26°C en été est un excellent compromis confort/consommation. Fermer les volets matin pour bloquer le rayonnement solaire et les ouvrir le soir pour profiter de la brise réduit drastiquement le besoin de climatisation, parfois de 40 à 50%.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Puis-je régler ma climatisation à distance via smartphone ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Puis-je régler ma climatisation à distance via smartphone ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Oui, la plupart des climatiseurs récents (après 2020) sont compatibles Wi-Fi et se contrôlent via une application smartphone dédiée. Les marques Daikin (application Onecta), Mitsubishi (MELCloud), Atlantic (Cozytouch) et Samsung (SmartThings) ont chacune leur application native. Cela permet de programmer les horaires, contrôler à distance pour préparer son arrivée, suivre la consommation énergétique, et recevoir des alertes en cas de dysfonctionnement. Si votre appareil est ancien, il existe des télécommandes universelles connectées à ajouter à l'installation (50 à 150 €) qui transforment n'importe quelle clim en clim connectée.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Une climatisation est-elle bruyante ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Une climatisation est-elle bruyante ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Les climatiseurs modernes sont globalement très silencieux : 20 à 25 dB(A) pour l'unité intérieure (comparable à un chuchotement) et 45 à 55 dB(A) pour l'unité extérieure (comparable au bruit d'un réfrigérateur). La norme sonore à respecter dépend du règlement de copropriété et de la distance aux voisins. Une unité extérieure bien dimensionnée et correctement installée ne doit jamais dépasser les seuils imposés, généralement 30 dB(A) la nuit à la limite de propriété. Pour les installations en copropriété ou mitoyenneté, nous mesurons le niveau sonore lors de la mise en service et ajustons si nécessaire avec des silent-blocs.</p>
           </div>
-        </details>
+        </div>
+      </details>
 
-        <details class="faq-item">
-          <summary>
-            <h3>Comment obtenir rapidement un devis ?</h3>
-            <span class="faq-icon" aria-hidden="true">+</span>
-          </summary>
-          <div class="faq-answer">
+      <details class="faq-qa">
+        <summary>
+          <h3 class="faq-q">Comment obtenir rapidement un devis ?</h3>
+          <span class="faq-plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-a">
+          <div class="faq-a-inner">
             <p>Trois options selon votre urgence. Par téléphone au 06 43 72 18 50 : réponse immédiate, devis verbal possible pour les dépannages simples. Via le <a href="/contact/">formulaire de contact</a> du site : réponse garantie sous 30 minutes en journée. Via la <a href="/tarifs/">page Tarifs</a> : devis automatique pour chaque prestation standard. Pour les dépannages urgents, privilégiez systématiquement le téléphone. Pour les installations neuves, une visite technique gratuite est programmée sous 24 à 48 heures pour mesurer précisément les besoins, calculer la puissance adaptée et vous remettre un devis écrit détaillé sans engagement.</p>
           </div>
-        </details>
-      </section>
-
-      <!-- CTA final -->
-      <section class="faq-cta">
-        <h2>Vous n'avez pas trouvé votre réponse ?</h2>
-        <p>Appelez-nous directement, notre équipe vous répond en moins de 5 minutes en journée.</p>
-        <div class="cta-buttons">
-          <a href="tel:+33643721850" class="btn btn-primary btn-lg">06 43 72 18 50</a>
-          <a href="/contact/" class="btn btn-secondary btn-lg">Demander un devis</a>
         </div>
-      </section>
+      </details>
+
+    </section>
+
+    <div class="faq-cta-box">
+      <h2>Vous n'avez pas trouvé votre réponse ?</h2>
+      <p>Appelez-nous directement, notre équipe vous répond en moins de 5 minutes en journée.</p>
+      <div class="faq-cta-btns">
+        <a href="tel:+33643721850" class="faq-btn faq-btn-pri">06 43 72 18 50</a>
+        <a href="/contact/" class="faq-btn faq-btn-sec">Demander un devis</a>
+      </div>
+    </div>
 
     </div>
   </main>
