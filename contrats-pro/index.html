@@ -31,6 +31,109 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
+  <style>
+    /* FAQ accordéons <details>/<summary> scopés contrats-pro */
+    .pro-faq-section {
+      margin: 3rem 0;
+    }
+
+    .pro-faq-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #1E6FA8;
+      text-align: center;
+      margin: 0 0 2rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .pro-faq-section details.pro-faq {
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .pro-faq-section details.pro-faq[open] {
+      border-color: #F56E17;
+    }
+
+    .pro-faq-section details.pro-faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.125rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+      color: #1F2937;
+      font-size: 15px;
+      line-height: 1.45;
+      gap: 1rem;
+    }
+
+    .pro-faq-section details.pro-faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .pro-faq-section details.pro-faq summary::marker {
+      display: none;
+      content: "";
+    }
+
+    .pro-faq-section details.pro-faq[open] summary {
+      color: #1E6FA8;
+      border-bottom: 1px solid #F3F4F6;
+    }
+
+    .pro-faq-section details.pro-faq .pro-faq-plus {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #F3F4F6;
+      color: #6B7280;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+
+    .pro-faq-section details.pro-faq[open] .pro-faq-plus {
+      background: #F56E17;
+      color: #FFFFFF;
+      transform: rotate(45deg);
+    }
+
+    .pro-faq-section details.pro-faq .pro-faq-body {
+      padding: 1rem 1.5rem 1.25rem 1.5rem;
+    }
+
+    .pro-faq-section details.pro-faq .pro-faq-body p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #4B5563;
+      margin: 0;
+    }
+
+    .pro-faq-section details.pro-faq .pro-faq-body p + p {
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+      .pro-faq-section h2 { font-size: 1.625rem; }
+      .pro-faq-section details.pro-faq summary { padding: 1rem 1.25rem; font-size: 14px; }
+      .pro-faq-section details.pro-faq .pro-faq-body { padding: 1rem 1.25rem 1.25rem 1.25rem; }
+    }
+  </style>
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -353,31 +456,80 @@
     <!-- FAQ -->
     <section class="section section--alt" aria-labelledby="faq-pro-title">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="faq-pro-title">Questions fréquentes — Abonnements climatisation</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="pfaq1" id="pfaq1-btn">Qui peut souscrire un abonnement climatisation ClimUrgence ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq1" role="region" aria-labelledby="pfaq1-btn"><div class="faq-answer-inner"><p>Tout le monde ! Les abonnements sont ouverts aux <strong>particuliers</strong> (maisons, appartements) comme aux <strong>professionnels</strong> (hôtels, restaurants, commerces, bureaux, cabinets médicaux, entrepôts). ClimUrgence adapte la formule à la nature et au volume de votre installation.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="pfaq2" id="pfaq2-btn">Que comprend un abonnement climatisation ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq2" role="region" aria-labelledby="pfaq2-btn"><div class="faq-answer-inner"><p>Visites préventives planifiées (1 à 4/an selon la formule), nettoyage complet des unités, contrôle circuit frigorifique, vérification électrique, <strong>rapport d'intervention</strong>, rapport d'entretien annuel, intervention curative prioritaire avec <strong>délai garanti</strong>.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="pfaq3" id="pfaq3-btn">Quel est le délai d'intervention garanti en cas de panne ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq3" role="region" aria-labelledby="pfaq3-btn"><div class="faq-answer-inner"><p>Selon la formule : <strong>intervention sous 4h en heures ouvrées (Premium)</strong> ou <strong>J+1 ouvré (Essentiel)</strong>. Ces délais sont garantis contractuellement.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="pfaq4" id="pfaq4-btn">Comment est facturé un abonnement climatisation ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq4" role="region" aria-labelledby="pfaq4-btn"><div class="faq-answer-inner"><p>Les abonnements sont facturés <strong>mensuellement ou annuellement</strong> selon votre préférence. Toutes les visites préventives sont incluses dans le forfait ; les pièces de remplacement sont facturées selon un barème tarifaire préférentiel (–15 %).</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="pfaq5" id="pfaq5-btn">Les particuliers bénéficient-ils des mêmes garanties que les professionnels ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="pfaq5" role="region" aria-labelledby="pfaq5-btn"><div class="faq-answer-inner"><p>Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention garantis et du même niveau de technicité. La formule <strong>Premium</strong> est idéale pour ceux qui souhaitent une couverture prioritaire avec intervention sous 4h.</p></div></div>
-          </div>
-        </div>
+        <section class="pro-faq-section" aria-labelledby="faq-pro-title">
+          <h2 id="faq-pro-title">Questions fréquentes — abonnements climatisation</h2>
+
+          <details class="pro-faq">
+            <summary>
+              Qui peut souscrire un abonnement climatisation ClimUrgence ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Tout le monde. Les abonnements sont ouverts aux <strong>particuliers</strong> (maisons, appartements) comme aux <strong>professionnels</strong> (restaurants, hôtels, commerces, bureaux, cabinets médicaux, salles de sport, entrepôts). Les formules Essentiel (25 € TTC/mois) et Premium (40 € TTC/mois) sont les mêmes pour tous, seul l'usage peut varier.</p>
+            </div>
+          </details>
+
+          <details class="pro-faq">
+            <summary>
+              Que comprend un abonnement climatisation ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Visites préventives planifiées (1 par an pour Essentiel, 2 par an pour Premium), nettoyage complet des unités intérieures et extérieures, vérification des performances et des fixations, traitement antibactérien, rapport d'intervention écrit. La formule Premium ajoute une intervention garantie sous 4h ouvrées en cas de panne + une réduction de 20 % sur les pièces et dépannages.</p>
+            </div>
+          </details>
+
+          <details class="pro-faq">
+            <summary>
+              Quel est le délai d'intervention garanti en cas de panne ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Selon la formule : <strong>intervention sous 4 heures en heures ouvrées (Premium)</strong> ou planification J+1 ouvré pour Essentiel. Pour les urgences hors contrat, nos délais classiques s'appliquent (moins d'1 heure à Marseille, environ 1h pour Aix et Vitrolles, 1 à 1h30 pour Toulon et le Var).</p>
+            </div>
+          </details>
+
+          <details class="pro-faq">
+            <summary>
+              Comment est facturé un abonnement climatisation ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Les abonnements sont facturés <strong>mensuellement ou annuellement</strong> selon votre préférence. Formule Essentiel : 25 € TTC/mois soit 300 € TTC/an. Formule Premium : 40 € TTC/mois soit 480 € TTC/an. Paiement par prélèvement automatique, virement ou chèque. Pour les professionnels, une facturation trimestrielle est possible.</p>
+            </div>
+          </details>
+
+          <details class="pro-faq">
+            <summary>
+              Les particuliers bénéficient-ils des mêmes garanties que les professionnels ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Oui. Que vous soyez particulier ou professionnel, vous bénéficiez des mêmes délais d'intervention, des mêmes réductions, de la même qualité de service et du même rapport d'intervention écrit. La seule différence concerne la gestion administrative : facturation entreprise avec numéro de TVA pour les pros, facturation classique pour les particuliers.</p>
+            </div>
+          </details>
+
+          <details class="pro-faq">
+            <summary>
+              Puis-je résilier mon abonnement à tout moment ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Le contrat est conclu pour une durée minimale de <strong>12 mois</strong>. Après cette première année, le contrat est reconduit tacitement d'année en année, et vous pouvez le résilier à tout moment avec un <strong>préavis de 30 jours</strong> par email ou courrier. Aucun frais de résiliation n'est facturé.</p>
+            </div>
+          </details>
+
+          <details class="pro-faq">
+            <summary>
+              Que se passe-t-il si j'ai plusieurs climatiseurs ?
+              <span class="pro-faq-plus">+</span>
+            </summary>
+            <div class="pro-faq-body">
+              <p>Les tarifs de base (25 €/mois Essentiel, 40 €/mois Premium) couvrent jusqu'à <strong>5 unités intérieures</strong>. Au-delà, un complément de 10 € TTC/mois par unité supplémentaire est appliqué en Essentiel, 15 € TTC/mois en Premium. Pour les parcs étendus (hôtels, entrepôts, immeubles), nous établissons un devis sur mesure.</p>
+            </div>
+          </details>
+
+        </section>
       </div>
     </section>
 
