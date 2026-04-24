@@ -1,36 +1,480 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Entretien Climatisation Marseille & PACA – Obligatoire | ClimUrgence</title>
-  <meta name="description" content="Entretien annuel climatisation obligatoire en Bouches-du-Rhône et Var. Nettoyage filtres, contrôle gaz, rapport d'intervention écrit fourni. Devis gratuit : 06 43 72 18 50." />
+  <title>Entretien Climatisation Marseille — Révision annuelle 7j/7 | ClimUrgence</title>
+  <meta name="description" content="Entretien annuel climatisation à Marseille et PACA dès 119 € TTC. Nettoyage complet, bac condensats, traitement antibactérien, rapport écrit. 7j/7 de 9h à 21h." />
   <link rel="canonical" href="https://climurgence.com/entretien-climatisation/" />
 
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://climurgence.com/entretien-climatisation/" />
-  <meta property="og:title"       content="Entretien Climatisation Obligatoire – Marseille & PACA | ClimUrgence" />
-  <meta property="og:description" content="Entretien annuel réglementaire de votre climatisation. Compte-rendu d'intervention écrit fourni. Bouches-du-Rhône et Var." />
-  <meta property="og:image"       content="https://climurgence.com/img/og-entretien.webp" />
+  <meta property="og:title"       content="Entretien Climatisation Marseille dès 119 € | ClimUrgence" />
+  <meta property="og:description" content="Révision annuelle complète de votre climatisation 7j/7. Protocole en 8 étapes. Rapport d'intervention écrit." />
+  <meta property="og:image"       content="https://climurgence.com/img/og-home.webp" />
   <meta property="og:locale"      content="fr_FR" />
   <meta property="og:site_name"   content="ClimUrgence" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Entretien Climatisation Obligatoire – Marseille & PACA | ClimUrgence" />
-  <meta name="twitter:description" content="Entretien annuel obligatoire. Nettoyage filtres, contrôle gaz, rapport d'intervention écrit. 7j/7 PACA. 06 43 72 18 50." />
-  <meta name="twitter:image"       content="https://climurgence.com/img/og-entretien.webp" />
+  <meta name="twitter:title"       content="Entretien Climatisation Marseille dès 119 € | ClimUrgence" />
+  <meta name="twitter:description" content="Révision annuelle complète de votre climatisation 7j/7. Protocole en 8 étapes. Rapport d'intervention écrit." />
+  <meta name="twitter:image"       content="https://climurgence.com/img/og-home.webp" />
 
   <meta name="indexnow" content="climurgence2026a8f3c7d21b9" />
   <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <style>
+body { margin: 0; padding: 0; }
+
+.entretien-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 1.5rem 4rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1F2937;
+  line-height: 1.7;
+}
+
+.entretien-wrap .ent-bread {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0 0 1rem 0;
+}
+
+.entretien-wrap .ent-bread a {
+  color: #6B7280;
+  text-decoration: none;
+}
+
+.entretien-wrap .ent-bread a:hover { color: #F56E17; }
+
+.entretien-wrap h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.05;
+  color: #1E6FA8;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.entretien-wrap .ent-intro {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0 0 2.5rem 0;
+  max-width: 720px;
+}
+
+.entretien-wrap .ent-hero-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 3rem 0;
+}
+
+.entretien-wrap .ent-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #FDEEDF;
+  color: #F56E17;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.entretien-wrap .ent-section {
+  margin: 0 0 4rem 0;
+}
+
+.entretien-wrap h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #E5E7EB;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.entretien-wrap h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.entretien-wrap p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4B5563;
+  margin: 0 0 1.25rem 0;
+}
+
+.entretien-wrap strong {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.entretien-wrap a {
+  color: #1E6FA8;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(30, 111, 168, 0.3);
+  text-underline-offset: 2px;
+}
+
+.entretien-wrap a:hover { text-decoration-color: #1E6FA8; }
+
+.entretien-wrap .info-box {
+  background: #F0F7FF;
+  border-left: 4px solid #1E6FA8;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+
+.entretien-wrap .info-box-title {
+  font-weight: 700;
+  color: #1E6FA8;
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.entretien-wrap .info-box p {
+  margin: 0;
+  color: #1F2937;
+  font-size: 0.9375rem;
+}
+
+.entretien-wrap .highlight-box {
+  background: #FFF9F5;
+  border-left: 4px solid #F56E17;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+
+.entretien-wrap .highlight-box-title {
+  font-weight: 700;
+  color: #F56E17;
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.entretien-wrap .highlight-box p {
+  margin: 0;
+  color: #1F2937;
+  font-size: 0.9375rem;
+}
+
+.entretien-wrap .protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 1.5rem 0;
+}
+
+.entretien-wrap .protocol-step {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.entretien-wrap .protocol-num {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #F56E17;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.entretien-wrap .protocol-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: #1F2937;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.entretien-wrap .protocol-desc {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.entretien-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+
+.entretien-wrap table th {
+  background: #1E6FA8;
+  color: #FFFFFF;
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.entretien-wrap table td {
+  padding: 14px 16px;
+  border-top: 1px solid #F3F4F6;
+  color: #4B5563;
+}
+
+.entretien-wrap table tr:hover {
+  background: #F9FAFB;
+}
+
+.entretien-wrap .price-cell {
+  font-weight: 600;
+  color: #F56E17;
+  white-space: nowrap;
+}
+
+.entretien-wrap .engagements-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+}
+
+.entretien-wrap .engagements-list li {
+  padding: 10px 0 10px 34px;
+  position: relative;
+  color: #4B5563;
+  line-height: 1.7;
+}
+
+.entretien-wrap .engagements-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  background: #FDEEDF;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23F56E17' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.entretien-wrap details.ent-faq {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.entretien-wrap details.ent-faq[open] { border-color: #F56E17; }
+
+.entretien-wrap details.ent-faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.125rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #1F2937;
+  font-size: 15px;
+}
+
+.entretien-wrap details.ent-faq summary::-webkit-details-marker { display: none; }
+.entretien-wrap details.ent-faq summary::marker { display: none; content: ""; }
+
+.entretien-wrap details.ent-faq[open] summary { color: #1E6FA8; }
+
+.entretien-wrap details.ent-faq .ent-faq-plus {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.entretien-wrap details.ent-faq[open] .ent-faq-plus {
+  background: #F56E17;
+  color: #FFFFFF;
+  transform: rotate(45deg);
+}
+
+.entretien-wrap details.ent-faq .ent-faq-body {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  border-top: 1px solid #F3F4F6;
+  padding-top: 1rem;
+}
+
+.entretien-wrap details.ent-faq .ent-faq-body p {
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.entretien-wrap .cross-sell-card {
+  background: linear-gradient(135deg, #FFF9F5 0%, #F0F7FF 100%);
+  border: 1px solid #F3DED0;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+
+.entretien-wrap .cross-sell-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #1E6FA8;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.entretien-wrap .cross-sell-card p {
+  margin: 0 0 1.25rem 0;
+}
+
+.entretien-wrap .cross-sell-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #1E6FA8;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+
+.entretien-wrap .cross-sell-btn:hover {
+  background: #154B7A;
+  transform: translateY(-1px);
+}
+
+.entretien-wrap .ent-cta {
+  background: linear-gradient(135deg, #1E6FA8 0%, #154B7A 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 4rem 0 0 0;
+  color: #FFFFFF;
+}
+
+.entretien-wrap .ent-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: none;
+  padding: 0;
+}
+
+.entretien-wrap .ent-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.75rem 0;
+}
+
+.entretien-wrap .ent-cta-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.entretien-wrap .ent-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.entretien-wrap .ent-btn-pri {
+  background: #F56E17;
+  color: #FFFFFF;
+}
+
+.entretien-wrap .ent-btn-pri:hover {
+  background: #D85A0E;
+  transform: translateY(-1px);
+}
+
+.entretien-wrap .ent-btn-sec {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.entretien-wrap .ent-btn-sec:hover { background: rgba(255, 255, 255, 0.25); }
+
+@media (max-width: 640px) {
+  .entretien-wrap { padding: 120px 1rem 2.5rem 1rem; }
+  .entretien-wrap h1 { font-size: 2.125rem; }
+  .entretien-wrap h2 { font-size: 1.625rem; }
+  .entretien-wrap h3 { font-size: 1.125rem; }
+  .entretien-wrap .ent-intro { font-size: 1rem; }
+  .entretien-wrap .protocol-grid { grid-template-columns: 1fr; }
+  .entretien-wrap .ent-cta { padding: 2.5rem 1.5rem; }
+  .entretien-wrap .ent-cta h2 { font-size: 1.625rem; }
+  .entretien-wrap table { font-size: 0.875rem; }
+  .entretien-wrap table th, .entretien-wrap table td { padding: 10px 8px; }
+  .entretien-wrap .cross-sell-card { padding: 1.5rem; }
+}
+</style>
 
   <script type="application/ld+json">
 {
@@ -55,6 +499,20 @@
           "name": "Var"
         }
       ],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
       "offers": [
         {
           "@type": "Offer",
@@ -102,50 +560,78 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://climurgence.com/entretien-climatisation/#howto-entretien",
-      "name": "Comment entretenir sa climatisation soi-même entre deux visites professionnelles",
-      "description": "Entretien simple accessible à tous pour prolonger la durée de vie de votre climatisation",
-      "totalTime": "PT30M",
-      "supply": [
-        {
-          "@type": "HowToSupply",
-          "name": "Eau tiède savonneuse"
-        },
-        {
-          "@type": "HowToSupply",
-          "name": "Chiffon microfibre"
-        }
-      ],
+      "@id": "https://climurgence.com/entretien-climatisation/#howto",
+      "name": "Comment préparer le rendez-vous d'entretien de votre climatisation",
+      "description": "5 étapes simples pour optimiser la visite du technicien ClimUrgence",
+      "totalTime": "PT10M",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Couper l'alimentation électrique",
-          "text": "Mettre hors tension la climatisation au niveau du disjoncteur avant toute manipulation pour éviter tout risque électrique."
+          "name": "Dégagez l'accès à l'unité intérieure",
+          "text": "Retirez les meubles ou objets qui gênent l'accès à l'unité intérieure (canapé, armoire, décoration). Un espace d'environ 1 mètre devant et en dessous est idéal."
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Retirer et laver les filtres",
-          "text": "Ouvrir le capot de l'unité intérieure, retirer les filtres à air, les laver à l'eau tiède savonneuse en insistant sur la poussière incrustée."
+          "name": "Vérifiez l'accès à l'unité extérieure",
+          "text": "Assurez-vous que le technicien peut accéder à l'unité extérieure (balcon, terrasse, jardin). Si elle est sur une toiture plate, prévoyez l'accès."
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Sécher complètement les filtres",
-          "text": "Laisser sécher les filtres à l'air libre pendant au moins 2 heures. Ne jamais remettre un filtre humide, cela favoriserait moisissures et bactéries."
+          "name": "Rassemblez les documents utiles",
+          "text": "Préparez la télécommande, la notice de l'appareil si disponible, et le compte-rendu du dernier entretien si vous en avez un."
         },
         {
           "@type": "HowToStep",
           "position": 4,
-          "name": "Nettoyer l'extérieur de l'unité",
-          "text": "Essuyer doucement la façade de l'unité intérieure avec un chiffon microfibre légèrement humide. Dépoussiérer les grilles d'aération visibles."
+          "name": "Notez vos observations récentes",
+          "text": "Notez les anomalies éventuelles : bruit inhabituel, baisse de performance, odeurs, consommation en hausse. Cela aide le technicien à cibler son diagnostic."
         },
         {
           "@type": "HowToStep",
           "position": 5,
-          "name": "Programmer un entretien professionnel annuel",
-          "text": "Au minimum 1 fois par an, faire appel à un professionnel pour l'entretien complet (nettoyage échangeur, bac à condensats, vérifications électriques). À partir de 119 € TTC chez ClimUrgence."
+          "name": "Prévoyez 60 à 120 minutes",
+          "text": "L'intervention dure 60 à 90 minutes pour un monosplit, jusqu'à 2-3 heures pour un multisplit 5 unités. Soyez disponible sur cette plage."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://climurgence.com/entretien-climatisation/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "L'entretien annuel de climatisation est-il obligatoire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le décret n°2004-461 impose un entretien annuel obligatoire pour les systèmes dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW). La plupart des climatiseurs résidentiels monosplit ou bisplit contiennent moins de 2 kg, ils ne sont donc pas légalement obligés, mais un entretien annuel reste fortement recommandé pour la performance, la longévité et la qualité de l'air intérieur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À quelle fréquence faut-il entretenir sa climatisation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 fois par an minimum, idéalement au printemps (mars-mai) avant la saison chaude. Un entretien annuel prolonge la durée de vie de l'appareil de 5 à 8 ans et réduit la consommation électrique de 15 à 30%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte un entretien de climatisation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "119 € TTC pour un monosplit (1 unité intérieure), 159 € TTC pour un bisplit (2 unités), 199 € TTC pour un multisplit (3 à 5 unités) ou une pompe à chaleur air/air. Déplacement offert, aucune majoration soir ou week-end."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre entretien et nettoyage haute pression ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'entretien annuel (119 € TTC) comprend un nettoyage courant à l'air comprimé, aux brosses et produits classiques. Le nettoyage haute pression Jet HP (149 € TTC) est un décapage professionnel approfondi de l'échangeur intérieur, recommandé tous les 2-3 ans en cas d'odeurs ou moisissures."
+          }
         }
       ]
     },
@@ -171,7 +657,7 @@
       "@type": "WebPage",
       "@id": "https://climurgence.com/entretien-climatisation/#webpage",
       "url": "https://climurgence.com/entretien-climatisation/",
-      "name": "Entretien Climatisation Marseille — Annuel | ClimUrgence",
+      "name": "Entretien Climatisation Marseille — Révision annuelle | ClimUrgence",
       "isPartOf": {
         "@id": "https://climurgence.com/#website"
       },
@@ -186,7 +672,6 @@
   </script>
 </head>
 <body>
-
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
   <header class="site-header" role="banner">
@@ -212,160 +697,326 @@
     </div>
   </header>
 
-  <nav class="breadcrumb" aria-label="Fil d'Ariane">
-    <div class="container">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Accueil</span></a><meta itemprop="position" content="1" /></li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" aria-current="page">Entretien Climatisation</span><meta itemprop="position" content="2" /></li>
-      </ol>
-    </div>
-  </nav>
-
   <main id="main-content">
+    <div class="entretien-wrap">
 
-    <section class="page-hero" aria-labelledby="h1-entretien">
-      <div class="container">
-        <span class="hero-badge">Compte-rendu d'intervention écrit fourni</span>
-        <h1 id="h1-entretien">Entretien Climatisation<br><em style="color:#FFD166;font-style:normal;">Obligatoire & Réglementaire</em><br>dans les Bouches-du-Rhône et le Var</h1>
-        <p class="lead">L'entretien annuel de votre climatisation est <strong>obligatoire par la loi</strong> dès 2 kg de charge en fluide frigorigène. ClimUrgence intervient dans tout le 13 et le 83 — équipe professionnelle qualifiée et expérimentée.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.75rem;">
-          <a href="tel:+33643721850" class="btn btn-primary btn-lg">
-            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-            06 43 72 18 50
-          </a>
-          <a href="#devis-ent" class="btn btn-secondary btn-lg">Devis entretien gratuit</a>
+      <div class="ent-bread">
+        <a href="/">Accueil</a> › <span>Entretien climatisation</span>
+      </div>
+
+      <h1>Entretien climatisation à Marseille et PACA — révision annuelle dès 119 €</h1>
+
+      <p class="ent-intro">ClimUrgence réalise l'entretien annuel de votre climatisation 7 jours sur 7 dans les Bouches-du-Rhône et le Var, avec un protocole complet en 8 étapes. Nos techniciens qualifiés interviennent sur toutes marques (Daikin, Mitsubishi, Samsung, LG, Atlantic, Hitachi, Toshiba, Panasonic) et tous systèmes : monosplit, bisplit, multisplit, pompes à chaleur air/air et VMC. Tarif à partir de 119 € TTC, déplacement offert, aucune majoration soir ou week-end, rapport d'intervention écrit systématique.</p>
+
+      <div class="ent-hero-badges">
+        <span class="ent-badge">Dès 119 € TTC</span>
+        <span class="ent-badge">7j/7 de 9h à 21h</span>
+        <span class="ent-badge">Déplacement offert</span>
+        <span class="ent-badge">Rapport écrit</span>
+      </div>
+
+      <section class="ent-section">
+        <h2>L'entretien annuel est-il obligatoire ?</h2>
+
+        <p>La question revient très souvent, et la réponse mérite d'être précise. <strong>Tout dépend de la quantité de fluide frigorigène</strong> contenue dans votre système.</p>
+
+        <div class="info-box">
+          <div class="info-box-title">Texte de loi applicable</div>
+          <p>Le décret n°2004-461 du 1er juin 2004 et l'arrêté du 16 avril 2010 imposent un entretien périodique obligatoire pour les équipements de climatisation contenant plus de 2 kg de fluide frigorigène (équivalent à environ 6 kW de puissance frigorifique).</p>
+        </div>
+
+        <h3>Les 3 seuils à connaître</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Charge en fluide</th>
+              <th>Type d'équipement concerné</th>
+              <th>Obligation légale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moins de 2 kg</td>
+              <td>Monosplit, bisplit résidentiel</td>
+              <td>Recommandé</td>
+            </tr>
+            <tr>
+              <td>2 kg à 30 kg</td>
+              <td>Multisplit, gainable, petite installation tertiaire</td>
+              <td>Annuel obligatoire</td>
+            </tr>
+            <tr>
+              <td>Plus de 30 kg</td>
+              <td>Grandes installations commerciales et industrielles</td>
+              <td>Semestriel obligatoire</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>En pratique, la majorité des climatiseurs résidentiels monosplit ou bisplit contiennent moins de 2 kg et ne sont donc <strong>pas légalement obligés</strong>. Mais dans les faits, un entretien annuel reste fortement recommandé pour 3 raisons concrètes : il prolonge la durée de vie de l'appareil de 5 à 8 ans, réduit la consommation électrique de 15 à 30%, et préserve la qualité de l'air intérieur.</p>
+
+        <div class="highlight-box">
+          <div class="highlight-box-title">Note importante</div>
+          <p>Même sans obligation légale, un entretien annuel peut être <strong>exigé par votre assurance habitation</strong> en cas de sinistre lié à la climatisation (incendie, dégât des eaux). Sans preuve d'entretien régulier, l'indemnisation peut être réduite ou refusée. Le compte-rendu d'intervention que nous vous remettons sert de justificatif officiel.</p>
+        </div>
+      </section>
+
+      <section class="ent-section">
+        <h2>Le protocole ClimUrgence en 8 étapes</h2>
+
+        <p>Notre intervention d'entretien suit un protocole standardisé en 8 étapes successives, appliqué à chaque unité intérieure et extérieure. Durée totale : 60 à 90 minutes pour un monosplit, jusqu'à 3 heures pour un multisplit 5 unités.</p>
+
+        <div class="protocol-grid">
+
+          <div class="protocol-step">
+            <div class="protocol-num">1</div>
+            <div>
+              <p class="protocol-title">Contrôle visuel initial</p>
+              <p class="protocol-desc">Inspection de l'état général, fixations, liaisons frigorifiques, câblage électrique.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">2</div>
+            <div>
+              <p class="protocol-title">Nettoyage des filtres</p>
+              <p class="protocol-desc">Dépose, lavage à l'eau tiède savonneuse, séchage complet, remise en place.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">3</div>
+            <div>
+              <p class="protocol-title">Dépoussiérage de l'échangeur intérieur</p>
+              <p class="protocol-desc">Soufflage à l'air comprimé des ailettes de l'échangeur pour restaurer le débit d'air.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">4</div>
+            <div>
+              <p class="protocol-title">Débouchage du bac à condensats</p>
+              <p class="protocol-desc">Nettoyage et désinfection du bac + débouchage du tuyau d'évacuation des eaux.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">5</div>
+            <div>
+              <p class="protocol-title">Nettoyage du condenseur extérieur</p>
+              <p class="protocol-desc">Soufflage des ailettes extérieures, retrait des feuilles, cotonniers et débris.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">6</div>
+            <div>
+              <p class="protocol-title">Traitement antibactérien</p>
+              <p class="protocol-desc">Application d'un spray désinfectant dans le circuit d'air pour éliminer moisissures et bactéries.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">7</div>
+            <div>
+              <p class="protocol-title">Mesures de performance</p>
+              <p class="protocol-desc">Contrôle des températures de soufflage et reprise en mode froid et chaud.</p>
+            </div>
+          </div>
+
+          <div class="protocol-step">
+            <div class="protocol-num">8</div>
+            <div>
+              <p class="protocol-title">Rapport d'intervention</p>
+              <p class="protocol-desc">Compte-rendu écrit remis au client : opérations réalisées, état, recommandations.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="ent-section">
+        <h2>Tarifs selon votre type d'installation</h2>
+
+        <p>Nos tarifs sont publiés publiquement et identiques 7 jours sur 7. Le déplacement est offert dans toute notre zone d'intervention (Bouches-du-Rhône et Var), sans aucune majoration le soir ou le week-end.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Type d'installation</th>
+              <th>Prix TTC</th>
+              <th>Durée</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monosplit</strong><br><span style="color:#6B7280;font-size:13px;">1 unité intérieure + 1 unité extérieure</span></td>
+              <td class="price-cell">119 €</td>
+              <td>75 min</td>
+            </tr>
+            <tr>
+              <td><strong>Bisplit</strong><br><span style="color:#6B7280;font-size:13px;">2 unités intérieures + 1 unité extérieure</span></td>
+              <td class="price-cell">159 €</td>
+              <td>105 min</td>
+            </tr>
+            <tr>
+              <td><strong>Multisplit 3 à 5 têtes</strong><br><span style="color:#6B7280;font-size:13px;">3 à 5 unités intérieures + 1 unité extérieure</span></td>
+              <td class="price-cell">199 €</td>
+              <td>135 à 210 min</td>
+            </tr>
+            <tr>
+              <td><strong>Pompe à chaleur air/air</strong><br><span style="color:#6B7280;font-size:13px;">Monosplit réversible avec contrôle spécifique</span></td>
+              <td class="price-cell">199 €</td>
+              <td>90 min</td>
+            </tr>
+            <tr>
+              <td><strong>VMC simple flux</strong><br><span style="color:#6B7280;font-size:13px;">Logement jusqu'à 120 m²</span></td>
+              <td class="price-cell">119 €</td>
+              <td>60 min</td>
+            </tr>
+            <tr>
+              <td><strong>VMC double flux</strong><br><span style="color:#6B7280;font-size:13px;">Logement jusqu'à 150 m², filtres G4 et F7 inclus</span></td>
+              <td class="price-cell">199 €</td>
+              <td>105 min</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><a href="/tarifs/">Voir la grille tarifaire complète de tous nos services</a></p>
+      </section>
+
+      <section class="ent-section">
+        <h2>Les 5 engagements ClimUrgence pour votre entretien</h2>
+
+        <ul class="engagements-list">
+          <li><strong>Intervention 7 jours sur 7 de 9h à 21h</strong>, y compris samedis, dimanches et jours fériés, sans aucune majoration</li>
+          <li><strong>Déplacement offert</strong> sur toute la zone des Bouches-du-Rhône (13) et du Var (83), quelle que soit la distance depuis Marseille</li>
+          <li><strong>Tarifs publiés publiquement</strong> sur notre site, identiques pour tous les clients, sans devis opaque</li>
+          <li><strong>Rapport d'intervention écrit</strong> remis à chaque visite, utilisable comme justificatif auprès de votre assurance habitation</li>
+          <li><strong>Intervention sur toutes les grandes marques</strong> (Daikin, Mitsubishi Electric, Samsung, LG, Atlantic, Hitachi, Toshiba, Panasonic, Fujitsu, Gree, Airwell, Carrier)</li>
+        </ul>
+      </section>
+
+      <section class="ent-section">
+        <h2>Entretien classique ou nettoyage haute pression ?</h2>
+
+        <p>Beaucoup de clients nous posent la question, surtout en cas d'odeurs persistantes ou de baisse de performance. Voici comment distinguer les deux prestations et savoir laquelle choisir.</p>
+
+        <h3>L'entretien classique (dès 119 € TTC)</h3>
+
+        <p>C'est la <strong>maintenance préventive annuelle standard</strong>. Le technicien nettoie les filtres, dépoussière l'échangeur à l'air comprimé, nettoie le bac à condensats, et traite le circuit d'air. C'est suffisant dans 80 % des cas, et c'est ce qu'il faut faire chaque année pour maintenir votre appareil en bon état.</p>
+
+        <h3>Le nettoyage haute pression Jet HP (149 € TTC)</h3>
+
+        <p>C'est un <strong>nettoyage de récupération approfondi</strong>, recommandé tous les 2 à 3 ans, ou plus tôt si vous constatez : <strong>des odeurs persistantes</strong> (champignon, humidité), des <strong>moisissures visibles</strong> sur les grilles, ou une <strong>baisse de performance notable</strong> malgré un entretien récent. Le technicien installe une bâche étanche, applique un produit dégraissant et antimicrobien, puis rince l'échangeur sous pression au kit Jet HP professionnel.</p>
+
+        <div class="info-box">
+          <div class="info-box-title">Pack économique</div>
+          <p>Si vous cumulez les deux prestations dans la même intervention, nous proposons un <strong>pack combiné entretien annuel + Jet HP à 249 € TTC</strong> au lieu de 268 € si pris séparément. À envisager si votre dernier Jet HP remonte à plus de 3 ans.</p>
+        </div>
+      </section>
+
+      <section class="ent-section">
+        <h2>Plutôt qu'un entretien ponctuel, pensez au contrat annuel</h2>
+
+        <p>Si vous avez plusieurs climatiseurs ou si vous voulez ne plus avoir à penser à l'entretien, nos contrats de maintenance annuelle sont souvent plus économiques qu'un entretien payé au coup par coup.</p>
+
+        <div class="cross-sell-card">
+          <div class="cross-sell-title">Contrat Essentiel à 25 € TTC par mois</div>
+          <p>1 visite de maintenance préventive annuelle sur votre équipement + <strong>réduction de 15 % sur tous les dépannages</strong> pendant la durée du contrat. Soit 300 € par an pour 1 visite (vs 119-199 € ponctuellement) mais avec la tranquillité d'un suivi automatique et la réduction sur les dépannages imprévus.</p>
+          <a href="/contrats-pro/" class="cross-sell-btn">Découvrir les contrats</a>
+        </div>
+
+        <div class="cross-sell-card">
+          <div class="cross-sell-title">Contrat Premium à 40 € TTC par mois</div>
+          <p>2 visites préventives annuelles (printemps + automne) + <strong>intervention garantie sous 4 heures</strong> en cas de panne + réduction de 20 % sur les pièces et dépannages. Adapté aux professionnels (restaurants, hôtels, commerces) et aux particuliers avec plusieurs équipements ou usage intensif.</p>
+          <a href="/contrats-pro/" class="cross-sell-btn">Voir les contrats pro</a>
+        </div>
+      </section>
+
+      <section class="ent-section">
+        <h2>Quand programmer votre entretien ?</h2>
+
+        <p>Le timing idéal fait une vraie différence sur l'efficacité de votre climatisation pendant la saison chaude.</p>
+
+        <h3>La période optimale : mars à mai</h3>
+
+        <p>L'entretien effectué entre <strong>mars et mai</strong> prépare votre appareil à la saison intensive (juin à septembre). Les filtres sont propres, le circuit est désinfecté, les performances sont maximales quand vous en avez le plus besoin. C'est aussi la période où nos agendas sont les plus disponibles : vous obtenez un rendez-vous rapidement et avec le créneau horaire qui vous convient.</p>
+
+        <h3>La pire période : juin à août</h3>
+
+        <p>En plein été, tous les dépanneurs climatisation sont débordés par les dépannages d'urgence. Les délais de prise de rendez-vous pour un entretien classique peuvent s'allonger à 2-3 semaines. De plus, un entretien effectué en juin ne vous apporte plus que 2-3 mois de bénéfices avant la fin de la saison.</p>
+
+        <h3>Période intéressante pour les pompes à chaleur : septembre-octobre</h3>
+
+        <p>Les pompes à chaleur réversibles (utilisées pour le chauffage l'hiver) ont tout intérêt à être entretenues en septembre ou octobre, avant la saison de chauffe. Cela garantit un fonctionnement optimal quand les températures baissent.</p>
+      </section>
+
+      <section class="ent-section">
+        <h2>Questions fréquentes sur l'entretien</h2>
+
+        <details class="ent-faq">
+          <summary>L'entretien annuel de climatisation est-il vraiment obligatoire ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>Le décret n°2004-461 impose un entretien annuel obligatoire pour les systèmes dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW). La plupart des climatiseurs résidentiels monosplit ou bisplit contiennent moins de 2 kg et ne sont donc pas légalement obligés. Mais un entretien annuel reste fortement recommandé pour la performance, la longévité et la qualité de l'air intérieur. De plus, il peut être exigé par votre assurance habitation en cas de sinistre.</p>
+          </div>
+        </details>
+
+        <details class="ent-faq">
+          <summary>Puis-je nettoyer mes filtres moi-même ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>Oui, pour les filtres à air classiques c'est accessible à tous. Retirez-les (ils coulissent ou se déclipsent), lavez-les à l'eau tiède savonneuse, laissez sécher complètement à l'air libre puis remettez-les en place. À faire tous les 1 à 3 mois en période d'utilisation intensive. En revanche, le nettoyage de l'échangeur intérieur, du bac à condensats, du condenseur extérieur et les vérifications techniques nécessitent un professionnel équipé.</p>
+          </div>
+        </details>
+
+        <details class="ent-faq">
+          <summary>Combien de temps dure un entretien ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>60 à 90 minutes pour un monosplit, 90 à 120 minutes pour un bisplit, 135 à 210 minutes pour un multisplit 3 à 5 unités. La pompe à chaleur air/air prend environ 90 minutes. La VMC simple flux environ 60 minutes, la double flux environ 105 minutes avec remplacement des filtres G4 et F7.</p>
+          </div>
+        </details>
+
+        <details class="ent-faq">
+          <summary>Que se passe-t-il si vous trouvez un problème pendant l'entretien ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>Si le technicien identifie un problème (pièce usée, fuite naissante, performance anormale), il vous en informe immédiatement avec un devis verbal. Aucune réparation n'est effectuée sans votre accord explicite. Selon la nature du problème, la réparation peut parfois être faite dans la même intervention, ou nécessiter une deuxième visite (pièce à commander par exemple).</p>
+          </div>
+        </details>
+
+        <details class="ent-faq">
+          <summary>Intervenez-vous le samedi ou le dimanche pour l'entretien ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>Oui, nous intervenons 7 jours sur 7 de 9h à 21h, sans aucune majoration tarifaire. Le samedi est souvent apprécié par les clients qui travaillent en semaine. Le dimanche est possible mais notre agenda est généralement plus chargé, réservez à l'avance.</p>
+          </div>
+        </details>
+
+        <details class="ent-faq">
+          <summary>Remettez-vous une attestation d'entretien ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>Nous remettons un compte-rendu d'intervention écrit à chaque visite : détail des opérations réalisées, état général de l'appareil, mesures de performance, recommandations éventuelles. Ce document peut servir de justificatif auprès de votre assurance habitation ou pour vos obligations professionnelles. Note : ClimUrgence n'étant pas certifiée RGE Qualibat, le document n'a pas valeur d'attestation officielle pour les installations soumises à obligation stricte au-delà de 30 kg de fluide.</p>
+          </div>
+        </details>
+
+        <details class="ent-faq">
+          <summary>Faut-il prévoir quelque chose de particulier pour la visite ?<span class="ent-faq-plus">+</span></summary>
+          <div class="ent-faq-body">
+            <p>Dégagez l'accès à l'unité intérieure (1 mètre devant et en dessous), assurez-vous que le technicien peut accéder à l'unité extérieure, préparez la télécommande, et notez vos observations éventuelles (bruits, baisse de performance, odeurs). Prévoyez d'être disponible entre 1 et 3 heures selon le type d'installation.</p>
+          </div>
+        </details>
+
+      </section>
+
+      <div class="ent-cta">
+        <h2>Réservez votre entretien dès aujourd'hui</h2>
+        <p>Appelez-nous 7j/7 de 9h à 21h ou remplissez le formulaire de contact pour obtenir un rendez-vous rapide.</p>
+        <div class="ent-cta-btns">
+          <a href="tel:+33643721850" class="ent-btn ent-btn-pri">06 43 72 18 50</a>
+          <a href="/contact/" class="ent-btn ent-btn-sec">Demander un devis</a>
         </div>
       </div>
-    </section>
 
-    <!-- Answer Capsule -->
-    <section class="section section--alt" style="padding-top:2rem;padding-bottom:1rem;">
-      <div class="container">
-        <div class="answer-capsule" role="note">
-          <p>L'<strong>entretien annuel de votre climatisation est obligatoire</strong> par loi pour les installations &gt; 2 kg de charge en fluide frigorigène. ClimUrgence réalise votre maintenance préventive en <strong>Bouches-du-Rhône et Var</strong> : nettoyage filtres, contrôle gaz, compte-rendu d'intervention écrit fourni. Devis gratuit au <strong>06 43 72 18 50</strong>.</p>
-        </div>
-        <p class="update-badge">
-          <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
-          Mis à jour le 18 avril 2026
-        </p>
-      </div>
-    </section>
-
-    <!-- Cadre réglementaire -->
-    <section class="section" aria-labelledby="regl-title">
-      <div class="container">
-        <h2 class="section-title" id="regl-title">Pourquoi l'entretien climatisation est-il obligatoire ?</h2>
-        <div class="content-block" style="margin-top:1.25rem;">
-          <p>La réglementation française, issue du <strong>décret n°2004-461 du 1er juin 2004</strong> et de l'<strong>arrêté du 16 avril 2010</strong>, impose un entretien périodique obligatoire pour tout système de climatisation dont la charge en fluide frigorigène dépasse <strong>2 kg</strong> (soit environ 6 kW de puissance frigorifique).</p>
-
-          <div class="warning-box">
-            <strong>Conséquences en cas de non-entretien :</strong> amende jusqu'à 1 500 €, invalidation possible de votre contrat d'assurance en cas de sinistre lié à la climatisation, perte de garantie constructeur.
-          </div>
-
-          <h3>Fréquence d'entretien réglementaire</h3>
-          <div class="table-wrapper">
-            <table>
-              <thead><tr><th>Charge en fluide frigorigène</th><th>Fréquence obligatoire</th></tr></thead>
-              <tbody>
-                <tr><td>Entre 2 kg et 30 kg</td><td>1 fois par an minimum</td></tr>
-                <tr><td>Plus de 30 kg</td><td>Tous les 6 mois</td></tr>
-                <tr><td>Moins de 2 kg</td><td>Recommandé (non obligatoire)</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p style="margin-top:1rem;">Pour les <strong>professionnels</strong> (hôtels, restaurants, bureaux, commerces), les obligations sont renforcées. Découvrez nos <a href="/contrats-pro/">contrats de maintenance professionnels</a> adaptés.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ce que comprend l'entretien -->
-    <section class="section section--alt" aria-labelledby="prestations-title">
-      <div class="container">
-        <h2 class="section-title" id="prestations-title">Ce que comprend l'entretien ClimUrgence</h2>
-        <div class="services-grid" style="margin-top:1.5rem;">
-          <article class="service-card">
-            <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
-            <h3>Nettoyage complet</h3>
-            <p>Filtres à air, échangeurs intérieur et extérieur, bac de condensats, grille de soufflage. Élimination des moisissures et bactéries.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <h3>Contrôle du circuit frigorifique</h3>
-            <p>Mesure des pressions haute et basse, vérification du niveau de gaz réfrigérant, détection de fuite par détecteur homologué.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-            <h3>Vérification électrique</h3>
-            <p>Contrôle des connexions électriques, mesure des intensités, vérification des protections (disjoncteur, fusibles), test de la télécommande.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
-            <h3>Rapport d'intervention écrit</h3>
-            <p>Remise d'un rapport d'entretien détaillé récapitulant toutes les opérations réalisées et l'état de l'installation. Document utile pour assureurs et contrôles.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
-            <h3>Rapport de visite détaillé</h3>
-            <p>Compte-rendu complet de l'état de votre installation avec recommandations préventives pour éviter les pannes futures.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <h3>Intervention prioritaire</h3>
-            <p>Les clients ayant un contrat d'entretien annuel bénéficient d'une priorité d'intervention en cas de panne, avec des tarifs préférentiels.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- FAQ -->
-    <section class="section" aria-labelledby="faq-ent-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="faq-ent-title">Questions fréquentes — Entretien climatisation</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="efaq1" id="efaq1-btn">L'entretien de climatisation est-il vraiment obligatoire ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="efaq1" role="region" aria-labelledby="efaq1-btn"><div class="faq-answer-inner"><p>Oui. Le <strong>décret n°2004-461</strong> et l'arrêté du 16 avril 2010 imposent un entretien périodique pour tout système dont la charge en fluide frigorigène dépasse <strong>2 kg</strong> (≈ 6 kW). Le non-respect peut entraîner des amendes et invalider votre assurance en cas de sinistre.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="efaq2" id="efaq2-btn">Quelle est la fréquence d'entretien obligatoire ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="efaq2" role="region" aria-labelledby="efaq2-btn"><div class="faq-answer-inner"><p>La fréquence dépend de la charge : <strong>1 fois par an</strong> pour une charge entre 2 et 30 kg, <strong>tous les 6 mois</strong> au-delà de 30 kg. En pratique, un entretien annuel avant la saison chaude (mars-avril) est recommandé pour toutes les installations.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="efaq3" id="efaq3-btn">Que comprend exactement l'entretien ClimUrgence ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="efaq3" role="region" aria-labelledby="efaq3-btn"><div class="faq-answer-inner"><p>Nettoyage filtres et échangeurs (intérieur + extérieur), contrôle du niveau de gaz réfrigérant, vérification des pressions, contrôle du circuit électrique, nettoyage bac condensats, test de fonctionnement complet, remise d'un <strong>rapport d'entretien détaillé</strong>.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="efaq4" id="efaq4-btn">Quel est le prix d'un entretien climatisation ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="efaq4" role="region" aria-labelledby="efaq4-btn"><div class="faq-answer-inner"><p>À partir de <strong>79 € TTC pour un monosplit</strong>. Tarifs dégressifs pour les multisplits. Des forfaits annuels avec priorité d'intervention sont disponibles. Devis gratuit sur demande au 06 43 72 18 50.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="efaq5" id="efaq5-btn">ClimUrgence fournit-il un rapport d'entretien après l'intervention ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="efaq5" role="region" aria-labelledby="efaq5-btn"><div class="faq-answer-inner"><p>Oui. À l'issue de chaque entretien, ClimUrgence remet un <strong>rapport d'entretien détaillé</strong> récapitulant toutes les opérations réalisées et l'état de l'installation. Ce compte-rendu écrit est utile en cas de contrôle ou de sinistre.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Liens internes -->
-    <section class="section section--alt" style="padding-top:1.5rem;padding-bottom:2rem;">
-      <div class="container">
-        <div class="related-links">
-          <h3>Services complémentaires</h3>
-          <ul>
-            <li><a href="/depannage-clim-marseille/">Dépannage urgence climatisation</a></li>
-            <li><a href="/installation-climatisation/">Installation climatisation neuve</a></li>
-            <li><a href="/contrats-pro/">Contrats maintenance professionnels</a></li>
-            <li><a href="/zone-intervention/">Zones d'intervention 13 &amp; 83</a></li>
-            <li><a href="/contact/">Prendre rendez-vous</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <footer class="site-footer" role="contentinfo">
@@ -373,7 +1024,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo"><img src="/img/logo.webp" alt="Logo ClimUrgence — Dépannage climatisation 7j/7 Bouches-du-Rhône et Var" class="logo-img logo-img--footer" width="160" height="45" /></a>
-          <p>Entretien réglementaire et dépannage climatisation en Bouches-du-Rhône et Var. 7j/7.</p>
+          <p>Dépannage, entretien et installation de climatisation en Bouches-du-Rhône et Var. 7j/7.</p>
           <a href="tel:+33643721850" class="footer-phone"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>06 43 72 18 50</a>
         </div>
         <div class="footer-col"><h4>Services</h4><ul><li><a href="/tarifs/">Tarifs</a></li><li><a href="/depannage-clim-marseille/">Dépannage urgence</a></li><li><a href="/entretien-climatisation/" aria-current="page">Entretien annuel</a></li><li><a href="/installation-climatisation/">Installation clim</a></li><li><a href="/contrats-pro/">Abonnements</a></li></ul></div>
@@ -381,17 +1032,13 @@
         <div class="footer-col"><h4>Légal</h4><ul><li><a href="/mentions-legales/">Mentions légales</a></li><li><a href="/confidentialite/">Politique de confidentialité</a></li><li><a href="/cgv/">CGV</a></li></ul></div>
       </div>
       <div class="footer-bottom">
-        <span>© ClimUrgence — Dépannage climatisation Marseille &amp; PACA</span>
+        <span>© ClimUrgence — Entretien climatisation Marseille &amp; PACA</span>
         <span class="update-date">Mis à jour : 23 avril 2026</span>
       </div>
     </div>
   </footer>
 
-  <a href="tel:+33643721850" class="mobile-cta" aria-label="Appeler ClimUrgence">
-    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-    Appeler · 06 43 72 18 50
-  </a>
-
+  <a href="tel:+33643721850" class="mobile-cta" aria-label="Appeler ClimUrgence"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Appeler · 06 43 72 18 50</a>
   <script src="/js/main.js?v=3" defer></script>
 </body>
 </html>
