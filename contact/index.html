@@ -1,86 +1,492 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact & Devis Climatisation Gratuit – Marseille & PACA | ClimUrgence</title>
-  <meta name="description" content="Contactez ClimUrgence pour un devis gratuit ou une urgence climatisation. 06 43 72 18 50 · 7j/7 de 9h à 21h. Marseille, Bouches-du-Rhône et Var. Réponse sous 30 min." />
+  <title>Contact — Dépannage Climatisation PACA 7j/7 | ClimUrgence</title>
+  <meta name="description" content="Contactez ClimUrgence pour tout dépannage, entretien ou installation de climatisation dans le 13 et le 83. Téléphone 06 43 72 18 50, WhatsApp, formulaire en ligne. 7j/7 9h-21h." />
   <link rel="canonical" href="https://climurgence.com/contact/" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://climurgence.com/contact/" />
-  <meta property="og:title" content="Contact & Devis Climatisation Gratuit | ClimUrgence" />
-  <meta property="og:description" content="Devis gratuit ou urgence climatisation : appelez le 06 43 72 18 50 ou remplissez le formulaire. Réponse sous 30 min. 7j/7." />
-  <meta property="og:image" content="https://climurgence.com/img/og-contact.webp" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="ClimUrgence" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://climurgence.com/contact/" />
+  <meta property="og:title"       content="Contact ClimUrgence — Dépannage climatisation 7j/7" />
+  <meta property="og:description" content="3 canaux pour nous joindre : téléphone, WhatsApp, formulaire. Réponse sous 30 min en journée." />
+  <meta property="og:image"       content="https://climurgence.com/img/og-home.webp" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta property="og:site_name"   content="ClimUrgence" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Contact & Devis Climatisation Gratuit | ClimUrgence" />
-  <meta name="twitter:description" content="Contactez ClimUrgence : devis gratuit, réponse en 30 min. 06 43 72 18 50, 7j/7 de 9h à 21h. Marseille & PACA." />
-  <meta name="twitter:image"       content="https://climurgence.com/img/og-contact.webp" />
+  <meta name="twitter:title"       content="Contact ClimUrgence — Dépannage climatisation 7j/7" />
+  <meta name="twitter:description" content="3 canaux pour nous joindre : téléphone, WhatsApp, formulaire. Réponse sous 30 min en journée." />
+  <meta name="twitter:image"       content="https://climurgence.com/img/og-home.webp" />
 
   <meta name="indexnow" content="climurgence2026a8f3c7d21b9" />
   <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
+  <style>
+body { margin: 0; padding: 0; }
+
+.contact-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 1.5rem 4rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1F2937;
+  line-height: 1.7;
+}
+
+.contact-wrap .ct-bread {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0 0 1rem 0;
+}
+
+.contact-wrap .ct-bread a {
+  color: #6B7280;
+  text-decoration: none;
+}
+
+.contact-wrap .ct-bread a:hover { color: #F56E17; }
+
+.contact-wrap h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.05;
+  color: #1E6FA8;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.contact-wrap .ct-intro {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0 0 2.5rem 0;
+  max-width: 720px;
+}
+
+.contact-wrap .ct-section {
+  margin: 0 0 4rem 0;
+}
+
+.contact-wrap h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #E5E7EB;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.contact-wrap p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4B5563;
+  margin: 0 0 1.25rem 0;
+}
+
+.contact-wrap strong { color: #1F2937; font-weight: 600; }
+
+.contact-wrap a {
+  color: #1E6FA8;
+  font-weight: 500;
+}
+
+.contact-wrap .channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 2rem 0;
+}
+
+.contact-wrap .channel-card {
+  background: #FFFFFF;
+  border: 2px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 1.75rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-wrap .channel-card:hover {
+  border-color: #F56E17;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 110, 23, 0.08);
+}
+
+.contact-wrap .channel-card.channel-phone {
+  background: linear-gradient(135deg, #F56E17 0%, #D85A0E 100%);
+  border-color: #F56E17;
+  color: #FFFFFF;
+}
+
+.contact-wrap .channel-card.channel-phone:hover {
+  background: linear-gradient(135deg, #D85A0E 0%, #B84A08 100%);
+}
+
+.contact-wrap .channel-card.channel-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #1FB855 100%);
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.contact-wrap .channel-card.channel-whatsapp:hover {
+  background: linear-gradient(135deg, #1FB855 0%, #169A48 100%);
+}
+
+.contact-wrap .channel-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-wrap .channel-icon svg { width: 100%; height: 100%; }
+
+.contact-wrap .channel-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.contact-wrap .channel-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.contact-wrap .channel-note { font-size: 13px; opacity: 0.9; }
+
+.contact-wrap .channel-card.channel-email { color: #1E6FA8; }
+
+.contact-wrap .channel-card.channel-email .channel-value {
+  font-size: 1.125rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.contact-wrap .reassurance-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: #F9FAFB;
+  border-radius: 16px;
+}
+
+.contact-wrap .reassurance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0.5rem;
+}
+
+.contact-wrap .reassurance-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FDEEDF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F56E17;
+}
+
+.contact-wrap .reassurance-icon svg { width: 18px; height: 18px; }
+
+.contact-wrap .reassurance-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: #1F2937;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.contact-wrap .reassurance-desc {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contact-wrap .form-container {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-wrap .zones-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 1.5rem 0;
+}
+
+.contact-wrap .zone-quick-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1F2937;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+
+.contact-wrap .zone-quick-card:hover {
+  border-color: #F56E17;
+  color: #F56E17;
+  transform: translateX(2px);
+}
+
+.contact-wrap .zone-quick-arrow { color: #9CA3AF; font-size: 14px; }
+.contact-wrap .zone-quick-card:hover .zone-quick-arrow { color: #F56E17; }
+
+.contact-wrap details.ct-faq {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.contact-wrap details.ct-faq[open] { border-color: #F56E17; }
+
+.contact-wrap details.ct-faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.125rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #1F2937;
+  font-size: 15px;
+  line-height: 1.45;
+  gap: 1rem;
+}
+
+.contact-wrap details.ct-faq summary::-webkit-details-marker { display: none; }
+.contact-wrap details.ct-faq summary::marker { display: none; content: ""; }
+
+.contact-wrap details.ct-faq[open] summary {
+  color: #1E6FA8;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.contact-wrap details.ct-faq .ct-faq-plus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  color: #6B7280;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.contact-wrap details.ct-faq[open] .ct-faq-plus {
+  background: #F56E17;
+  color: #FFFFFF;
+  transform: rotate(45deg);
+}
+
+.contact-wrap details.ct-faq .ct-faq-body {
+  padding: 1rem 1.5rem 1.25rem 1.5rem;
+}
+
+.contact-wrap details.ct-faq .ct-faq-body p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0;
+}
+
+.contact-wrap .ct-cta {
+  background: linear-gradient(135deg, #1E6FA8 0%, #154B7A 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 4rem 0 0 0;
+  color: #FFFFFF;
+}
+
+.contact-wrap .ct-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: none;
+  padding: 0;
+}
+
+.contact-wrap .ct-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 1.75rem 0;
+}
+
+.contact-wrap .ct-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  background: #F56E17;
+  color: #FFFFFF;
+}
+
+.contact-wrap .ct-cta-btn:hover {
+  background: #D85A0E;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .contact-wrap { padding: 120px 1rem 2.5rem 1rem; }
+  .contact-wrap h1 { font-size: 2.125rem; }
+  .contact-wrap h2 { font-size: 1.625rem; }
+  .contact-wrap .ct-intro { font-size: 1rem; }
+  .contact-wrap .channels-grid { grid-template-columns: 1fr; }
+  .contact-wrap .zones-quick-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-wrap .form-container { padding: 1.5rem; }
+  .contact-wrap .ct-cta { padding: 2.5rem 1.5rem; }
+  .contact-wrap .ct-cta h2 { font-size: 1.625rem; }
+  .contact-wrap details.ct-faq summary { padding: 1rem 1.25rem; font-size: 14px; }
+  .contact-wrap details.ct-faq .ct-faq-body { padding: 1rem 1.25rem 1.25rem 1.25rem; }
+}
+</style>
+
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "HVACBusiness",
-        "@id": "https://climurgence.com/#business",
-        "name": "ClimUrgence",
-        "telephone": "+33643721850",
-        "email": "contact@climurgence.com",
-        "url": "https://climurgence.com",
-        "address": {"@type": "PostalAddress", "addressLocality": "Marseille", "postalCode": "13000", "addressCountry": "FR"},
-        "geo": {"@type": "GeoCoordinates", "latitude": 43.2965, "longitude": 5.3698},
-        "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "21:00"}],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+33643721850",
-          "contactType": "customer service",
-          "availableLanguage": "French",
-          "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "09:00", "closes": "21:00"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://climurgence.com/contact/#contactpage",
+      "url": "https://climurgence.com/contact/",
+      "name": "Contact ClimUrgence",
+      "description": "Page de contact pour toute demande de dépannage, entretien ou installation de climatisation dans les Bouches-du-Rhône et le Var.",
+      "mainEntity": {
+        "@id": "https://climurgence.com/#business"
+      },
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/contact/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://climurgence.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://climurgence.com/contact/"
         }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://climurgence.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Contact & Devis", "item": "https://climurgence.com/contact/"}
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://climurgence.com/contact/#webpage",
-        "url": "https://climurgence.com/contact/",
-        "name": "Contact & Devis Climatisation Gratuit – Marseille & PACA | ClimUrgence",
-        "inLanguage": "fr-FR",
-        "dateModified": "2026-04-23",
-        "isPartOf": {"@id": "https://climurgence.com/#website"}
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"Comment contacter ClimUrgence pour une urgence climatisation ?","acceptedAnswer":{"@type":"Answer","text":"Pour une urgence, appelez directement le 06 43 72 18 50. Un technicien vous répond en moins de 5 minutes, 7j/7 de 9h à 21h. Vous pouvez aussi vous rendre sur notre page urgence pour accéder directement au bouton d'appel."}},
-          {"@type":"Question","name":"Quel est le délai de réponse pour un devis par formulaire ?","acceptedAnswer":{"@type":"Answer","text":"Pour un devis demandé via le formulaire de contact, ClimUrgence s'engage à rappeler sous 30 minutes en journée (9h-21h). En dehors de ces horaires, le rappel est effectué dès l'ouverture le lendemain matin à 9h."}},
-          {"@type":"Question","name":"Le devis de climatisation est-il vraiment gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui, le devis est entièrement gratuit et sans engagement. Un technicien se déplace pour évaluer votre installation (dépannage, entretien ou installation neuve) et vous remet un devis détaillé avant toute intervention."}},
-          {"@type":"Question","name":"Peut-on envoyer des photos de sa panne par message avant l'intervention ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Lors de votre appel, vous pouvez envoyer des photos ou vidéos de votre système par SMS ou WhatsApp au 06 43 72 18 50. Cela permet au technicien d'anticiper les pièces nécessaires et d'optimiser l'intervention."}},
-          {"@type":"Question","name":"ClimUrgence propose-t-il des devis pour des projets d'installation importants ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Pour les projets d'installation importants (multisplit, gainable, logements collectifs, locaux professionnels), un technicien se déplace pour un audit complet et vous remet une proposition détaillée avec plusieurs options tarifaires sous 48h."}}
-        ]
-      }
-    ]
-  }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://climurgence.com/contact/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps avant d'avoir une réponse ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En journée (9h-21h, 7j/7), nous répondons aux demandes sous 30 minutes en moyenne. Les demandes reçues en soirée ou tôt le matin sont traitées dès l'ouverture."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le déplacement est-il vraiment gratuit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, le déplacement est offert sur toute notre zone d'intervention (Bouches-du-Rhône et Var), quelle que soit la distance depuis Marseille."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se passe la prise de rendez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Par téléphone au 06 43 72 18 50, via le formulaire, par WhatsApp ou par email. Nous vous proposons un créneau adapté : urgence immédiate, journée suivante ou date de votre choix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je être informé par SMS de l'arrivée du technicien ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, sur demande. Nous vous envoyons un SMS 30 minutes avant l'arrivée du technicien, avec son prénom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que faire si je n'habite pas dans le 13 ou le 83 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Notre zone d'intervention est limitée aux Bouches-du-Rhône (13) et au Var (83). En dehors de cette zone, nous ne pouvons pas intervenir."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -109,125 +515,242 @@
     </div>
   </header>
 
-  <nav class="breadcrumb" aria-label="Fil d'Ariane">
-    <div class="container">
-      <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Accueil</span></a><meta itemprop="position" content="1" /></li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" aria-current="page">Contact &amp; Devis</span><meta itemprop="position" content="2" /></li>
-      </ol>
-    </div>
-  </nav>
-
   <main id="main-content">
+    <div class="contact-wrap">
 
-    <section class="page-hero" aria-labelledby="h1-contact">
-      <div class="container">
-        <span class="hero-badge">Réponse sous 30 minutes · 7j/7</span>
-        <h1 id="h1-contact">Contact &amp; Devis<br><em style="color:#FFD166;font-style:normal;">Climatisation Gratuit</em><br>Marseille &amp; PACA</h1>
-        <p class="lead">Pour une urgence, appelez directement le <strong>06 43 72 18 50</strong>. Pour un devis, remplissez le formulaire ci-dessous — réponse garantie sous 30 minutes en journée.</p>
-        <a href="tel:+33643721850" class="btn btn-primary btn-lg"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Appeler maintenant</a>
+      <div class="ct-bread">
+        <a href="/">Accueil</a> › <span>Contact</span>
       </div>
-    </section>
 
-    <section class="section section--alt" style="padding-top:2rem;padding-bottom:1rem;">
-      <div class="container">
-        <div class="answer-capsule" role="note">
-          <p>Contactez <strong>ClimUrgence</strong> pour un devis gratuit ou une intervention d'urgence en climatisation dans les Bouches-du-Rhône et le Var. Par téléphone : <strong>06 43 72 18 50</strong> (7j/7, 9h–21h). Par formulaire ci-dessous, <strong>réponse sous 30 minutes</strong> en jours ouvrés.</p>
-        </div>
-        <p class="update-badge"><svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg> Mis à jour le 18 avril 2026</p>
-      </div>
-    </section>
+      <h1>Contact — parlons de votre besoin</h1>
 
-    <!-- Infos de contact -->
-    <section class="section" aria-labelledby="infos-contact-title">
-      <div class="container">
-        <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;max-width:800px;margin:0 auto;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <p class="ct-intro">Appel, WhatsApp ou formulaire : trois façons de nous joindre selon votre préférence. Nos techniciens sont disponibles 7 jours sur 7 de 9h à 21h pour toute urgence, demande d'entretien, devis d'installation ou question sur nos contrats de maintenance. Réponse garantie sous 30 minutes en journée.</p>
 
-            <div class="service-card" style="text-align:center;">
-              <div class="service-card-icon" style="margin:0 auto 1rem;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              </div>
-              <h3 style="font-size:1rem;margin-bottom:.4rem;">Téléphone</h3>
-              <a href="tel:+33643721850" style="font-size:1.15rem;font-weight:800;color:var(--orange);text-decoration:none;display:block;">06 43 72 18 50</a>
-              <p style="font-size:.8rem;color:var(--text3);margin-top:.3rem;">7j/7 · 9h–21h</p>
+      <section class="ct-section">
+        <div class="channels-grid">
+
+          <a href="tel:+33643721850" class="channel-card channel-phone">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
             </div>
+            <div class="channel-label">Appel direct</div>
+            <div class="channel-value">06 43 72 18 50</div>
+            <div class="channel-note">7j/7 de 9h à 21h</div>
+          </a>
 
-            <div class="service-card" style="text-align:center;">
-              <div class="service-card-icon" style="margin:0 auto 1rem;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </div>
-              <h3 style="font-size:1rem;margin-bottom:.4rem;">E-mail</h3>
-              <a href="mailto:contact@climurgence.com" style="font-size:.95rem;font-weight:600;color:var(--blue);word-break:break-all;">contact@climurgence.com</a>
-              <p style="font-size:.8rem;color:var(--text3);margin-top:.3rem;">Réponse sous 2h en journée</p>
+          <a href="https://wa.me/33643721850" class="channel-card channel-whatsapp" target="_blank" rel="noopener">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/>
+              </svg>
             </div>
+            <div class="channel-label">WhatsApp</div>
+            <div class="channel-value">Message</div>
+            <div class="channel-note">Réponse rapide</div>
+          </a>
 
+          <a href="mailto:contact@climurgence.com" class="channel-card channel-email">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="channel-label">Email</div>
+            <div class="channel-value">contact@climurgence.com</div>
+            <div class="channel-note">Réponse sous 24h</div>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="ct-section">
+        <h2>Formulaire de contact</h2>
+        <p>Décrivez votre besoin en quelques mots. Nous vous recontactons sous 30 minutes en journée.</p>
+
+        <div class="form-container">
+          <form class="form-devis" novalidate action="#" method="POST" aria-label="Formulaire de demande de devis">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="c-nom">Nom complet <span class="req">*</span></label>
+                <input type="text" id="c-nom" name="nom" placeholder="Jean Dupont" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="c-tel">Téléphone <span class="req">*</span></label>
+                <input type="tel" id="c-tel" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel" required />
+              </div>
+              <div class="form-group">
+                <label for="c-cp">Code postal <span class="req">*</span></label>
+                <input type="text" id="c-cp" name="codepostal" placeholder="13000" maxlength="5" inputmode="numeric" required />
+              </div>
+              <div class="form-group">
+                <label for="c-email">E-mail</label>
+                <input type="email" id="c-email" name="email" placeholder="vous@exemple.fr" autocomplete="email" />
+              </div>
+              <div class="form-group full">
+                <label for="c-service">Type de besoin <span class="req">*</span></label>
+                <select id="c-service" name="probleme" required>
+                  <option value="">Sélectionnez votre besoin…</option>
+                  <optgroup label="Urgences">
+                    <option value="panne-totale">Panne totale — clim ne démarre plus</option>
+                    <option value="ne-refroidit-plus">Clim ne refroidit plus</option>
+                    <option value="code-erreur">Code erreur affiché (E1, E3, F3…)</option>
+                    <option value="fuite">Fuite eau / gaz réfrigérant</option>
+                    <option value="bruit">Bruit anormal</option>
+                  </optgroup>
+                  <optgroup label="Entretien &amp; maintenance">
+                    <option value="entretien-annuel">Entretien annuel obligatoire</option>
+                    <option value="nettoyage">Nettoyage filtres uniquement</option>
+                  </optgroup>
+                  <optgroup label="Installation">
+                    <option value="installation-neuve">Installation neuve</option>
+                    <option value="remplacement">Remplacement ancien système</option>
+                  </optgroup>
+                  <optgroup label="Abonnements">
+                    <option value="abonnement">Abonnement maintenance</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="c-message">Message (optionnel)</label>
+                <textarea id="c-message" name="message" placeholder="Décrivez votre situation, la marque de votre appareil, l'année d'installation…" rows="4"></textarea>
+              </div>
+              <div class="form-group full">
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                  Envoyer ma demande
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="ct-section">
+        <div class="reassurance-strip">
+
+          <div class="reassurance-item">
+            <div class="reassurance-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12,6 12,12 16,14"/>
+              </svg>
+            </div>
+            <div>
+              <p class="reassurance-title">Réponse sous 30 minutes</p>
+              <p class="reassurance-desc">En journée, 7j/7 de 9h à 21h</p>
+            </div>
           </div>
 
-          <div class="service-card">
-            <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">
-              <div>
-                <h3 style="font-size:1rem;margin-bottom:.5rem;">Zone d'intervention</h3>
-                <p style="font-size:.875rem;color:var(--text2);">Bouches-du-Rhône (13) · Var (83)<br>Marseille · Aix-en-Provence · Aubagne · La Ciotat · Cassis · Martigues · Istres · Toulon · Hyères · Bandol · Saint-Cyr-sur-Mer</p>
-                <a href="/zone-intervention/" style="font-size:.85rem;font-weight:600;">Voir toutes les zones →</a>
-              </div>
-              <div>
-                <h3 style="font-size:1rem;margin-bottom:.5rem;">Horaires</h3>
-                <p style="font-size:.875rem;color:var(--text2);">Lundi – Dimanche<br><strong style="color:var(--blue);">9h00 – 21h00</strong><br>Week-ends &amp; jours fériés inclus</p>
-              </div>
+          <div class="reassurance-item">
+            <div class="reassurance-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            <div>
+              <p class="reassurance-title">Devis gratuit</p>
+              <p class="reassurance-desc">Sans engagement, transparent</p>
+            </div>
+          </div>
+
+          <div class="reassurance-item">
+            <div class="reassurance-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 7h-3a2 2 0 0 1-2-2V2"/>
+                <path d="M5 22V4a2 2 0 0 1 2-2h10l5 5v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="reassurance-title">Déplacement offert</p>
+              <p class="reassurance-desc">Sur tout le 13 et le 83</p>
             </div>
           </div>
 
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ -->
-    <section class="section" aria-labelledby="faq-c-title">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" id="faq-c-title">Questions fréquentes — Contact &amp; devis</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="cfaq1" id="cfaq1-btn">Comment contacter ClimUrgence pour une urgence ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="cfaq1" role="region" aria-labelledby="cfaq1-btn"><div class="faq-answer-inner"><p>Appelez directement le <strong>06 43 72 18 50</strong>. Un technicien vous répond en moins de 5 minutes, <strong>7j/7 de 9h à 21h</strong>. Vous pouvez aussi remplir notre <a href="/contact/">formulaire de contact</a> pour un rappel rapide.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="cfaq2" id="cfaq2-btn">Quel est le délai de réponse pour un devis par formulaire ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="cfaq2" role="region" aria-labelledby="cfaq2-btn"><div class="faq-answer-inner"><p>ClimUrgence s'engage à rappeler sous <strong>30 minutes</strong> pour toute demande reçue entre 9h et 21h. En dehors de ces horaires, le rappel est effectué dès l'ouverture le lendemain matin à 9h.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="cfaq3" id="cfaq3-btn">Le devis est-il vraiment gratuit et sans engagement ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="cfaq3" role="region" aria-labelledby="cfaq3-btn"><div class="faq-answer-inner"><p>Oui, le devis est <strong>entièrement gratuit et sans engagement</strong>. Pour une installation ou un remplacement, un technicien se déplace pour évaluer votre logement et vous remet un devis détaillé avant toute intervention. Aucune facturation sans accord préalable.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="cfaq4" id="cfaq4-btn">Peut-on envoyer des photos de la panne avant l'intervention ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="cfaq4" role="region" aria-labelledby="cfaq4-btn"><div class="faq-answer-inner"><p>Oui. Lors de votre appel, vous pouvez envoyer photos ou vidéos par <strong>SMS ou WhatsApp au 06 43 72 18 50</strong>. Cela permet au technicien d'anticiper les pièces nécessaires et d'optimiser l'efficacité de l'intervention.</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" aria-controls="cfaq5" id="cfaq5-btn">ClimUrgence réalise-t-il des devis pour de grands projets d'installation ?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-answer" id="cfaq5" role="region" aria-labelledby="cfaq5-btn"><div class="faq-answer-inner"><p>Oui. Pour les projets importants (multisplit, gainable, logements collectifs, locaux professionnels), un technicien se déplace pour un <strong>audit thermique complet</strong> et vous remet une proposition détaillée avec plusieurs options sous 48h ouvrées.</p></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section class="ct-section">
+        <h2>Intervention dans votre ville</h2>
 
-    <section class="section section--alt" style="padding-top:1.5rem;padding-bottom:2rem;">
-      <div class="container">
-        <div class="related-links">
-          <h3>Nos services</h3>
-          <ul>
-            <li><a href="/depannage-clim-marseille/">Dépannage urgence climatisation</a></li>
-            <li><a href="/entretien-climatisation/">Entretien annuel obligatoire</a></li>
-            <li><a href="/installation-climatisation/">Installation</a></li>
-            <li><a href="/contrats-pro/">Contrats maintenance professionnels</a></li>
-            <li><a href="/zone-intervention/">Zones d'intervention 13 &amp; 83</a></li>
-                      </ul>
-        </div>
-      </div>
-    </section>
+        <p>Nos techniciens se déplacent dans toutes les communes des Bouches-du-Rhône et du Var. Voici les villes les plus demandées :</p>
 
+        <div class="zones-quick-grid">
+          <a href="/depannage-clim-marseille/" class="zone-quick-card"><span>Marseille</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/depannage-clim-aix-en-provence/" class="zone-quick-card"><span>Aix-en-Provence</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/depannage-clim-aubagne/" class="zone-quick-card"><span>Aubagne</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/depannage-clim-la-ciotat/" class="zone-quick-card"><span>La Ciotat</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/depannage-clim-vitrolles/" class="zone-quick-card"><span>Vitrolles</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/depannage-clim-toulon/" class="zone-quick-card"><span>Toulon</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/depannage-clim-hyeres/" class="zone-quick-card"><span>Hyères</span><span class="zone-quick-arrow">→</span></a>
+          <a href="/zone-intervention/" class="zone-quick-card"><span>Toutes les villes</span><span class="zone-quick-arrow">→</span></a>
+        </div>
+      </section>
+
+      <section class="ct-section">
+        <h2>Questions avant de nous contacter</h2>
+
+        <details class="ct-faq">
+          <summary>
+            Combien de temps avant d'avoir une réponse ?
+            <span class="ct-faq-plus">+</span>
+          </summary>
+          <div class="ct-faq-body">
+            <p>En journée (9h-21h, 7j/7), nous répondons aux demandes sous 30 minutes en moyenne. Les demandes reçues en soirée après 21h ou tôt le matin avant 9h sont traitées dès notre ouverture. Pour les urgences, privilégiez toujours l'appel direct au 06 43 72 18 50 pour une prise en charge immédiate.</p>
+          </div>
+        </details>
+
+        <details class="ct-faq">
+          <summary>
+            Le déplacement est-il vraiment gratuit ?
+            <span class="ct-faq-plus">+</span>
+          </summary>
+          <div class="ct-faq-body">
+            <p>Oui, le déplacement est offert sur toute notre zone d'intervention (Bouches-du-Rhône et Var), quelle que soit la distance depuis Marseille. Vous ne payez que la prestation réalisée, au tarif public affiché sur notre grille tarifaire. Aucune majoration soir, week-end ou jours fériés.</p>
+          </div>
+        </details>
+
+        <details class="ct-faq">
+          <summary>
+            Comment se passe la prise de rendez-vous ?
+            <span class="ct-faq-plus">+</span>
+          </summary>
+          <div class="ct-faq-body">
+            <p>Trois options selon votre préférence : 1. Téléphone direct au 06 43 72 18 50, le plus rapide pour les urgences. 2. Formulaire ou WhatsApp, nous vous rappelons pour confirmer dans la demi-heure. 3. Email à contact@climurgence.com, réponse sous 24h. Dans tous les cas, nous vous proposons un créneau adapté à votre besoin.</p>
+          </div>
+        </details>
+
+        <details class="ct-faq">
+          <summary>
+            Puis-je être informé par SMS de l'arrivée du technicien ?
+            <span class="ct-faq-plus">+</span>
+          </summary>
+          <div class="ct-faq-body">
+            <p>Oui, sur demande. Nous vous envoyons un SMS environ 30 minutes avant l'arrivée du technicien, avec son prénom. Cela vous permet d'organiser votre journée et d'être prêt à l'accueillir. Précisez simplement votre préférence au moment de la prise de rendez-vous.</p>
+          </div>
+        </details>
+
+        <details class="ct-faq">
+          <summary>
+            Que faire si je n'habite pas dans le 13 ou le 83 ?
+            <span class="ct-faq-plus">+</span>
+          </summary>
+          <div class="ct-faq-body">
+            <p>Notre zone d'intervention est strictement limitée aux Bouches-du-Rhône (13) et au Var (83). Si vous êtes en dehors de cette zone (Vaucluse, Alpes-Maritimes, Gard, Hautes-Alpes), nous ne pourrons malheureusement pas intervenir. Cependant, nous pouvons vous conseiller par téléphone pour certaines questions générales.</p>
+          </div>
+        </details>
+
+      </section>
+
+      <div class="ct-cta">
+        <h2>Urgence climatisation ? Appelez maintenant</h2>
+        <p>Pour toute panne ou urgence, le téléphone reste le moyen le plus rapide. Nos techniciens sont en alerte 7j/7 de 9h à 21h.</p>
+        <a href="tel:+33643721850" class="ct-cta-btn">06 43 72 18 50</a>
+      </div>
+
+    </div>
   </main>
 
   <footer class="site-footer" role="contentinfo">
@@ -244,7 +767,7 @@
       </div>
       <div class="footer-bottom">
         <span>© ClimUrgence — Contact climatisation Marseille &amp; PACA</span>
-        <span class="update-date">Mis à jour : 23 avril 2026</span>
+        <span class="update-date">Mis à jour : 24 avril 2026</span>
       </div>
     </div>
   </footer>
