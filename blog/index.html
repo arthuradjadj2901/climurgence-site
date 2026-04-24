@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog ClimUrgence — Conseils et astuces climatisation | Marseille et PACA</title>
+  <meta name="description" content="Le blog ClimUrgence : articles techniques, conseils de dépannage, codes erreur expliqués, tout savoir sur votre climatisation. Par des professionnels marseillais, 7j/7." />
+  <link rel="canonical" href="https://climurgence.com/blog/" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://climurgence.com/blog/" />
+  <meta property="og:title"       content="Blog ClimUrgence — Conseils et astuces climatisation | Marseille et PACA" />
+  <meta property="og:description" content="Le blog ClimUrgence : articles techniques, conseils de dépannage, codes erreur expliqués, tout savoir sur votre climatisation. Par des professionnels marseillais, 7j/7." />
+  <meta property="og:image"       content="https://climurgence.com/img/og-home.webp" />
+  <meta property="og:locale"      content="fr_FR" />
+  <meta property="og:site_name"   content="ClimUrgence" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Blog ClimUrgence — Conseils et astuces climatisation" />
+  <meta name="twitter:description" content="Articles techniques, dépannage et codes erreur climatisation par les pros ClimUrgence." />
+  <meta name="twitter:image"       content="https://climurgence.com/img/og-home.webp" />
+
+  <meta name="indexnow" content="climurgence2026a8f3c7d21b9" />
+  <meta name="robots"    content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <style>
+body { margin: 0; padding: 0; }
+
+.blog-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 140px 1.5rem 4rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1F2937;
+  line-height: 1.7;
+}
+
+.blog-wrap .blog-bread {
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0 0 1rem 0;
+}
+
+.blog-wrap .blog-bread a {
+  color: #6B7280;
+  text-decoration: none;
+}
+
+.blog-wrap .blog-bread a:hover { color: #F56E17; }
+
+.blog-wrap h1.blog-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #1E6FA8;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.blog-wrap .blog-intro {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #4B5563;
+  margin: 0 0 3rem 0;
+}
+
+.blog-wrap h2.blog-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: #1E6FA8;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.blog-wrap p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4B5563;
+  margin: 0 0 1.25rem 0;
+}
+
+.blog-wrap strong {
+  color: #1F2937;
+  font-weight: 600;
+}
+
+.blog-wrap a {
+  color: #1E6FA8;
+  font-weight: 500;
+}
+
+.blog-wrap .articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.blog-wrap .blog-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 1.75rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: block;
+  position: relative;
+}
+
+.blog-wrap .blog-card:hover {
+  border-color: #F56E17;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 110, 23, 0.08);
+}
+
+.blog-wrap .blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 0.875rem 0;
+  font-size: 12px;
+  color: #6B7280;
+  flex-wrap: wrap;
+}
+
+.blog-wrap .blog-card-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog-wrap .blog-card-meta-item svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.blog-wrap .blog-card-category {
+  display: inline-block;
+  padding: 3px 9px;
+  background: #FDEEDF;
+  color: #F56E17;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.blog-wrap .blog-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #1E6FA8;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  transition: color 0.2s ease;
+}
+
+.blog-wrap .blog-card:hover .blog-card-title {
+  color: #F56E17;
+}
+
+.blog-wrap .blog-card-excerpt {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #4B5563;
+  margin: 0 0 1rem 0;
+}
+
+.blog-wrap .blog-card-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #F56E17;
+}
+
+.blog-wrap .blog-card-readmore::after {
+  content: "→";
+  transition: transform 0.15s ease;
+}
+
+.blog-wrap .blog-card:hover .blog-card-readmore::after {
+  transform: translateX(3px);
+}
+
+.blog-wrap .coming-soon {
+  background: #F9FAFB;
+  border: 1px dashed #D1D5DB;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.blog-wrap .coming-soon-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  color: #6B7280;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.blog-wrap .coming-soon p {
+  margin: 0;
+  color: #6B7280;
+  font-size: 0.9375rem;
+}
+
+.blog-wrap .blog-cta {
+  background: linear-gradient(135deg, #1E6FA8 0%, #154B7A 100%);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin: 3rem 0 0 0;
+  color: #FFFFFF;
+}
+
+.blog-wrap .blog-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.75rem;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: none;
+  padding: 0;
+}
+
+.blog-wrap .blog-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.blog-wrap .blog-cta-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog-wrap .blog-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.blog-wrap .blog-btn-pri {
+  background: #F56E17;
+  color: #FFFFFF;
+}
+
+.blog-wrap .blog-btn-pri:hover {
+  background: #D85A0E;
+  transform: translateY(-1px);
+}
+
+.blog-wrap .blog-btn-sec {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.blog-wrap .blog-btn-sec:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 640px) {
+  .blog-wrap { padding: 120px 1rem 2.5rem 1rem; }
+  .blog-wrap h1.blog-title { font-size: 2rem; }
+  .blog-wrap h2.blog-section-title { font-size: 1.375rem; }
+  .blog-wrap .blog-card { padding: 1.5rem; }
+  .blog-wrap .blog-card-title { font-size: 1.25rem; }
+  .blog-wrap .blog-cta { padding: 2rem 1.5rem; }
+  .blog-wrap .blog-cta h2 { font-size: 1.5rem; }
+}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://climurgence.com/blog/#blog",
+      "url": "https://climurgence.com/blog/",
+      "name": "Blog ClimUrgence",
+      "description": "Articles et conseils techniques sur la climatisation, le dépannage, les codes erreur et l'entretien, par des professionnels marseillais.",
+      "publisher": {"@id": "https://climurgence.com/#business"},
+      "inLanguage": "fr-FR",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://climurgence.com/blog/clim-souffle-chaud/#article",
+          "url": "https://climurgence.com/blog/clim-souffle-chaud/",
+          "headline": "Pourquoi ma climatisation souffle chaud ? Les 5 causes les plus fréquentes",
+          "datePublished": "2026-04-24",
+          "dateModified": "2026-04-24",
+          "author": {"@id": "https://climurgence.com/#business"}
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://climurgence.com/blog/code-erreur-e3-daikin/#article",
+          "url": "https://climurgence.com/blog/code-erreur-e3-daikin/",
+          "headline": "Code erreur E3 sur climatisation Daikin : signification et solutions",
+          "datePublished": "2026-04-24",
+          "dateModified": "2026-04-24",
+          "author": {"@id": "https://climurgence.com/#business"}
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://climurgence.com/blog/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://climurgence.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://climurgence.com/blog/"}
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://climurgence.com/blog/#webpage",
+      "url": "https://climurgence.com/blog/",
+      "name": "Blog ClimUrgence",
+      "isPartOf": {"@id": "https://climurgence.com/#website"},
+      "inLanguage": "fr-FR"
+    }
+  ]
+}
+  </script>
+
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="ClimUrgence – Accueil">
+        <img src="/img/logo.webp" alt="ClimUrgence — Dépannage climatisation Marseille et PACA" class="logo-img" width="200" height="56" />
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/contrats-pro/">Abonnements</a></li>
+          <li><a href="/depannage-clim-marseille/">Dépannage</a></li>
+          <li><a href="/entretien-climatisation/">Entretien</a></li>
+          <li><a href="/installation-climatisation/">Installation</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:.5rem;">
+        <a href="tel:+33643721850" class="header-cta"><svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>06 43 72 18 50</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="blog-wrap">
+
+      <div class="blog-bread">
+        <a href="/">Accueil</a> › <span>Blog</span>
+      </div>
+
+      <h1 class="blog-title">Blog ClimUrgence — conseils et astuces climatisation</h1>
+
+      <p class="blog-intro">Bienvenue sur le blog de ClimUrgence, votre spécialiste marseillais du dépannage, de l'entretien et de l'installation de climatisation 7 jours sur 7. Nos techniciens partagent ici leurs conseils pratiques, explications techniques et astuces pour comprendre le fonctionnement de votre climatiseur, diagnostiquer les pannes courantes, et savoir quand faire appel à un professionnel. Tous nos articles sont rédigés à partir de notre expérience terrain dans les Bouches-du-Rhône et le Var.</p>
+
+      <h2 class="blog-section-title">Derniers articles</h2>
+
+      <div class="articles-list">
+
+        <a href="/blog/clim-souffle-chaud/" class="blog-card">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Dépannage</span>
+            <span class="blog-card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              24 avril 2026
+            </span>
+            <span class="blog-card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              6 min
+            </span>
+          </div>
+          <h3 class="blog-card-title">Pourquoi ma climatisation souffle chaud ? Les 5 causes les plus fréquentes</h3>
+          <p class="blog-card-excerpt">Votre climatiseur tourne mais l'air qui sort est tiède ou chaud ? C'est l'une des pannes les plus fréquentes, particulièrement en été à Marseille. Découvrez les 5 causes techniques les plus courantes, comment les diagnostiquer vous-même et dans quels cas il faut absolument appeler un professionnel.</p>
+          <span class="blog-card-readmore">Lire l'article</span>
+        </a>
+
+        <a href="/blog/code-erreur-e3-daikin/" class="blog-card">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Codes erreur</span>
+            <span class="blog-card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              24 avril 2026
+            </span>
+            <span class="blog-card-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              7 min
+            </span>
+          </div>
+          <h3 class="blog-card-title">Code erreur E3 sur climatisation Daikin : signification et solutions</h3>
+          <p class="blog-card-excerpt">Votre climatiseur Daikin affiche soudainement le code erreur E3 et s'arrête de fonctionner ? Pas de panique, c'est un problème relativement fréquent dont la cause est identifiable. Apprenez ce que signifie ce code, les 4 causes techniques possibles et comment le résoudre.</p>
+          <span class="blog-card-readmore">Lire l'article</span>
+        </a>
+
+      </div>
+
+      <div class="coming-soon">
+        <div class="coming-soon-title">D'autres articles arrivent prochainement</div>
+        <p>Nous enrichissons régulièrement le blog avec de nouveaux articles techniques, conseils d'entretien et explications des codes erreur par marque. Revenez bientôt.</p>
+      </div>
+
+      <div class="blog-cta">
+        <h2>Une panne urgente ? Contactez-nous</h2>
+        <p>Nos techniciens interviennent 7j/7 de 9h à 21h dans tout le 13 et le 83. Moins d'1h à Marseille.</p>
+        <div class="blog-cta-btns">
+          <a href="tel:+33643721850" class="blog-btn blog-btn-pri">06 43 72 18 50</a>
+          <a href="/contact/" class="blog-btn blog-btn-sec">Demander un devis</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="/img/logo.webp" alt="Logo ClimUrgence — Dépannage climatisation 7j/7 Bouches-du-Rhône et Var" class="logo-img logo-img--footer" width="160" height="45" /></a>
+          <p>Dépannage, entretien et installation de climatisation en Bouches-du-Rhône et Var. 7j/7.</p>
+          <a href="tel:+33643721850" class="footer-phone"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>06 43 72 18 50</a>
+        </div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="/tarifs/">Tarifs</a></li><li><a href="/depannage-clim-marseille/">Dépannage urgence</a></li><li><a href="/entretien-climatisation/">Entretien annuel</a></li><li><a href="/installation-climatisation/">Installation clim</a></li><li><a href="/contrats-pro/">Abonnements</a></li></ul></div>
+        <div class="footer-col"><h4>Ressources</h4><ul><li><a href="/zone-intervention/">Zones d'intervention</a></li><li><a href="/guide/">Guide réglementation</a></li><li><a href="/blog/" aria-current="page">Blog</a></li><li><a href="/faq/">FAQ climatisation</a></li><li><a href="/contact/">Contact &amp; devis</a></li></ul></div>
+        <div class="footer-col"><h4>Légal</h4><ul><li><a href="/mentions-legales/">Mentions légales</a></li><li><a href="/confidentialite/">Politique de confidentialité</a></li><li><a href="/cgv/">CGV</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© ClimUrgence — Blog climatisation Marseille &amp; PACA</span>
+        <span class="update-date">Mis à jour : 24 avril 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="tel:+33643721850" class="mobile-cta" aria-label="Appeler ClimUrgence"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>Appeler · 06 43 72 18 50</a>
+  <script src="/js/main.js?v=3" defer></script>
+</body>
+</html>

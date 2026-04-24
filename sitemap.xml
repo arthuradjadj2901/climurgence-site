@@ -123,6 +123,14 @@
   </url>
 
   <url>
+    <loc>https://climurgence.com/blog/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/blog/" />
+  </url>
+
+  <url>
     <loc>https://climurgence.com/blog/clim-souffle-chaud/</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
