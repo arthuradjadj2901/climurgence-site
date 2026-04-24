@@ -123,6 +123,22 @@
   </url>
 
   <url>
+    <loc>https://climurgence.com/blog/clim-souffle-chaud/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/blog/clim-souffle-chaud/" />
+  </url>
+
+  <url>
+    <loc>https://climurgence.com/blog/code-erreur-e3-daikin/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://climurgence.com/blog/code-erreur-e3-daikin/" />
+  </url>
+
+  <url>
     <loc>https://climurgence.com/contact/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
