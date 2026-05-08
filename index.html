@@ -531,7 +531,9 @@
           <h2 id="form-title">Formulaire de demande de devis</h2>
           <p style="color:var(--text2);font-size:.9rem;margin-bottom:1.5rem;">Tous les champs marqués <span style="color:var(--orange);">*</span> sont obligatoires. Réponse garantie sous 30 minutes en journée.</p>
 
-          <form class="form-devis" novalidate action="#" method="POST" aria-label="Formulaire de demande de devis">
+          <form class="form-devis" novalidate action="#" method="POST" aria-label="Formulaire de demande de devis" data-lead-type="contact">
+            <!-- Honeypot anti-spam : doit rester vide. Caché aux humains, visible aux bots. -->
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0;" aria-hidden="true" />
             <div class="form-grid">
               <div class="form-group">
                 <label for="c-nom">Nom complet <span class="req">*</span></label>
