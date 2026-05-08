@@ -71,21 +71,20 @@
 
     var ok = true;
 
+    // Nom requis
     if (!nom || !nom.value.trim()) { setErr(nom, true); ok = false; } else setErr(nom, false);
 
-    var hasTel   = tel   && tel.value.trim();
-    var hasEmail = email && email.value.trim();
+    // Téléphone requis + format français valide
+    if (!tel || !tel.value.trim() || !TEL_REGEX.test(tel.value.replace(/\s/g, ''))) {
+      setErr(tel, true); ok = false;
+    } else setErr(tel, false);
 
-    if (!hasTel && !hasEmail) {
-      setErr(tel, true); setErr(email, true);
-      ok = false;
-    } else {
-      if (hasTel && !TEL_REGEX.test(tel.value.replace(/\s/g, ''))) { setErr(tel, true); ok = false; }
-      else setErr(tel, false);
-      if (hasEmail && !EMAIL_REGEX.test(email.value)) { setErr(email, true); ok = false; }
-      else setErr(email, false);
-    }
+    // Email requis + format valide
+    if (!email || !email.value.trim() || !EMAIL_REGEX.test(email.value)) {
+      setErr(email, true); ok = false;
+    } else setErr(email, false);
 
+    // Code postal si marqué `required` dans le HTML
     if (cp && cp.required && !cp.value.trim()) { setErr(cp, true); ok = false; }
     else if (cp) setErr(cp, false);
 

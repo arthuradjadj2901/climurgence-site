@@ -316,8 +316,11 @@ module.exports = async function handler(req, res) {
     if (!nomRaw) {
       return res.status(400).json({ ok: false, error: "Le nom est requis." });
     }
-    if (!tel && !email) {
-      return res.status(400).json({ ok: false, error: "Au moins un téléphone OU un email est requis." });
+    if (!tel) {
+      return res.status(400).json({ ok: false, error: "Le téléphone est requis." });
+    }
+    if (!email) {
+      return res.status(400).json({ ok: false, error: "L'email est requis." });
     }
 
     // ── 3. Rate limit
