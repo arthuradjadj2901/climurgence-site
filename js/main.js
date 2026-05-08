@@ -145,7 +145,7 @@
       } else {
         form.innerHTML =
           '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">' +
-            '✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.' +
+            'Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.' +
           '</p>';
       }
     }).catch(function (err) {
