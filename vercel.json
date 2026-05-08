@@ -2,11 +2,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
-    "api/devis.js": {
-      "maxDuration": 30
-    },
-    "api/whatsapp.js": {
-      "maxDuration": 60
+    "api/lead.js": {
+      "maxDuration": 10
     }
   },
   "headers": [

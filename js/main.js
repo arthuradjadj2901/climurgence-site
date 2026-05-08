@@ -2,46 +2,203 @@
 (function () {
   'use strict';
 
-  /* ── Theme (dark/light) ── */
-  const THEME_KEY = 'cu-theme';
+  /* ═══════════════════════════════════════════════════════════════
+     Theme (dark/light)
+  ═══════════════════════════════════════════════════════════════ */
+  var THEME_KEY = 'cu-theme';
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    const btn = document.getElementById('themeToggle');
+    var btn = document.getElementById('themeToggle');
     if (btn) btn.setAttribute('aria-label', theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre');
     if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
     localStorage.setItem(THEME_KEY, theme);
   }
 
   function initTheme() {
-    const saved = localStorage.getItem(THEME_KEY);
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var saved = localStorage.getItem(THEME_KEY);
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     applyTheme(saved || (prefersDark ? 'dark' : 'light'));
   }
 
   initTheme();
 
+  /* ═══════════════════════════════════════════════════════════════
+     Helpers formulaires (utilisés par .form-devis et .modal-form)
+  ═══════════════════════════════════════════════════════════════ */
+  var TEL_REGEX   = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
+  var EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var ENDPOINT    = '/api/lead';
+  var ERR_GENERIC = '⚠️ Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler au 06 43 72 18 50.';
+
+  function setErr(el, isErr) {
+    if (el) el.style.borderColor = isErr ? '#e53e3e' : '';
+  }
+
+  function getValue(form, name) {
+    var el = form.querySelector('[name="' + name + '"]');
+    return el ? (el.value || '').trim() : '';
+  }
+
+  /**
+   * Construit le payload à envoyer à /api/lead à partir de tous les
+   * champs `name` présents dans le formulaire + métadonnées.
+   */
+  function buildPayload(form) {
+    var payload = {
+      type:         form.dataset.leadType || 'contact',
+      sujet:        form.dataset.leadSujet || '',
+      page_origine: window.location.pathname || ''
+    };
+    var inputs = form.querySelectorAll('[name]');
+    for (var i = 0; i < inputs.length; i++) {
+      var el = inputs[i];
+      if (!el.name) continue;
+      payload[el.name] = (el.value || '').trim();
+    }
+    return payload;
+  }
+
+  /**
+   * Valide un formulaire : nom requis + (telephone valide OU email valide).
+   * Surligne en rouge les champs invalides. Retourne true/false.
+   */
+  function validateForm(form) {
+    var nom   = form.querySelector('[name="nom"]');
+    var tel   = form.querySelector('[name="telephone"]');
+    var email = form.querySelector('[name="email"]');
+    var cp    = form.querySelector('[name="codepostal"]');
+
+    var ok = true;
+
+    if (!nom || !nom.value.trim()) { setErr(nom, true); ok = false; } else setErr(nom, false);
+
+    var hasTel   = tel   && tel.value.trim();
+    var hasEmail = email && email.value.trim();
+
+    if (!hasTel && !hasEmail) {
+      setErr(tel, true); setErr(email, true);
+      ok = false;
+    } else {
+      if (hasTel && !TEL_REGEX.test(tel.value.replace(/\s/g, ''))) { setErr(tel, true); ok = false; }
+      else setErr(tel, false);
+      if (hasEmail && !EMAIL_REGEX.test(email.value)) { setErr(email, true); ok = false; }
+      else setErr(email, false);
+    }
+
+    if (cp && cp.required && !cp.value.trim()) { setErr(cp, true); ok = false; }
+    else if (cp) setErr(cp, false);
+
+    return ok;
+  }
+
+  /**
+   * Affiche un message d'erreur inline (et le crée si absent).
+   */
+  function showError(form, msg) {
+    var errEl = form.querySelector('.form-send-error');
+    if (!errEl) {
+      errEl = document.createElement('p');
+      errEl.className = 'form-send-error';
+      errEl.style.cssText = 'color:#e53e3e;font-weight:700;text-align:center;margin-top:1rem;';
+      form.appendChild(errEl);
+    }
+    errEl.textContent = msg || ERR_GENERIC;
+  }
+
+  /**
+   * Soumission AJAX vers /api/lead.
+   * Si le formulaire est dans une modal (.modal-form), succès = remplacer
+   * la .modal-box. Sinon = remplacer le contenu du <form>.
+   */
+  function submitLead(form, btn, originalBtnText) {
+    var payload = buildPayload(form);
+
+    return fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      return res.text().then(function (body) {
+        if (!res.ok) {
+          var msg = ERR_GENERIC;
+          try {
+            var parsed = JSON.parse(body);
+            if (parsed && parsed.error) msg = '⚠️ ' + parsed.error;
+          } catch (e) { /* body non-JSON, on garde le message générique */ }
+          throw new Error(msg);
+        }
+      });
+    }).then(function () {
+      // Succès : feedback selon le type de formulaire
+      if (form.classList.contains('modal-form')) {
+        var modalBox = form.closest('.modal-box');
+        if (modalBox) {
+          modalBox.innerHTML =
+            '<div style="padding:2.5rem;text-align:center;">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" style="width:48px;height:48px;margin:0 auto 1rem;display:block;"><polyline points="20 6 9 17 4 12"/></svg>' +
+              '<p style="font-weight:700;color:var(--blue);font-size:1.1rem;margin-bottom:.5rem;">Demande envoyée !</p>' +
+              '<p style="color:var(--text-muted);font-size:.9rem;margin-bottom:1.5rem;">Nous vous rappelons sous 30 minutes.</p>' +
+              '<button class="btn btn-outline" type="button" onclick="document.getElementById(\'tarifModal\').classList.remove(\'open\');document.body.style.overflow=\'\';">Fermer</button>' +
+            '</div>';
+        }
+      } else {
+        form.innerHTML =
+          '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">' +
+            '✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.' +
+          '</p>';
+      }
+    }).catch(function (err) {
+      console.error('[ClimUrgence] Erreur /api/lead :', err.message || err);
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = originalBtnText;
+      }
+      showError(form, err.message || ERR_GENERIC);
+    });
+  }
+
+  /**
+   * Attache le handler à un formulaire (.form-devis ou .modal-form).
+   */
+  function attachLeadHandler(form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validateForm(form)) return;
+
+      var btn = form.querySelector('[type="submit"]');
+      var originalBtnText = btn ? btn.textContent : '';
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours…';
+      }
+      submitLead(form, btn, originalBtnText);
+    });
+  }
+
+  /* ═══════════════════════════════════════════════════════════════
+     DOMContentLoaded — wiring de toute la page
+  ═══════════════════════════════════════════════════════════════ */
   document.addEventListener('DOMContentLoaded', function () {
 
     /* Theme toggle button */
-    const themeBtn = document.getElementById('themeToggle');
+    var themeBtn = document.getElementById('themeToggle');
     if (themeBtn) {
       themeBtn.addEventListener('click', function () {
-        const current = document.documentElement.getAttribute('data-theme');
+        var current = document.documentElement.getAttribute('data-theme');
         applyTheme(current === 'dark' ? 'light' : 'dark');
       });
     }
 
-    /* ── Mobile nav ── */
-    const navToggle = document.getElementById('navToggle');
-    const mainNav   = document.getElementById('mainNav');
+    /* Mobile nav */
+    var navToggle = document.getElementById('navToggle');
+    var mainNav   = document.getElementById('mainNav');
     if (navToggle && mainNav) {
       navToggle.addEventListener('click', function () {
-        const open = mainNav.classList.toggle('open');
+        var open = mainNav.classList.toggle('open');
         navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         navToggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
       });
-      /* Fermer au clic extérieur */
       document.addEventListener('click', function (e) {
         if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
           mainNav.classList.remove('open');
@@ -50,8 +207,8 @@
       });
     }
 
-    /* ── Active nav link ── */
-    const navLinks = document.querySelectorAll('.main-nav a');
+    /* Active nav link */
+    var navLinks = document.querySelectorAll('.main-nav a');
     navLinks.forEach(function (link) {
       if (link.href === window.location.href ||
           (link.href !== window.location.origin + '/' && window.location.href.startsWith(link.href))) {
@@ -60,132 +217,31 @@
       }
     });
 
-    /* ── FAQ Accordion ── */
-    const faqBtns = document.querySelectorAll('.faq-question');
+    /* FAQ Accordion */
+    var faqBtns = document.querySelectorAll('.faq-question');
     faqBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        /* Fermer tous */
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
         faqBtns.forEach(function (b) {
           b.setAttribute('aria-expanded', 'false');
-          const ans = document.getElementById(b.getAttribute('aria-controls'));
+          var ans = document.getElementById(b.getAttribute('aria-controls'));
           if (ans) ans.classList.remove('open');
         });
-        /* Ouvrir celui-ci si fermé */
         if (!expanded) {
           btn.setAttribute('aria-expanded', 'true');
-          const answer = document.getElementById(btn.getAttribute('aria-controls'));
+          var answer = document.getElementById(btn.getAttribute('aria-controls'));
           if (answer) answer.classList.add('open');
         }
       });
     });
 
-    /* ── Formulaire devis : validation basique ── */
-    const forms = document.querySelectorAll('.form-devis');
-    console.log('[ClimUrgence] Formulaires .form-devis trouvés :', forms.length);
-    forms.forEach(function (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        console.log('[ClimUrgence] Submit intercepté par JS');
+    /* ═══ Formulaires : .form-devis (home + contact) ═══ */
+    var devisForms = document.querySelectorAll('.form-devis');
+    devisForms.forEach(attachLeadHandler);
 
-        const tel  = form.querySelector('input[name="telephone"]');
-        const nom  = form.querySelector('input[name="nom"]');
-        const cp   = form.querySelector('input[name="codepostal"]');
-
-        console.log('[ClimUrgence] nom =', nom ? '"' + nom.value + '"' : 'CHAMP ABSENT');
-        console.log('[ClimUrgence] telephone =', tel ? '"' + tel.value + '"' : 'CHAMP ABSENT');
-        console.log('[ClimUrgence] codepostal =', cp ? '"' + cp.value + '"' : 'CHAMP ABSENT');
-
-        let ok = true;
-
-        if (!nom || !nom.value.trim()) {
-          if (nom) nom.style.borderColor = '#e53e3e';
-          console.warn('[ClimUrgence] KO : nom vide ou absent');
-          ok = false;
-        } else {
-          nom.style.borderColor = '';
-          console.log('[ClimUrgence] OK : nom');
-        }
-
-        if (!tel || !tel.value.trim()) {
-          if (tel) tel.style.borderColor = '#e53e3e';
-          console.warn('[ClimUrgence] KO : telephone vide ou absent');
-          ok = false;
-        } else {
-          tel.style.borderColor = '';
-          console.log('[ClimUrgence] OK : telephone présent');
-        }
-
-        if (!cp || !cp.value.trim()) {
-          if (cp) cp.style.borderColor = '#e53e3e';
-          console.warn('[ClimUrgence] KO : codepostal vide ou absent');
-          ok = false;
-        } else {
-          cp.style.borderColor = '';
-          console.log('[ClimUrgence] OK : codepostal');
-        }
-
-        if (tel && tel.value && !/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/.test(tel.value.replace(/\s/g, ''))) {
-          tel.style.borderColor = '#e53e3e';
-          console.warn('[ClimUrgence] KO : telephone invalide (regex) — valeur :', tel.value);
-          ok = false;
-        } else if (tel && tel.value) {
-          console.log('[ClimUrgence] OK : telephone regex');
-        }
-
-        console.log('[ClimUrgence] Validation finale ok =', ok);
-
-        if (ok) {
-          const btn = form.querySelector('[type="submit"]');
-          if (btn) {
-            btn.disabled = true;
-            btn.textContent = 'Envoi en cours…';
-          }
-          var payload = {
-            nom:        (form.querySelector('[name="nom"]')       || {}).value || '',
-            telephone:  (form.querySelector('[name="telephone"]') || {}).value || '',
-            codepostal: (form.querySelector('[name="codepostal"]')|| {}).value || '',
-            email:      (form.querySelector('[name="email"]')     || {}).value || '',
-            probleme:   (form.querySelector('[name="probleme"]')  || {}).value || '',
-            message:    (form.querySelector('[name="message"]')   || {}).value || ''
-          };
-          console.log('[ClimUrgence] Envoi du formulaire vers /api/devis :', payload);
-          fetch('/api/devis', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          }).then(function (res) {
-            console.log('[ClimUrgence] Réponse /api/devis — statut HTTP :', res.status);
-            return res.text().then(function (body) {
-              console.log('[ClimUrgence] Corps réponse /api/devis :', body);
-              if (!res.ok) {
-                throw new Error('HTTP ' + res.status + ' — ' + body);
-              }
-            });
-          }).then(function () {
-            console.log('[ClimUrgence] Succès confirmé — affichage message de confirmation');
-            form.innerHTML = '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">✅ Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.</p>';
-          }).catch(function (err) {
-            console.error('[ClimUrgence] ERREUR envoi /api/devis :', err.message || err);
-            if (btn) {
-              btn.disabled = false;
-              btn.textContent = 'Envoyer ma demande';
-            }
-            var errEl = form.querySelector('.form-send-error');
-            if (!errEl) {
-              errEl = document.createElement('p');
-              errEl.className = 'form-send-error';
-              errEl.style.cssText = 'color:#e53e3e;font-weight:700;text-align:center;margin-top:1rem;';
-              form.appendChild(errEl);
-            }
-            errEl.textContent = '⚠️ Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler directement.';
-          });
-        }
-      });
-    });
-
-    /* ── Scroll : cacher bouton mobile si on est en haut ── */
-    /* (désactivé : toujours visible car urgence permanente) */
+    /* ═══ Formulaire modal : .modal-form (page tarifs) ═══ */
+    var modalForms = document.querySelectorAll('.modal-form');
+    modalForms.forEach(attachLeadHandler);
 
   });
 })();

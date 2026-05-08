@@ -1105,7 +1105,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
       <p class="modal-title" id="modal-title-text">Choisir : <span id="modal-prestation-label"></span></p>
-      <form class="modal-form" id="modalForm" novalidate>
+      <form class="modal-form" id="modalForm" novalidate data-lead-type="tarif">
+        <!-- Honeypot anti-spam : doit rester vide. Caché aux humains, visible aux bots. -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0;" aria-hidden="true" />
+        <input type="hidden" name="sujet" id="modal-sujet" value="" />
         <input type="hidden" name="probleme" id="modal-probleme" value="" />
         <div class="form-grid">
           <div class="form-group">
@@ -1147,12 +1150,14 @@
     var modalClose  = document.getElementById('modalClose');
     var modalCancel = document.getElementById('modalCancel');
     var modalLabel  = document.getElementById('modal-prestation-label');
-    var modalInput  = document.getElementById('modal-probleme');
+    var modalSujet  = document.getElementById('modal-sujet');
+    var modalProb   = document.getElementById('modal-probleme');
 
     function openModal(prestation) {
       modalLabel.textContent = prestation;
       modalForm.reset();
-      modalInput.value = prestation;
+      modalSujet.value = prestation;
+      modalProb.value  = prestation;
       modal.classList.add('open');
       document.body.style.overflow = 'hidden';
       setTimeout(function () {
@@ -1174,59 +1179,6 @@
     modalCancel.addEventListener('click', closeModal);
     modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
-
-    /* ── Soumission formulaire modal ── */
-    modalForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var nom   = modalForm.querySelector('[name="nom"]');
-      var tel   = modalForm.querySelector('[name="telephone"]');
-      var email = modalForm.querySelector('[name="email"]');
-      var cp    = modalForm.querySelector('[name="codepostal"]');
-      var msg   = modalForm.querySelector('[name="message"]');
-
-      function setErr(el, isErr) { if (el) el.style.borderColor = isErr ? '#e53e3e' : ''; }
-
-      var ok = true;
-      if (!nom  || !nom.value.trim())  { setErr(nom,  true); ok = false; } else setErr(nom,  false);
-      if (!tel  || !tel.value.trim())  { setErr(tel,  true); ok = false; }
-      else if (!/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/.test(tel.value.replace(/\s/g,''))) { setErr(tel, true); ok = false; }
-      else setErr(tel, false);
-      if (!email || !email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) { setErr(email, true); ok = false; } else setErr(email, false);
-      if (!cp   || !cp.value.trim())   { setErr(cp,   true); ok = false; } else setErr(cp,   false);
-      if (!ok) return;
-
-      var btn = modalForm.querySelector('[type="submit"]');
-      if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours\u2026'; }
-
-      fetch('/api/devis', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nom:        nom.value.trim(),
-          telephone:  tel.value.trim(),
-          codepostal: cp.value.trim(),
-          email:      email.value.trim(),
-          probleme:   modalInput.value,
-          message:    msg ? msg.value.trim() : ''
-        })
-      }).then(function (res) {
-        return res.text().then(function (body) { if (!res.ok) throw new Error('HTTP ' + res.status + ' \u2014 ' + body); });
-      }).then(function () {
-        var box = modal.querySelector('.modal-box');
-        box.innerHTML = '<div style="padding:2.5rem;text-align:center;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" style="width:48px;height:48px;margin:0 auto 1rem;display:block;"><polyline points="20 6 9 17 4 12"/></svg><p style="font-weight:700;color:var(--blue);font-size:1.1rem;margin-bottom:.5rem;">Demande envoy\u00e9e !</p><p style="color:var(--text-muted);font-size:.9rem;margin-bottom:1.5rem;">Nous vous rappelons sous 30 minutes.</p><button class="btn btn-outline" onclick="document.getElementById(\'tarifModal\').classList.remove(\'open\');document.body.style.overflow=\'\';">Fermer</button></div>';
-      }).catch(function (err) {
-        console.error('[ClimUrgence] ERREUR modal /api/devis :', err.message || err);
-        if (btn) { btn.disabled = false; btn.textContent = 'Envoyer ma demande'; }
-        var errEl = modalForm.querySelector('.form-send-error');
-        if (!errEl) {
-          errEl = document.createElement('p');
-          errEl.className = 'form-send-error';
-          errEl.style.cssText = 'color:#e53e3e;font-weight:700;text-align:center;margin-top:1rem;';
-          modalForm.appendChild(errEl);
-        }
-        errEl.textContent = 'Une erreur est survenue lors de l\'envoi. Veuillez r\u00e9essayer ou nous appeler directement.';
-      });
-    });
   })();
   </script>
 
