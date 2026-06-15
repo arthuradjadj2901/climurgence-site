@@ -51,7 +51,7 @@ Catalogue des prestations (prix TTC, TVA 20% incluse) :
 
 [CONTRATS MAINTENANCE]
 - Formule Essentiel (CTRT-001) : 25€ TTC/mois ou 300€ TTC/an — 1 visite annuelle de maintenance préventive + 15% de réduction sur tous les dépannages
-- Formule Premium (CTRT-002) : 40€ TTC/mois ou 480€ TTC/an — 2 visites annuelles préventives (printemps + automne) + intervention garantie sous 4h en heures ouvrées + 20% de réduction sur pièces et dépannages
+- Formule Premium (CTRT-002) : 40€ TTC/mois ou 480€ TTC/an — 2 visites annuelles préventives (printemps + automne) + intervention garantie sous 4h en heures ouvrées + 15% de réduction sur pièces et dépannages
 
 Règles : déplacement offert partout sur Bouches-du-Rhône (13) et Var (83), aucune majoration soir/week-end/jours fériés, TVA 20% incluse dans tous les prix affichés, ne jamais déduire automatiquement le diagnostic de la facture finale (la déduction est appliquée manuellement si la réparation est acceptée dans la même intervention).
 

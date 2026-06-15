@@ -69,7 +69,7 @@
 | Formule | Prix | Contenu principal |
 |---|---|---|
 | Essentiel | 25 € TTC / mois | 1 visite annuelle + réduction 15% sur dépannages |
-| Premium | 40 € TTC / mois | 2 visites annuelles + intervention sous 4h + réduction 20% sur pièces et dépannages |
+| Premium | 40 € TTC / mois | 2 visites annuelles + intervention sous 4h + réduction 15% sur pièces et dépannages |
 
 ## Zones d'intervention complètes avec délais
 
@@ -129,15 +129,11 @@ L'entretien annuel d'un climatiseur monosplit (1 unité intérieure) coûte à p
 
 ### L'entretien annuel de climatisation est-il obligatoire en France ?
 
-Oui. Le décret n°2004-461 du 1er juin 2004 et l'arrêté du 16 avril 2010 imposent un entretien périodique obligatoire pour tout système de climatisation dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW de puissance frigorifique). La fréquence est d'1 fois par an entre 2 kg et 30 kg, tous les 6 mois au-delà. Le non-respect expose à une amende et peut invalider la garantie constructeur et l'assurance habitation.
+La réglementation française impose un entretien périodique pour les systèmes de climatisation dont la charge en fluide frigorigène dépasse un certain seuil (le plus souvent les multisplits, gainables et grandes installations). La majorité des climatiseurs monosplit ou bisplit résidentiels ne sont pas concernés par l'obligation légale, mais un entretien annuel reste fortement recommandé pour la performance, la longévité de l'appareil et la qualité de l'air intérieur. Il peut également être exigé par votre assurance habitation en cas de sinistre.
 
 ### Quelle est la différence entre un monosplit, un bisplit et un multisplit ?
 
 Un monosplit est composé d'une unité intérieure reliée à une unité extérieure et climatise une seule pièce. Un bisplit possède 2 unités intérieures connectées à 1 unité extérieure pour 2 pièces indépendantes. Un multisplit (trisplit, quadrisplit, quintisplit) raccorde 3 à 5 unités intérieures à une seule unité extérieure pour climatiser plusieurs pièces avec des températures indépendantes.
-
-### ClimUrgence est-il certifié RGE ou éligible à MaPrimeRénov' ?
-
-Non. ClimUrgence n'est pas certifié RGE Qualibat et les prestations ne sont pas éligibles à MaPrimeRénov', à la TVA à 5,5 % ou à d'autres aides nécessitant une certification. Les prix affichés sont en TVA 20%. Cette transparence fait partie de nos engagements.
 
 ### Quelles sont les marques de climatisation réparées ?
 
@@ -194,6 +190,10 @@ Cibles principales : particuliers en urgence (panne en été), professionnels (r
 
 ## Informations techniques additionnelles
 
-- **Réglementation applicable** : décret n°2004-461 du 1er juin 2004, arrêté du 16 avril 2010, règlement européen F-Gas (UE) 517/2014 sur les fluides frigorigènes
+- **Réglementation applicable** : réglementation française sur l'entretien des systèmes de climatisation, règlement européen F-Gas (UE) 517/2014 sur les fluides frigorigènes
 - **Fluides frigorigènes manipulés** : R32 (actuel), R410A (existants), R290 (propane, systèmes écologiques)
 - **Types d'interventions** : résidentiel (maisons, appartements), tertiaire (commerces, bureaux, hôtellerie-restauration, cabinets médicaux), industriel léger
+
+## Mise à jour
+
+Dernière mise à jour : 15 juin 2026.
