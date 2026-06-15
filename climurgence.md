@@ -147,7 +147,7 @@ Règle simple : environ 100 watts par m² pour un logement bien isolé. 20 m² =
 ## Réglementation applicable
 
 - **Réglementation française sur l'entretien des systèmes de climatisation** : entretien périodique obligatoire au-delà d'un certain seuil de charge en fluide
-- **Contrôle d'étanchéité des circuits frigorifiques** : encadré par la réglementation, réservé aux professionnels agréés
+- **Contrôle d'étanchéité des circuits frigorifiques** : encadré par la réglementation, confié à des professionnels qualifiés et expérimentés
 - **Règlement européen F-Gas (UE) 517/2014** : réduction des gaz à effet de serre fluorés
 - **Règlement européen (UE) 2024/573** : durcissement des échéances F-Gas
 - **Directive Éco-conception ErP 2009/125/CE** : performance énergétique minimale
