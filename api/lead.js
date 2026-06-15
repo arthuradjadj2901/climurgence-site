@@ -279,11 +279,18 @@ function initRedis() {
 // ── Rate limit : 5 leads / 10 min / IP ──────────────────────────────
 async function checkRateLimit(redis, ip) {
   if (!redis || !ip) return { ok: true }; // pas de Redis = pas de rate limit (mode dégradé)
-  const key = RATE_LIMIT_PREFIX + ip;
-  const count = await redis.incr(key);
-  if (count === 1) await redis.expire(key, RATE_LIMIT_WINDOW);
-  if (count > RATE_LIMIT_MAX) return { ok: false, count };
-  return { ok: true, count };
+  try {
+    const key = RATE_LIMIT_PREFIX + ip;
+    const count = await redis.incr(key);
+    if (count === 1) await redis.expire(key, RATE_LIMIT_WINDOW);
+    if (count > RATE_LIMIT_MAX) return { ok: false, count };
+    return { ok: true, count };
+  } catch (err) {
+    // L'anti-spam ne doit JAMAIS bloquer un lead légitime : si Redis est
+    // indisponible ou mal configuré, on échoue en mode ouvert (envoi autorisé).
+    console.error("[lead] Rate limit indisponible (Redis), envoi autorisé :", err && err.message ? err.message : err);
+    return { ok: true };
+  }
 }
 
 // ════════════════════════════════════════════════════════════════════
@@ -395,18 +402,25 @@ module.exports = async function handler(req, res) {
     }
 
     const resend = new Resend(apiKey);
-    const { data, error } = await resend.emails.send({
-      from: FROM_ADDRESS,
-      to,
-      subject,
-      html,
-      text,
-      replyTo,
-    });
+    let data, error;
+    try {
+      ({ data, error } = await resend.emails.send({
+        from: FROM_ADDRESS,
+        to,
+        subject,
+        html,
+        text,
+        replyTo,
+      }));
+    } catch (sendErr) {
+      // Exception levée par le SDK/réseau (DNS, timeout, clé invalide…)
+      console.error("[lead] Exception Resend :", sendErr && sendErr.message ? sendErr.message : sendErr);
+      return res.status(502).json({ ok: false, error: "Impossible d'envoyer l'email pour le moment. Merci de nous appeler au 06 43 72 18 50." });
+    }
 
     if (error) {
       console.error("[lead] Erreur Resend :", error);
-      return res.status(500).json({ ok: false, error: "Impossible d'envoyer l'email pour le moment." });
+      return res.status(502).json({ ok: false, error: "Impossible d'envoyer l'email pour le moment. Merci de nous appeler au 06 43 72 18 50." });
     }
 
     // ── 7. Log non-PII pour suivi

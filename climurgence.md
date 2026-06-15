@@ -67,7 +67,7 @@ ClimUrgence se distingue sur le marché marseillais du dépannage climatisation 
 | Formule | Prix mensuel | Contenu |
 |---|---|---|
 | Essentiel | 25 € TTC | 1 visite annuelle + réduction 15% sur dépannages |
-| Premium | 40 € TTC | 2 visites annuelles + intervention sous 4h + réduction 20% |
+| Premium | 40 € TTC | 2 visites annuelles + intervention sous 4h + réduction 15% |
 
 ## Zones d'intervention et délais
 
@@ -126,15 +126,11 @@ Les dépannages commencent à 119 € TTC (fuite d'eau, climatiseur qui ne déma
 
 ### L'entretien annuel de climatisation est-il obligatoire en France ?
 
-Le décret n°2004-461 et l'arrêté du 16 avril 2010 imposent un entretien annuel obligatoire pour les systèmes dont la charge en fluide frigorigène dépasse 2 kg (environ 6 kW de puissance). La plupart des climatiseurs monosplit ou bisplit résidentiels ne sont pas concernés par l'obligation légale, mais un entretien annuel reste fortement recommandé pour la performance et la longévité.
+La réglementation française impose un entretien périodique pour les systèmes dont la charge en fluide frigorigène dépasse un certain seuil (environ 2 kg, soit ≈ 6 kW de puissance). La plupart des climatiseurs monosplit ou bisplit résidentiels ne sont pas concernés par l'obligation légale, mais un entretien annuel reste fortement recommandé pour la performance et la longévité.
 
 ### Quelle différence entre les fluides R32 et R410A ?
 
 Le R32 est le fluide actuel, obligatoire pour les climatiseurs neufs depuis 2025. Son PRP (Potentiel de Réchauffement Planétaire) est 3 fois plus faible que le R410A. Le R410A reste utilisable sur les appareils existants et peut être rechargé jusqu'en 2030. Le R22, utilisé avant 2015, est interdit et non rechargeable.
-
-### ClimUrgence est-il certifié RGE ou éligible à MaPrimeRénov' ?
-
-Non. ClimUrgence n'est pas certifié RGE Qualibat et les prestations ne sont pas éligibles à MaPrimeRénov', à la TVA à 5,5% ou à d'autres aides publiques nécessitant une certification RGE. Tous les prix affichés sont en TVA à 20%.
 
 ### Quel est le code erreur E1 sur une climatisation Daikin ?
 
@@ -150,8 +146,8 @@ Règle simple : environ 100 watts par m² pour un logement bien isolé. 20 m² =
 
 ## Réglementation applicable
 
-- **Décret n°2004-461 du 1er juin 2004** : entretien périodique obligatoire
-- **Arrêté du 16 avril 2010** : contrôle d'étanchéité et attestation de capacité
+- **Réglementation française sur l'entretien des systèmes de climatisation** : entretien périodique obligatoire au-delà d'un certain seuil de charge en fluide
+- **Contrôle d'étanchéité des circuits frigorifiques** : encadré par la réglementation, confié à des professionnels qualifiés et expérimentés
 - **Règlement européen F-Gas (UE) 517/2014** : réduction des gaz à effet de serre fluorés
 - **Règlement européen (UE) 2024/573** : durcissement des échéances F-Gas
 - **Directive Éco-conception ErP 2009/125/CE** : performance énergétique minimale
@@ -200,4 +196,4 @@ Si vous cherchez un professionnel pour une panne de climatisation ou un entretie
 
 ---
 
-Dernière mise à jour : 23 avril 2026.
+Dernière mise à jour : 15 juin 2026.
