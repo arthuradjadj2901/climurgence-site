@@ -9,7 +9,7 @@
 //
 // ── Body attendu (JSON) ──
 // {
-//   type:      "contact" | "tarif" | string,  // type brut envoyé par le form
+//   type:      "contact" | "tarif" | "partenaire" | string,  // type brut envoyé par le form
 //   sujet?:    string,                         // sujet précis (label prestation pour le modal tarifs)
 //   nom:       string,                         // requis
 //   prenom?:   string,
@@ -19,6 +19,10 @@
 //   ville?:    string,
 //   probleme?: string,                         // value du <select> côté forms home/contact
 //   message?:  string,
+//   societe?:  string,                         // candidature partenaire
+//   siren?:    string,                         // candidature partenaire
+//   zones?:    string,                         // candidature partenaire
+//   activites?:string,                         // candidature partenaire
 //   page_origine?: string,                     // window.location.pathname
 //   website?:  string                          // honeypot — doit être vide
 // }
@@ -47,19 +51,22 @@ const TYPE_DEFS = {
   urgence:   { label: "URGENCE",   color: "#dc2626", labelLong: "Urgence dépannage" },
   install:   { label: "INSTALL",   color: "#ea580c", labelLong: "Demande d'installation" },
   entretien: { label: "ENTRETIEN", color: "#2563eb", labelLong: "Demande d'entretien" },
-  contrat:   { label: "CONTRAT",   color: "#9333ea", labelLong: "Demande contrat / abonnement" },
   contact:   { label: "CONTACT",   color: "#6b7280", labelLong: "Demande de contact" },
+  partenaire:{ label: "PARTENAIRE",color: "#0f766e", labelLong: "Candidature technicien partenaire" },
 };
 
 // ── Dérive le type d'affichage à partir des données du formulaire ───
 // Priorité : `probleme` (forms home/contact) > `sujet` (modal tarifs) > `type` brut.
 function deriveDisplayType({ type, probleme, sujet }) {
+  // Une candidature partenaire est identifiée par son `type` brut et ne doit pas
+  // être requalifiée en urgence/install/entretien par les règles ci-dessous.
+  if (String(type || "").toLowerCase() === "partenaire") return "partenaire";
+
   const haystack = [probleme, sujet, type].filter(Boolean).join(" ").toLowerCase();
 
   if (/panne-totale|ne-refroidit|code-erreur|fuite|bruit|d[ée]pannage|urgence/.test(haystack)) return "urgence";
   if (/installation|remplacement|pose monosplit|fourniture \+ pose|d[ée]pose/.test(haystack))  return "install";
   if (/entretien|nettoyage|jet hp|vmc/.test(haystack))                                          return "entretien";
-  if (/abonnement|contrat|formule (essentiel|premium)/.test(haystack))                          return "contrat";
   return "contact";
 }
 
@@ -74,7 +81,6 @@ const PROBLEME_LABELS = {
   "nettoyage":         "Nettoyage filtres uniquement",
   "installation-neuve":"Installation neuve",
   "remplacement":      "Remplacement ancien système",
-  "abonnement":        "Abonnement maintenance",
 };
 
 function readableSujet({ sujet, probleme, message }) {
@@ -164,6 +170,7 @@ function buildSubject({ displayType, sujet, codepostal, nom }) {
 function buildHtmlBody({
   displayType, sujet, nom, prenom, telephone, email, codepostal, ville,
   probleme, message, pageOrigine, ip, userAgent, crmUrl,
+  societe, siren, zones, activites,
 }) {
   const def = TYPE_DEFS[displayType] || TYPE_DEFS.contact;
   const sujetReadable = readableSujet({ sujet, probleme });
@@ -171,11 +178,24 @@ function buildHtmlBody({
   // Lignes coordonnées (skip vides)
   const coords = [];
   const fullName = [prenom, nom].filter(Boolean).join(" ");
-  if (fullName) coords.push(`<tr><td style="padding:4px 0;color:#6b7280;width:24px;">👤</td><td style="padding:4px 0;font-size:16px;font-weight:600;">${esc(fullName)}</td></tr>`);
-  if (telephone) coords.push(`<tr><td style="padding:4px 0;">📞</td><td style="padding:4px 0;font-size:16px;"><a href="tel:${esc(telephone.replace(/\s/g,""))}" style="color:#1f2937;text-decoration:none;font-weight:600;">${esc(telephone)}</a></td></tr>`);
-  if (email) coords.push(`<tr><td style="padding:4px 0;">✉️</td><td style="padding:4px 0;font-size:16px;"><a href="mailto:${esc(email)}" style="color:#1f2937;text-decoration:none;font-weight:600;">${esc(email)}</a></td></tr>`);
+  if (fullName) coords.push(`<tr><td style="padding:4px 0;color:#6b7280;width:70px;">Nom</td><td style="padding:4px 0;font-size:16px;font-weight:600;">${esc(fullName)}</td></tr>`);
+  if (telephone) coords.push(`<tr><td style="padding:4px 0;color:#6b7280;width:70px;">Tél.</td><td style="padding:4px 0;font-size:16px;"><a href="tel:${esc(telephone.replace(/\s/g,""))}" style="color:#1f2937;text-decoration:none;font-weight:600;">${esc(telephone)}</a></td></tr>`);
+  if (email) coords.push(`<tr><td style="padding:4px 0;color:#6b7280;width:70px;">E-mail</td><td style="padding:4px 0;font-size:16px;"><a href="mailto:${esc(email)}" style="color:#1f2937;text-decoration:none;font-weight:600;">${esc(email)}</a></td></tr>`);
   const lieu = [codepostal, ville].filter(Boolean).join(" ");
-  if (lieu) coords.push(`<tr><td style="padding:4px 0;">📮</td><td style="padding:4px 0;font-size:16px;">${esc(lieu)}</td></tr>`);
+  if (lieu) coords.push(`<tr><td style="padding:4px 0;color:#6b7280;width:70px;">Adresse</td><td style="padding:4px 0;font-size:16px;">${esc(lieu)}</td></tr>`);
+
+  // Section entreprise : uniquement renseignée pour les candidatures partenaire
+  const entreprise = [];
+  if (societe)   entreprise.push(`<tr><td style="padding:4px 0;color:#6b7280;width:90px;">Société</td><td style="padding:4px 0;font-size:16px;font-weight:600;">${esc(societe)}</td></tr>`);
+  if (siren)     entreprise.push(`<tr><td style="padding:4px 0;color:#6b7280;width:90px;">SIREN</td><td style="padding:4px 0;font-size:16px;">${esc(siren)}</td></tr>`);
+  if (zones)     entreprise.push(`<tr><td style="padding:4px 0;color:#6b7280;width:90px;">Zones</td><td style="padding:4px 0;font-size:16px;">${esc(zones)}</td></tr>`);
+  if (activites) entreprise.push(`<tr><td style="padding:4px 0;color:#6b7280;width:90px;">Activités</td><td style="padding:4px 0;font-size:16px;">${esc(activites)}</td></tr>`);
+  const societeHtml = entreprise.length
+    ? `<div style="font-size:11px;letter-spacing:1.2px;color:#9ca3af;font-weight:600;margin-bottom:8px;">ENTREPRISE</div>
+      <table role="presentation" style="width:100%;border-collapse:collapse;margin-bottom:20px;">
+        ${entreprise.join("\n        ")}
+      </table>`
+    : "";
 
   // Section demande
   const messageHtml = message && message.trim()
@@ -196,13 +216,15 @@ function buildHtmlBody({
     <div style="padding:24px;">
       <a href="${esc(crmUrl)}"
          style="display:block;background:#ea580c;color:#ffffff;text-decoration:none;text-align:center;padding:16px 24px;border-radius:8px;font-weight:700;font-size:16px;margin-bottom:24px;">
-        📋 Créer la fiche client dans le CRM
+        Créer la fiche client dans le CRM
       </a>
 
       <div style="font-size:11px;letter-spacing:1.2px;color:#9ca3af;font-weight:600;margin-bottom:8px;">COORDONNÉES</div>
       <table role="presentation" style="width:100%;border-collapse:collapse;margin-bottom:20px;">
         ${coords.join("\n        ") || '<tr><td style="color:#9ca3af;font-style:italic;">Aucune coordonnée renseignée.</td></tr>'}
       </table>
+
+      ${societeHtml}
 
       <div style="font-size:11px;letter-spacing:1.2px;color:#9ca3af;font-weight:600;margin-bottom:8px;">DEMANDE</div>
       <p style="margin:0 0 4px;color:#1f2937;"><strong>Sujet :</strong> ${esc(sujetReadable)}</p>
@@ -228,6 +250,7 @@ function buildHtmlBody({
 function buildTextBody({
   displayType, sujet, nom, prenom, telephone, email, codepostal, ville,
   probleme, message, pageOrigine, ip, userAgent, crmUrl,
+  societe, siren, zones, activites,
 }) {
   const def = TYPE_DEFS[displayType] || TYPE_DEFS.contact;
   const sujetReadable = readableSujet({ sujet, probleme });
@@ -245,6 +268,14 @@ function buildTextBody({
   if (telephone) lines.push(`Téléphone : ${telephone}`);
   if (email)     lines.push(`Email     : ${email}`);
   if (lieu)      lines.push(`Adresse   : ${lieu}`);
+  if (societe || siren || zones || activites) {
+    lines.push("");
+    lines.push("─── ENTREPRISE ───");
+    if (societe)   lines.push(`Société   : ${societe}`);
+    if (siren)     lines.push(`SIREN     : ${siren}`);
+    if (zones)     lines.push(`Zones     : ${zones}`);
+    if (activites) lines.push(`Activités : ${activites}`);
+  }
   lines.push("");
   lines.push("─── DEMANDE ───");
   lines.push(`Sujet : ${sujetReadable}`);
@@ -350,6 +381,10 @@ module.exports = async function handler(req, res) {
     const sujet      = (body.sujet || "").trim();
     const message    = (body.message || "").trim();
     const pageOrigine= (body.page_origine || "").trim();
+    const societe    = (body.societe || "").trim();
+    const siren      = (body.siren || "").trim();
+    const zones      = (body.zones || "").trim();
+    const activites  = (body.activites || "").trim();
     const userAgent  = req.headers["user-agent"] || "";
 
     const displayType = deriveDisplayType({
@@ -369,13 +404,13 @@ module.exports = async function handler(req, res) {
     const html = buildHtmlBody({
       displayType, sujet, nom, prenom, telephone: tel, email,
       codepostal, ville, probleme, message, pageOrigine,
-      ip, userAgent, crmUrl,
+      ip, userAgent, crmUrl, societe, siren, zones, activites,
     });
 
     const text = buildTextBody({
       displayType, sujet, nom, prenom, telephone: tel, email,
       codepostal, ville, probleme, message, pageOrigine,
-      ip, userAgent, crmUrl,
+      ip, userAgent, crmUrl, societe, siren, zones, activites,
     });
 
     const to = process.env.LEAD_EMAIL_TO || FALLBACK_TO;
