@@ -77,10 +77,10 @@ const PROBLEME_LABELS = {
   "code-erreur":       "Code erreur affiché (E1, E3, F3…)",
   "fuite":             "Fuite eau / gaz réfrigérant",
   "bruit":             "Bruit anormal",
-  "entretien-annuel":  "Entretien annuel obligatoire",
+  "entretien-annuel":  "Entretien périodique réglementaire",
   "nettoyage":         "Nettoyage filtres uniquement",
-  "installation-neuve":"Installation neuve",
-  "remplacement":      "Remplacement ancien système",
+  "installation-neuve":"Installation neuve (monosplit, bisplit, multisplit, PAC)",
+  "remplacement":      "Remplacement d'une climatisation existante",
 };
 
 function readableSujet({ sujet, probleme, message }) {
