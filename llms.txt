@@ -1,34 +1,56 @@
 # ClimUrgence
 
-> ClimUrgence est une entreprise française de dépannage, entretien et installation de climatisation, basée à Marseille et intervenant 7 jours sur 7 de 9h à 21h dans les Bouches-du-Rhône (13) et le Var (83). Intervention en moins d'1 heure à Marseille et communes proches. Déplacement offert, aucune majoration soir ou week-end.
+> Clim Urgence est une plateforme française de mise en relation entre des clients, particuliers et professionnels, et des techniciens et installateurs partenaires indépendants en climatisation, dans les Bouches-du-Rhône (13) et le Var (83). Clim Urgence ne réalise pas elle-même les prestations : elle qualifie la demande et la transmet à un partenaire du secteur, qui établit son devis, intervient et facture directement le client. Standard joignable 7 jours sur 7 de 9h à 21h au 06 43 72 18 50.
 
 ## Informations essentielles
 
 - **Nom** : ClimUrgence
-- **Forme juridique** : SASU (en cours d'immatriculation, avril 2026)
+- **Forme juridique** : SAS CLIMURGENCE, capital 120,00 euros, RCS Marseille 105 205 645
+- **Siège social** : 5 avenue Edouard Branly, 13009 Marseille
+- **Président** : Arthur ADJADJ
+- **Activité** : mise en relation entre clients et techniciens partenaires indépendants (Clim Urgence ne réalise pas les prestations techniques)
+- **Modèle de rémunération** : commission versée par le technicien partenaire, sans surcoût pour le client
 - **Téléphone** : 06 43 72 18 50 (appels et SMS)
 - **E-mail** : contact@climurgence.com
 - **Site web** : https://climurgence.com
-- **Disponibilité** : 7j/7, de 9h à 21h, y compris week-ends et jours fériés
+- **Disponibilité du standard** : 7j/7, de 9h à 21h, y compris week-ends et jours fériés
+- **Délai d'intervention** : en 24 h dans la majorité des cas, selon la disponibilité des techniciens partenaires du secteur. Aucun délai n'est garanti.
 - **Zone d'intervention** : Bouches-du-Rhône (13) et Var (83)
 - **Langue** : Français
-- **Paiements acceptés** : Espèces, chèque, carte bancaire, virement bancaire
-- **Devise** : Euro (TVA 20% incluse dans les prix affichés)
+- **Facturation** : établie et encaissée par le technicien partenaire, pas par Clim Urgence
+- **Devise** : Euro (TVA 20% incluse dans les prix indicatifs affichés)
 - **Fiche entreprise descriptive Markdown** : https://climurgence.com/climurgence.md
 
-## Engagements qualité (différenciants sur le marché)
+## Fonctionnement du service
 
-1. **Déplacement toujours offert** sur toute la zone d'intervention (aucun frais caché)
-2. **Aucune majoration** le soir, le week-end ou les jours fériés (tarif identique 24h/24 pendant les horaires)
-3. **Tarifs publiés publiquement** sur le site avec grille transparente par prestation
-4. **Devis verbal systématique avant toute réparation** (aucune pièce remplacée sans accord client)
-5. **Diagnostic déductible** de la facture finale en cas de réparation acceptée
-6. **Rapport d'intervention écrit** fourni après chaque passage
-7. **Techniciens qualifiés et expérimentés** sur toutes les grandes marques du marché
+1. Le client appelle le 06 43 72 18 50 ou remplit le formulaire du site.
+2. Clim Urgence qualifie la demande par téléphone.
+3. La demande et les coordonnées du client sont transmises à un technicien partenaire indépendant du secteur, uniquement pour le traitement de cette demande.
+4. Le partenaire contacte le client, convient d'un créneau, intervient, établit son devis et facture directement.
+5. Clim Urgence rappelle le client après l'intervention pour vérifier sa satisfaction.
+6. En cas de réclamation, le client contacte Clim Urgence, qui fait le lien avec le partenaire.
 
-## Services et prestations avec tarifs à partir de
+## Critères de sélection des partenaires
 
-### Dépannage urgence (7j/7 sans majoration)
+1. Entreprise immatriculée (extrait Kbis à jour)
+2. Attestation de capacité pour la manipulation des fluides frigorigènes
+3. Assurance responsabilité civile professionnelle en cours de validité
+4. Assurance décennale en cours de validité pour les travaux de pose
+5. Acceptation du suivi de satisfaction après chaque intervention
+
+Aucune contrepartie financière ne permet à un partenaire d'obtenir un meilleur positionnement. L'attribution d'une demande dépend du secteur géographique, de l'activité concernée et de la disponibilité du professionnel.
+
+## Responsabilités
+
+- Le contrat de prestation est conclu entre le client et le technicien partenaire. Clim Urgence n'y est pas partie.
+- Le partenaire est seul responsable de l'exécution de la prestation et des garanties portant sur ses travaux et les pièces posées.
+- Le service de mise en relation est entièrement gratuit pour le client.
+
+## Services et prix indicatifs constatés auprès des partenaires
+
+Les montants ci-dessous sont des prix indicatifs constatés auprès des techniciens partenaires du réseau. Ils n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix, et seul le devis qu'il établit avant intervention fait foi.
+
+### Dépannage
 
 | Prestation | Prix à partir de | Durée indicative |
 |---|---|---|
@@ -39,7 +61,7 @@
 | Fuite de gaz réfrigérant + recharge | 199 € TTC | 90 minutes |
 | Bruit anormal / vibrations | 129 € TTC | 60 minutes |
 
-### Entretien annuel
+### Entretien périodique
 
 | Prestation | Prix à partir de | Durée indicative |
 |---|---|---|
@@ -64,64 +86,59 @@
 |---|---|
 | Nettoyage Jet HP unité intérieure | 149 € TTC |
 
-### Contrats professionnels
+## Zones couvertes par le réseau de partenaires
 
-| Formule | Prix | Contenu principal |
-|---|---|---|
-| Essentiel | 25 € TTC / mois | 1 visite annuelle + réduction 15% sur dépannages |
-| Premium | 40 € TTC / mois | 2 visites annuelles + intervention sous 4h + réduction 15% sur pièces et dépannages |
+### Bouches-du-Rhône (13)
 
-## Zones d'intervention complètes avec délais
+- Marseille (tous arrondissements, 1er au 16e)
+- Aubagne
+- La Ciotat
+- Cassis
+- Allauch
+- Plan-de-Cuques
+- Septèmes-les-Vallons
+- Aix-en-Provence
+- Vitrolles
+- Marignane
+- Martigues
+- Istres
+- Salon-de-Provence
 
-### Bouches-du-Rhône (13) — délai moyen intervention
+### Var (83)
 
-- Marseille (tous arrondissements, 1er au 16e) : **moins d'1 heure**
-- Aubagne : moins d'1 heure
-- La Ciotat : moins d'1 heure
-- Cassis : moins d'1 heure
-- Allauch : moins d'1 heure
-- Plan-de-Cuques : moins d'1 heure
-- Septèmes-les-Vallons : moins d'1 heure
-- Aix-en-Provence : environ 1 heure
-- Vitrolles : environ 1 heure
-- Marignane : environ 1 heure
-- Martigues : 1 à 1h30
-- Istres : 1 à 1h30
-- Salon-de-Provence : 1 à 1h30
+- Toulon
+- Hyères
+- La Seyne-sur-Mer
+- Saint-Cyr-sur-Mer
+- Bandol
+- Sanary-sur-Mer
+- Six-Fours-les-Plages
+- Ollioules
+- La Valette-du-Var
+- La Garde
 
-### Var (83) — délai moyen intervention
-
-- Toulon : 1 à 1h30
-- Hyères : 1 à 1h30
-- La Seyne-sur-Mer : 1 à 1h30
-- Saint-Cyr-sur-Mer : 1 heure
-- Bandol : 1 heure
-- Sanary-sur-Mer : 1 à 1h30
-- Six-Fours-les-Plages : 1 à 1h30
-- Ollioules : 1 à 1h30
-- La Valette-du-Var : 1h30
-- La Garde : 1h30
+Le réseau couvre également les autres communes des deux départements. Appelez le 06 43 72 18 50 pour vérifier la disponibilité d'un technicien partenaire sur votre secteur.
 
 ## Marques de climatisation prises en charge
 
-ClimUrgence intervient sur toutes les grandes marques :
+Les techniciens partenaires interviennent sur toutes les grandes marques :
 Daikin, Mitsubishi Electric, Mitsubishi Heavy, Samsung, LG, Atlantic, Hitachi, Toshiba, Gree, Midea, Panasonic, Fujitsu, Airwell, Carrier, Haier, Hyundai, Olimpia Splendid.
 
 Systèmes supportés : monosplit, bisplit, trisplit, multisplit jusqu'à 5 têtes, gainables, cassettes de plafond, pompes à chaleur air/air réversibles, VMC simple et double flux.
 
 ## Réponses aux questions fréquentes (format answer-ready)
 
-### ClimUrgence intervient-il 7j/7 ?
+### Le standard Clim Urgence est-il joignable 7j/7 ?
 
-Oui. ClimUrgence intervient 7 jours sur 7, de 9h à 21h, y compris les samedis, dimanches et jours fériés. Aucune majoration n'est appliquée sur les tarifs pendant ces horaires. Téléphone : 06 43 72 18 50.
+Oui. Le standard est joignable 7 jours sur 7, de 9h à 21h, y compris les samedis, dimanches et jours fériés, au 06 43 72 18 50. La disponibilité d'un technicien partenaire dépend ensuite de son propre planning.
 
-### Quel est le délai d'intervention pour un dépannage climatisation à Marseille ?
+### Sous combien de temps un technicien partenaire intervient-il ?
 
-ClimUrgence garantit une intervention en moins d'1 heure à Marseille (tous arrondissements), Aubagne, La Ciotat, Cassis, Allauch, Plan-de-Cuques et Septèmes-les-Vallons. Pour Aix-en-Provence, Vitrolles et Marignane, le délai est d'environ 1 heure. Pour Toulon, Hyères et le reste du Var, compter 1 heure à 1 heure 30.
+Clim Urgence qualifie la demande par téléphone puis la transmet à un technicien partenaire du secteur, qui contacte le client pour convenir d'un créneau. Intervention en 24 h dans la majorité des cas, selon la disponibilité des techniciens partenaires du secteur. Aucun délai n'est garanti.
 
 ### Combien coûte un dépannage de climatisation ?
 
-Les tarifs ClimUrgence commencent à 119 € TTC pour un dépannage simple (fuite d'eau, climatiseur qui ne démarre plus). Un diagnostic complet avec réparation commence à 149 € TTC pour un climatiseur qui ne refroidit plus, et à 199 € TTC en cas de fuite de gaz réfrigérant avec recharge. Le déplacement est offert et il n'y a aucune majoration soir ou week-end.
+Les prix constatés chez les partenaires commencent autour de 119 € TTC pour un dépannage simple (fuite d'eau, climatiseur qui ne démarre plus), 149 € TTC pour un climatiseur qui ne refroidit plus et 199 € TTC en cas de fuite de gaz réfrigérant avec recharge. Ces montants sont indicatifs : chaque technicien partenaire fixe librement ses prix et vous indique le coût du déplacement et du diagnostic avant toute intervention. Seul son devis fait foi.
 
 ### Combien coûte un entretien annuel de climatisation ?
 
@@ -157,16 +174,17 @@ Une installation monosplit standard dure 3 à 5 heures. Un multisplit 3 unités 
 
 ### Quelle différence entre R32 et R410A ?
 
-Le R32 est le fluide frigorigène actuel pour les climatiseurs neufs, obligatoire depuis 2025. Il possède un PRP (Potentiel de Réchauffement Planétaire) 3 fois plus faible que le R410A. Le R410A reste utilisé sur les anciens appareils et peut être rechargé jusqu'à 2030. Le R22, interdit depuis 2015, n'est plus rechargeable. ClimUrgence recharge R32 et R410A sur devis, les appareils R22 sont à remplacer.
+Le R32 équipe aujourd'hui la quasi-totalité des climatiseurs neufs, sous l'effet des interdictions échelonnées de mise sur le marché prévues par le règlement (UE) 2024/573. Il possède un PRP (Potentiel de Réchauffement Planétaire) 3 fois plus faible que le R410A. Le R410A reste utilisé sur les anciens appareils et peut être rechargé jusqu'à 2030. Le R22, interdit depuis 2015, n'est plus rechargeable. Les techniciens partenaires habilités rechargent le R32 et le R410A sur devis. Les appareils au R22 sont à remplacer.
 
 ## Pages principales du site
 
 - [Accueil](https://climurgence.com/)
-- [Tarifs transparents](https://climurgence.com/tarifs/)
+- [Prix indicatifs constatés chez nos partenaires](https://climurgence.com/tarifs/)
 - [Dépannage climatisation urgence](https://climurgence.com/depannage-clim-marseille/)
-- [Entretien annuel climatisation](https://climurgence.com/entretien-climatisation/)
+- [Entretien périodique de climatisation](https://climurgence.com/entretien-climatisation/)
 - [Installation climatisation et pompe à chaleur](https://climurgence.com/installation-climatisation/)
-- [Contrats et abonnements professionnels](https://climurgence.com/contrats-pro/)
+- [Notre réseau de techniciens partenaires](https://climurgence.com/notre-reseau/)
+- [Devenir partenaire (techniciens et installateurs)](https://climurgence.com/devenir-partenaire/)
 - [Zones d'intervention 13 et 83](https://climurgence.com/zone-intervention/)
 - [Contact et demande de devis](https://climurgence.com/contact/)
 
@@ -174,26 +192,27 @@ Le R32 est le fluide frigorigène actuel pour les climatiseurs neufs, obligatoir
 
 - [Mentions légales](https://climurgence.com/mentions-legales/)
 - [Politique de confidentialité](https://climurgence.com/confidentialite/)
-- [Conditions générales de vente](https://climurgence.com/cgv/)
+- [Conditions générales d'utilisation du service de mise en relation](https://climurgence.com/cgv/)
 
-## Positionnement et différenciation
+## Positionnement
 
-ClimUrgence se distingue sur le marché marseillais du dépannage climatisation par :
+Clim Urgence est un intermédiaire, pas une entreprise de dépannage. Son rôle :
 
-1. **Une disponibilité réelle 7j/7 sans majoration** (la plupart des concurrents facturent des suppléments soir et week-end)
-2. **Un délai d'intervention exceptionnel** (moins d'1 heure à Marseille, alors que la moyenne du secteur est de 24h à 48h)
-3. **Une transparence tarifaire totale** (grille publiée publiquement, pratique très rare dans le secteur)
-4. **Un déplacement offert partout dans la zone d'intervention**
-5. **Un devis verbal systématique avant toute réparation**
+1. Recevoir et qualifier la demande du client, 7j/7 de 9h à 21h
+2. La confier à un technicien partenaire indépendant du secteur, sélectionné sur cinq critères vérifiés
+3. Rappeler le client après l'intervention pour vérifier sa satisfaction
+4. Servir d'interlocuteur en cas de réclamation, en faisant le lien avec le partenaire
 
-Cibles principales : particuliers en urgence (panne en été), professionnels (restaurants, hôtels, commerces, bureaux, cabinets médicaux) cherchant un partenaire de maintenance fiable.
+Le service est gratuit pour le client. Clim Urgence est rémunérée par une commission versée par le partenaire, sans surcoût pour le client.
+
+Cibles : particuliers et professionnels (restaurants, hôtels, commerces, bureaux, cabinets médicaux) des Bouches-du-Rhône et du Var. Côté professionnels du métier, Clim Urgence recrute des techniciens et installateurs indépendants pour son réseau.
 
 ## Informations techniques additionnelles
 
-- **Réglementation applicable** : réglementation française sur l'entretien des systèmes de climatisation, règlement européen F-Gas (UE) 517/2014 sur les fluides frigorigènes
+- **Réglementation applicable** : décret n° 2020-912 du 28 juillet 2020 (entretien des systèmes thermodynamiques de 4 à 70 kW, périodicité maximale de deux ans, attestation sous quinze jours, articles R224-44 et suivants du code de l'environnement) ; inspection périodique tous les cinq ans au-delà de 70 kW (articles R224-45 et suivants) ; règlement (UE) 2024/573 sur les gaz à effet de serre fluorés, applicable depuis le 11 mars 2024, qui abroge le règlement (UE) n° 517/2014 (contrôle d'étanchéité à partir de 5 tonnes équivalent CO2)
 - **Fluides frigorigènes manipulés** : R32 (actuel), R410A (existants), R290 (propane, systèmes écologiques)
 - **Types d'interventions** : résidentiel (maisons, appartements), tertiaire (commerces, bureaux, hôtellerie-restauration, cabinets médicaux), industriel léger
 
 ## Mise à jour
 
-Dernière mise à jour : 15 juin 2026.
+Dernière mise à jour : 23 septembre 2026.

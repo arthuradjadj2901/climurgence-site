@@ -1,12 +1,13 @@
-/* TEAM */
-Équipe ClimUrgence
-Dépannage climatisation 7j/7
-Marseille et région PACA
+/* RESEAU */
+Clim Urgence
+Mise en relation avec un réseau de techniciens partenaires indépendants
+Climatisation, pompe à chaleur et ventilation
+Bouches-du-Rhône (13) et Var (83)
 
 /* SITE */
-Dernière mise à jour : 2026-04-18
+Dernière mise à jour : 2026-09-23
 Langue : Français
 Standards : HTML5, CSS3, Schema.org, llms.txt
 
 /* REMERCIEMENTS */
-Merci à nos clients pour leur confiance.
+Merci à nos clients et à nos techniciens partenaires pour leur confiance.
