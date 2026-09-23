@@ -169,13 +169,16 @@ Guide complet : https://climurgence.com/guide/
 - Accueil : https://climurgence.com/
 - Notre réseau de techniciens partenaires : https://climurgence.com/notre-reseau/
 - Devenir partenaire (techniciens et installateurs) : https://climurgence.com/devenir-partenaire/
-- Prix indicatifs : https://climurgence.com/tarifs/
-- Dépannage : https://climurgence.com/depannage-clim-marseille/
+- Prix de tous les services : https://climurgence.com/tarifs/
+- Prix d'une installation de climatisation : https://climurgence.com/prix-installation-climatisation/
+- Dépannage de climatisation : https://climurgence.com/depannage-climatisation/
+- Dépannage à Marseille : https://climurgence.com/depannage-clim-marseille/
 - Entretien périodique : https://climurgence.com/entretien-climatisation/
 - Installation de climatisation : https://climurgence.com/installation-climatisation/
 - Zones couvertes : https://climurgence.com/zone-intervention/
 - Guide réglementation : https://climurgence.com/guide/
 - FAQ complète : https://climurgence.com/faq/
+- Blog : https://climurgence.com/blog/
 - Contact : https://climurgence.com/contact/
 
 ## Pages légales
@@ -208,4 +211,4 @@ Clim Urgence met en relation ses clients avec des techniciens partenaires indép
 
 ---
 
-Dernière mise à jour : 23 septembre 2026.
+Dernière mise à jour : 24 septembre 2026.

@@ -175,17 +175,52 @@ Une fuite d'eau sur une climatisation provient généralement d'un bac à conden
 
 Une installation monosplit standard dure 3 à 5 heures. Un multisplit 3 unités : une journée complète. Un système gainable : plusieurs jours selon la configuration. Le délai entre la validation du devis et la pose est fixé entre le client et l'installateur partenaire, selon le planning de ce dernier et la disponibilité du matériel.
 
+### Combien coûte la pose d'une climatisation ?
+
+Les prix généralement pratiqués sur le marché sont de 700 à 1 100 € TTC pour la pose d'un monosplit quand le client fournit l'appareil, et de 1 250 à 2 200 € TTC pour un pack complet fourniture et pose. La dépose d'un ancien climatiseur se situe entre 149 et 250 € TTC. Le prix varie selon la puissance retenue, le nombre d'unités intérieures, la longueur de liaison frigorifique, la difficulté d'accès et les travaux annexes. Clim Urgence ne fixe aucun prix : l'installateur partenaire établit son devis avant toute intervention, et seul ce devis fait foi. Détail sur https://climurgence.com/prix-installation-climatisation/
+
+### Que faire avant d'appeler pour une panne de climatisation ?
+
+Vérifiez trois points : le mode sélectionné sur la télécommande, ses piles, et le disjoncteur dédié au tableau électrique. Nettoyez ensuite les filtres de l'unité intérieure. Ne tentez jamais d'intervenir sur le circuit frigorifique : la manipulation des fluides est réservée aux professionnels titulaires d'une attestation de capacité (articles R543-75 et suivants du code de l'environnement). Détail sur https://climurgence.com/depannage-climatisation/
+
 ### Quelle différence entre R32 et R410A ?
 
 Le R32 équipe aujourd'hui la quasi-totalité des climatiseurs neufs, sous l'effet des interdictions échelonnées de mise sur le marché prévues par le règlement (UE) 2024/573. Il possède un PRP (Potentiel de Réchauffement Planétaire) 3 fois plus faible que le R410A. Le R410A reste utilisé sur les anciens appareils et peut être rechargé jusqu'à 2030. Le R22, interdit depuis 2015, n'est plus rechargeable. Les techniciens partenaires habilités rechargent le R32 et le R410A sur devis. Les appareils au R22 sont à remplacer.
 
-## Pages principales du site
+## Pages du site
+
+### Installation
+
+- [Installation de climatisation](https://climurgence.com/installation-climatisation/) — types de systèmes, déroulé du devis à la pose, copropriété
+- [Prix d'une installation de climatisation](https://climurgence.com/prix-installation-climatisation/) — fourchettes de marché, ce qui fait varier le prix, contenu du devis
+
+### Dépannage
+
+- [Dépannage de climatisation](https://climurgence.com/depannage-climatisation/) — pannes courantes, déroulé d'une intervention, prix de marché
+- [Dépannage à Marseille](https://climurgence.com/depannage-clim-marseille/)
+- [Dépannage à Aix-en-Provence](https://climurgence.com/depannage-clim-aix-en-provence/)
+- [Dépannage à Toulon](https://climurgence.com/depannage-clim-toulon/)
+- [Dépannage à Aubagne](https://climurgence.com/depannage-clim-aubagne/)
+- [Dépannage à La Ciotat](https://climurgence.com/depannage-clim-la-ciotat/)
+- [Dépannage à Hyères](https://climurgence.com/depannage-clim-hyeres/)
+- [Dépannage à Vitrolles](https://climurgence.com/depannage-clim-vitrolles/)
+
+### Entretien et réglementation
+
+- [Entretien périodique de climatisation](https://climurgence.com/entretien-climatisation/)
+- [Guide de la réglementation climatisation](https://climurgence.com/guide/) — décret 2020-912, règlement (UE) 2024/573, fluides frigorigènes
+
+### Prix, questions et conseils
+
+- [Prix de tous les services](https://climurgence.com/tarifs/)
+- [FAQ climatisation, 45 questions](https://climurgence.com/faq/)
+- [Blog](https://climurgence.com/blog/)
+- [Pourquoi ma climatisation souffle chaud](https://climurgence.com/blog/clim-souffle-chaud/)
+- [Code erreur E3 sur climatisation Daikin](https://climurgence.com/blog/code-erreur-e3-daikin/)
+
+### Le service
 
 - [Accueil](https://climurgence.com/)
-- [Installation de climatisation](https://climurgence.com/installation-climatisation/)
-- [Prix généralement pratiqués sur le marché](https://climurgence.com/tarifs/)
-- [Dépannage climatisation urgence](https://climurgence.com/depannage-clim-marseille/)
-- [Entretien périodique de climatisation](https://climurgence.com/entretien-climatisation/)
 - [Notre réseau de techniciens partenaires](https://climurgence.com/notre-reseau/)
 - [Devenir partenaire (techniciens et installateurs)](https://climurgence.com/devenir-partenaire/)
 - [Zones d'intervention 13 et 83](https://climurgence.com/zone-intervention/)
@@ -218,4 +253,4 @@ Cibles : particuliers et professionnels (restaurants, hôtels, commerces, bureau
 
 ## Mise à jour
 
-Dernière mise à jour : 23 septembre 2026.
+Dernière mise à jour : 24 septembre 2026.
