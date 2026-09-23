@@ -10,4 +10,4 @@ Langue : Français
 Standards : HTML5, CSS3, Schema.org, llms.txt
 
 /* REMERCIEMENTS */
-Merci à nos clients et à nos techniciens partenaires pour leur confiance.
+Ce site est édité par Clim Urgence, plateforme de mise en relation.
