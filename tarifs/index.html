@@ -41,182 +41,246 @@
 
   <!-- Données structurées Schema.org — @graph complet -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "OfferCatalog",
-      "@id": "https://climurgence.com/tarifs/#catalog",
-      "name": "Tarifs Clim Urgence",
-      "description": "Prix généralement pratiqués sur le marché, en euros TTC. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention.",
-      "provider": {
-        "@id": "https://climurgence.com/#business"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://climurgence.com/tarifs/#catalog",
+        "name": "Tarifs Clim Urgence",
+        "description": "Prix généralement pratiqués sur le marché, en euros TTC. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention.",
+        "provider": {
+          "@id": "https://climurgence.com/#business"
+        },
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Climatiseur ne refroidit plus",
+            "category": "Dépannage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 149,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Fuite d'eau condensats",
+            "category": "Dépannage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 119,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Code erreur / panne électronique",
+            "category": "Dépannage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 139,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Clim ne démarre plus / panne totale",
+            "category": "Dépannage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 119,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Fuite gaz réfrigérant + recharge",
+            "category": "Dépannage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 199,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Bruit anormal",
+            "category": "Dépannage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 129,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Entretien monosplit annuel",
+            "category": "Entretien",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 119,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Entretien bisplit annuel",
+            "category": "Entretien",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 159,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Entretien multisplit annuel",
+            "category": "Entretien",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 199,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Entretien pompe à chaleur",
+            "category": "Entretien",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 199,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Entretien VMC simple flux",
+            "category": "VMC",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 119,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Entretien VMC double flux",
+            "category": "VMC",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 199,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Pose monosplit (appareil client)",
+            "category": "Installation",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 699,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Fourniture + pose monosplit",
+            "category": "Installation",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 1249,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Dépose climatiseur",
+            "category": "Installation",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 149,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          },
+          {
+            "@type": "Offer",
+            "name": "Nettoyage Jet HP",
+            "category": "Nettoyage",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 149,
+              "priceCurrency": "EUR",
+              "valueAddedTaxIncluded": true
+            },
+            "description": "Prix généralement pratiqué sur le marché, donné à titre indicatif. Le prix définitif figure sur le devis établi par le technicien partenaire avant toute intervention."
+          }
+        ]
       },
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "name": "Climatiseur ne refroidit plus",
-          "price": 149,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Dépannage"
-        },
-        {
-          "@type": "Offer",
-          "name": "Fuite d'eau condensats",
-          "price": 119,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Dépannage"
-        },
-        {
-          "@type": "Offer",
-          "name": "Code erreur / panne électronique",
-          "price": 139,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Dépannage"
-        },
-        {
-          "@type": "Offer",
-          "name": "Clim ne démarre plus / panne totale",
-          "price": 119,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Dépannage"
-        },
-        {
-          "@type": "Offer",
-          "name": "Fuite gaz réfrigérant + recharge",
-          "price": 199,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Dépannage"
-        },
-        {
-          "@type": "Offer",
-          "name": "Bruit anormal",
-          "price": 129,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Dépannage"
-        },
-        {
-          "@type": "Offer",
-          "name": "Entretien monosplit annuel",
-          "price": 119,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Entretien"
-        },
-        {
-          "@type": "Offer",
-          "name": "Entretien bisplit annuel",
-          "price": 159,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Entretien"
-        },
-        {
-          "@type": "Offer",
-          "name": "Entretien multisplit annuel",
-          "price": 199,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Entretien"
-        },
-        {
-          "@type": "Offer",
-          "name": "Entretien pompe à chaleur",
-          "price": 199,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Entretien"
-        },
-        {
-          "@type": "Offer",
-          "name": "Entretien VMC simple flux",
-          "price": 119,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "VMC"
-        },
-        {
-          "@type": "Offer",
-          "name": "Entretien VMC double flux",
-          "price": 199,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "VMC"
-        },
-        {
-          "@type": "Offer",
-          "name": "Pose monosplit (appareil client)",
-          "price": 699,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Installation"
-        },
-        {
-          "@type": "Offer",
-          "name": "Fourniture + pose monosplit",
-          "price": 1249,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Installation"
-        },
-        {
-          "@type": "Offer",
-          "name": "Dépose climatiseur",
-          "price": 149,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Installation"
-        },
-        {
-          "@type": "Offer",
-          "name": "Nettoyage Jet HP",
-          "price": 149,
-          "priceCurrency": "EUR",
-          "valueAddedTaxIncluded": true,
-          "category": "Nettoyage"
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://climurgence.com/tarifs/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://climurgence.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Tarifs",
-          "item": "https://climurgence.com/tarifs/"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://climurgence.com/tarifs/#webpage",
-      "url": "https://climurgence.com/tarifs/",
-      "name": "Tarifs Climatisation — Grille transparente 2026 | Clim Urgence",
-      "isPartOf": {
-        "@id": "https://climurgence.com/#website"
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://climurgence.com/tarifs/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://climurgence.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tarifs",
+            "item": "https://climurgence.com/tarifs/"
+          }
+        ]
       },
-      "about": {
-        "@id": "https://climurgence.com/tarifs/#catalog"
-      },
-      "inLanguage": "fr-FR",
-      "dateModified": "2026-09-23"
-    }
-  ]
-}
+      {
+        "@type": "WebPage",
+        "@id": "https://climurgence.com/tarifs/#webpage",
+        "url": "https://climurgence.com/tarifs/",
+        "name": "Tarifs Climatisation — Grille transparente 2026 | Clim Urgence",
+        "isPartOf": {
+          "@id": "https://climurgence.com/#website"
+        },
+        "about": {
+          "@id": "https://climurgence.com/tarifs/#catalog"
+        },
+        "inLanguage": "fr-FR",
+        "dateModified": "2026-09-23"
+      }
+    ]
+  }
   </script>
 
   <style>
