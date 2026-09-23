@@ -74,12 +74,7 @@
     {
       "source": "/contrats-pro",
       "destination": "/notre-reseau",
-      "permanent": true
-    },
-    {
-      "source": "/contrats-pro/",
-      "destination": "/notre-reseau/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/depannage",
