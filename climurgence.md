@@ -50,9 +50,9 @@ Aucune contrepartie financière ne permet à un partenaire d'obtenir un meilleur
 - Clim Urgence est rémunérée par une **commission versée par le technicien partenaire**, sans surcoût pour le client.
 - Clim Urgence n'a aucun lien capitalistique avec les entreprises partenaires.
 
-## Prix indicatifs constatés auprès des partenaires
+## Prix généralement pratiqués sur le marché
 
-Les montants ci-dessous sont des prix indicatifs constatés auprès des techniciens partenaires du réseau. Ils n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix et indique au client le coût du déplacement et du diagnostic avant toute intervention. Seul le devis du partenaire fait foi.
+Les montants ci-dessous sont des prix généralement pratiqués sur le marché. Ils n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix et indique au client le coût du déplacement et du diagnostic avant toute intervention. Seul le devis du partenaire fait foi.
 
 ### Installation
 
@@ -130,7 +130,7 @@ Le technicien partenaire. Il établit son propre devis, réalise l'intervention,
 
 ### Combien coûte un dépannage climatisation ?
 
-Les prix constatés chez les partenaires commencent autour de 119 € TTC (fuite d'eau, climatiseur qui ne démarre plus) et montent à 199 € TTC pour une recharge de gaz réfrigérant complète. Ces montants sont indicatifs : le technicien partenaire indique le coût du déplacement et du diagnostic avant toute intervention, et seul son devis fait foi.
+Les prix généralement pratiqués sur le marché commencent autour de 119 € TTC (fuite d'eau, climatiseur qui ne démarre plus) et montent à 199 € TTC pour une recharge de gaz réfrigérant complète. Ces montants sont indicatifs : le technicien partenaire indique le coût du déplacement et du diagnostic avant toute intervention, et seul son devis fait foi.
 
 ### L'entretien de climatisation est-il obligatoire en France ?
 

@@ -49,9 +49,9 @@ Aucune contrepartie financière ne permet à un partenaire d'obtenir un meilleur
 - Le partenaire est seul responsable de l'exécution de la prestation et des garanties portant sur ses travaux et les pièces posées.
 - Le service de mise en relation est entièrement gratuit pour le client.
 
-## Services et prix indicatifs constatés auprès des partenaires
+## Services et prix généralement pratiqués sur le marché
 
-Les montants ci-dessous sont des prix indicatifs constatés auprès des techniciens partenaires du réseau. Ils n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix, et seul le devis qu'il établit avant intervention fait foi.
+Les montants ci-dessous sont des prix généralement pratiqués sur le marché. Ils n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix, et seul le devis qu'il établit avant intervention fait foi.
 
 ### Installation
 
@@ -141,11 +141,11 @@ Clim Urgence qualifie la demande par téléphone puis la transmet à un technici
 
 ### Combien coûte un dépannage de climatisation ?
 
-Les prix constatés chez les partenaires commencent autour de 119 € TTC pour un dépannage simple (fuite d'eau, climatiseur qui ne démarre plus), 149 € TTC pour un climatiseur qui ne refroidit plus et 199 € TTC en cas de fuite de gaz réfrigérant avec recharge. Ces montants sont indicatifs : chaque technicien partenaire fixe librement ses prix et vous indique le coût du déplacement et du diagnostic avant toute intervention. Seul son devis fait foi.
+Les prix généralement pratiqués sur le marché commencent autour de 119 € TTC pour un dépannage simple (fuite d'eau, climatiseur qui ne démarre plus), 149 € TTC pour un climatiseur qui ne refroidit plus et 199 € TTC en cas de fuite de gaz réfrigérant avec recharge. Ces montants sont indicatifs : chaque technicien partenaire fixe librement ses prix et vous indique le coût du déplacement et du diagnostic avant toute intervention. Seul son devis fait foi.
 
 ### Combien coûte un entretien annuel de climatisation ?
 
-Les prix indicatifs constatés auprès des techniciens partenaires commencent autour de 119 € TTC pour un monosplit (1 unité intérieure), 159 € TTC pour un bisplit (2 unités), 199 € TTC pour un multisplit de 3 à 5 unités et 199 € TTC pour une pompe à chaleur air/air réversible. Ces montants n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix et seul le devis qu'il établit avant intervention fait foi.
+Les prix généralement pratiqués sur le marché commencent autour de 119 € TTC pour un monosplit (1 unité intérieure), 159 € TTC pour un bisplit (2 unités), 199 € TTC pour un multisplit de 3 à 5 unités et 199 € TTC pour une pompe à chaleur air/air réversible. Ces montants n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix et seul le devis qu'il établit avant intervention fait foi.
 
 ### L'entretien annuel de climatisation est-il obligatoire en France ?
 
@@ -183,7 +183,7 @@ Le R32 équipe aujourd'hui la quasi-totalité des climatiseurs neufs, sous l'eff
 
 - [Accueil](https://climurgence.com/)
 - [Installation de climatisation](https://climurgence.com/installation-climatisation/)
-- [Prix indicatifs constatés chez nos partenaires](https://climurgence.com/tarifs/)
+- [Prix généralement pratiqués sur le marché](https://climurgence.com/tarifs/)
 - [Dépannage climatisation urgence](https://climurgence.com/depannage-clim-marseille/)
 - [Entretien périodique de climatisation](https://climurgence.com/entretien-climatisation/)
 - [Notre réseau de techniciens partenaires](https://climurgence.com/notre-reseau/)
