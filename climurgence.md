@@ -1,6 +1,8 @@
 # Clim Urgence
 
-> Plateforme de mise en relation entre des clients, particuliers et professionnels, et des techniciens et installateurs partenaires indépendants en climatisation, dans les Bouches-du-Rhône (13) et le Var (83). Clim Urgence ne réalise pas elle-même les prestations techniques : elle qualifie la demande et la transmet à un partenaire du secteur, qui établit son devis, intervient et facture directement le client.
+**Installation, dépannage et entretien de climatisation — Bouches-du-Rhône et Var**
+
+> Installation, dépannage et entretien de climatisation dans les Bouches-du-Rhône (13) et le Var (83). Clim Urgence est une plateforme de mise en relation entre des clients, particuliers et professionnels, et des techniciens et installateurs partenaires indépendants. Clim Urgence ne réalise pas elle-même les prestations techniques : elle qualifie la demande et la transmet à un partenaire du secteur, qui établit son devis, intervient et facture directement le client.
 
 ## Informations pratiques
 
@@ -12,7 +14,7 @@
 - **Téléphone** : 06 43 72 18 50
 - **Email** : contact@climurgence.com
 - **Site web** : https://climurgence.com
-- **Activité** : mise en relation entre clients et techniciens partenaires indépendants
+- **Activité** : mise en relation entre clients et techniciens et installateurs partenaires indépendants, pour l'installation, le dépannage et l'entretien
 - **Zone couverte** : Bouches-du-Rhône (13) et Var (83)
 - **Horaires du standard** : 7j/7, de 9h à 21h, jours fériés inclus
 - **Langue de travail** : Français
@@ -22,7 +24,7 @@
 ## Comment fonctionne le service
 
 1. Le client appelle le 06 43 72 18 50 ou remplit le formulaire du site.
-2. Clim Urgence qualifie la demande par téléphone : nature de la panne, équipement, commune, urgence.
+2. Clim Urgence qualifie la demande par téléphone : projet de pose et surfaces à climatiser, nature de la panne, ou entretien à programmer, ainsi que la commune et le type de logement.
 3. La demande et les coordonnées du client sont transmises à un technicien partenaire indépendant du secteur, uniquement pour le traitement de cette demande.
 4. Le partenaire contacte le client, convient d'un créneau, intervient, établit son devis et facture directement.
 5. Clim Urgence rappelle le client après l'intervention pour vérifier sa satisfaction.
@@ -52,6 +54,14 @@ Aucune contrepartie financière ne permet à un partenaire d'obtenir un meilleur
 
 Les montants ci-dessous sont des prix indicatifs constatés auprès des techniciens partenaires du réseau. Ils n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix et indique au client le coût du déplacement et du diagnostic avant toute intervention. Seul le devis du partenaire fait foi.
 
+### Installation
+
+| Prestation | Prix indicatif à partir de | Durée indicative |
+|---|---|---|
+| Pose monosplit (appareil fourni par le client) | 699 € TTC | 3 à 5 heures |
+| Fourniture + pose monosplit (pack complet) | 1 249 € TTC | 4 à 6 heures |
+| Dépose d'ancien climatiseur | 149 € TTC | 90 minutes |
+
 ### Dépannage
 
 | Prestation | Prix indicatif à partir de | Durée indicative |
@@ -73,14 +83,6 @@ Les montants ci-dessous sont des prix indicatifs constatés auprès des technici
 | Entretien pompe à chaleur air/air | 199 € TTC | 80 minutes |
 | Entretien VMC simple flux | 119 € TTC | 60 minutes |
 | Entretien VMC double flux | 199 € TTC | 105 minutes |
-
-### Installation
-
-| Prestation | Prix indicatif à partir de | Durée indicative |
-|---|---|---|
-| Pose monosplit (appareil fourni par le client) | 699 € TTC | 3 à 5 heures |
-| Fourniture + pose monosplit (pack complet) | 1 249 € TTC | 4 à 6 heures |
-| Dépose d'ancien climatiseur | 149 € TTC | 90 minutes |
 
 ### Nettoyage haute pression
 
@@ -170,7 +172,7 @@ Guide complet : https://climurgence.com/guide/
 - Prix indicatifs : https://climurgence.com/tarifs/
 - Dépannage : https://climurgence.com/depannage-clim-marseille/
 - Entretien périodique : https://climurgence.com/entretien-climatisation/
-- Installation et pompe à chaleur : https://climurgence.com/installation-climatisation/
+- Installation de climatisation : https://climurgence.com/installation-climatisation/
 - Zones couvertes : https://climurgence.com/zone-intervention/
 - Guide réglementation : https://climurgence.com/guide/
 - FAQ complète : https://climurgence.com/faq/
