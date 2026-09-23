@@ -175,6 +175,14 @@ Une fuite d'eau sur une climatisation provient généralement d'un bac à conden
 
 Une installation monosplit standard dure 3 à 5 heures. Un multisplit 3 unités : une journée complète. Un système gainable : plusieurs jours selon la configuration. Le délai entre la validation du devis et la pose est fixé entre le client et l'installateur partenaire, selon le planning de ce dernier et la disponibilité du matériel.
 
+### Faut-il l'accord de la copropriété pour installer une climatisation ?
+
+Oui dès que les travaux touchent aux parties communes ou modifient l'aspect extérieur de l'immeuble, ce qui est presque toujours le cas d'une unité extérieure posée en façade, sur un balcon ou en toiture. L'article 25 b) de la loi n° 65-557 du 10 juillet 1965 soumet cette autorisation à un vote de l'assemblée générale, à la majorité des voix de tous les copropriétaires. S'y ajoute le plus souvent une déclaration préalable en mairie, les travaux modifiant l'aspect extérieur d'un bâtiment existant y étant soumis (article R421-17 du code de l'urbanisme). Détail sur https://climurgence.com/climatisation-copropriete/
+
+### Une climatisation réversible chauffe-t-elle vraiment l'hiver ?
+
+Oui. Une climatisation réversible est une pompe à chaleur air/air : en hiver, elle inverse son cycle et prélève des calories dans l'air extérieur pour les restituer à l'intérieur. Son rendement baisse à mesure que la température extérieure descend, et sa capacité à couvrir seule les besoins d'un logement dépend de l'isolation, de la surface et du dimensionnement, qui se décident à la visite technique. Clim Urgence n'est pas certifiée RGE et n'oriente vers aucune aide ni subvention. Détail sur https://climurgence.com/climatisation-reversible-chauffage/
+
 ### Combien coûte la pose d'une climatisation ?
 
 Les prix généralement pratiqués sur le marché sont de 700 à 1 100 € TTC pour la pose d'un monosplit quand le client fournit l'appareil, et de 1 250 à 2 200 € TTC pour un pack complet fourniture et pose. La dépose d'un ancien climatiseur se situe entre 149 et 250 € TTC. Le prix varie selon la puissance retenue, le nombre d'unités intérieures, la longueur de liaison frigorifique, la difficulté d'accès et les travaux annexes. Clim Urgence ne fixe aucun prix : l'installateur partenaire établit son devis avant toute intervention, et seul ce devis fait foi. Détail sur https://climurgence.com/prix-installation-climatisation/
@@ -191,8 +199,13 @@ Le R32 équipe aujourd'hui la quasi-totalité des climatiseurs neufs, sous l'eff
 
 ### Installation
 
-- [Installation de climatisation](https://climurgence.com/installation-climatisation/) — types de systèmes, déroulé du devis à la pose, copropriété
+- [Installation de climatisation](https://climurgence.com/installation-climatisation/) — types de systèmes, déroulé du devis à la pose
 - [Prix d'une installation de climatisation](https://climurgence.com/prix-installation-climatisation/) — fourchettes de marché, ce qui fait varier le prix, contenu du devis
+- [Climatisation en copropriété](https://climurgence.com/climatisation-copropriete/) — règlement, parties communes, article 25 b) de la loi du 10 juillet 1965, déclaration préalable, bruit
+- [Se chauffer avec une climatisation réversible](https://climurgence.com/climatisation-reversible-chauffage/) — principe, performance par temps froid, limites
+- [Installation à Marseille](https://climurgence.com/installation-climatisation-marseille/) — 84,3 % d'appartements (INSEE 2023), littoral, bâti ancien, mistral
+- [Installation à Aix-en-Provence](https://climurgence.com/installation-climatisation-aix-en-provence/) — site patrimonial remarquable, architecte des Bâtiments de France, résidences récentes
+- [Installation à Toulon](https://climurgence.com/installation-climatisation-toulon/) — air marin de la rade, vent, tableau électrique des immeubles anciens
 
 ### Dépannage
 

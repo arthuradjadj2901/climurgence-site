@@ -896,7 +896,7 @@ h1, h2, h3, h4, h5 {
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 900px) {
-  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+  .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 2rem; }
 }
 
 .footer-brand .logo { margin-bottom: 1rem; }

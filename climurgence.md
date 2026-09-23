@@ -171,6 +171,11 @@ Guide complet : https://climurgence.com/guide/
 - Devenir partenaire (techniciens et installateurs) : https://climurgence.com/devenir-partenaire/
 - Prix de tous les services : https://climurgence.com/tarifs/
 - Prix d'une installation de climatisation : https://climurgence.com/prix-installation-climatisation/
+- Climatisation en copropriété : https://climurgence.com/climatisation-copropriete/
+- Climatisation réversible et chauffage : https://climurgence.com/climatisation-reversible-chauffage/
+- Installation à Marseille : https://climurgence.com/installation-climatisation-marseille/
+- Installation à Aix-en-Provence : https://climurgence.com/installation-climatisation-aix-en-provence/
+- Installation à Toulon : https://climurgence.com/installation-climatisation-toulon/
 - Dépannage de climatisation : https://climurgence.com/depannage-climatisation/
 - Dépannage à Marseille : https://climurgence.com/depannage-clim-marseille/
 - Entretien périodique : https://climurgence.com/entretien-climatisation/
