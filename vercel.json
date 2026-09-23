@@ -72,6 +72,11 @@
   ],
   "redirects": [
     {
+      "source": "/contrats-pro",
+      "destination": "/notre-reseau",
+      "statusCode": 301
+    },
+    {
       "source": "/depannage",
       "destination": "/depannage-clim-marseille",
       "permanent": true
