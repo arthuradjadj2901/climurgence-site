@@ -11,7 +11,7 @@
     document.documentElement.setAttribute('data-theme', theme);
     var btn = document.getElementById('themeToggle');
     if (btn) btn.setAttribute('aria-label', theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre');
-    if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    if (btn) btn.textContent = theme === 'dark' ? 'Mode clair' : 'Mode sombre';
     localStorage.setItem(THEME_KEY, theme);
   }
 
@@ -29,7 +29,7 @@
   var TEL_REGEX   = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
   var EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   var ENDPOINT    = '/api/lead';
-  var ERR_GENERIC = '⚠️ Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler au 06 43 72 18 50.';
+  var ERR_GENERIC = 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler au 06 43 72 18 50.';
 
   function setErr(el, isErr) {
     if (el) el.style.borderColor = isErr ? '#e53e3e' : '';
@@ -54,7 +54,15 @@
     for (var i = 0; i < inputs.length; i++) {
       var el = inputs[i];
       if (!el.name) continue;
-      payload[el.name] = (el.value || '').trim();
+      // Cases a cocher et boutons radio : on ignore ce qui n'est pas selectionne.
+      if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) continue;
+      var value = (el.value || '').trim();
+      // Plusieurs cases cochees portant le meme name : on concatene les valeurs.
+      if (el.type === 'checkbox' && payload[el.name]) {
+        payload[el.name] = payload[el.name] + ', ' + value;
+      } else {
+        payload[el.name] = value;
+      }
     }
     return payload;
   }
@@ -123,7 +131,7 @@
           var msg = ERR_GENERIC;
           try {
             var parsed = JSON.parse(body);
-            if (parsed && parsed.error) msg = '⚠️ ' + parsed.error;
+            if (parsed && parsed.error) msg = parsed.error;
           } catch (e) { /* body non-JSON, on garde le message générique */ }
           throw new Error(msg);
         }
@@ -137,14 +145,14 @@
             '<div style="padding:2.5rem;text-align:center;">' +
               '<svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" style="width:48px;height:48px;margin:0 auto 1rem;display:block;"><polyline points="20 6 9 17 4 12"/></svg>' +
               '<p style="font-weight:700;color:var(--blue);font-size:1.1rem;margin-bottom:.5rem;">Demande envoyée !</p>' +
-              '<p style="color:var(--text-muted);font-size:.9rem;margin-bottom:1.5rem;">Nous vous rappelons sous 30 minutes.</p>' +
+              '<p style="color:var(--text-muted);font-size:.9rem;margin-bottom:1.5rem;">Merci, votre demande est bien reçue. Nous vous rappelons rapidement.</p>' +
               '<button class="btn btn-outline" type="button" onclick="document.getElementById(\'tarifModal\').classList.remove(\'open\');document.body.style.overflow=\'\';">Fermer</button>' +
             '</div>';
         }
       } else {
         form.innerHTML =
           '<p style="color:var(--blue);font-weight:700;text-align:center;padding:2rem;">' +
-            'Votre demande a été envoyée ! Nous vous rappelons sous 30 minutes.' +
+            'Merci, votre demande est bien reçue. Nous vous rappelons rapidement.' +
           '</p>';
       }
     }).catch(function (err) {
