@@ -1,4 +1,4 @@
-# robots.txt — ClimUrgence
+# robots.txt — Clim Urgence
 # Tous les robots sont les bienvenus, y compris les IA
 
 User-agent: *

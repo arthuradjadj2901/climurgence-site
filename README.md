@@ -4,13 +4,13 @@ Site vitrine public de la SAS **Clim Urgence** (dépannage, entretien, installat
 climatisation à Marseille et environs). C'est ici qu'arrivent les visiteurs depuis
 Google, et que sont captés tous les leads via 3 formulaires.
 
-> ⚠️ Ce repo est **distinct** du CRM (`crm.climurgence.com`). Toute la logique
+> Ce repo est **distinct** du CRM (`crm.climurgence.com`). Toute la logique
 > d'agent IA WhatsApp / Twilio a été migrée dans le CRM — ce site n'envoie
 > désormais **que des emails Resend** vers `contact@climurgence.com`.
 
 ---
 
-## 📋 Stack technique
+## Stack technique
 
 | Élément | Détail |
 |---------|--------|
@@ -23,7 +23,7 @@ Google, et que sont captés tous les leads via 3 formulaires.
 
 ---
 
-## 🔑 Variables d'environnement
+## Variables d'environnement
 
 Toutes les variables sont définies **dans Vercel Dashboard** (Production + Preview)
 et dans `.env.local` pour les tests locaux. **Aucune** n'est commitée dans le repo.
@@ -36,7 +36,7 @@ et dans `.env.local` pour les tests locaux. **Aucune** n'est commitée dans le r
 | `UPSTASH_REDIS_REST_URL` | URL REST de la base Redis (rate limit) | [Upstash Console](https://console.upstash.com) → ta DB → REST API |
 | `UPSTASH_REDIS_REST_TOKEN` | Token REST de la base Redis | Idem ci-dessus |
 
-> 💡 Si l'ancien projet utilise les noms `KV_REST_API_URL` / `KV_REST_API_TOKEN`
+>  Si l'ancien projet utilise les noms `KV_REST_API_URL` / `KV_REST_API_TOKEN`
 > (anciens noms Vercel KV), `api/lead.js` les lit aussi en fallback —
 > aucune action urgente, tu pourras renommer plus tard.
 
@@ -44,7 +44,7 @@ Voir [.env.example](./.env.example) pour le template complet.
 
 ---
 
-## 💻 Lancement en local
+## Lancement en local
 
 ### Pré-requis (à faire **une seule fois**)
 
@@ -72,7 +72,7 @@ Voir [.env.example](./.env.example) pour le template complet.
    ```bash
    npm install
    ```
-   > 💡 **Anti-pattern OneDrive** : si l'install bloque sur des fichiers
+   >  **Anti-pattern OneDrive** : si l'install bloque sur des fichiers
    > verrouillés, mets OneDrive en pause (icône bleue → Suspendre la
    > synchronisation 2h) et relance.
 
@@ -87,7 +87,7 @@ exactement comme en prod.
 
 ---
 
-## 🚢 Déploiement en production
+## Déploiement en production
 
 Le projet est déployé automatiquement par Vercel à chaque push sur `main`.
 
@@ -102,13 +102,13 @@ Le projet est déployé automatiquement par Vercel à chaque push sur `main`.
 
 Sinon les emails ne partiront pas.
 
-> ⚠️ Les anciennes variables `OPENAI_API_KEY`, `TWILIO_*`, `PDFMONKEY_*`
+>  Les anciennes variables `OPENAI_API_KEY`, `TWILIO_*`, `PDFMONKEY_*`
 > peuvent être supprimées **après** que la nouvelle version est validée
 > en prod (pas tout de suite, garde-les en filet de secours pour rollback).
 
 ---
 
-## 🧪 Tester `/api/lead`
+## Tester `/api/lead`
 
 ### Test 1 — Mode dry-run (aucun mail envoyé)
 
@@ -131,7 +131,7 @@ Sinon les emails ne partiront pas.
 2. Soumets un formulaire avec ton vrai email à toi (pas celui de Clim Urgence)
 3. Vérifie ta boîte `contact@climurgence.com` — le mail doit arriver avec :
    - Bandeau coloré selon le type (rouge urgence, orange install, etc.)
-   - Bouton orange « 📋 Créer la fiche client dans le CRM »
+   - Bouton orange «  Créer la fiche client dans le CRM »
    - Toutes tes coordonnées + le sujet
    - Métadonnées en bas (page d'origine, IP tronquée, navigateur)
 
@@ -153,7 +153,7 @@ Sinon les emails ne partiront pas.
 
 ---
 
-## 🔄 Procédure rollback
+## Procédure rollback
 
 Si un problème majeur survient en prod après la mise en ligne :
 
@@ -175,13 +175,13 @@ Si un problème majeur survient en prod après la mise en ligne :
    - `npm install`
    - Tester en local avec `vercel dev` puis pousser.
 
-> 📌 Les anciens endpoints sont **conservés** dans `api/_archive/` —
+>  Les anciens endpoints sont **conservés** dans `api/_archive/` —
 > Vercel ignore les sous-dossiers d'`api/` qui commencent par `_`,
 > donc ils ne sont pas exposés mais sont prêts pour un rollback.
 
 ---
 
-## 📂 Structure du projet
+## Structure du projet
 
 ```
 climurgence-site/
@@ -211,7 +211,7 @@ climurgence-site/
 
 ---
 
-## 🔐 Sécurité
+## Sécurité
 
 - **Headers de sécurité** durcis dans `vercel.json` : HSTS, CSP, X-Frame-Options, etc.
 - **Honeypot** caché en CSS dans chaque `<form>` : un bot rempli typiquement tous les champs détectés ; nous on rejette silencieusement.
@@ -221,7 +221,7 @@ climurgence-site/
 
 ---
 
-## 📞 Contact
+## Contact
 
 - **Société** : SAS Clim Urgence
 - **Téléphone** : 06 43 72 18 50 (9h-21h, 7j/7)

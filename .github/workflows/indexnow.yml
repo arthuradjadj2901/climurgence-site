@@ -1,0 +1,59 @@
+name: IndexNow
+
+# Signale a Bing (et aux moteurs qui partagent le protocole IndexNow)
+# les URL modifiees par chaque mise en ligne. Vercel deploie sur le meme
+# push : on laisse au deploiement le temps de se propager, puis le script
+# verifie chaque URL en HTTP avant de la soumettre.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      sitemap:
+        description: "Soumettre toutes les URL du sitemap"
+        type: boolean
+        default: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Attendre la propagation du deploiement Vercel
+        run: sleep 120
+
+      - name: Soumettre tout le sitemap
+        if: github.event_name == 'workflow_dispatch' && inputs.sitemap
+        run: node scripts/indexnow.mjs --sitemap
+
+      - name: Soumettre les URL modifiees
+        if: github.event_name == 'push'
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            BEFORE="${{ github.sha }}^"
+          fi
+
+          URLS=$(git diff --name-only --diff-filter=ACMR "$BEFORE" "${{ github.sha }}" \
+            | awk '
+                $0 == "index.html"            { print "https://climurgence.com/"; next }
+                $0 == "climurgence.md"         { print "https://climurgence.com/climurgence.md"; next }
+                $0 ~ /\/index\.html$/          { sub(/index\.html$/, ""); print "https://climurgence.com/" $0; next }
+              ' | sort -u)
+
+          if [ -z "$URLS" ]; then
+            echo "Aucune page modifiee, rien a soumettre."
+            exit 0
+          fi
+
+          echo "$URLS"
+          node scripts/indexnow.mjs $URLS
