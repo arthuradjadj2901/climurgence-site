@@ -152,7 +152,7 @@ Le code E3 signale une pression anormale dans le circuit frigorifique : soit tro
 
 ### Quelle puissance de climatisation pour quelle surface ?
 
-Règle simple : environ 100 watts par m² pour un logement bien isolé. 20 m² = 2 kW (environ 7 000 BTU). 30 m² = 2,5 à 3 kW. 50 m² = 4 à 5 kW. À Marseille et en PACA, majorer de 20 à 30 % en raison de l'ensoleillement et des chaleurs estivales.
+Ordres de grandeur indicatifs, utilisés comme première approche : environ 100 watts par m² pour un logement bien isolé, soit environ 2 kW pour 20 m² (environ 7 000 BTU), 2,5 à 3 kW pour 30 m², 4 à 5 kW pour 50 m². À Marseille et en PACA, les professionnels majorent en général cette première estimation en raison de l'ensoleillement et des chaleurs estivales. Ces valeurs ne remplacent pas un dimensionnement, qui se décide à la visite technique.
 
 ## Réglementation applicable
 
