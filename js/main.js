@@ -113,6 +113,44 @@
     errEl.textContent = msg || ERR_GENERIC;
   }
 
+  /* ═══════════════════════════════════════════════════════════════
+     Mesure d'audience (Umami)
+     Le script Umami n'est pas encore pose sur les pages : tant que
+     window.umami n'existe pas, track() ne fait rien. Le jour ou la
+     balise est ajoutee, les evenements ci-dessous remontent sans autre
+     modification. Voir docs/MESURE.md.
+  ═══════════════════════════════════════════════════════════════ */
+
+  function track(event, data) {
+    try {
+      if (typeof window.umami === 'undefined' || !window.umami) return;
+      if (typeof window.umami.track === 'function') window.umami.track(event, data || {});
+    } catch (e) { /* la mesure ne doit jamais casser la page */ }
+  }
+
+  /** Nomme l'emplacement d'un lien pour distinguer les points d'appel. */
+  function ctaPlacement(el) {
+    if (el.closest('.mobile-cta') || el.classList.contains('mobile-cta')) return 'bouton-mobile';
+    if (el.closest('.site-header')) return 'en-tete';
+    if (el.closest('.site-footer')) return 'pied-de-page';
+    if (el.closest('.hero')) return 'hero';
+    if (el.closest('.cta-sticky')) return 'barre-fixe';
+    return 'corps-de-page';
+  }
+
+  function attachOutboundTracking() {
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!link) return;
+      var href = link.getAttribute('href') || '';
+      if (href.indexOf('tel:') === 0) {
+        track('clic_telephone', { emplacement: ctaPlacement(link), page: location.pathname });
+      } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+        track('clic_whatsapp', { emplacement: ctaPlacement(link), page: location.pathname });
+      }
+    }, true);
+  }
+
   /**
    * Soumission AJAX vers /api/lead.
    * Si le formulaire est dans une modal (.modal-form), succès = remplacer
@@ -137,7 +175,14 @@
         }
       });
     }).then(function () {
-      // Succès : feedback selon le type de formulaire
+      // Succès : evenement de conversion, puis feedback visuel.
+      var leadType = form.dataset.leadType || 'contact';
+      track(leadType === 'partenaire' ? 'envoi_candidature_partenaire' : 'envoi_formulaire', {
+        formulaire: leadType,
+        page: location.pathname
+      });
+
+      // Feedback selon le type de formulaire
       if (form.classList.contains('modal-form')) {
         var modalBox = form.closest('.modal-box');
         if (modalBox) {
@@ -241,6 +286,9 @@
         }
       });
     });
+
+    /* Mesure : clics telephone et WhatsApp */
+    attachOutboundTracking();
 
     /* ═══ Formulaires : .form-devis (home + contact) ═══ */
     var devisForms = document.querySelectorAll('.form-devis');
