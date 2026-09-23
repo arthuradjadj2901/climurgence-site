@@ -10,6 +10,7 @@ Identifiant de site : `ece4f5f2-5dda-4f84-803b-26eec299e65c`. Tableau de bord : 
 |---|---|
 | Balise Umami avant `</head>` des 24 pages | chaque `index.html` et `404.html` |
 | Domaine `cloud.umami.is` autorisé dans la `Content-Security-Policy` (`script-src`) | `vercel.json` |
+| Envoi des mesures vers `gateway.umami.is`, couvert par `connect-src 'self' https:` | `vercel.json` |
 | Fonction `track()`, sans effet si le script ne s'est pas chargé | `js/main.js` |
 
 ### Événements
@@ -37,3 +38,7 @@ Les événements ne remontent qu'en cas de succès réel de l'envoi, après la r
 ## Point de vigilance RGPD
 
 Umami ne dépose pas de cookie et n'utilise pas d'identifiant persistant : aucune bannière de consentement n'est requise en l'état. Si l'hébergement ou la configuration changent, la page `/confidentialite/` devra être mise à jour en conséquence.
+
+## Si la CSP est un jour resserrée
+
+Le script est chargé depuis `cloud.umami.is` mais **envoie les mesures à `gateway.umami.is`**. La directive `connect-src` vaut aujourd'hui `'self' https:`, qui couvre les deux. Si elle est un jour restreinte, il faudra y déclarer explicitement `https://gateway.umami.is`, faute de quoi les mesures seront bloquées sans erreur visible pour le visiteur.
