@@ -1,4 +1,4 @@
-/* ClimUrgence — main.js — vanilla JS minimal */
+/* Clim Urgence — main.js — vanilla JS minimal */
 (function () {
   'use strict';
 
@@ -156,7 +156,7 @@
           '</p>';
       }
     }).catch(function (err) {
-      console.error('[ClimUrgence] Erreur /api/lead :', err.message || err);
+      console.error('[Clim Urgence] Erreur /api/lead :', err.message || err);
       if (btn) {
         btn.disabled = false;
         btn.textContent = originalBtnText;
