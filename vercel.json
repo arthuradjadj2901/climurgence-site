@@ -1,5 +1,5 @@
 {
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": true,
   "functions": {
     "api/lead.js": {
@@ -122,6 +122,16 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*/",
+      "statusCode": 301
+    },
     {
       "source": "/contrats-pro",
       "destination": "/notre-reseau/",
