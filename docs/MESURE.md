@@ -1,35 +1,39 @@
 # Mesure d'audience — Umami Cloud
 
-État : **préparé, non déployé.** Le script Umami n'est posé sur aucune page. Il manque l'identifiant de site, à créer dans Umami Cloud.
+État : **en place.** Le script est posé sur les 23 pages du site et sur `404.html`.
 
-## Ce qui est déjà en place
+Identifiant de site : `ece4f5f2-5dda-4f84-803b-26eec299e65c`. Tableau de bord : https://cloud.umami.is
 
-| Élément | Fichier | État |
+## Ce qui est mesuré
+
+| Élément | Fichier |
+|---|---|
+| Balise Umami avant `</head>` des 24 pages | chaque `index.html` et `404.html` |
+| Domaine `cloud.umami.is` autorisé dans la `Content-Security-Policy` (`script-src`) | `vercel.json` |
+| Fonction `track()`, sans effet si le script ne s'est pas chargé | `js/main.js` |
+
+### Événements
+
+| Événement | Déclencheur | Propriétés |
 |---|---|---|
-| Domaine `cloud.umami.is` autorisé dans la `Content-Security-Policy` (`script-src`) | `vercel.json` | Fait |
-| Fonction `track()` inerte tant que `window.umami` n'existe pas | `js/main.js` | Fait |
-| Événement `clic_telephone` sur tout lien `tel:`, avec l'emplacement du bouton | `js/main.js` | Fait |
-| Événement `clic_whatsapp` sur tout lien `wa.me` ou `whatsapp:` | `js/main.js` | Fait, mais aucun lien WhatsApp n'existe aujourd'hui sur le site |
-| Événement `envoi_formulaire` au succès des formulaires de devis et de la modale tarifs | `js/main.js` | Fait |
-| Événement `envoi_candidature_partenaire` au succès du formulaire de `/devenir-partenaire/` | `js/main.js` | Fait |
+| `clic_telephone` | clic sur tout lien `tel:` | `emplacement`, `page` |
+| `clic_whatsapp` | clic sur tout lien `wa.me` ou `whatsapp:` | `emplacement`, `page` |
+| `envoi_formulaire` | succès de l'envoi d'un formulaire de devis ou de la modale tarifs | `formulaire`, `page` |
+| `envoi_candidature_partenaire` | succès de l'envoi du formulaire de `/devenir-partenaire/` | `formulaire`, `page` |
 
-Tant que la balise n'est pas posée, `track()` ne fait rien : aucune requête, aucun cookie, aucun impact sur la performance.
+`emplacement` vaut `en-tete`, `hero`, `pied-de-page`, `bouton-mobile`, `barre-fixe` ou `corps-de-page`. Ces valeurs permettent de savoir quel point d'appel convertit réellement sur mobile.
 
-## Ce qu'il reste à faire
+Aucun lien WhatsApp n'existe aujourd'hui sur le site : `clic_whatsapp` est câblé mais ne se déclenchera pas tant qu'un lien ne sera pas ajouté.
 
-1. Créer le site dans Umami Cloud et récupérer le `data-website-id`.
-2. Remplacer `[À COMPLÉTER PAR ARTHUR]` ci-dessous par cet identifiant, puis ajouter la balise avant `</head>` **des 23 pages et de `404.html`**. Le site n'a pas de système de composants : l'en-tête est dupliqué dans chaque fichier.
+Les événements ne remontent qu'en cas de succès réel de l'envoi, après la réponse de `/api/lead`. Un formulaire en erreur ne compte pas comme une conversion.
 
-```html
-<script defer src="https://cloud.umami.is/script.js" data-website-id="[À COMPLÉTER PAR ARTHUR]"></script>
-```
+## Vérification après une mise en ligne
 
-3. Vérifier dans Umami que les quatre événements remontent : un clic sur le numéro depuis mobile, un envoi du formulaire de contact, un envoi du formulaire partenaire.
-
-## Emplacements renvoyés par `clic_telephone`
-
-`en-tete`, `hero`, `pied-de-page`, `bouton-mobile`, `barre-fixe`, `corps-de-page`. Ils permettent de savoir quel point d'appel convertit réellement sur mobile.
+1. Ouvrir une page du site, puis le tableau de bord Umami : la visite doit apparaître en temps réel.
+2. Cliquer sur le numéro depuis un mobile, vérifier l'apparition de `clic_telephone` avec `emplacement: bouton-mobile`.
+3. Envoyer le formulaire de contact, vérifier `envoi_formulaire`.
+4. Envoyer le formulaire de `/devenir-partenaire/`, vérifier `envoi_candidature_partenaire`.
 
 ## Point de vigilance RGPD
 
-Umami Cloud ne dépose pas de cookie et n'utilise pas d'identifiant persistant. En l'état, aucune bannière de consentement n'est requise. Si l'hébergement ou la configuration changent, la page `/confidentialite/` devra être mise à jour en conséquence.
+Umami ne dépose pas de cookie et n'utilise pas d'identifiant persistant : aucune bannière de consentement n'est requise en l'état. Si l'hébergement ou la configuration changent, la page `/confidentialite/` devra être mise à jour en conséquence.
