@@ -145,11 +145,11 @@ Les prix constatés chez les partenaires commencent autour de 119 € TTC pour u
 
 ### Combien coûte un entretien annuel de climatisation ?
 
-L'entretien annuel d'un climatiseur monosplit (1 unité intérieure) coûte à partir de 119 € TTC chez ClimUrgence. Comptez 159 € pour un bisplit (2 unités), 199 € pour un multisplit 3 à 5 unités, 199 € pour une pompe à chaleur réversible.
+Les prix indicatifs constatés auprès des techniciens partenaires commencent autour de 119 € TTC pour un monosplit (1 unité intérieure), 159 € TTC pour un bisplit (2 unités), 199 € TTC pour un multisplit de 3 à 5 unités et 199 € TTC pour une pompe à chaleur air/air réversible. Ces montants n'engagent pas Clim Urgence : chaque partenaire fixe librement ses prix et seul le devis qu'il établit avant intervention fait foi.
 
 ### L'entretien annuel de climatisation est-il obligatoire en France ?
 
-La réglementation française impose un entretien périodique pour les systèmes de climatisation dont la charge en fluide frigorigène dépasse un certain seuil (le plus souvent les multisplits, gainables et grandes installations). La majorité des climatiseurs monosplit ou bisplit résidentiels ne sont pas concernés par l'obligation légale, mais un entretien annuel reste fortement recommandé pour la performance, la longévité de l'appareil et la qualité de l'air intérieur. Il peut également être exigé par votre assurance habitation en cas de sinistre.
+Oui pour la plupart des installations résidentielles. Le décret n° 2020-912 du 28 juillet 2020 (articles R224-44 à R224-44-5 du code de l'environnement) impose un entretien périodique à tout système thermodynamique dont la puissance nominale est comprise entre 4 kW et 70 kW, avec une période maximale de deux ans entre deux entretiens et une attestation remise sous quinze jours. L'obligation dépend donc de la puissance de l'appareil, et non de sa charge en fluide frigorigène. La plupart des monosplits et bisplits résidentiels dépassent 4 kW et y sont soumis. Au-delà de 70 kW, c'est une inspection périodique tous les cinq ans qui s'applique (articles R224-45 et suivants). À ne pas confondre avec le contrôle d'étanchéité du règlement (UE) 2024/573, qui dépend lui de la charge en fluide, à partir de 5 tonnes équivalent CO2, seuil que les installations résidentielles n'atteignent pas.
 
 ### Quelle est la différence entre un monosplit, un bisplit et un multisplit ?
 
@@ -157,11 +157,11 @@ Un monosplit est composé d'une unité intérieure reliée à une unité extéri
 
 ### Quelles sont les marques de climatisation réparées ?
 
-ClimUrgence intervient sur toutes les grandes marques du marché résidentiel et tertiaire : Daikin, Mitsubishi Electric, Mitsubishi Heavy, Samsung, LG, Atlantic, Hitachi, Toshiba, Gree, Midea, Panasonic, Fujitsu, Airwell, Carrier, Haier, Hyundai, Olimpia Splendid.
+Les techniciens partenaires du réseau interviennent sur toutes les grandes marques du marché résidentiel et tertiaire : Daikin, Mitsubishi Electric, Mitsubishi Heavy, Samsung, LG, Atlantic, Hitachi, Toshiba, Gree, Midea, Panasonic, Fujitsu, Airwell, Carrier, Haier, Hyundai, Olimpia Splendid.
 
 ### Quel code erreur signifie quoi chez Daikin ?
 
-Les codes erreur Daikin les plus fréquents : E1 = erreur de communication entre unité intérieure et extérieure (généralement câblage ou carte électronique), E3 = pression anormale (fuite de gaz ou problème de ventilation), F3 = température échangeur extérieur anormale (condenseur encrassé ou ventilateur bloqué). ClimUrgence diagnostique et répare sur place ces codes erreur dans la majorité des cas.
+Les codes erreur Daikin les plus fréquents : E1 = erreur de communication entre unité intérieure et extérieure (généralement câblage ou carte électronique), E3 = pression anormale (fuite de gaz ou problème de ventilation), F3 = température échangeur extérieur anormale (condenseur encrassé ou ventilateur bloqué). Le diagnostic et la réparation relèvent du technicien partenaire, qui établit son devis avant toute intervention.
 
 ### Quel type de climatisation pour combien de m² ?
 
@@ -169,11 +169,11 @@ Une règle simple : environ 100 watts par m² pour un logement bien isolé. Une 
 
 ### Que faire si ma climatisation fuit de l'eau ?
 
-Une fuite d'eau sur une climatisation provient généralement d'un bac à condensats bouché ou d'un circuit d'évacuation des condensats colmaté. Ne pas éteindre brutalement l'appareil : placer une bassine sous l'écoulement, couper l'alimentation électrique si la fuite atteint des prises, puis appeler un professionnel. ClimUrgence intervient sous 1 heure à Marseille pour 119 € TTC (débouchage du circuit + test d'étanchéité).
+Une fuite d'eau sur une climatisation provient généralement d'un bac à condensats bouché ou d'un circuit d'évacuation des condensats colmaté. Ne pas éteindre brutalement l'appareil : placer une bassine sous l'écoulement, couper l'alimentation électrique si la fuite atteint des prises, puis appeler un professionnel. Clim Urgence transmet la demande à un technicien partenaire du secteur, qui vous indique le prix du déplacement et du diagnostic avant toute intervention. Intervention en 24 h dans la majorité des cas, selon la disponibilité des techniciens partenaires de votre secteur.
 
 ### Combien de temps dure une installation de climatisation ?
 
-Une installation monosplit standard dure 3 à 5 heures. Un multisplit 3 unités : une journée complète. Un système gainable : plusieurs jours selon la configuration. Le délai entre le devis validé et l'installation est en moyenne de 5 à 10 jours ouvrés chez ClimUrgence.
+Une installation monosplit standard dure 3 à 5 heures. Un multisplit 3 unités : une journée complète. Un système gainable : plusieurs jours selon la configuration. Le délai entre la validation du devis et la pose est fixé entre le client et l'installateur partenaire, selon le planning de ce dernier et la disponibilité du matériel.
 
 ### Quelle différence entre R32 et R410A ?
 
