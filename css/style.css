@@ -935,9 +935,17 @@ h1, h2, h3, h4, h5 {
 }
 .footer-col li a:hover { color: var(--white); }
 
-.footer-bottom {
+.footer-network {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,.08);
+  font-size: .85rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,.55);
+  max-width: 68ch;
+}
+
+.footer-bottom {
+  padding-top: 1.25rem;
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;

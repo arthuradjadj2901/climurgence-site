@@ -72,6 +72,16 @@
   ],
   "redirects": [
     {
+      "source": "/contrats-pro",
+      "destination": "/notre-reseau",
+      "permanent": true
+    },
+    {
+      "source": "/contrats-pro/",
+      "destination": "/notre-reseau/",
+      "permanent": true
+    },
+    {
       "source": "/depannage",
       "destination": "/depannage-clim-marseille",
       "permanent": true
